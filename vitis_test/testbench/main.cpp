@@ -2,9 +2,6 @@
 #include <cmath>
 #include "core.h"
 
-// Define your fixed-point type using standard float for simplicity
-typedef float fixed_p;
-
 // Custom abs function for fixed_p type
 fixed_p custom_abs(fixed_p x)
 {
@@ -17,113 +14,128 @@ fixed_p relu(fixed_p x)
     return x > fixed_p(0) ? x : fixed_p(0);
 }
 
-// Conv1D Layer function
-void conv1d_0(fixed_p input[INPUT_SIZE_CONV1D], fixed_p output[INPUT_SIZE_CONV1D - KERNEL_SIZE_CONV1D + 1][NUM_FILTERS_CONV1D])
+void conv1d_0(fixed_p input[120], fixed_p output[118][16])
 {
-    for (int i = 0; i < INPUT_SIZE_CONV1D - KERNEL_SIZE_CONV1D + 1; i++) // Loop over output positions
+    for (int i = 0; i < 118; i++) // Loop over output positions
     {
-        for (int j = 0; j < NUM_FILTERS_CONV1D; j++) // Loop over filters
+        for (int j = 0; j < 16; j++) // Loop over filters
         {
             fixed_p sum = 0;
-            for (int k = 0; k < KERNEL_SIZE_CONV1D; k++) // Loop over the kernel size
+            for (int k = 0; k < 3; k++) // Loop over the kernel size
             {
-                sum += input[i + k] * conv1d_weights[k][0][j]; // Corrected the indexing
+                sum += input[i + k] * conv1d_0_weights[k][0][j];
             }
-            output[i][j] = relu(sum + conv1d_biases[j]);
+            output[i][j] = relu(sum + conv1d_0_biases[j]);
         }
     }
 }
 
-// Flatten Layer function
-void flatten_1(fixed_p input[INPUT_SIZE_CONV1D - KERNEL_SIZE_CONV1D + 1][NUM_FILTERS_CONV1D], fixed_p output[FLATTEN_SIZE_FLATTEN])
+void conv1d_1(fixed_p input[118], fixed_p output[116][16])
+{
+    for (int i = 0; i < 116; i++) // Loop over output positions
+    {
+        for (int j = 0; j < 16; j++) // Loop over filters
+        {
+            fixed_p sum = 0;
+            for (int k = 0; k < 3; k++) // Loop over the kernel size
+            {
+                sum += input[i + k] * conv1d_1_weights[k][0][j];
+            }
+            output[i][j] = relu(sum + conv1d_1_biases[j]);
+        }
+    }
+}
+
+void flatten_0(fixed_p input[116][16], fixed_p output[1856])
 {
     int idx = 0;
-    for (int i = 0; i < INPUT_SIZE_CONV1D - KERNEL_SIZE_CONV1D + 1; i++)
+    for (int i = 0; i < 116; i++)
     {
-        for (int j = 0; j < NUM_FILTERS_CONV1D; j++)
+        for (int j = 0; j < 16; j++)
         {
             output[idx++] = input[i][j];
         }
     }
 }
 
-void dense_2(fixed_p input[FLATTEN_SIZE_FLATTEN], fixed_p output[DENSE_SIZE_DENSE])
+void dense_0(fixed_p input[1856], fixed_p output[16])
 {
-    for (int i = 0; i < DENSE_SIZE_DENSE; i++)
+    for (int i = 0; i < 16; i++)
     {
         fixed_p sum = 0;
-        for (int j = 0; j < FLATTEN_SIZE_FLATTEN; j++)
+        for (int j = 0; j < 1856; j++)
         {
-            sum += input[j] * dense_weights[j][i];
+            sum += input[j] * dense_0_weights[j][i];
         }
-        output[i] = relu(sum + dense_biases[i]);
+        output[i] = relu(sum + dense_0_biases[i]); // Apply ReLU
     }
 }
 
-void dense_3(fixed_p input[DENSE_SIZE_DENSE], fixed_p output[DENSE_SIZE_DENSE_1])
+void dense_1(fixed_p input[16], fixed_p output[16])
 {
-    for (int i = 0; i < DENSE_SIZE_DENSE_1; i++)
+    for (int i = 0; i < 16; i++)
     {
         fixed_p sum = 0;
-        for (int j = 0; j < DENSE_SIZE_DENSE; j++)
+        for (int j = 0; j < 16; j++)
         {
-            sum += input[j] * dense_1_weights[j][i]; // Make sure the names match
+            sum += input[j] * dense_1_weights[j][i];
         }
-        output[i] = sum + dense_1_biases[i]; // No ReLU before softmax
+        output[i] = relu(sum + dense_1_biases[i]); // Apply ReLU
     }
 }
 
-// Softmax function for Output Layer
-void softmax_4(fixed_p input[DENSE_SIZE_DENSE_1], fixed_p output[DENSE_SIZE_DENSE_1])
+void dense_2(fixed_p input[16], fixed_p output[20])
 {
-    fixed_p sum = 0;
-    for (int i = 0; i < DENSE_SIZE_DENSE_1; i++)
+    for (int i = 0; i < 20; i++)
     {
-        sum += exp(input[i]);
+        fixed_p sum = 0;
+        for (int j = 0; j < 16; j++)
+        {
+            sum += input[j] * dense_2_weights[j][i];
+        }
+        output[i] = sum + dense_2_biases[i]; // No ReLU before softmax
     }
-    for (int i = 0; i < DENSE_SIZE_DENSE_1; i++)
+
+    fixed_p softmax_sum = 0;
+    for (int i = 0; i < 20; i++)
     {
-        output[i] = exp(input[i]) / sum;
+        softmax_sum += exp(output[i]);
+    }
+    for (int i = 0; i < 20; i++)
+    {
+        output[i] = exp(output[i]) / softmax_sum;
     }
 }
-// Top-level function
-void gesture_model(fixed_p input[INPUT_SIZE_CONV1D], fixed_p output[DENSE_SIZE_DENSE_1])
+
+void gesture_model(fixed_p input[120], fixed_p output[20])
 {
-    fixed_p conv1d_out[INPUT_SIZE_CONV1D - KERNEL_SIZE_CONV1D + 1][NUM_FILTERS_CONV1D];
-    fixed_p flatten_out[FLATTEN_SIZE_FLATTEN];
-    fixed_p dense_out[DENSE_SIZE_DENSE];
-    fixed_p dense_1_out[DENSE_SIZE_DENSE_1];
-
-    // Apply Conv1D layer
-    conv1d_0(input, conv1d_out);
-
-    // Apply Flatten layer
-    flatten_1(conv1d_out, flatten_out);
-
-    // Apply Dense layer
-    dense_2(flatten_out, dense_out);
-
-    // Apply Second Dense layer before Softmax
-    dense_3(dense_out, dense_1_out);
-
-    // Apply Softmax layer
-    softmax_4(dense_1_out, output);
+    fixed_p conv1d_out_0[118][16];
+    fixed_p conv1d_out_1[116][16];
+    fixed_p flatten_out_0[1856];
+    fixed_p dense_out_0[16];
+    fixed_p dense_out_1[16];
+    conv1d_0(input, conv1d_out_0);
+    conv1d_1(input, conv1d_out_1);
+    flatten_0(conv1d_out_1, flatten_out_0);
+    dense_0(flatten_out_0, dense_out_0);
+    dense_1(dense_out_0, dense_out_1);
+    dense_2(dense_out_1, output);
 }
 
 // Define the main function for the testbench
 int main()
 {
     // Initialize test input data
-    fixed_p test_input[INPUT_SIZE_CONV1D] = {0.211592, 0.20615773, 0.2278948, 0.47787094, 0.62459606, 0.010524248, -0.060121194, -0.07098973, -0.08185826, -0.043818425, -0.01664709, -0.14706944, -0.1525037, -0.13076663, -0.119898096, -0.12533237, -0.1525037, -0.15793797, -0.119898096, -0.12533237, -0.64158744, -0.1362009, -0.1362009, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.17388277, -0.17581464, -0.17774653, -0.27820447, -0.28013635, -0.18933783, -0.110130616, -0.081152365, -0.046378467, -0.096607424, -0.21445231, -0.22604361, -0.1468364, -0.12944944, -0.12751757, -0.12172191, -0.115926266, -0.12558568, -0.12172191, -0.12558568, 0.85774297, -0.1352451, -0.1352451, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.06283578, -0.07031992, -0.06283578, 0.3749861, 0.09058898, -0.40710598, -0.044125434, -0.010446832, 0.0007793529, 0.02323177, 0.083104834, 0.075620726, 0.07187865, 0.08684691, 0.060652442, 0.04568419, 0.04568419, 0.07187865, 0.056910373, 0.053168304, -0.6578245, 0.109299324, 0.060652442, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536};
-    fixed_p expected_output[DENSE_SIZE_DENSE_1] = {0.00091833324, 0.002782783, 0.0024716181, 2.164753e-13, 2.9521166e-07, 0.001049942, 4.7674245e-08, 7.48808e-07, 0.093439855, 0.7831256, 1.4107883e-13, 1.0641564e-15, 4.1172717e-07, 2.5048628e-05, 1.3061081e-05, 3.121172e-05, 4.3810092e-14, 4.5178414e-08, 0.0016557239, 0.11448527};
-    fixed_p model_output[DENSE_SIZE_DENSE_1];
+    fixed_p test_input[120] = {-0.22578783, -0.22578783, -0.23920679, -0.17211203, 0.096267, 0.44515973, 0.25058496, 0.21032812, 0.25058496, 0.31767976, 0.05601016, -0.23920679, -0.25262573, -0.2660447, -0.2324973, -0.2324973, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, 0.0015950644, 0.014742719, -0.090438515, -0.30080083, -0.4191296, 0.0804809, -0.30080083, -0.629492, -0.23506263, -0.1298814, -0.1561767, 0.106776215, 0.13307153, 0.13307153, 0.04103803, 0.027890373, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, 0.098814026, 0.08629091, -0.045201745, -0.35201797, -0.27061775, 0.36179933, 0.21778357, 0.098814026, 0.14890645, -0.0076324316, -0.22678687, -0.27061775, -0.06398642, 0.061244674, 0.06750623, 0.09255247, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536};
+    fixed_p expected_output[20] = {0.0020039114, 0.00059027656, 3.750341e-08, 4.4417946e-05, 1.496658e-09, 2.7696049e-05, 2.0231675e-13, 5.3014516e-12, 5.3463425e-09, 3.5551584e-05, 3.5320993e-09, 2.2497817e-09, 0.12163296, 0.87525934, 1.8181292e-11, 2.91819e-08, 5.80301e-10, 9.132538e-07, 6.508569e-05, 0.00033981368};
+    fixed_p model_output[20];
 
     // Call the top-level function
     gesture_model(test_input, model_output);
 
     // Compare the model output with the expected output
     bool pass = true;
-    for (int i = 0; i < DENSE_SIZE_DENSE_1; i++)
+    for (int i = 0; i < 20; i++)
     {
         if (custom_abs(model_output[i] - expected_output[i]) > fixed_p(1e-3))
         {
@@ -136,7 +148,7 @@ int main()
     // Find the predicted class (the index of the max value in the model_output array)
     int predicted_class = 0;
     fixed_p max_value = model_output[0];
-    for (int i = 1; i < DENSE_SIZE_DENSE_1; i++)
+    for (int i = 1; i < 20; i++)
     {
         if (model_output[i] > max_value)
         {
