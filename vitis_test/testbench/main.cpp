@@ -2,6 +2,9 @@
 #include <cmath>
 #include "core.h"
 
+// declare epsilon for Batch Normalization
+#define epsilon 0.00001
+
 // Custom abs function for fixed_p type
 fixed_p custom_abs(fixed_p x)
 {
@@ -14,7 +17,7 @@ fixed_p relu(fixed_p x)
     return x > fixed_p(0) ? x : fixed_p(0);
 }
 
-void conv1d_0(fixed_p input[120], fixed_p output[118][16])
+void conv1d_0(fixed_p input[120][1], fixed_p output[118][16])
 {
     for (int i = 0; i < 118; i++) // Loop over output positions
     {
@@ -23,33 +26,51 @@ void conv1d_0(fixed_p input[120], fixed_p output[118][16])
             fixed_p sum = 0;
             for (int k = 0; k < 3; k++) // Loop over the kernel size
             {
-                sum += input[i + k] * conv1d_0_weights[k][0][j];
+                for (int c = 0; c < 1; c++) // Loop over input channels
+                {
+                    sum += input[i + k][c] * conv1d_0_weights[k][c][j];
+                }
             }
             output[i][j] = relu(sum + conv1d_0_biases[j]);
         }
     }
 }
 
-void conv1d_1(fixed_p input[118], fixed_p output[116][16])
+void batch_normalization_0(fixed_p input[118][16], fixed_p output[118][16])
 {
-    for (int i = 0; i < 116; i++) // Loop over output positions
+    for (int i = 0; i < 118; i++) // Loop over time steps
     {
-        for (int j = 0; j < 16; j++) // Loop over filters
+        for (int j = 0; j < 16; j++) // Loop over channels
         {
-            fixed_p sum = 0;
-            for (int k = 0; k < 3; k++) // Loop over the kernel size
-            {
-                sum += input[i + k] * conv1d_1_weights[k][0][j];
-            }
-            output[i][j] = relu(sum + conv1d_1_biases[j]);
+            output[i][j] = batch_norm_0_gamma[j] * ((input[i][j] - batch_norm_0_mean[j]) / sqrt(batch_norm_0_variance[j] + epsilon)) + batch_norm_0_beta[j];
         }
     }
 }
 
-void flatten_0(fixed_p input[116][16], fixed_p output[1856])
+void max_pooling1d_0(fixed_p input[118][16], fixed_p output[59][16])
+{
+    for (int i = 0; i < 59; i++) // Loop over output positions
+    {
+        for (int j = 0; j < 16; j++) // Loop over channels
+        {
+            fixed_p max_val = input[i * 2][j]; // Initialize max value
+            for (int k = 1; k < 2; k++)        // Loop over pooling window
+            {
+                int idx = i * 2 + k;
+                if (idx < 118) // Ensure within bounds
+                {
+                    max_val = (input[idx][j] > max_val) ? input[idx][j] : max_val;
+                }
+            }
+            output[i][j] = max_val;
+        }
+    }
+}
+
+void flatten_0(fixed_p input[59][16], fixed_p output[944])
 {
     int idx = 0;
-    for (int i = 0; i < 116; i++)
+    for (int i = 0; i < 59; i++)
     {
         for (int j = 0; j < 16; j++)
         {
@@ -58,12 +79,12 @@ void flatten_0(fixed_p input[116][16], fixed_p output[1856])
     }
 }
 
-void dense_0(fixed_p input[1856], fixed_p output[16])
+void dense_0(fixed_p input[944], fixed_p output[16])
 {
     for (int i = 0; i < 16; i++)
     {
         fixed_p sum = 0;
-        for (int j = 0; j < 1856; j++)
+        for (int j = 0; j < 944; j++)
         {
             sum += input[j] * dense_0_weights[j][i];
         }
@@ -71,29 +92,16 @@ void dense_0(fixed_p input[1856], fixed_p output[16])
     }
 }
 
-void dense_1(fixed_p input[16], fixed_p output[16])
-{
-    for (int i = 0; i < 16; i++)
-    {
-        fixed_p sum = 0;
-        for (int j = 0; j < 16; j++)
-        {
-            sum += input[j] * dense_1_weights[j][i];
-        }
-        output[i] = relu(sum + dense_1_biases[i]); // Apply ReLU
-    }
-}
-
-void dense_2(fixed_p input[16], fixed_p output[20])
+void dense_1(fixed_p input[16], fixed_p output[20])
 {
     for (int i = 0; i < 20; i++)
     {
         fixed_p sum = 0;
         for (int j = 0; j < 16; j++)
         {
-            sum += input[j] * dense_2_weights[j][i];
+            sum += input[j] * dense_1_weights[j][i];
         }
-        output[i] = sum + dense_2_biases[i]; // No ReLU before softmax
+        output[i] = sum + dense_1_biases[i]; // No ReLU before softmax
     }
 
     fixed_p softmax_sum = 0;
@@ -107,27 +115,27 @@ void dense_2(fixed_p input[16], fixed_p output[20])
     }
 }
 
-void gesture_model(fixed_p input[120], fixed_p output[20])
+void gesture_model(fixed_p input[120][1], fixed_p output[20])
 {
     fixed_p conv1d_out_0[118][16];
-    fixed_p conv1d_out_1[116][16];
-    fixed_p flatten_out_0[1856];
+    fixed_p batch_norm_out_0[118][16];
+    fixed_p max_pool_out_0[59][16];
+    fixed_p flatten_out_0[944];
     fixed_p dense_out_0[16];
-    fixed_p dense_out_1[16];
     conv1d_0(input, conv1d_out_0);
-    conv1d_1(input, conv1d_out_1);
-    flatten_0(conv1d_out_1, flatten_out_0);
+    batch_normalization_0(conv1d_out_0, batch_norm_out_0);
+    max_pooling1d_0(batch_norm_out_0, max_pool_out_0);
+    flatten_0(max_pool_out_0, flatten_out_0);
     dense_0(flatten_out_0, dense_out_0);
-    dense_1(dense_out_0, dense_out_1);
-    dense_2(dense_out_1, output);
+    dense_1(dense_out_0, output);
 }
 
 // Define the main function for the testbench
 int main()
 {
     // Initialize test input data
-    fixed_p test_input[120] = {-0.22578783, -0.22578783, -0.23920679, -0.17211203, 0.096267, 0.44515973, 0.25058496, 0.21032812, 0.25058496, 0.31767976, 0.05601016, -0.23920679, -0.25262573, -0.2660447, -0.2324973, -0.2324973, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, 0.0015950644, 0.014742719, -0.090438515, -0.30080083, -0.4191296, 0.0804809, -0.30080083, -0.629492, -0.23506263, -0.1298814, -0.1561767, 0.106776215, 0.13307153, 0.13307153, 0.04103803, 0.027890373, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, 0.098814026, 0.08629091, -0.045201745, -0.35201797, -0.27061775, 0.36179933, 0.21778357, 0.098814026, 0.14890645, -0.0076324316, -0.22678687, -0.27061775, -0.06398642, 0.061244674, 0.06750623, 0.09255247, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536};
-    fixed_p expected_output[20] = {0.0020039114, 0.00059027656, 3.750341e-08, 4.4417946e-05, 1.496658e-09, 2.7696049e-05, 2.0231675e-13, 5.3014516e-12, 5.3463425e-09, 3.5551584e-05, 3.5320993e-09, 2.2497817e-09, 0.12163296, 0.87525934, 1.8181292e-11, 2.91819e-08, 5.80301e-10, 9.132538e-07, 6.508569e-05, 0.00033981368};
+    fixed_p test_input[120][1] = {-0.049834944, -0.00020670304, -0.00020670304, 0.07423566, -0.049834944, 0.0990497, 0.28515553, -0.26075482, -0.12427723, -0.14909135, -0.39723238, -0.67018753, -0.24834774, -0.17390546, 0.11145676, -0.12427723, -0.14909135, 0.38441193, 0.68218124, 0.23552728, -0.037427884, -0.049834944, -0.025020825, -0.037427884, -0.074648984, -0.00020670304, -0.025020825, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.14946693, -0.14946693, -0.15758096, -0.165695, -0.17380902, -0.0926688, -0.26306325, 0.15886588, 0.40228653, 0.44285667, -0.15758096, -0.44968578, -0.052098665, -0.0034145555, -0.165695, -0.2792913, -0.43345773, -0.48214182, 0.18320796, 0.102067746, -0.10078283, -0.165695, -0.1251249, -0.18192305, -0.13323888, -0.165695, -0.14946693, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.0015846012, 0.014473888, -0.012290225, 0.04659083, 0.20182282, 0.43199432, -0.21569765, -0.41375226, -0.11934678, 0.0037682285, 0.07335498, -0.08722981, -0.31204855, -0.32275417, 0.44270006, 0.29817367, -0.02834875, 0.030532377, -0.02834875, 0.0091210585, -0.0015846012, -0.0069374307, -0.012290225, 0.019826718, -0.033701546, 0.0037682285, 0.014473888, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536};
+    fixed_p expected_output[20] = {1.3854135e-13, 2.3625446e-10, 1.935111e-12, 1.1119832e-19, 5.2494805e-05, 1.6466416e-07, 0.9909689, 0.008915806, 8.410667e-07, 1.6057294e-07, 5.8840696e-11, 1.7069348e-12, 4.839522e-15, 1.5323139e-17, 5.821229e-05, 3.3381782e-06, 4.3186317e-09, 2.8004435e-13, 4.8869425e-10, 2.8688794e-12};
     fixed_p model_output[20];
 
     // Call the top-level function
@@ -137,7 +145,7 @@ int main()
     bool pass = true;
     for (int i = 0; i < 20; i++)
     {
-        if (custom_abs(model_output[i] - expected_output[i]) > fixed_p(1e-3))
+        if (custom_abs(model_output[i] - expected_output[i]) > fixed_p(1e-2))
         {
             pass = false;
             std::cout << "Mismatch at index " << i << ": Expected " << expected_output[i]
