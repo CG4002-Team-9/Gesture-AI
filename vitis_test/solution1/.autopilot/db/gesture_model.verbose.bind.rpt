@@ -1,0 +1,927 @@
+
+
+================================================================
+== Vitis HLS Report for 'gesture_model'
+================================================================
+* Date:           Thu Aug 29 18:13:58 2024
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        vitis_test
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.589 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+----------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
+    +---------+---------+----------+----------+-------+-------+----------+
+    |    17280|    17280|  0.173 ms|  0.173 ms|  15110|  15110|  dataflow|
+    +---------+---------+----------+----------+-------+-------+----------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------+---------------------------+---------+---------+----------+----------+-------+-------+---------+
+        |                                      |                           |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+        |               Instance               |           Module          |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+        +--------------------------------------+---------------------------+---------+---------+----------+----------+-------+-------+---------+
+        |grp_conv1d_0_fu_96                    |conv1d_0                   |      847|      847|  8.470 us|  8.470 us|    847|    847|       no|
+        |grp_batchnorm_1_fu_104                |batchnorm_1                |      137|      137|  1.370 us|  1.370 us|    137|    137|       no|
+        |grp_maxpool1d_2_fu_116                |maxpool1d_2                |       54|       54|  0.540 us|  0.540 us|     54|     54|       no|
+        |grp_Loop_VITIS_LOOP_42_1_proc_fu_122  |Loop_VITIS_LOOP_42_1_proc  |      946|      946|  9.460 us|  9.460 us|    946|    946|       no|
+        |grp_dense_4_fu_128                    |dense_4                    |    15109|    15109|  0.151 ms|  0.151 ms|  15109|  15109|       no|
+        |grp_batchnorm_5_fu_138                |batchnorm_5                |       52|       52|  0.520 us|  0.520 us|     52|     52|       no|
+        |grp_dense_output_7_fu_152             |dense_output_7             |       54|       54|  0.540 us|  0.540 us|     54|     54|       no|
+        |grp_softmax_7_fu_168                  |softmax_7                  |       74|       74|  0.740 us|  0.740 us|     74|     74|       no|
+        +--------------------------------------+---------------------------+---------+---------+----------+----------+-------+-------+---------+
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 16
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 16, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.23>
+ST_1 : Operation 17 [1/1] (1.23ns)   --->   "%conv1d_out_V = alloca i64 1" [vitis_test/nnet/core.cpp:90]   --->   Operation 17 'alloca' 'conv1d_out_V' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 18 [1/1] (1.23ns)   --->   "%bn1_out_V = alloca i64 1" [vitis_test/nnet/core.cpp:91]   --->   Operation 18 'alloca' 'bn1_out_V' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 19 [1/1] (0.67ns)   --->   "%maxpool_out_V = alloca i64 1" [vitis_test/nnet/core.cpp:92]   --->   Operation 19 'alloca' 'maxpool_out_V' <Predicate = true> <Delay = 0.67>
+ST_1 : Operation 20 [1/1] (1.23ns)   --->   "%flatten_out_V = alloca i64 1" [vitis_test/nnet/core.cpp:93]   --->   Operation 20 'alloca' 'flatten_out_V' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 21 [1/1] (0.67ns)   --->   "%dense1_out_V = alloca i64 1" [vitis_test/nnet/core.cpp:94]   --->   Operation 21 'alloca' 'dense1_out_V' <Predicate = true> <Delay = 0.67>
+ST_1 : Operation 22 [1/1] (0.67ns)   --->   "%bn2_out_V = alloca i64 1" [vitis_test/nnet/core.cpp:95]   --->   Operation 22 'alloca' 'bn2_out_V' <Predicate = true> <Delay = 0.67>
+ST_1 : Operation 23 [1/1] (0.67ns)   --->   "%dense_output_out_V = alloca i64 1" [vitis_test/nnet/core.cpp:96]   --->   Operation 23 'alloca' 'dense_output_out_V' <Predicate = true> <Delay = 0.67>
+ST_1 : Operation 24 [2/2] (0.00ns)   --->   "%call_ln101 = call void @conv1d_0, i16 %input_r, i15 %conv1d_out_V" [vitis_test/nnet/core.cpp:101]   --->   Operation 24 'call' 'call_ln101' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 25 [1/2] (0.00ns)   --->   "%call_ln101 = call void @conv1d_0, i16 %input_r, i15 %conv1d_out_V" [vitis_test/nnet/core.cpp:101]   --->   Operation 25 'call' 'call_ln101' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 26 [2/2] (0.00ns)   --->   "%call_ln104 = call void @batchnorm_1, i15 %conv1d_out_V, i16 %bn1_out_V, i4 %bn_moving_mean_1_V, i9 %bn_gamma_1_V, i7 %bn_beta_1_V" [vitis_test/nnet/core.cpp:104]   --->   Operation 26 'call' 'call_ln104' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 27 [1/2] (0.00ns)   --->   "%call_ln104 = call void @batchnorm_1, i15 %conv1d_out_V, i16 %bn1_out_V, i4 %bn_moving_mean_1_V, i9 %bn_gamma_1_V, i7 %bn_beta_1_V" [vitis_test/nnet/core.cpp:104]   --->   Operation 27 'call' 'call_ln104' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 28 [2/2] (0.00ns)   --->   "%call_ln107 = call void @maxpool1d_2, i16 %bn1_out_V, i16 %maxpool_out_V" [vitis_test/nnet/core.cpp:107]   --->   Operation 28 'call' 'call_ln107' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 29 [1/2] (0.00ns)   --->   "%call_ln107 = call void @maxpool1d_2, i16 %bn1_out_V, i16 %maxpool_out_V" [vitis_test/nnet/core.cpp:107]   --->   Operation 29 'call' 'call_ln107' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 30 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_42_1_proc, i16 %maxpool_out_V, i16 %flatten_out_V"   --->   Operation 30 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 31 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_42_1_proc, i16 %maxpool_out_V, i16 %flatten_out_V"   --->   Operation 31 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 32 [2/2] (0.00ns)   --->   "%call_ln113 = call void @dense_4, i16 %flatten_out_V, i15 %dense1_out_V, i8 %dense_biases_4_V, i7 %dense_weights_4_V" [vitis_test/nnet/core.cpp:113]   --->   Operation 32 'call' 'call_ln113' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 33 [1/2] (0.00ns)   --->   "%call_ln113 = call void @dense_4, i16 %flatten_out_V, i15 %dense1_out_V, i8 %dense_biases_4_V, i7 %dense_weights_4_V" [vitis_test/nnet/core.cpp:113]   --->   Operation 33 'call' 'call_ln113' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 34 [2/2] (0.00ns)   --->   "%call_ln116 = call void @batchnorm_5, i15 %dense1_out_V, i16 %bn2_out_V, i9 %bn_moving_mean_5_V, i8 %bn_moving_variance_5_V, i10 %bn_gamma_5_V, i8 %bn_beta_5_V" [vitis_test/nnet/core.cpp:116]   --->   Operation 34 'call' 'call_ln116' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 35 [1/2] (0.00ns)   --->   "%call_ln116 = call void @batchnorm_5, i15 %dense1_out_V, i16 %bn2_out_V, i9 %bn_moving_mean_5_V, i8 %bn_moving_variance_5_V, i10 %bn_gamma_5_V, i8 %bn_beta_5_V" [vitis_test/nnet/core.cpp:116]   --->   Operation 35 'call' 'call_ln116' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 0.00>
+ST_13 : Operation 36 [2/2] (0.00ns)   --->   "%call_ln119 = call void @dense_output_7, i16 %bn2_out_V, i16 %dense_output_out_V, i9 %dense_weights_7_V, i8 %dense_biases_7_V, i11 %f_x_lsb_table_V, i25 %exp_x_msb_2_m_1_table_V, i25 %exp_x_msb_1_table_V" [vitis_test/nnet/core.cpp:119]   --->   Operation 36 'call' 'call_ln119' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 0.00>
+ST_14 : Operation 37 [1/2] (0.00ns)   --->   "%call_ln119 = call void @dense_output_7, i16 %bn2_out_V, i16 %dense_output_out_V, i9 %dense_weights_7_V, i8 %dense_biases_7_V, i11 %f_x_lsb_table_V, i25 %exp_x_msb_2_m_1_table_V, i25 %exp_x_msb_1_table_V" [vitis_test/nnet/core.cpp:119]   --->   Operation 37 'call' 'call_ln119' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 0.00>
+ST_15 : Operation 38 [2/2] (0.00ns)   --->   "%call_ln122 = call void @softmax_7, i16 %dense_output_out_V, i16 %output_r" [vitis_test/nnet/core.cpp:122]   --->   Operation 38 'call' 'call_ln122' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 0.00>
+ST_16 : Operation 39 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln98 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_8" [vitis_test/nnet/core.cpp:98]   --->   Operation 39 'specdataflowpipeline' 'specdataflowpipeline_ln98' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 40 [1/1] (0.00ns)   --->   "%spectopmodule_ln88 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [vitis_test/nnet/core.cpp:88]   --->   Operation 40 'spectopmodule' 'spectopmodule_ln88' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_r, void @empty_7, i32 0, i32 0, void @empty_8, i32 4294967295, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 42 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_r"   --->   Operation 42 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %output_r, void @empty_7, i32 0, i32 0, void @empty_8, i32 4294967295, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 44 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %output_r"   --->   Operation 44 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 45 [1/2] (0.00ns)   --->   "%call_ln122 = call void @softmax_7, i16 %dense_output_out_V, i16 %output_r" [vitis_test/nnet/core.cpp:122]   --->   Operation 45 'call' 'call_ln122' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 46 [1/1] (0.00ns)   --->   "%ret_ln123 = ret" [vitis_test/nnet/core.cpp:123]   --->   Operation 46 'ret' 'ret_ln123' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ input_r]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ output_r]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ bn_moving_mean_1_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ bn_gamma_1_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ bn_beta_1_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_biases_4_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_weights_4_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ bn_moving_mean_5_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ bn_moving_variance_5_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ bn_gamma_5_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ bn_beta_5_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_weights_7_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1111111111111111]; IO mode=ap_memory:ce=0
+Port [ dense_biases_7_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ f_x_lsb_table_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ exp_x_msb_2_m_1_table_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ exp_x_msb_1_table_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+conv1d_out_V              (alloca              ) [ 00111000000000000]
+bn1_out_V                 (alloca              ) [ 00111110000000000]
+maxpool_out_V             (alloca              ) [ 00111111100000000]
+flatten_out_V             (alloca              ) [ 00111111111000000]
+dense1_out_V              (alloca              ) [ 00111111111110000]
+bn2_out_V                 (alloca              ) [ 00111111111111100]
+dense_output_out_V        (alloca              ) [ 00111111111111111]
+call_ln101                (call                ) [ 00000000000000000]
+call_ln104                (call                ) [ 00000000000000000]
+call_ln107                (call                ) [ 00000000000000000]
+call_ln0                  (call                ) [ 00000000000000000]
+call_ln113                (call                ) [ 00000000000000000]
+call_ln116                (call                ) [ 00000000000000000]
+call_ln119                (call                ) [ 00000000000000000]
+specdataflowpipeline_ln98 (specdataflowpipeline) [ 00000000000000000]
+spectopmodule_ln88        (spectopmodule       ) [ 00000000000000000]
+specinterface_ln0         (specinterface       ) [ 00000000000000000]
+specbitsmap_ln0           (specbitsmap         ) [ 00000000000000000]
+specinterface_ln0         (specinterface       ) [ 00000000000000000]
+specbitsmap_ln0           (specbitsmap         ) [ 00000000000000000]
+call_ln122                (call                ) [ 00000000000000000]
+ret_ln123                 (ret                 ) [ 00000000000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="input_r">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="input_r"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="output_r">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="output_r"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="bn_moving_mean_1_V">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="bn_moving_mean_1_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="bn_gamma_1_V">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="bn_gamma_1_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="bn_beta_1_V">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="bn_beta_1_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="dense_biases_4_V">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_biases_4_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="dense_weights_4_V">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_weights_4_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="bn_moving_mean_5_V">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="bn_moving_mean_5_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="bn_moving_variance_5_V">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="bn_moving_variance_5_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="bn_gamma_5_V">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="bn_gamma_5_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1000" name="bn_beta_5_V">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="bn_beta_5_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1000" name="dense_weights_7_V">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_weights_7_V"/><MemPortTyVec>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1000" name="dense_biases_7_V">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_biases_7_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1000" name="f_x_lsb_table_V">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="f_x_lsb_table_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1000" name="exp_x_msb_2_m_1_table_V">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="exp_x_msb_2_m_1_table_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1000" name="exp_x_msb_1_table_V">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="exp_x_msb_1_table_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="conv1d_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="batchnorm_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="maxpool1d_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Loop_VITIS_LOOP_42_1_proc"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_4"/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="batchnorm_5"/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_output_7"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="softmax_7"/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecDataflowPipeline"/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1001" name="const_52">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1001" name="const_54">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1001" name="const_56">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_8"/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1001" name="const_58">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1001" name="const_60">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1001" name="const_62">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1001" name="const_64">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_7"/></StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1001" name="const_66">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1004" name="conv1d_out_V_alloca_fu_68">
+<pin_list>
+<pin id="69" dir="0" index="0" bw="1" slack="0"/>
+<pin id="70" dir="1" index="1" bw="15" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="conv1d_out_V/1 "/>
+</bind>
+</comp>
+
+<comp id="72" class="1004" name="bn1_out_V_alloca_fu_72">
+<pin_list>
+<pin id="73" dir="0" index="0" bw="1" slack="0"/>
+<pin id="74" dir="1" index="1" bw="16" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="bn1_out_V/1 "/>
+</bind>
+</comp>
+
+<comp id="76" class="1004" name="maxpool_out_V_alloca_fu_76">
+<pin_list>
+<pin id="77" dir="0" index="0" bw="1" slack="0"/>
+<pin id="78" dir="1" index="1" bw="16" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="maxpool_out_V/1 "/>
+</bind>
+</comp>
+
+<comp id="80" class="1004" name="flatten_out_V_alloca_fu_80">
+<pin_list>
+<pin id="81" dir="0" index="0" bw="1" slack="0"/>
+<pin id="82" dir="1" index="1" bw="16" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="flatten_out_V/1 "/>
+</bind>
+</comp>
+
+<comp id="84" class="1004" name="dense1_out_V_alloca_fu_84">
+<pin_list>
+<pin id="85" dir="0" index="0" bw="1" slack="0"/>
+<pin id="86" dir="1" index="1" bw="15" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="dense1_out_V/1 "/>
+</bind>
+</comp>
+
+<comp id="88" class="1004" name="bn2_out_V_alloca_fu_88">
+<pin_list>
+<pin id="89" dir="0" index="0" bw="1" slack="0"/>
+<pin id="90" dir="1" index="1" bw="16" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="bn2_out_V/1 "/>
+</bind>
+</comp>
+
+<comp id="92" class="1004" name="dense_output_out_V_alloca_fu_92">
+<pin_list>
+<pin id="93" dir="0" index="0" bw="1" slack="0"/>
+<pin id="94" dir="1" index="1" bw="16" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="dense_output_out_V/1 "/>
+</bind>
+</comp>
+
+<comp id="96" class="1004" name="grp_conv1d_0_fu_96">
+<pin_list>
+<pin id="97" dir="0" index="0" bw="0" slack="0"/>
+<pin id="98" dir="0" index="1" bw="16" slack="0"/>
+<pin id="99" dir="0" index="2" bw="15" slack="0"/>
+<pin id="100" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln101/1 "/>
+</bind>
+</comp>
+
+<comp id="104" class="1004" name="grp_batchnorm_1_fu_104">
+<pin_list>
+<pin id="105" dir="0" index="0" bw="0" slack="0"/>
+<pin id="106" dir="0" index="1" bw="15" slack="2147483647"/>
+<pin id="107" dir="0" index="2" bw="16" slack="2147483647"/>
+<pin id="108" dir="0" index="3" bw="4" slack="0"/>
+<pin id="109" dir="0" index="4" bw="9" slack="0"/>
+<pin id="110" dir="0" index="5" bw="7" slack="0"/>
+<pin id="111" dir="1" index="6" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln104/3 "/>
+</bind>
+</comp>
+
+<comp id="116" class="1004" name="grp_maxpool1d_2_fu_116">
+<pin_list>
+<pin id="117" dir="0" index="0" bw="0" slack="0"/>
+<pin id="118" dir="0" index="1" bw="16" slack="2147483647"/>
+<pin id="119" dir="0" index="2" bw="16" slack="2147483647"/>
+<pin id="120" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln107/5 "/>
+</bind>
+</comp>
+
+<comp id="122" class="1004" name="grp_Loop_VITIS_LOOP_42_1_proc_fu_122">
+<pin_list>
+<pin id="123" dir="0" index="0" bw="0" slack="0"/>
+<pin id="124" dir="0" index="1" bw="16" slack="2147483647"/>
+<pin id="125" dir="0" index="2" bw="16" slack="2147483647"/>
+<pin id="126" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/7 "/>
+</bind>
+</comp>
+
+<comp id="128" class="1004" name="grp_dense_4_fu_128">
+<pin_list>
+<pin id="129" dir="0" index="0" bw="0" slack="0"/>
+<pin id="130" dir="0" index="1" bw="16" slack="2147483647"/>
+<pin id="131" dir="0" index="2" bw="15" slack="2147483647"/>
+<pin id="132" dir="0" index="3" bw="8" slack="0"/>
+<pin id="133" dir="0" index="4" bw="7" slack="0"/>
+<pin id="134" dir="1" index="5" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln113/9 "/>
+</bind>
+</comp>
+
+<comp id="138" class="1004" name="grp_batchnorm_5_fu_138">
+<pin_list>
+<pin id="139" dir="0" index="0" bw="0" slack="0"/>
+<pin id="140" dir="0" index="1" bw="15" slack="2147483647"/>
+<pin id="141" dir="0" index="2" bw="16" slack="2147483647"/>
+<pin id="142" dir="0" index="3" bw="9" slack="0"/>
+<pin id="143" dir="0" index="4" bw="8" slack="0"/>
+<pin id="144" dir="0" index="5" bw="10" slack="0"/>
+<pin id="145" dir="0" index="6" bw="8" slack="0"/>
+<pin id="146" dir="1" index="7" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln116/11 "/>
+</bind>
+</comp>
+
+<comp id="152" class="1004" name="grp_dense_output_7_fu_152">
+<pin_list>
+<pin id="153" dir="0" index="0" bw="0" slack="0"/>
+<pin id="154" dir="0" index="1" bw="16" slack="2147483647"/>
+<pin id="155" dir="0" index="2" bw="16" slack="2147483647"/>
+<pin id="156" dir="0" index="3" bw="9" slack="0"/>
+<pin id="157" dir="0" index="4" bw="8" slack="0"/>
+<pin id="158" dir="0" index="5" bw="11" slack="0"/>
+<pin id="159" dir="0" index="6" bw="25" slack="0"/>
+<pin id="160" dir="0" index="7" bw="25" slack="0"/>
+<pin id="161" dir="1" index="8" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln119/13 "/>
+</bind>
+</comp>
+
+<comp id="168" class="1004" name="grp_softmax_7_fu_168">
+<pin_list>
+<pin id="169" dir="0" index="0" bw="0" slack="0"/>
+<pin id="170" dir="0" index="1" bw="16" slack="2147483647"/>
+<pin id="171" dir="0" index="2" bw="16" slack="0"/>
+<pin id="172" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln122/15 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="71"><net_src comp="32" pin="0"/><net_sink comp="68" pin=0"/></net>
+
+<net id="75"><net_src comp="32" pin="0"/><net_sink comp="72" pin=0"/></net>
+
+<net id="79"><net_src comp="32" pin="0"/><net_sink comp="76" pin=0"/></net>
+
+<net id="83"><net_src comp="32" pin="0"/><net_sink comp="80" pin=0"/></net>
+
+<net id="87"><net_src comp="32" pin="0"/><net_sink comp="84" pin=0"/></net>
+
+<net id="91"><net_src comp="32" pin="0"/><net_sink comp="88" pin=0"/></net>
+
+<net id="95"><net_src comp="32" pin="0"/><net_sink comp="92" pin=0"/></net>
+
+<net id="101"><net_src comp="34" pin="0"/><net_sink comp="96" pin=0"/></net>
+
+<net id="102"><net_src comp="0" pin="0"/><net_sink comp="96" pin=1"/></net>
+
+<net id="103"><net_src comp="68" pin="1"/><net_sink comp="96" pin=2"/></net>
+
+<net id="112"><net_src comp="36" pin="0"/><net_sink comp="104" pin=0"/></net>
+
+<net id="113"><net_src comp="4" pin="0"/><net_sink comp="104" pin=3"/></net>
+
+<net id="114"><net_src comp="6" pin="0"/><net_sink comp="104" pin=4"/></net>
+
+<net id="115"><net_src comp="8" pin="0"/><net_sink comp="104" pin=5"/></net>
+
+<net id="121"><net_src comp="38" pin="0"/><net_sink comp="116" pin=0"/></net>
+
+<net id="127"><net_src comp="40" pin="0"/><net_sink comp="122" pin=0"/></net>
+
+<net id="135"><net_src comp="42" pin="0"/><net_sink comp="128" pin=0"/></net>
+
+<net id="136"><net_src comp="10" pin="0"/><net_sink comp="128" pin=3"/></net>
+
+<net id="137"><net_src comp="12" pin="0"/><net_sink comp="128" pin=4"/></net>
+
+<net id="147"><net_src comp="44" pin="0"/><net_sink comp="138" pin=0"/></net>
+
+<net id="148"><net_src comp="14" pin="0"/><net_sink comp="138" pin=3"/></net>
+
+<net id="149"><net_src comp="16" pin="0"/><net_sink comp="138" pin=4"/></net>
+
+<net id="150"><net_src comp="18" pin="0"/><net_sink comp="138" pin=5"/></net>
+
+<net id="151"><net_src comp="20" pin="0"/><net_sink comp="138" pin=6"/></net>
+
+<net id="162"><net_src comp="46" pin="0"/><net_sink comp="152" pin=0"/></net>
+
+<net id="163"><net_src comp="22" pin="0"/><net_sink comp="152" pin=3"/></net>
+
+<net id="164"><net_src comp="24" pin="0"/><net_sink comp="152" pin=4"/></net>
+
+<net id="165"><net_src comp="26" pin="0"/><net_sink comp="152" pin=5"/></net>
+
+<net id="166"><net_src comp="28" pin="0"/><net_sink comp="152" pin=6"/></net>
+
+<net id="167"><net_src comp="30" pin="0"/><net_sink comp="152" pin=7"/></net>
+
+<net id="173"><net_src comp="48" pin="0"/><net_sink comp="168" pin=0"/></net>
+
+<net id="174"><net_src comp="2" pin="0"/><net_sink comp="168" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: output_r | {15 16 }
+ - Input state : 
+	Port: gesture_model : input_r | {1 2 }
+	Port: gesture_model : bn_moving_mean_1_V | {3 4 }
+	Port: gesture_model : bn_gamma_1_V | {3 4 }
+	Port: gesture_model : bn_beta_1_V | {3 4 }
+	Port: gesture_model : dense_biases_4_V | {9 10 }
+	Port: gesture_model : dense_weights_4_V | {9 10 }
+	Port: gesture_model : bn_moving_mean_5_V | {11 12 }
+	Port: gesture_model : bn_moving_variance_5_V | {11 12 }
+	Port: gesture_model : bn_gamma_5_V | {11 12 }
+	Port: gesture_model : bn_beta_5_V | {11 12 }
+	Port: gesture_model : dense_weights_7_V | {13 14 }
+	Port: gesture_model : dense_biases_7_V | {13 14 }
+	Port: gesture_model : f_x_lsb_table_V | {13 14 }
+	Port: gesture_model : exp_x_msb_2_m_1_table_V | {13 14 }
+	Port: gesture_model : exp_x_msb_1_table_V | {13 14 }
+  - Chain level:
+	State 1
+		call_ln101 : 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|--------------------------------------|---------|---------|---------|---------|
+| Operation|            Functional Unit           |   DSP   |  Delay  |    FF   |   LUT   |
+|----------|--------------------------------------|---------|---------|---------|---------|
+|          |          grp_conv1d_0_fu_96          |    10   |  8.153  |   717   |   1026  |
+|          |        grp_batchnorm_1_fu_104        |    1    |  3.038  |   1646  |   1211  |
+|          |        grp_maxpool1d_2_fu_116        |    0    |  0.854  |    26   |    70   |
+|   call   | grp_Loop_VITIS_LOOP_42_1_proc_fu_122 |    0    |  0.427  |    80   |    37   |
+|          |          grp_dense_4_fu_128          |    1    |  2.184  |   215   |   259   |
+|          |        grp_batchnorm_5_fu_138        |    1    |  4.319  |   1740  |   2272  |
+|          |       grp_dense_output_7_fu_152      |    19   |  18.793 |   1873  |   1046  |
+|          |         grp_softmax_7_fu_168         |    0    |  1.281  |   1624  |   1189  |
+|----------|--------------------------------------|---------|---------|---------|---------|
+|   Total  |                                      |    32   |  39.049 |   7921  |   7110  |
+|----------|--------------------------------------|---------|---------|---------|---------|
+
+Memories:
++-----------------------+--------+--------+--------+--------+
+|                       |  BRAM  |   FF   |   LUT  |  URAM  |
++-----------------------+--------+--------+--------+--------+
+|       bn1_out_V       |    2   |    0   |    0   |    0   |
+|       bn2_out_V       |    0   |   64   |    8   |    0   |
+|      bn_beta_1_V      |    0   |    7   |    2   |    -   |
+|      bn_beta_5_V      |    0   |    8   |    2   |    -   |
+|      bn_gamma_1_V     |    0   |    9   |    3   |    -   |
+|      bn_gamma_5_V     |    0   |   10   |    3   |    -   |
+|   bn_moving_mean_1_V  |    0   |    4   |    1   |    -   |
+|   bn_moving_mean_5_V  |    0   |    9   |    3   |    -   |
+| bn_moving_variance_5_V|    0   |    8   |    2   |    -   |
+|      conv1d_out_V     |    1   |    0   |    0   |    0   |
+|      dense1_out_V     |    0   |   15   |    8   |    0   |
+|    dense_biases_4_V   |    0   |    8   |    2   |    -   |
+|    dense_biases_7_V   |    0   |    8   |    3   |    -   |
+|   dense_output_out_V  |    0   |   16   |   10   |    0   |
+|   dense_weights_4_V   |    7   |    0   |    0   |    -   |
+|   dense_weights_7_V   |    8   |    0   |    0   |    -   |
+|  exp_x_msb_1_table_V  |    0   |   25   |   13   |    -   |
+|exp_x_msb_2_m_1_table_V|    0   |   25   |   13   |    -   |
+|    f_x_lsb_table_V    |    0   |   11   |    6   |    -   |
+|     flatten_out_V     |    2   |    0   |    0   |    0   |
+|     maxpool_out_V     |    1   |    0   |    0   |    0   |
++-----------------------+--------+--------+--------+--------+
+|         Total         |   21   |   227  |   79   |    0   |
++-----------------------+--------+--------+--------+--------+
+
+* Register list:
+N/A
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+--------+
+|           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
++-----------+--------+--------+--------+--------+--------+--------+
+|  Function |    -   |   32   |   39   |  7921  |  7110  |    -   |
+|   Memory  |   21   |    -   |    -   |   227  |   79   |    0   |
+|Multiplexer|    -   |    -   |    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |    -   |    -   |    -   |    -   |
++-----------+--------+--------+--------+--------+--------+--------+
+|   Total   |   21   |   32   |   39   |  8148  |  7189  |    0   |
++-----------+--------+--------+--------+--------+--------+--------+

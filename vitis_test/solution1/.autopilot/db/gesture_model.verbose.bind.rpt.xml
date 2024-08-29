@@ -1,0 +1,53 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'gesture_model'" level="0">
+<item name = "Date">Thu Aug 29 18:13:58 2024
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">vitis_test</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu3eg-sbva484-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.589 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">17280, 17280, 0.173 ms, 0.173 ms, 15110, 15110, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_conv1d_0_fu_96">conv1d_0, 847, 847, 8.470 us, 8.470 us, 847, 847, no</column>
+<column name="grp_batchnorm_1_fu_104">batchnorm_1, 137, 137, 1.370 us, 1.370 us, 137, 137, no</column>
+<column name="grp_maxpool1d_2_fu_116">maxpool1d_2, 54, 54, 0.540 us, 0.540 us, 54, 54, no</column>
+<column name="grp_Loop_VITIS_LOOP_42_1_proc_fu_122">Loop_VITIS_LOOP_42_1_proc, 946, 946, 9.460 us, 9.460 us, 946, 946, no</column>
+<column name="grp_dense_4_fu_128">dense_4, 15109, 15109, 0.151 ms, 0.151 ms, 15109, 15109, no</column>
+<column name="grp_batchnorm_5_fu_138">batchnorm_5, 52, 52, 0.520 us, 0.520 us, 52, 52, no</column>
+<column name="grp_dense_output_7_fu_152">dense_output_7, 54, 54, 0.540 us, 0.540 us, 54, 54, no</column>
+<column name="grp_softmax_7_fu_168">softmax_7, 74, 74, 0.740 us, 0.740 us, 74, 74, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

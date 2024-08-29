@@ -1,0 +1,388 @@
+================================================================
+== Vivado RTL Synthesis Results
+================================================================
++ General Information:
+    * Date:            Thu Aug 29 18:17:55 +08 2024
+    * Version:         2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:         vitis_test
+    * Solution:        solution1 (Vivado IP Flow Target)
+    * Product family:  zynquplus
+    * Target device:   xczu3eg-sbva484-2-i
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * RTL Synthesis target clock:  10 ns
+    * C-Synthesis target clock:    10 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== RTL Synthesis Resource Summary
+================================================================
+LUT:              4034
+FF:               3204
+DSP:              32
+BRAM:             17
+URAM:             0
+SRL:              184
+
+
+================================================================
+== RTL Synthesis Timing Summary
+================================================================
+* Timing was met
++------------+-------------+
+| Timing     | Period (ns) |
++------------+-------------+
+| Target     | 10.000      |
+| Post-Route | 4.634       |
++------------+-------------+
+
+
+================================================================
+== RTL Synthesis Resources
+================================================================
++------------------------------------------------------------+------+------+-----+------+------+-----+--------+-------+---------+-------------------------+---------------------------------------------------------------------------------+
+| Name                                                       | LUT  | FF   | DSP | BRAM | URAM | SRL | Pragma | Impl  | Latency | Variable                | Source                                                                          |
++------------------------------------------------------------+------+------+-----+------+------+-----+--------+-------+---------+-------------------------+---------------------------------------------------------------------------------+
+| inst                                                       | 4034 | 3204 | 32  | 17   |      |     |        |       |         |                         |                                                                                 |
+|   Loop_VITIS_LOOP_42_1_proc_U0                             | 30   | 23   |     |      |      |     |        |       |         |                         |                                                                                 |
+|     (Loop_VITIS_LOOP_42_1_proc_U0)                         | 2    | 22   |     |      |      |     |        |       |         |                         |                                                                                 |
+|     flow_control_loop_pipe_U                               | 28   | 1    |     |      |      |     |        |       |         |                         |                                                                                 |
+|   batchnorm_1_U0                                           | 311  | 260  | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|     (batchnorm_1_U0)                                       | 17   | 70   |     |      |      |     |        |       |         |                         |                                                                                 |
+|     bn_moving_mean_1_V_U                                   |      | 4    |     |      |      |     |        |       |         |                         |                                                                                 |
+|       bind_storage rom_1p                                  |      |      |     |      |      |     |        | auto  | 1       | bn_moving_mean_1_V      |                                                                                 |
+|     flow_control_loop_pipe_U                               | 20   | 1    |     |      |      |     |        |       |         |                         |                                                                                 |
+|     mac_muladd_24s_9ns_15s_24_4_1_U20                      | 10   |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|       bind_op mul                                          |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln837               | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:837  |
+|       bind_op add                                          |      |      |     |      |      |     |        | dsp48 | 3       | ret_V                   | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|     sdiv_24ns_1ns_24_28_1_U19                              | 264  | 185  |     |      |      |     |        |       |         |                         |                                                                                 |
+|       (sdiv_24ns_1ns_24_28_1_U19)                          | 33   | 16   |     |      |      |     |        |       |         |                         |                                                                                 |
+|   batchnorm_5_U0                                           | 947  | 846  | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|     (batchnorm_5_U0)                                       | 18   | 71   |     |      |      |     |        |       |         |                         |                                                                                 |
+|     bn_moving_mean_5_V_U                                   | 5    | 9    |     |      |      |     |        |       |         |                         |                                                                                 |
+|       bind_storage rom_1p                                  |      |      |     |      |      |     |        | auto  | 1       | bn_moving_mean_5_V      |                                                                                 |
+|     bn_moving_variance_5_V_U                               |      | 8    |     |      |      |     |        |       |         |                         |                                                                                 |
+|       bind_storage rom_1p                                  |      |      |     |      |      |     |        | auto  | 1       | bn_moving_variance_5_V  |                                                                                 |
+|     flow_control_loop_delay_pipe_U                         | 22   | 2    |     |      |      |     |        |       |         |                         |                                                                                 |
+|     grp_sqrt_fixed_17_9_s_fu_134                           | 124  | 44   |     |      |      |     |        |       |         |                         |                                                                                 |
+|     mac_muladd_24s_10ns_16s_24_4_1_U39                     | 11   |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|       bind_op mul                                          |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln837               | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:837  |
+|       bind_op add                                          |      |      |     |      |      |     |        | dsp48 | 3       | ret_V                   | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|     sdiv_24ns_10ns_24_28_1_U38                             | 767  | 712  |     |      |      |     |        |       |         |                         |                                                                                 |
+|       (sdiv_24ns_10ns_24_28_1_U38)                         | 64   | 16   |     |      |      |     |        |       |         |                         |                                                                                 |
+|   bn1_out_V_U                                              | 376  | 105  |     |      |      |     |        |       |         |                         |                                                                                 |
+|     bind_storage ram_s2p                                   |      |      |     |      |      |     |        | auto  | 1       | bn1_out_V               | vitis_test/nnet/core.cpp:91                                                     |
+|   bn2_out_V_U                                              | 147  | 105  |     |      |      |     |        |       |         |                         |                                                                                 |
+|     bind_storage ram_s2p                                   |      |      |     |      |      |     |        | auto  | 1       | bn2_out_V               | vitis_test/nnet/core.cpp:95                                                     |
+|   conv1d_0_U0                                              | 406  | 105  | 10  |      |      |     |        |       |         |                         |                                                                                 |
+|     (conv1d_0_U0)                                          | 174  | 104  |     |      |      |     |        |       |         |                         |                                                                                 |
+|     mac_muladd_16s_5ns_24s_24_4_1_U5                       | 27   |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|       bind_op mul                                          |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1273_2            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273 |
+|       bind_op add                                          |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_21           | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|     mac_muladd_16s_6ns_24s_24_4_1_U6                       | 17   |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|       bind_op mul                                          |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1273_3            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273 |
+|       bind_op add                                          |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_23           | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|     mac_muladd_16s_6ns_24s_24_4_1_U8                       | 17   |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|       bind_op mul                                          |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1273_5            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273 |
+|       bind_op add                                          |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_26           | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|     mac_muladd_16s_7ns_22s_24_4_1_U2                       |      |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|       bind_op mul                                          |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln813               | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:813  |
+|       bind_op add                                          |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347              | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|     mac_muladd_16s_7s_24s_24_4_1_U10                       | 49   |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|       bind_op mul                                          |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1273_7            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273 |
+|       bind_op add                                          |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_29           | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|     mac_muladd_16s_7s_24s_24_4_1_U3                        | 28   |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|       bind_op mul                                          |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1273_1            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273 |
+|       bind_op add                                          |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_16           | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|     mac_muladd_16s_7s_24s_24_4_1_U7                        | 11   |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|       bind_op mul                                          |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1273_4            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273 |
+|       bind_op add                                          |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_25           | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|     mac_muladd_16s_7s_24s_24_4_1_U9                        | 2    |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|       bind_op mul                                          |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1273_6            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273 |
+|       bind_op add                                          |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_28           | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|     mac_muladd_16s_8s_24ns_24_4_1_U4                       | 33   |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|       bind_op mul                                          |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln813_1             | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:813  |
+|       bind_op add                                          |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_19           | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|     mul_mul_16s_5ns_22_4_1_U1                              |      |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|       bind_op mul                                          |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1273              | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273 |
+|   conv1d_out_V_U                                           | 199  | 21   |     |      |      |     |        |       |         |                         |                                                                                 |
+|     bind_storage ram_1p                                    |      |      |     |      |      |     |        | auto  | 1       | conv1d_out_V            | vitis_test/nnet/core.cpp:90                                                     |
+|   dense1_out_V_U                                           | 59   | 21   |     |      |      |     |        |       |         |                         |                                                                                 |
+|     bind_storage ram_1p                                    |      |      |     |      |      |     |        | auto  | 1       | dense1_out_V            | vitis_test/nnet/core.cpp:94                                                     |
+|   dense_4_U0                                               | 155  | 82   | 1   | 7    |      |     |        |       |         |                         |                                                                                 |
+|     (dense_4_U0)                                           | 8    | 73   |     |      |      |     |        |       |         |                         |                                                                                 |
+|     dense_biases_4_V_U                                     | 9    | 8    |     |      |      |     |        |       |         |                         |                                                                                 |
+|       bind_storage rom_1p                                  |      |      |     |      |      |     |        | auto  | 1       | dense_biases_4_V        |                                                                                 |
+|     dense_weights_4_V_U                                    | 4    |      |     | 7    |      |     |        |       |         |                         |                                                                                 |
+|       bind_storage rom_1p                                  |      |      |     |      |      |     |        | auto  | 1       | dense_weights_4_V       |                                                                                 |
+|     flow_control_loop_pipe_U                               | 52   | 1    |     |      |      |     |        |       |         |                         |                                                                                 |
+|     mac_muladd_16s_7s_24s_24_4_1_U32                       | 82   |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|       bind_op mul                                          |      |      |     |      |      |     |        | dsp48 | 3       | r_V_4                   | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273 |
+|       bind_op add                                          |      |      |     |      |      |     |        | dsp48 | 3       | ret_V                   | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|   dense_output_7_U0                                        | 240  | 510  | 19  | 8    |      |     |        |       |         |                         |                                                                                 |
+|     (dense_output_7_U0)                                    | 17   | 268  |     |      |      |     |        |       |         |                         |                                                                                 |
+|     grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201     | 223  | 242  | 19  | 8    |      |     |        |       |         |                         |                                                                                 |
+|       (grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201) | 39   | 117  |     |      |      |     |        |       |         |                         |                                                                                 |
+|       dense_biases_7_V_U                                   | 6    | 8    |     |      |      |     |        |       |         |                         |                                                                                 |
+|         bind_storage rom_1p                                |      |      |     |      |      |     |        | auto  | 1       | dense_biases_7_V        |                                                                                 |
+|       dense_weights_7_V_U                                  | 12   |      |     | 8    |      |     |        |       |         |                         |                                                                                 |
+|         bind_storage rom_np                                |      |      |     |      |      |     |        | auto  | 1       | dense_weights_7_V       |                                                                                 |
+|       flow_control_loop_pipe_sequential_init_U             | 16   | 2    |     |      |      |     |        |       |         |                         |                                                                                 |
+|       grp_exp_17_9_s_fu_435                                | 136  | 115  | 3   |      |      |     |        |       |         |                         |                                                                                 |
+|         (grp_exp_17_9_s_fu_435)                            | 67   | 42   |     |      |      |     |        |       |         |                         |                                                                                 |
+|         exp_x_msb_1_table_V_U                              | 41   | 25   |     |      |      |     |        |       |         |                         |                                                                                 |
+|           bind_storage rom_1p                              |      |      |     |      |      |     |        | auto  | 1       | exp_x_msb_1_table_V     |                                                                                 |
+|         exp_x_msb_2_m_1_table_V_U                          |      | 25   |     |      |      |     |        |       |         |                         |                                                                                 |
+|           bind_storage rom_1p                              |      |      |     |      |      |     |        | auto  | 1       | exp_x_msb_2_m_1_table_V |                                                                                 |
+|         f_x_lsb_table_V_U                                  | 1    | 3    |     |      |      |     |        |       |         |                         |                                                                                 |
+|           bind_storage rom_1p                              |      |      |     |      |      |     |        | auto  | 1       | f_x_lsb_table_V         |                                                                                 |
+|         mul_25ns_25ns_50_1_1_U48                           | 13   |      | 2   |      |      |     |        |       |         |                         |                                                                                 |
+|           bind_op mul                                      |      |      |     |      |      |     |        | auto  | 0       | r_V                     | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273 |
+|         mul_mul_25ns_18ns_43_4_1_U49                       | 16   | 20   | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|           bind_op mul                                      |      |      |     |      |      |     |        | dsp48 | 3       | r_V_3                   | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273 |
+|       mac_muladd_16s_9s_24ns_24_4_1_U57                    |      |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|         bind_op mul                                        |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1347              | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|         bind_op add                                        |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347              | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|       mac_muladd_16s_9s_24ns_24_4_1_U58                    |      |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|         bind_op mul                                        |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1347_1            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|         bind_op add                                        |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_1            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|       mac_muladd_16s_9s_24ns_24_4_1_U59                    |      |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|         bind_op mul                                        |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1347_2            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|         bind_op add                                        |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_2            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|       mac_muladd_16s_9s_24ns_24_4_1_U60                    |      |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|         bind_op mul                                        |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1347_3            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|         bind_op add                                        |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_3            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|       mac_muladd_16s_9s_24ns_24_4_1_U61                    |      |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|         bind_op mul                                        |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1347_4            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|         bind_op add                                        |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_4            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|       mac_muladd_16s_9s_24ns_24_4_1_U62                    |      |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|         bind_op mul                                        |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1347_5            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|         bind_op add                                        |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_5            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|       mac_muladd_16s_9s_24ns_24_4_1_U63                    |      |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|         bind_op mul                                        |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1347_6            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|         bind_op add                                        |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_6            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|       mac_muladd_16s_9s_24ns_24_4_1_U64                    |      |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|         bind_op mul                                        |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1347_7            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|         bind_op add                                        |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_7            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|       mac_muladd_16s_9s_24ns_24_4_1_U65                    |      |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|         bind_op mul                                        |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1347_8            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|         bind_op add                                        |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_8            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|       mac_muladd_16s_9s_24ns_24_4_1_U66                    |      |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|         bind_op mul                                        |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1347_9            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|         bind_op add                                        |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_9            | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|       mac_muladd_16s_9s_24ns_24_4_1_U67                    |      |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|         bind_op mul                                        |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1347_10           | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|         bind_op add                                        |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_10           | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|       mac_muladd_16s_9s_24ns_24_4_1_U68                    |      |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|         bind_op mul                                        |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1347_11           | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|         bind_op add                                        |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_11           | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|       mac_muladd_16s_9s_24ns_24_4_1_U69                    |      |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|         bind_op mul                                        |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1347_12           | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|         bind_op add                                        |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_12           | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|       mac_muladd_16s_9s_24ns_24_4_1_U70                    |      |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|         bind_op mul                                        |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1347_13           | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|         bind_op add                                        |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_13           | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|       mac_muladd_16s_9s_24ns_24_4_1_U71                    | 14   |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|         bind_op mul                                        |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln1347_14           | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|         bind_op add                                        |      |      |     |      |      |     |        | dsp48 | 3       | add_ln1347_14           | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 |
+|       mul_mul_16s_9s_24_4_1_U56                            |      |      | 1   |      |      |     |        |       |         |                         |                                                                                 |
+|         bind_op mul                                        |      |      |     |      |      |     |        | dsp48 | 3       | mul_ln818               | /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:818  |
+|   dense_output_out_V_U                                     | 100  | 22   |     |      |      |     |        |       |         |                         |                                                                                 |
+|     bind_storage ram_1p                                    |      |      |     |      |      |     |        | auto  | 1       | dense_output_out_V      | vitis_test/nnet/core.cpp:96                                                     |
+|   flatten_out_V_U                                          | 5    | 6    |     | 2    |      |     |        |       |         |                         |                                                                                 |
+|     bind_storage ram_1p                                    |      |      |     |      |      |     |        | auto  | 1       | flatten_out_V           | vitis_test/nnet/core.cpp:93                                                     |
+|   maxpool1d_2_U0                                           | 33   | 15   |     |      |      |     |        |       |         |                         |                                                                                 |
+|     (maxpool1d_2_U0)                                       | 6    | 14   |     |      |      |     |        |       |         |                         |                                                                                 |
+|   maxpool_out_V_U                                          | 118  | 22   |     |      |      |     |        |       |         |                         |                                                                                 |
+|     bind_storage ram_1p                                    |      |      |     |      |      |     |        | auto  | 1       | maxpool_out_V           | vitis_test/nnet/core.cpp:92                                                     |
+|   softmax_7_U0                                             | 915  | 1061 |     |      |      |     |        |       |         |                         |                                                                                 |
+|     (softmax_7_U0)                                         | 1    | 6    |     |      |      |     |        |       |         |                         |                                                                                 |
++------------------------------------------------------------+------+------+-----+------+------+-----+--------+-------+---------+-------------------------+---------------------------------------------------------------------------------+
+
+
+================================================================
+== RTL Synthesis Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 5.72%  | OK     |
+| FD                                                        | 50%       | 2.27%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 2.71%  | OK     |
+| CARRY8                                                    | 25%       | 2.88%  | OK     |
+| MUXF7                                                     | 15%       | 0.09%  | OK     |
+| DSP                                                       | 80%       | 8.89%  | OK     |
+| RAMB/FIFO                                                 | 80%       | 3.94%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 6.42%  | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 1323      | 91     | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.300ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.208ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== RTL Synthesis Timing Paths
+================================================================
+* Timing was met
++-------+-------+---------------------------------------------------------------------------+------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN                                                            | ENDPOINT PIN                                                     | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                                                                           |                                                                  |              |            |                |          DELAY |        DELAY |
++-------+-------+---------------------------------------------------------------------------+------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 5.366 | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]/C | batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[4]_srl2/D |           15 |         38 |          4.552 |          1.248 |        3.304 |
+| Path2 | 5.376 | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]/C | batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[6]_srl2/D |           15 |         38 |          4.542 |          1.216 |        3.326 |
+| Path3 | 5.376 | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]/C | batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[7]_srl2/D |           15 |         38 |          4.542 |          1.216 |        3.326 |
+| Path4 | 5.376 | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]/C | batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[8]_srl2/D |           15 |         38 |          4.542 |          1.216 |        3.326 |
+| Path5 | 5.430 | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]/C | batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[5]_srl2/D |           15 |         38 |          4.488 |          1.184 |        3.304 |
++-------+-------+---------------------------------------------------------------------------+------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +------------------------------------------------------------------------------------+-------------------+
+    | Path1 Cells                                                                        | Primitive Type    |
+    +------------------------------------------------------------------------------------+-------------------+
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]            | REGISTER.SDR.FDRE |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry_i_4      | CLB.LUT.LUT4      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry          | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_1         | CLB.LUT.LUT4      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_3         | CLB.LUT.LUT1      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry             | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry_i_1  | CLB.LUT.LUT2      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry      | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_8               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_2               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_11 | CLB.LUT.LUT5      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_2  | CLB.LUT.LUT4      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry      | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[5]_i_2               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[4]_i_2               | CLB.LUT.LUT4      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/divisor0_reg[4]_srl2_i_1               | CLB.LUT.LUT4      |
+    | batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[4]_srl2                     | CLB.SRL.SRL16E    |
+    +------------------------------------------------------------------------------------+-------------------+
+
+    +------------------------------------------------------------------------------------+-------------------+
+    | Path2 Cells                                                                        | Primitive Type    |
+    +------------------------------------------------------------------------------------+-------------------+
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]            | REGISTER.SDR.FDRE |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry_i_4      | CLB.LUT.LUT4      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry          | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_1         | CLB.LUT.LUT4      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_3         | CLB.LUT.LUT1      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry             | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry_i_1  | CLB.LUT.LUT2      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry      | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_8               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_2               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_11 | CLB.LUT.LUT5      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_2  | CLB.LUT.LUT4      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry      | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[5]_i_2               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[8]_i_2               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/divisor0_reg[6]_srl2_i_1               | CLB.LUT.LUT4      |
+    | batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[6]_srl2                     | CLB.SRL.SRL16E    |
+    +------------------------------------------------------------------------------------+-------------------+
+
+    +------------------------------------------------------------------------------------+-------------------+
+    | Path3 Cells                                                                        | Primitive Type    |
+    +------------------------------------------------------------------------------------+-------------------+
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]            | REGISTER.SDR.FDRE |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry_i_4      | CLB.LUT.LUT4      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry          | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_1         | CLB.LUT.LUT4      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_3         | CLB.LUT.LUT1      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry             | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry_i_1  | CLB.LUT.LUT2      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry      | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_8               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_2               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_11 | CLB.LUT.LUT5      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_2  | CLB.LUT.LUT4      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry      | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[5]_i_2               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[8]_i_2               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/divisor0_reg[7]_srl2_i_1               | CLB.LUT.LUT5      |
+    | batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[7]_srl2                     | CLB.SRL.SRL16E    |
+    +------------------------------------------------------------------------------------+-------------------+
+
+    +------------------------------------------------------------------------------------+-------------------+
+    | Path4 Cells                                                                        | Primitive Type    |
+    +------------------------------------------------------------------------------------+-------------------+
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]            | REGISTER.SDR.FDRE |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry_i_4      | CLB.LUT.LUT4      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry          | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_1         | CLB.LUT.LUT4      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_3         | CLB.LUT.LUT1      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry             | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry_i_1  | CLB.LUT.LUT2      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry      | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_8               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_2               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_11 | CLB.LUT.LUT5      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_2  | CLB.LUT.LUT4      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry      | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[5]_i_2               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[8]_i_2               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/divisor0_reg[8]_srl2_i_1               | CLB.LUT.LUT5      |
+    | batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[8]_srl2                     | CLB.SRL.SRL16E    |
+    +------------------------------------------------------------------------------------+-------------------+
+
+    +------------------------------------------------------------------------------------+-------------------+
+    | Path5 Cells                                                                        | Primitive Type    |
+    +------------------------------------------------------------------------------------+-------------------+
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]            | REGISTER.SDR.FDRE |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry_i_4      | CLB.LUT.LUT4      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry          | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_1         | CLB.LUT.LUT4      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_3         | CLB.LUT.LUT1      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry             | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry_i_1  | CLB.LUT.LUT2      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry      | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_8               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_2               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_11 | CLB.LUT.LUT5      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_2  | CLB.LUT.LUT4      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry      | CLB.CARRY.CARRY8  |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[5]_i_2               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[5]_i_1               | CLB.LUT.LUT6      |
+    | batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/divisor0_reg[5]_srl2_i_1               | CLB.LUT.LUT3      |
+    | batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[5]_srl2                     | CLB.SRL.SRL16E    |
+    +------------------------------------------------------------------------------------+-------------------+
+
+
+================================================================
+== RTL Synthesis Vivado Reports
+================================================================
++--------------------------+----------------------------------------------------------------------+
+| Report Type              | Report Location                                                      |
++--------------------------+----------------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/gesture_model_design_analysis_synth.rpt          |
+| failfast                 | impl/verilog/report/gesture_model_failfast_synth.rpt                 |
+| timing                   | impl/verilog/report/gesture_model_timing_synth.rpt                   |
+| timing_paths             | impl/verilog/report/gesture_model_timing_paths_synth.rpt             |
+| utilization              | impl/verilog/report/gesture_model_utilization_synth.rpt              |
+| utilization_hierarchical | impl/verilog/report/gesture_model_utilization_hierarchical_synth.rpt |
++--------------------------+----------------------------------------------------------------------+
+
+

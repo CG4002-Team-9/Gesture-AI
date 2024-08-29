@@ -1,0 +1,239 @@
+
+
+================================================================
+== Vitis HLS Report for 'gesture_model'
+================================================================
+* Date:           Thu Aug 29 18:13:58 2024
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        vitis_test
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.589 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+----------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
+    +---------+---------+----------+----------+-------+-------+----------+
+    |    17280|    17280|  0.173 ms|  0.173 ms|  15110|  15110|  dataflow|
+    +---------+---------+----------+----------+-------+-------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 16
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 16, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%conv1d_out_V = alloca i64 1" [vitis_test/nnet/core.cpp:90]   --->   Operation 17 'alloca' 'conv1d_out_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%bn1_out_V = alloca i64 1" [vitis_test/nnet/core.cpp:91]   --->   Operation 18 'alloca' 'bn1_out_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%maxpool_out_V = alloca i64 1" [vitis_test/nnet/core.cpp:92]   --->   Operation 19 'alloca' 'maxpool_out_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%flatten_out_V = alloca i64 1" [vitis_test/nnet/core.cpp:93]   --->   Operation 20 'alloca' 'flatten_out_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%dense1_out_V = alloca i64 1" [vitis_test/nnet/core.cpp:94]   --->   Operation 21 'alloca' 'dense1_out_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%bn2_out_V = alloca i64 1" [vitis_test/nnet/core.cpp:95]   --->   Operation 22 'alloca' 'bn2_out_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%dense_output_out_V = alloca i64 1" [vitis_test/nnet/core.cpp:96]   --->   Operation 23 'alloca' 'dense_output_out_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [2/2] (0.00ns)   --->   "%call_ln101 = call void @conv1d_0, i16 %input_r, i15 %conv1d_out_V" [vitis_test/nnet/core.cpp:101]   --->   Operation 24 'call' 'call_ln101' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 25 [1/2] (0.00ns)   --->   "%call_ln101 = call void @conv1d_0, i16 %input_r, i15 %conv1d_out_V" [vitis_test/nnet/core.cpp:101]   --->   Operation 25 'call' 'call_ln101' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 26 [2/2] (0.00ns)   --->   "%call_ln104 = call void @batchnorm_1, i15 %conv1d_out_V, i16 %bn1_out_V, i4 %bn_moving_mean_1_V, i9 %bn_gamma_1_V, i7 %bn_beta_1_V" [vitis_test/nnet/core.cpp:104]   --->   Operation 26 'call' 'call_ln104' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 27 [1/2] (0.00ns)   --->   "%call_ln104 = call void @batchnorm_1, i15 %conv1d_out_V, i16 %bn1_out_V, i4 %bn_moving_mean_1_V, i9 %bn_gamma_1_V, i7 %bn_beta_1_V" [vitis_test/nnet/core.cpp:104]   --->   Operation 27 'call' 'call_ln104' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 28 [2/2] (0.00ns)   --->   "%call_ln107 = call void @maxpool1d_2, i16 %bn1_out_V, i16 %maxpool_out_V" [vitis_test/nnet/core.cpp:107]   --->   Operation 28 'call' 'call_ln107' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 29 [1/2] (0.00ns)   --->   "%call_ln107 = call void @maxpool1d_2, i16 %bn1_out_V, i16 %maxpool_out_V" [vitis_test/nnet/core.cpp:107]   --->   Operation 29 'call' 'call_ln107' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 30 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_42_1_proc, i16 %maxpool_out_V, i16 %flatten_out_V"   --->   Operation 30 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 31 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_42_1_proc, i16 %maxpool_out_V, i16 %flatten_out_V"   --->   Operation 31 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 32 [2/2] (0.00ns)   --->   "%call_ln113 = call void @dense_4, i16 %flatten_out_V, i15 %dense1_out_V, i8 %dense_biases_4_V, i7 %dense_weights_4_V" [vitis_test/nnet/core.cpp:113]   --->   Operation 32 'call' 'call_ln113' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 33 [1/2] (0.00ns)   --->   "%call_ln113 = call void @dense_4, i16 %flatten_out_V, i15 %dense1_out_V, i8 %dense_biases_4_V, i7 %dense_weights_4_V" [vitis_test/nnet/core.cpp:113]   --->   Operation 33 'call' 'call_ln113' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 34 [2/2] (0.00ns)   --->   "%call_ln116 = call void @batchnorm_5, i15 %dense1_out_V, i16 %bn2_out_V, i9 %bn_moving_mean_5_V, i8 %bn_moving_variance_5_V, i10 %bn_gamma_5_V, i8 %bn_beta_5_V" [vitis_test/nnet/core.cpp:116]   --->   Operation 34 'call' 'call_ln116' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 35 [1/2] (0.00ns)   --->   "%call_ln116 = call void @batchnorm_5, i15 %dense1_out_V, i16 %bn2_out_V, i9 %bn_moving_mean_5_V, i8 %bn_moving_variance_5_V, i10 %bn_gamma_5_V, i8 %bn_beta_5_V" [vitis_test/nnet/core.cpp:116]   --->   Operation 35 'call' 'call_ln116' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 0.00>
+ST_13 : Operation 36 [2/2] (0.00ns)   --->   "%call_ln119 = call void @dense_output_7, i16 %bn2_out_V, i16 %dense_output_out_V, i9 %dense_weights_7_V, i8 %dense_biases_7_V, i11 %f_x_lsb_table_V, i25 %exp_x_msb_2_m_1_table_V, i25 %exp_x_msb_1_table_V" [vitis_test/nnet/core.cpp:119]   --->   Operation 36 'call' 'call_ln119' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 0.00>
+ST_14 : Operation 37 [1/2] (0.00ns)   --->   "%call_ln119 = call void @dense_output_7, i16 %bn2_out_V, i16 %dense_output_out_V, i9 %dense_weights_7_V, i8 %dense_biases_7_V, i11 %f_x_lsb_table_V, i25 %exp_x_msb_2_m_1_table_V, i25 %exp_x_msb_1_table_V" [vitis_test/nnet/core.cpp:119]   --->   Operation 37 'call' 'call_ln119' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 0.00>
+ST_15 : Operation 38 [2/2] (0.00ns)   --->   "%call_ln122 = call void @softmax_7, i16 %dense_output_out_V, i16 %output_r" [vitis_test/nnet/core.cpp:122]   --->   Operation 38 'call' 'call_ln122' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 0.00>
+ST_16 : Operation 39 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln98 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_8" [vitis_test/nnet/core.cpp:98]   --->   Operation 39 'specdataflowpipeline' 'specdataflowpipeline_ln98' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 40 [1/1] (0.00ns)   --->   "%spectopmodule_ln88 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [vitis_test/nnet/core.cpp:88]   --->   Operation 40 'spectopmodule' 'spectopmodule_ln88' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_r, void @empty_7, i32 0, i32 0, void @empty_8, i32 4294967295, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 42 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_r"   --->   Operation 42 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %output_r, void @empty_7, i32 0, i32 0, void @empty_8, i32 4294967295, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 44 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %output_r"   --->   Operation 44 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 45 [1/2] (0.00ns)   --->   "%call_ln122 = call void @softmax_7, i16 %dense_output_out_V, i16 %output_r" [vitis_test/nnet/core.cpp:122]   --->   Operation 45 'call' 'call_ln122' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 46 [1/1] (0.00ns)   --->   "%ret_ln123 = ret" [vitis_test/nnet/core.cpp:123]   --->   Operation 46 'ret' 'ret_ln123' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+ <State 13>: 0ns
+The critical path consists of the following:
+
+ <State 14>: 0ns
+The critical path consists of the following:
+
+ <State 15>: 0ns
+The critical path consists of the following:
+
+ <State 16>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

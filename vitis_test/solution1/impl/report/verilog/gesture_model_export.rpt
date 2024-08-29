@@ -1,0 +1,23 @@
+
+
+Implementation tool: Xilinx Vivado v.2022.2
+Project:             vitis_test
+Solution:            solution1
+Device target:       xczu3eg-sbva484-2-i
+Report date:         Thu Aug 29 18:17:44 +08 2024
+
+#=== Post-Synthesis Resource usage ===
+SLICE:            0
+LUT:           4034
+FF:            3204
+DSP:             32
+BRAM:            17
+URAM:             0
+LATCH:            0
+SRL:            184
+CLB:              0
+
+#=== Final timing ===
+CP required:                     10.000
+CP achieved post-synthesis:      4.634
+Timing met
