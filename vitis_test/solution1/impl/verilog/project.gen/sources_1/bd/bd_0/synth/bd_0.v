@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Thu Aug 29 18:15:04 2024
+//Date        : Fri Aug 30 03:12:30 2024
 //Host        : prince-ThinkPad-E14-Gen-5 running 64-bit Ubuntu 24.04 LTS
 //Command     : generate_target bd_0.bd
 //Design      : bd_0
@@ -12,136 +12,136 @@
 (* CORE_GENERATION_INFO = "bd_0,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_0,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=1,numReposBlks=1,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "bd_0.hwdef" *) 
 module bd_0
    (ap_clk,
-    ap_ctrl_done,
-    ap_ctrl_idle,
-    ap_ctrl_ready,
-    ap_ctrl_start,
-    ap_rst,
-    input_r_address0,
-    input_r_address1,
-    input_r_ce0,
-    input_r_ce1,
-    input_r_d0,
-    input_r_d1,
-    input_r_q0,
-    input_r_q1,
-    input_r_we0,
-    input_r_we1,
-    output_r_address0,
-    output_r_address1,
-    output_r_ce0,
-    output_r_ce1,
-    output_r_d0,
-    output_r_d1,
-    output_r_q0,
-    output_r_q1,
-    output_r_we0,
-    output_r_we1);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.AP_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.AP_CLK, ASSOCIATED_RESET ap_rst, CLK_DOMAIN bd_0_ap_clk_0, FREQ_HZ 100000000.0, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input ap_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl " *) output ap_ctrl_done;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl " *) output ap_ctrl_idle;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl " *) output ap_ctrl_ready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl " *) input ap_ctrl_start;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.AP_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.AP_RST, INSERT_VIP 0, POLARITY ACTIVE_HIGH" *) input ap_rst;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.INPUT_R_ADDRESS0 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.INPUT_R_ADDRESS0, LAYERED_METADATA undef" *) output [6:0]input_r_address0;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.INPUT_R_ADDRESS1 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.INPUT_R_ADDRESS1, LAYERED_METADATA undef" *) output [6:0]input_r_address1;
-  output input_r_ce0;
-  output input_r_ce1;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.INPUT_R_D0 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.INPUT_R_D0, LAYERED_METADATA undef" *) output [15:0]input_r_d0;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.INPUT_R_D1 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.INPUT_R_D1, LAYERED_METADATA undef" *) output [15:0]input_r_d1;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.INPUT_R_Q0 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.INPUT_R_Q0, LAYERED_METADATA undef" *) input [15:0]input_r_q0;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.INPUT_R_Q1 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.INPUT_R_Q1, LAYERED_METADATA undef" *) input [15:0]input_r_q1;
-  output input_r_we0;
-  output input_r_we1;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.OUTPUT_R_ADDRESS0 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.OUTPUT_R_ADDRESS0, LAYERED_METADATA undef" *) output [4:0]output_r_address0;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.OUTPUT_R_ADDRESS1 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.OUTPUT_R_ADDRESS1, LAYERED_METADATA undef" *) output [4:0]output_r_address1;
-  output output_r_ce0;
-  output output_r_ce1;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.OUTPUT_R_D0 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.OUTPUT_R_D0, LAYERED_METADATA undef" *) output [15:0]output_r_d0;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.OUTPUT_R_D1 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.OUTPUT_R_D1, LAYERED_METADATA undef" *) output [15:0]output_r_d1;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.OUTPUT_R_Q0 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.OUTPUT_R_Q0, LAYERED_METADATA undef" *) input [15:0]output_r_q0;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.OUTPUT_R_Q1 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.OUTPUT_R_Q1, LAYERED_METADATA undef" *) input [15:0]output_r_q1;
-  output output_r_we0;
-  output output_r_we1;
+    ap_rst_n,
+    input_stream_tdata,
+    input_stream_tready,
+    input_stream_tvalid,
+    interrupt,
+    output_stream_tdata,
+    output_stream_tready,
+    output_stream_tvalid,
+    s_axi_control_araddr,
+    s_axi_control_arready,
+    s_axi_control_arvalid,
+    s_axi_control_awaddr,
+    s_axi_control_awready,
+    s_axi_control_awvalid,
+    s_axi_control_bready,
+    s_axi_control_bresp,
+    s_axi_control_bvalid,
+    s_axi_control_rdata,
+    s_axi_control_rready,
+    s_axi_control_rresp,
+    s_axi_control_rvalid,
+    s_axi_control_wdata,
+    s_axi_control_wready,
+    s_axi_control_wstrb,
+    s_axi_control_wvalid);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.AP_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.AP_CLK, ASSOCIATED_BUSIF input_stream:output_stream:s_axi_control, ASSOCIATED_RESET ap_rst_n, CLK_DOMAIN bd_0_ap_clk_0, FREQ_HZ 100000000.0, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input ap_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.AP_RST_N RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.AP_RST_N, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input ap_rst_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME input_stream, CLK_DOMAIN bd_0_ap_clk_0, FREQ_HZ 100000000.0, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) input [15:0]input_stream_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream " *) output input_stream_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream " *) input input_stream_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 INTR.INTERRUPT INTERRUPT" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME INTR.INTERRUPT, PortWidth 1, SENSITIVITY LEVEL_HIGH" *) output interrupt;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME output_stream, CLK_DOMAIN bd_0_ap_clk_0, FREQ_HZ 100000000.0, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) output [15:0]output_stream_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream " *) input output_stream_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream " *) output output_stream_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_control, ADDR_WIDTH 32, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN bd_0_ap_clk_0, DATA_WIDTH 32, FREQ_HZ 100000000.0, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 0, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 1, NUM_READ_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 1, NUM_WRITE_THREADS 1, PHASE 0.0, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) input [3:0]s_axi_control_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) output s_axi_control_arready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) input s_axi_control_arvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) input [3:0]s_axi_control_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) output s_axi_control_awready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) input s_axi_control_awvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) input s_axi_control_bready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) output [1:0]s_axi_control_bresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) output s_axi_control_bvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) output [31:0]s_axi_control_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) input s_axi_control_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) output [1:0]s_axi_control_rresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) output s_axi_control_rvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) input [31:0]s_axi_control_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) output s_axi_control_wready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) input [3:0]s_axi_control_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) input s_axi_control_wvalid;
 
   wire ap_clk_0_1;
-  wire ap_ctrl_0_1_done;
-  wire ap_ctrl_0_1_idle;
-  wire ap_ctrl_0_1_ready;
-  wire ap_ctrl_0_1_start;
-  wire ap_rst_0_1;
-  wire [6:0]hls_inst_input_r_address0;
-  wire [6:0]hls_inst_input_r_address1;
-  wire hls_inst_input_r_ce0;
-  wire hls_inst_input_r_ce1;
-  wire [15:0]hls_inst_input_r_d0;
-  wire [15:0]hls_inst_input_r_d1;
-  wire hls_inst_input_r_we0;
-  wire hls_inst_input_r_we1;
-  wire [4:0]hls_inst_output_r_address0;
-  wire [4:0]hls_inst_output_r_address1;
-  wire hls_inst_output_r_ce0;
-  wire hls_inst_output_r_ce1;
-  wire [15:0]hls_inst_output_r_d0;
-  wire [15:0]hls_inst_output_r_d1;
-  wire hls_inst_output_r_we0;
-  wire hls_inst_output_r_we1;
-  wire [15:0]input_r_q0_0_1;
-  wire [15:0]input_r_q1_0_1;
-  wire [15:0]output_r_q0_0_1;
-  wire [15:0]output_r_q1_0_1;
+  wire ap_rst_n_0_1;
+  wire hls_inst_interrupt;
+  wire [15:0]hls_inst_output_stream_TDATA;
+  wire hls_inst_output_stream_TREADY;
+  wire hls_inst_output_stream_TVALID;
+  wire [15:0]input_stream_0_1_TDATA;
+  wire input_stream_0_1_TREADY;
+  wire input_stream_0_1_TVALID;
+  wire [3:0]s_axi_control_0_1_ARADDR;
+  wire s_axi_control_0_1_ARREADY;
+  wire s_axi_control_0_1_ARVALID;
+  wire [3:0]s_axi_control_0_1_AWADDR;
+  wire s_axi_control_0_1_AWREADY;
+  wire s_axi_control_0_1_AWVALID;
+  wire s_axi_control_0_1_BREADY;
+  wire [1:0]s_axi_control_0_1_BRESP;
+  wire s_axi_control_0_1_BVALID;
+  wire [31:0]s_axi_control_0_1_RDATA;
+  wire s_axi_control_0_1_RREADY;
+  wire [1:0]s_axi_control_0_1_RRESP;
+  wire s_axi_control_0_1_RVALID;
+  wire [31:0]s_axi_control_0_1_WDATA;
+  wire s_axi_control_0_1_WREADY;
+  wire [3:0]s_axi_control_0_1_WSTRB;
+  wire s_axi_control_0_1_WVALID;
 
   assign ap_clk_0_1 = ap_clk;
-  assign ap_ctrl_0_1_start = ap_ctrl_start;
-  assign ap_ctrl_done = ap_ctrl_0_1_done;
-  assign ap_ctrl_idle = ap_ctrl_0_1_idle;
-  assign ap_ctrl_ready = ap_ctrl_0_1_ready;
-  assign ap_rst_0_1 = ap_rst;
-  assign input_r_address0[6:0] = hls_inst_input_r_address0;
-  assign input_r_address1[6:0] = hls_inst_input_r_address1;
-  assign input_r_ce0 = hls_inst_input_r_ce0;
-  assign input_r_ce1 = hls_inst_input_r_ce1;
-  assign input_r_d0[15:0] = hls_inst_input_r_d0;
-  assign input_r_d1[15:0] = hls_inst_input_r_d1;
-  assign input_r_q0_0_1 = input_r_q0[15:0];
-  assign input_r_q1_0_1 = input_r_q1[15:0];
-  assign input_r_we0 = hls_inst_input_r_we0;
-  assign input_r_we1 = hls_inst_input_r_we1;
-  assign output_r_address0[4:0] = hls_inst_output_r_address0;
-  assign output_r_address1[4:0] = hls_inst_output_r_address1;
-  assign output_r_ce0 = hls_inst_output_r_ce0;
-  assign output_r_ce1 = hls_inst_output_r_ce1;
-  assign output_r_d0[15:0] = hls_inst_output_r_d0;
-  assign output_r_d1[15:0] = hls_inst_output_r_d1;
-  assign output_r_q0_0_1 = output_r_q0[15:0];
-  assign output_r_q1_0_1 = output_r_q1[15:0];
-  assign output_r_we0 = hls_inst_output_r_we0;
-  assign output_r_we1 = hls_inst_output_r_we1;
+  assign ap_rst_n_0_1 = ap_rst_n;
+  assign hls_inst_output_stream_TREADY = output_stream_tready;
+  assign input_stream_0_1_TDATA = input_stream_tdata[15:0];
+  assign input_stream_0_1_TVALID = input_stream_tvalid;
+  assign input_stream_tready = input_stream_0_1_TREADY;
+  assign interrupt = hls_inst_interrupt;
+  assign output_stream_tdata[15:0] = hls_inst_output_stream_TDATA;
+  assign output_stream_tvalid = hls_inst_output_stream_TVALID;
+  assign s_axi_control_0_1_ARADDR = s_axi_control_araddr[3:0];
+  assign s_axi_control_0_1_ARVALID = s_axi_control_arvalid;
+  assign s_axi_control_0_1_AWADDR = s_axi_control_awaddr[3:0];
+  assign s_axi_control_0_1_AWVALID = s_axi_control_awvalid;
+  assign s_axi_control_0_1_BREADY = s_axi_control_bready;
+  assign s_axi_control_0_1_RREADY = s_axi_control_rready;
+  assign s_axi_control_0_1_WDATA = s_axi_control_wdata[31:0];
+  assign s_axi_control_0_1_WSTRB = s_axi_control_wstrb[3:0];
+  assign s_axi_control_0_1_WVALID = s_axi_control_wvalid;
+  assign s_axi_control_arready = s_axi_control_0_1_ARREADY;
+  assign s_axi_control_awready = s_axi_control_0_1_AWREADY;
+  assign s_axi_control_bresp[1:0] = s_axi_control_0_1_BRESP;
+  assign s_axi_control_bvalid = s_axi_control_0_1_BVALID;
+  assign s_axi_control_rdata[31:0] = s_axi_control_0_1_RDATA;
+  assign s_axi_control_rresp[1:0] = s_axi_control_0_1_RRESP;
+  assign s_axi_control_rvalid = s_axi_control_0_1_RVALID;
+  assign s_axi_control_wready = s_axi_control_0_1_WREADY;
   bd_0_hls_inst_0 hls_inst
        (.ap_clk(ap_clk_0_1),
-        .ap_done(ap_ctrl_0_1_done),
-        .ap_idle(ap_ctrl_0_1_idle),
-        .ap_ready(ap_ctrl_0_1_ready),
-        .ap_rst(ap_rst_0_1),
-        .ap_start(ap_ctrl_0_1_start),
-        .input_r_address0(hls_inst_input_r_address0),
-        .input_r_address1(hls_inst_input_r_address1),
-        .input_r_ce0(hls_inst_input_r_ce0),
-        .input_r_ce1(hls_inst_input_r_ce1),
-        .input_r_d0(hls_inst_input_r_d0),
-        .input_r_d1(hls_inst_input_r_d1),
-        .input_r_q0(input_r_q0_0_1),
-        .input_r_q1(input_r_q1_0_1),
-        .input_r_we0(hls_inst_input_r_we0),
-        .input_r_we1(hls_inst_input_r_we1),
-        .output_r_address0(hls_inst_output_r_address0),
-        .output_r_address1(hls_inst_output_r_address1),
-        .output_r_ce0(hls_inst_output_r_ce0),
-        .output_r_ce1(hls_inst_output_r_ce1),
-        .output_r_d0(hls_inst_output_r_d0),
-        .output_r_d1(hls_inst_output_r_d1),
-        .output_r_q0(output_r_q0_0_1),
-        .output_r_q1(output_r_q1_0_1),
-        .output_r_we0(hls_inst_output_r_we0),
-        .output_r_we1(hls_inst_output_r_we1));
+        .ap_rst_n(ap_rst_n_0_1),
+        .input_stream_TDATA(input_stream_0_1_TDATA),
+        .input_stream_TREADY(input_stream_0_1_TREADY),
+        .input_stream_TVALID(input_stream_0_1_TVALID),
+        .interrupt(hls_inst_interrupt),
+        .output_stream_TDATA(hls_inst_output_stream_TDATA),
+        .output_stream_TREADY(hls_inst_output_stream_TREADY),
+        .output_stream_TVALID(hls_inst_output_stream_TVALID),
+        .s_axi_control_ARADDR(s_axi_control_0_1_ARADDR),
+        .s_axi_control_ARREADY(s_axi_control_0_1_ARREADY),
+        .s_axi_control_ARVALID(s_axi_control_0_1_ARVALID),
+        .s_axi_control_AWADDR(s_axi_control_0_1_AWADDR),
+        .s_axi_control_AWREADY(s_axi_control_0_1_AWREADY),
+        .s_axi_control_AWVALID(s_axi_control_0_1_AWVALID),
+        .s_axi_control_BREADY(s_axi_control_0_1_BREADY),
+        .s_axi_control_BRESP(s_axi_control_0_1_BRESP),
+        .s_axi_control_BVALID(s_axi_control_0_1_BVALID),
+        .s_axi_control_RDATA(s_axi_control_0_1_RDATA),
+        .s_axi_control_RREADY(s_axi_control_0_1_RREADY),
+        .s_axi_control_RRESP(s_axi_control_0_1_RRESP),
+        .s_axi_control_RVALID(s_axi_control_0_1_RVALID),
+        .s_axi_control_WDATA(s_axi_control_0_1_WDATA),
+        .s_axi_control_WREADY(s_axi_control_0_1_WREADY),
+        .s_axi_control_WSTRB(s_axi_control_0_1_WSTRB),
+        .s_axi_control_WVALID(s_axi_control_0_1_WVALID));
 endmodule

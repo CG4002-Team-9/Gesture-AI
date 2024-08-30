@@ -5,7 +5,7 @@
 // ==============================================================
 #ifndef __gesture_model_mac_muladd_24s_9ns_15s_24_4_1__HH__
 #define __gesture_model_mac_muladd_24s_9ns_15s_24_4_1__HH__
-#include "gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_6.h"
+#include "gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_2.h"
 
 template<
     int ID,
@@ -25,16 +25,16 @@ SC_MODULE(gesture_model_mac_muladd_24s_9ns_15s_24_4_1) {
 
 
 
-    gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_6 gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_6_U;
+    gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_2 gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_2_U;
 
-    SC_CTOR(gesture_model_mac_muladd_24s_9ns_15s_24_4_1):  gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_6_U ("gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_6_U") {
-        gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_6_U.clk(clk);
-        gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_6_U.rst(reset);
-        gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_6_U.ce(ce);
-        gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_6_U.in0(din0);
-        gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_6_U.in1(din1);
-        gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_6_U.in2(din2);
-        gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_6_U.dout(dout);
+    SC_CTOR(gesture_model_mac_muladd_24s_9ns_15s_24_4_1):  gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_2_U ("gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_2_U") {
+        gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_2_U.clk(clk);
+        gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_2_U.rst(reset);
+        gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_2_U.ce(ce);
+        gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_2_U.in0(din0);
+        gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_2_U.in1(din1);
+        gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_2_U.in2(din2);
+        gesture_model_mac_muladd_24s_9ns_15s_24_4_1_DSP48_2_U.dout(dout);
 
     }
 

@@ -5,7 +5,7 @@
 // ==============================================================
 #ifndef __gesture_model_mac_muladd_16s_7s_24s_24_4_1__HH__
 #define __gesture_model_mac_muladd_16s_7s_24s_24_4_1__HH__
-#include "gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_2.h"
+#include "gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_3.h"
 
 template<
     int ID,
@@ -25,16 +25,16 @@ SC_MODULE(gesture_model_mac_muladd_16s_7s_24s_24_4_1) {
 
 
 
-    gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_2 gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_2_U;
+    gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_3 gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_3_U;
 
-    SC_CTOR(gesture_model_mac_muladd_16s_7s_24s_24_4_1):  gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_2_U ("gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_2_U") {
-        gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_2_U.clk(clk);
-        gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_2_U.rst(reset);
-        gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_2_U.ce(ce);
-        gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_2_U.in0(din0);
-        gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_2_U.in1(din1);
-        gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_2_U.in2(din2);
-        gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_2_U.dout(dout);
+    SC_CTOR(gesture_model_mac_muladd_16s_7s_24s_24_4_1):  gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_3_U ("gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_3_U") {
+        gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_3_U.clk(clk);
+        gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_3_U.rst(reset);
+        gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_3_U.ce(ce);
+        gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_3_U.in0(din0);
+        gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_3_U.in1(din1);
+        gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_3_U.in2(din2);
+        gesture_model_mac_muladd_16s_7s_24s_24_4_1_DSP48_3_U.dout(dout);
 
     }
 

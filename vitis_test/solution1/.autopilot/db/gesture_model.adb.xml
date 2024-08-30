@@ -3,91 +3,115 @@
 
 <trans_list>
 
-<trans id="47" from="1" to="2">
+<trans id="55" from="1" to="2">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="48" from="2" to="3">
+<trans id="56" from="2" to="3">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="49" from="3" to="4">
+<trans id="57" from="3" to="4">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="50" from="4" to="5">
+<trans id="58" from="4" to="5">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="51" from="5" to="6">
+<trans id="59" from="5" to="6">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="52" from="6" to="7">
+<trans id="60" from="6" to="7">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="53" from="7" to="8">
+<trans id="61" from="7" to="8">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="54" from="8" to="9">
+<trans id="62" from="8" to="9">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="55" from="9" to="10">
+<trans id="63" from="9" to="10">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="56" from="10" to="11">
+<trans id="64" from="10" to="11">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="57" from="11" to="12">
+<trans id="65" from="11" to="12">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="58" from="12" to="13">
+<trans id="66" from="12" to="13">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="59" from="13" to="14">
+<trans id="67" from="13" to="14">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="60" from="14" to="15">
+<trans id="68" from="14" to="15">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="61" from="15" to="16">
+<trans id="69" from="15" to="16">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="70" from="16" to="17">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="71" from="17" to="18">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="72" from="18" to="19">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="73" from="19" to="20">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
@@ -100,70 +124,6 @@
 
 <state id="1" st_id="1">
 
-<operation id="17" st_id="1" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="23" bw="15" op_0_bw="64">
-<![CDATA[
-entry:6 %conv1d_out_V = alloca i64 1
-
-]]></Node>
-<StgValue><ssdm name="conv1d_out_V"/><MemPortTyVec>2 3 </MemPortTyVec>
-</StgValue>
-</operation>
-
-<operation id="18" st_id="1" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="24" bw="16" op_0_bw="64">
-<![CDATA[
-entry:7 %bn1_out_V = alloca i64 1
-
-]]></Node>
-<StgValue><ssdm name="bn1_out_V"/><MemPortTyVec>2 1 </MemPortTyVec>
-</StgValue>
-</operation>
-
-<operation id="19" st_id="1" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="25" bw="16" op_0_bw="64">
-<![CDATA[
-entry:8 %maxpool_out_V = alloca i64 1
-
-]]></Node>
-<StgValue><ssdm name="maxpool_out_V"/><MemPortTyVec>2 3 </MemPortTyVec>
-</StgValue>
-</operation>
-
-<operation id="20" st_id="1" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="26" bw="16" op_0_bw="64">
-<![CDATA[
-entry:9 %flatten_out_V = alloca i64 1
-
-]]></Node>
-<StgValue><ssdm name="flatten_out_V"/><MemPortTyVec>2 3 </MemPortTyVec>
-</StgValue>
-</operation>
-
 <operation id="21" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
@@ -171,12 +131,12 @@ entry:9 %flatten_out_V = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="27" bw="15" op_0_bw="64">
+<Node id="41" bw="16" op_0_bw="64">
 <![CDATA[
-entry:10 %dense1_out_V = alloca i64 1
+entry:7 %input_V_0 = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="dense1_out_V"/><MemPortTyVec>2 3 </MemPortTyVec>
+<StgValue><ssdm name="input_V_0"/><MemPortTyVec>2 1 </MemPortTyVec>
 </StgValue>
 </operation>
 
@@ -187,12 +147,12 @@ entry:10 %dense1_out_V = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="28" bw="16" op_0_bw="64">
+<Node id="42" bw="16" op_0_bw="64">
 <![CDATA[
-entry:11 %bn2_out_V = alloca i64 1
+entry:8 %output_V = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="bn2_out_V"/><MemPortTyVec>2 1 </MemPortTyVec>
+<StgValue><ssdm name="output_V"/><MemPortTyVec>2 1 </MemPortTyVec>
 </StgValue>
 </operation>
 
@@ -203,738 +163,1061 @@ entry:11 %bn2_out_V = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="29" bw="16" op_0_bw="64">
+<Node id="43" bw="15" op_0_bw="64">
 <![CDATA[
-entry:12 %dense_output_out_V = alloca i64 1
+entry:9 %conv1d_out_0_V = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="dense_output_out_V"/><MemPortTyVec>2 3 </MemPortTyVec>
+<StgValue><ssdm name="conv1d_out_0_V"/><MemPortTyVec>2 3 </MemPortTyVec>
 </StgValue>
 </operation>
 
-<operation id="24" st_id="1" stage="2" lat="2">
-<core></core>
+<operation id="24" st_id="1" stage="1" lat="1">
+<core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="30" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="15">
+<Node id="44" bw="16" op_0_bw="64">
 <![CDATA[
-entry:13 %call_ln101 = call void @conv1d_0, i16 %input_r, i15 %conv1d_out_V
+entry:10 %batch_norm_out_0_V = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="call_ln101"/></StgValue>
+<StgValue><ssdm name="batch_norm_out_0_V"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="25" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="45" bw="16" op_0_bw="64">
+<![CDATA[
+entry:11 %max_pool_out_0_V = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="max_pool_out_0_V"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="26" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="46" bw="16" op_0_bw="64">
+<![CDATA[
+entry:12 %flatten_out_0_V = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="flatten_out_0_V"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="27" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="47" bw="15" op_0_bw="64">
+<![CDATA[
+entry:13 %dense_out_0_V = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="dense_out_0_V"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="28" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="48" bw="16" op_0_bw="64">
+<![CDATA[
+entry:14 %batch_norm_out_1_V = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="batch_norm_out_1_V"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
 </operation>
 </state>
 
 <state id="2" st_id="2">
 
-<operation id="25" st_id="2" stage="1" lat="2">
+<operation id="29" st_id="2" stage="2" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="30" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="15">
+<Node id="49" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16">
 <![CDATA[
-entry:13 %call_ln101 = call void @conv1d_0, i16 %input_r, i15 %conv1d_out_V
+entry:15 %call_ln0 = call void @Loop_VITIS_LOOP_149_1_proc8, i16 %input_stream, i16 %input_V_0
 
 ]]></Node>
-<StgValue><ssdm name="call_ln101"/></StgValue>
+<StgValue><ssdm name="call_ln0"/></StgValue>
 </operation>
 </state>
 
 <state id="3" st_id="3">
 
-<operation id="26" st_id="3" stage="2" lat="2">
+<operation id="30" st_id="3" stage="1" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="31" bw="0" op_0_bw="0" op_1_bw="15" op_2_bw="16" op_3_bw="4" op_4_bw="9" op_5_bw="7" op_6_bw="0" op_7_bw="0">
+<Node id="49" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16">
 <![CDATA[
-entry:14 %call_ln104 = call void @batchnorm_1, i15 %conv1d_out_V, i16 %bn1_out_V, i4 %bn_moving_mean_1_V, i9 %bn_gamma_1_V, i7 %bn_beta_1_V
+entry:15 %call_ln0 = call void @Loop_VITIS_LOOP_149_1_proc8, i16 %input_stream, i16 %input_V_0
 
 ]]></Node>
-<StgValue><ssdm name="call_ln104"/></StgValue>
+<StgValue><ssdm name="call_ln0"/></StgValue>
 </operation>
 </state>
 
 <state id="4" st_id="4">
 
-<operation id="27" st_id="4" stage="1" lat="2">
+<operation id="31" st_id="4" stage="2" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="31" bw="0" op_0_bw="0" op_1_bw="15" op_2_bw="16" op_3_bw="4" op_4_bw="9" op_5_bw="7" op_6_bw="0" op_7_bw="0">
+<Node id="50" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="15" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="7" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-entry:14 %call_ln104 = call void @batchnorm_1, i15 %conv1d_out_V, i16 %bn1_out_V, i4 %bn_moving_mean_1_V, i9 %bn_gamma_1_V, i7 %bn_beta_1_V
+entry:16 %call_ln157 = call void @conv1d_0, i16 %input_V_0, i15 %conv1d_out_0_V, i8 %conv1d_0_weights_V_0_0, i8 %conv1d_0_weights_V_1_0, i8 %conv1d_0_weights_V_2_0, i7 %conv1d_0_biases_V
 
 ]]></Node>
-<StgValue><ssdm name="call_ln104"/></StgValue>
+<StgValue><ssdm name="call_ln157"/></StgValue>
 </operation>
 </state>
 
 <state id="5" st_id="5">
 
-<operation id="28" st_id="5" stage="2" lat="2">
+<operation id="32" st_id="5" stage="1" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="0" op_4_bw="0">
+<Node id="50" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="15" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="7" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-entry:15 %call_ln107 = call void @maxpool1d_2, i16 %bn1_out_V, i16 %maxpool_out_V
+entry:16 %call_ln157 = call void @conv1d_0, i16 %input_V_0, i15 %conv1d_out_0_V, i8 %conv1d_0_weights_V_0_0, i8 %conv1d_0_weights_V_1_0, i8 %conv1d_0_weights_V_2_0, i7 %conv1d_0_biases_V
 
 ]]></Node>
-<StgValue><ssdm name="call_ln107"/></StgValue>
+<StgValue><ssdm name="call_ln157"/></StgValue>
 </operation>
 </state>
 
 <state id="6" st_id="6">
 
-<operation id="29" st_id="6" stage="1" lat="2">
+<operation id="33" st_id="6" stage="2" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="0" op_4_bw="0">
+<Node id="51" bw="0" op_0_bw="0" op_1_bw="15" op_2_bw="16" op_3_bw="5" op_4_bw="1" op_5_bw="9" op_6_bw="7" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-entry:15 %call_ln107 = call void @maxpool1d_2, i16 %bn1_out_V, i16 %maxpool_out_V
+entry:17 %call_ln158 = call void @batch_normalization_0, i15 %conv1d_out_0_V, i16 %batch_norm_out_0_V, i5 %batch_norm_0_mean_V, i1 %batch_norm_0_variance_V, i9 %batch_norm_0_gamma_V, i7 %batch_norm_0_beta_V
 
 ]]></Node>
-<StgValue><ssdm name="call_ln107"/></StgValue>
+<StgValue><ssdm name="call_ln158"/></StgValue>
 </operation>
 </state>
 
 <state id="7" st_id="7">
 
-<operation id="30" st_id="7" stage="2" lat="2">
+<operation id="34" st_id="7" stage="1" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="33" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="0" op_4_bw="0">
+<Node id="51" bw="0" op_0_bw="0" op_1_bw="15" op_2_bw="16" op_3_bw="5" op_4_bw="1" op_5_bw="9" op_6_bw="7" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-entry:16 %call_ln0 = call void @Loop_VITIS_LOOP_42_1_proc, i16 %maxpool_out_V, i16 %flatten_out_V
+entry:17 %call_ln158 = call void @batch_normalization_0, i15 %conv1d_out_0_V, i16 %batch_norm_out_0_V, i5 %batch_norm_0_mean_V, i1 %batch_norm_0_variance_V, i9 %batch_norm_0_gamma_V, i7 %batch_norm_0_beta_V
 
 ]]></Node>
-<StgValue><ssdm name="call_ln0"/></StgValue>
+<StgValue><ssdm name="call_ln158"/></StgValue>
 </operation>
 </state>
 
 <state id="8" st_id="8">
 
-<operation id="31" st_id="8" stage="1" lat="2">
+<operation id="35" st_id="8" stage="2" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="33" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="0" op_4_bw="0">
+<Node id="52" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-entry:16 %call_ln0 = call void @Loop_VITIS_LOOP_42_1_proc, i16 %maxpool_out_V, i16 %flatten_out_V
+entry:18 %call_ln159 = call void @max_pooling1d_0, i16 %batch_norm_out_0_V, i16 %max_pool_out_0_V
+
+]]></Node>
+<StgValue><ssdm name="call_ln159"/></StgValue>
+</operation>
+</state>
+
+<state id="9" st_id="9">
+
+<operation id="36" st_id="9" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="52" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="0" op_4_bw="0">
+<![CDATA[
+entry:18 %call_ln159 = call void @max_pooling1d_0, i16 %batch_norm_out_0_V, i16 %max_pool_out_0_V
+
+]]></Node>
+<StgValue><ssdm name="call_ln159"/></StgValue>
+</operation>
+</state>
+
+<state id="10" st_id="10">
+
+<operation id="37" st_id="10" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="53" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="0" op_4_bw="0">
+<![CDATA[
+entry:19 %call_ln0 = call void @Loop_VITIS_LOOP_79_1_proc, i16 %max_pool_out_0_V, i16 %flatten_out_0_V
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
 </operation>
 </state>
 
-<state id="9" st_id="9">
-
-<operation id="32" st_id="9" stage="2" lat="2">
-<core></core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="34" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="15" op_3_bw="8" op_4_bw="7" op_5_bw="0" op_6_bw="0">
-<![CDATA[
-entry:17 %call_ln113 = call void @dense_4, i16 %flatten_out_V, i15 %dense1_out_V, i8 %dense_biases_4_V, i7 %dense_weights_4_V
-
-]]></Node>
-<StgValue><ssdm name="call_ln113"/></StgValue>
-</operation>
-</state>
-
-<state id="10" st_id="10">
-
-<operation id="33" st_id="10" stage="1" lat="2">
-<core></core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="34" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="15" op_3_bw="8" op_4_bw="7" op_5_bw="0" op_6_bw="0">
-<![CDATA[
-entry:17 %call_ln113 = call void @dense_4, i16 %flatten_out_V, i15 %dense1_out_V, i8 %dense_biases_4_V, i7 %dense_weights_4_V
-
-]]></Node>
-<StgValue><ssdm name="call_ln113"/></StgValue>
-</operation>
-</state>
-
 <state id="11" st_id="11">
 
-<operation id="34" st_id="11" stage="2" lat="2">
+<operation id="38" st_id="11" stage="1" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="35" bw="0" op_0_bw="0" op_1_bw="15" op_2_bw="16" op_3_bw="9" op_4_bw="8" op_5_bw="10" op_6_bw="8" op_7_bw="0" op_8_bw="0">
+<Node id="53" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-entry:18 %call_ln116 = call void @batchnorm_5, i15 %dense1_out_V, i16 %bn2_out_V, i9 %bn_moving_mean_5_V, i8 %bn_moving_variance_5_V, i10 %bn_gamma_5_V, i8 %bn_beta_5_V
+entry:19 %call_ln0 = call void @Loop_VITIS_LOOP_79_1_proc, i16 %max_pool_out_0_V, i16 %flatten_out_0_V
 
 ]]></Node>
-<StgValue><ssdm name="call_ln116"/></StgValue>
+<StgValue><ssdm name="call_ln0"/></StgValue>
 </operation>
 </state>
 
 <state id="12" st_id="12">
 
-<operation id="35" st_id="12" stage="1" lat="2">
+<operation id="39" st_id="12" stage="2" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="35" bw="0" op_0_bw="0" op_1_bw="15" op_2_bw="16" op_3_bw="9" op_4_bw="8" op_5_bw="10" op_6_bw="8" op_7_bw="0" op_8_bw="0">
+<Node id="54" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="15" op_3_bw="8" op_4_bw="7" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-entry:18 %call_ln116 = call void @batchnorm_5, i15 %dense1_out_V, i16 %bn2_out_V, i9 %bn_moving_mean_5_V, i8 %bn_moving_variance_5_V, i10 %bn_gamma_5_V, i8 %bn_beta_5_V
+entry:20 %call_ln161 = call void @dense_0, i16 %flatten_out_0_V, i15 %dense_out_0_V, i8 %dense_0_biases_V, i7 %dense_0_weights_V
 
 ]]></Node>
-<StgValue><ssdm name="call_ln116"/></StgValue>
+<StgValue><ssdm name="call_ln161"/></StgValue>
 </operation>
 </state>
 
 <state id="13" st_id="13">
 
-<operation id="36" st_id="13" stage="2" lat="2">
+<operation id="40" st_id="13" stage="1" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="36" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="9" op_4_bw="8" op_5_bw="11" op_6_bw="25" op_7_bw="25" op_8_bw="0" op_9_bw="0">
+<Node id="54" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="15" op_3_bw="8" op_4_bw="7" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-entry:19 %call_ln119 = call void @dense_output_7, i16 %bn2_out_V, i16 %dense_output_out_V, i9 %dense_weights_7_V, i8 %dense_biases_7_V, i11 %f_x_lsb_table_V, i25 %exp_x_msb_2_m_1_table_V, i25 %exp_x_msb_1_table_V
+entry:20 %call_ln161 = call void @dense_0, i16 %flatten_out_0_V, i15 %dense_out_0_V, i8 %dense_0_biases_V, i7 %dense_0_weights_V
 
 ]]></Node>
-<StgValue><ssdm name="call_ln119"/></StgValue>
+<StgValue><ssdm name="call_ln161"/></StgValue>
 </operation>
 </state>
 
 <state id="14" st_id="14">
 
-<operation id="37" st_id="14" stage="1" lat="2">
+<operation id="41" st_id="14" stage="2" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="36" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="9" op_4_bw="8" op_5_bw="11" op_6_bw="25" op_7_bw="25" op_8_bw="0" op_9_bw="0">
+<Node id="55" bw="0" op_0_bw="0" op_1_bw="15" op_2_bw="16" op_3_bw="9" op_4_bw="8" op_5_bw="10" op_6_bw="8" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-entry:19 %call_ln119 = call void @dense_output_7, i16 %bn2_out_V, i16 %dense_output_out_V, i9 %dense_weights_7_V, i8 %dense_biases_7_V, i11 %f_x_lsb_table_V, i25 %exp_x_msb_2_m_1_table_V, i25 %exp_x_msb_1_table_V
+entry:21 %call_ln162 = call void @batch_normalization_1, i15 %dense_out_0_V, i16 %batch_norm_out_1_V, i9 %batch_norm_1_mean_V, i8 %batch_norm_1_variance_V, i10 %batch_norm_1_gamma_V, i8 %batch_norm_1_beta_V
 
 ]]></Node>
-<StgValue><ssdm name="call_ln119"/></StgValue>
+<StgValue><ssdm name="call_ln162"/></StgValue>
 </operation>
 </state>
 
 <state id="15" st_id="15">
 
-<operation id="38" st_id="15" stage="2" lat="2">
+<operation id="42" st_id="15" stage="1" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="37" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="0" op_4_bw="0">
+<Node id="55" bw="0" op_0_bw="0" op_1_bw="15" op_2_bw="16" op_3_bw="9" op_4_bw="8" op_5_bw="10" op_6_bw="8" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-entry:20 %call_ln122 = call void @softmax_7, i16 %dense_output_out_V, i16 %output_r
+entry:21 %call_ln162 = call void @batch_normalization_1, i15 %dense_out_0_V, i16 %batch_norm_out_1_V, i9 %batch_norm_1_mean_V, i8 %batch_norm_1_variance_V, i10 %batch_norm_1_gamma_V, i8 %batch_norm_1_beta_V
 
 ]]></Node>
-<StgValue><ssdm name="call_ln122"/></StgValue>
+<StgValue><ssdm name="call_ln162"/></StgValue>
 </operation>
 </state>
 
 <state id="16" st_id="16">
 
-<operation id="39" st_id="16" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="17" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0">
-<![CDATA[
-entry:0 %specdataflowpipeline_ln98 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_8
-
-]]></Node>
-<StgValue><ssdm name="specdataflowpipeline_ln98"/></StgValue>
-</operation>
-
-<operation id="40" st_id="16" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="18" bw="0" op_0_bw="0" op_1_bw="0">
-<![CDATA[
-entry:1 %spectopmodule_ln88 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2
-
-]]></Node>
-<StgValue><ssdm name="spectopmodule_ln88"/></StgValue>
-</operation>
-
-<operation id="41" st_id="16" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="19" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
-<![CDATA[
-entry:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_r, void @empty_7, i32 0, i32 0, void @empty_8, i32 4294967295, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0
-
-]]></Node>
-<StgValue><ssdm name="specinterface_ln0"/></StgValue>
-</operation>
-
-<operation id="42" st_id="16" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="20" bw="0" op_0_bw="0" op_1_bw="16">
-<![CDATA[
-entry:3 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_r
-
-]]></Node>
-<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
-</operation>
-
-<operation id="43" st_id="16" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="21" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
-<![CDATA[
-entry:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %output_r, void @empty_7, i32 0, i32 0, void @empty_8, i32 4294967295, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0
-
-]]></Node>
-<StgValue><ssdm name="specinterface_ln0"/></StgValue>
-</operation>
-
-<operation id="44" st_id="16" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="22" bw="0" op_0_bw="0" op_1_bw="16">
-<![CDATA[
-entry:5 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %output_r
-
-]]></Node>
-<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
-</operation>
-
-<operation id="45" st_id="16" stage="1" lat="2">
+<operation id="43" st_id="16" stage="2" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="37" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="0" op_4_bw="0">
+<Node id="56" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="9" op_4_bw="9" op_5_bw="9" op_6_bw="9" op_7_bw="9" op_8_bw="9" op_9_bw="9" op_10_bw="9" op_11_bw="9" op_12_bw="9" op_13_bw="9" op_14_bw="9" op_15_bw="9" op_16_bw="9" op_17_bw="9" op_18_bw="9" op_19_bw="7" op_20_bw="0" op_21_bw="0">
 <![CDATA[
-entry:20 %call_ln122 = call void @softmax_7, i16 %dense_output_out_V, i16 %output_r
+entry:22 %call_ln163 = call void @dense_1, i16 %batch_norm_out_1_V, i16 %output_V, i9 %dense_1_weights_V_0, i9 %dense_1_weights_V_1, i9 %dense_1_weights_V_2, i9 %dense_1_weights_V_3, i9 %dense_1_weights_V_4, i9 %dense_1_weights_V_5, i9 %dense_1_weights_V_6, i9 %dense_1_weights_V_7, i9 %dense_1_weights_V_8, i9 %dense_1_weights_V_9, i9 %dense_1_weights_V_10, i9 %dense_1_weights_V_11, i9 %dense_1_weights_V_12, i9 %dense_1_weights_V_13, i9 %dense_1_weights_V_14, i9 %dense_1_weights_V_15, i7 %dense_1_biases_V
 
 ]]></Node>
-<StgValue><ssdm name="call_ln122"/></StgValue>
+<StgValue><ssdm name="call_ln163"/></StgValue>
 </operation>
+</state>
 
-<operation id="46" st_id="16" stage="1" lat="1">
+<state id="17" st_id="17">
+
+<operation id="44" st_id="17" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="56" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="9" op_4_bw="9" op_5_bw="9" op_6_bw="9" op_7_bw="9" op_8_bw="9" op_9_bw="9" op_10_bw="9" op_11_bw="9" op_12_bw="9" op_13_bw="9" op_14_bw="9" op_15_bw="9" op_16_bw="9" op_17_bw="9" op_18_bw="9" op_19_bw="7" op_20_bw="0" op_21_bw="0">
+<![CDATA[
+entry:22 %call_ln163 = call void @dense_1, i16 %batch_norm_out_1_V, i16 %output_V, i9 %dense_1_weights_V_0, i9 %dense_1_weights_V_1, i9 %dense_1_weights_V_2, i9 %dense_1_weights_V_3, i9 %dense_1_weights_V_4, i9 %dense_1_weights_V_5, i9 %dense_1_weights_V_6, i9 %dense_1_weights_V_7, i9 %dense_1_weights_V_8, i9 %dense_1_weights_V_9, i9 %dense_1_weights_V_10, i9 %dense_1_weights_V_11, i9 %dense_1_weights_V_12, i9 %dense_1_weights_V_13, i9 %dense_1_weights_V_14, i9 %dense_1_weights_V_15, i7 %dense_1_biases_V
+
+]]></Node>
+<StgValue><ssdm name="call_ln163"/></StgValue>
+</operation>
+</state>
+
+<state id="18" st_id="18">
+
+<operation id="45" st_id="18" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="57" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="0" op_4_bw="0">
+<![CDATA[
+entry:23 %call_ln0 = call void @Loop_VITIS_LOOP_166_3_proc9, i16 %output_V, i16 %output_stream
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="19" st_id="19">
+
+<operation id="46" st_id="19" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="57" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="0" op_4_bw="0">
+<![CDATA[
+entry:23 %call_ln0 = call void @Loop_VITIS_LOOP_166_3_proc9, i16 %output_V, i16 %output_stream
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="20" st_id="20">
+
+<operation id="47" st_id="20" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="38" bw="0">
+<Node id="34" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0">
 <![CDATA[
-entry:21 %ret_ln123 = ret
+entry:0 %specdataflowpipeline_ln156 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_2
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln123"/></StgValue>
+<StgValue><ssdm name="specdataflowpipeline_ln156"/></StgValue>
+</operation>
+
+<operation id="48" st_id="20" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="35" bw="0" op_0_bw="0" op_1_bw="0">
+<![CDATA[
+entry:1 %spectopmodule_ln132 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_7
+
+]]></Node>
+<StgValue><ssdm name="spectopmodule_ln132"/></StgValue>
+</operation>
+
+<operation id="49" st_id="20" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="36" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
+<![CDATA[
+entry:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_stream, void @empty_11, i32 1, i32 1, void @empty_1, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="50" st_id="20" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="37" bw="0" op_0_bw="0" op_1_bw="16">
+<![CDATA[
+entry:3 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_stream
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="51" st_id="20" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="38" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
+<![CDATA[
+entry:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %output_stream, void @empty_11, i32 1, i32 1, void @empty_1, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="52" st_id="20" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="39" bw="0" op_0_bw="0" op_1_bw="16">
+<![CDATA[
+entry:5 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %output_stream
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="53" st_id="20" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="40" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
+<![CDATA[
+entry:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_3, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_4, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="54" st_id="20" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="58" bw="0">
+<![CDATA[
+entry:24 %ret_ln169 = ret
+
+]]></Node>
+<StgValue><ssdm name="ret_ln169"/></StgValue>
 </operation>
 </state>
 </state_list>
 
 
 <ports>
-<port id="63" name="input_r" dir="0" iftype="1">
-<core>RAM</core><StgValue><ssdm name="input_r"/><MemPortTyVec>1 1 </MemPortTyVec>
+<port id="75" name="input_stream" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="input_stream"/></StgValue>
+</port>
+<port id="76" name="output_stream" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="output_stream"/></StgValue>
+</port>
+<port id="77" name="conv1d_0_weights_V_0_0" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="conv1d_0_weights_V_0_0"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="64" name="output_r" dir="1" iftype="1">
-<core>RAM</core><StgValue><ssdm name="output_r"/><MemPortTyVec>0 3 </MemPortTyVec>
+<port id="78" name="conv1d_0_weights_V_1_0" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="conv1d_0_weights_V_1_0"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="65" name="bn_moving_mean_1_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="bn_moving_mean_1_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="79" name="conv1d_0_weights_V_2_0" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="conv1d_0_weights_V_2_0"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="66" name="bn_gamma_1_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="bn_gamma_1_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="80" name="conv1d_0_biases_V" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="conv1d_0_biases_V"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="67" name="bn_beta_1_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="bn_beta_1_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="81" name="batch_norm_0_mean_V" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="batch_norm_0_mean_V"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="68" name="dense_biases_4_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_biases_4_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="82" name="batch_norm_0_variance_V" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="batch_norm_0_variance_V"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="69" name="dense_weights_4_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_weights_4_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="83" name="batch_norm_0_gamma_V" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="batch_norm_0_gamma_V"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="70" name="bn_moving_mean_5_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="bn_moving_mean_5_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="84" name="batch_norm_0_beta_V" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="batch_norm_0_beta_V"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="71" name="bn_moving_variance_5_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="bn_moving_variance_5_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="85" name="dense_0_biases_V" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_0_biases_V"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="72" name="bn_gamma_5_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="bn_gamma_5_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="86" name="dense_0_weights_V" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_0_weights_V"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="73" name="bn_beta_5_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="bn_beta_5_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="87" name="batch_norm_1_mean_V" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="batch_norm_1_mean_V"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="74" name="dense_weights_7_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_weights_7_V"/><MemPortTyVec>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </MemPortTyVec>
+<port id="88" name="batch_norm_1_variance_V" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="batch_norm_1_variance_V"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="75" name="dense_biases_7_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_biases_7_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="89" name="batch_norm_1_gamma_V" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="batch_norm_1_gamma_V"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="76" name="f_x_lsb_table_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="f_x_lsb_table_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="90" name="batch_norm_1_beta_V" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="batch_norm_1_beta_V"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="77" name="exp_x_msb_2_m_1_table_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="exp_x_msb_2_m_1_table_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="91" name="dense_1_weights_V_0" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_0"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="78" name="exp_x_msb_1_table_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="exp_x_msb_1_table_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="92" name="dense_1_weights_V_1" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_1"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="93" name="dense_1_weights_V_2" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_2"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="94" name="dense_1_weights_V_3" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_3"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="95" name="dense_1_weights_V_4" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_4"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="96" name="dense_1_weights_V_5" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_5"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="97" name="dense_1_weights_V_6" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_6"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="98" name="dense_1_weights_V_7" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_7"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="99" name="dense_1_weights_V_8" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_8"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="100" name="dense_1_weights_V_9" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_9"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="101" name="dense_1_weights_V_10" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_10"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="102" name="dense_1_weights_V_11" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_11"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="103" name="dense_1_weights_V_12" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_12"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="104" name="dense_1_weights_V_13" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_13"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="105" name="dense_1_weights_V_14" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_14"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="106" name="dense_1_weights_V_15" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_15"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="107" name="dense_1_biases_V" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_biases_V"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
 </ports>
 
 
 <dataflows>
-<dataflow id="80" from="StgValue_79" to="conv1d_out_V" fromId="79" toId="17">
+<dataflow id="109" from="StgValue_108" to="input_V_0" fromId="108" toId="21">
 </dataflow>
-<dataflow id="81" from="StgValue_79" to="bn1_out_V" fromId="79" toId="18">
+<dataflow id="110" from="StgValue_108" to="output_V" fromId="108" toId="22">
 </dataflow>
-<dataflow id="82" from="StgValue_79" to="maxpool_out_V" fromId="79" toId="19">
+<dataflow id="111" from="StgValue_108" to="conv1d_out_0_V" fromId="108" toId="23">
 </dataflow>
-<dataflow id="83" from="StgValue_79" to="flatten_out_V" fromId="79" toId="20">
+<dataflow id="112" from="StgValue_108" to="batch_norm_out_0_V" fromId="108" toId="24">
 </dataflow>
-<dataflow id="84" from="StgValue_79" to="dense1_out_V" fromId="79" toId="21">
+<dataflow id="113" from="StgValue_108" to="max_pool_out_0_V" fromId="108" toId="25">
 </dataflow>
-<dataflow id="85" from="StgValue_79" to="bn2_out_V" fromId="79" toId="22">
+<dataflow id="114" from="StgValue_108" to="flatten_out_0_V" fromId="108" toId="26">
 </dataflow>
-<dataflow id="86" from="StgValue_79" to="dense_output_out_V" fromId="79" toId="23">
+<dataflow id="115" from="StgValue_108" to="dense_out_0_V" fromId="108" toId="27">
 </dataflow>
-<dataflow id="88" from="conv1d_0" to="call_ln101" fromId="87" toId="24">
+<dataflow id="116" from="StgValue_108" to="batch_norm_out_1_V" fromId="108" toId="28">
 </dataflow>
-<dataflow id="89" from="input_r" to="call_ln101" fromId="63" toId="24">
+<dataflow id="118" from="Loop_VITIS_LOOP_149_1_proc8" to="call_ln0" fromId="117" toId="29">
 </dataflow>
-<dataflow id="90" from="conv1d_out_V" to="call_ln101" fromId="17" toId="24">
+<dataflow id="119" from="input_stream" to="call_ln0" fromId="75" toId="29">
 </dataflow>
-<dataflow id="91" from="conv1d_0" to="call_ln101" fromId="87" toId="25">
+<dataflow id="120" from="input_V_0" to="call_ln0" fromId="21" toId="29">
 </dataflow>
-<dataflow id="92" from="input_r" to="call_ln101" fromId="63" toId="25">
+<dataflow id="121" from="Loop_VITIS_LOOP_149_1_proc8" to="call_ln0" fromId="117" toId="30">
 </dataflow>
-<dataflow id="93" from="conv1d_out_V" to="call_ln101" fromId="17" toId="25">
+<dataflow id="122" from="input_stream" to="call_ln0" fromId="75" toId="30">
 </dataflow>
-<dataflow id="95" from="batchnorm_1" to="call_ln104" fromId="94" toId="26">
+<dataflow id="123" from="input_V_0" to="call_ln0" fromId="21" toId="30">
 </dataflow>
-<dataflow id="96" from="conv1d_out_V" to="call_ln104" fromId="17" toId="26">
+<dataflow id="125" from="conv1d_0" to="call_ln157" fromId="124" toId="31">
 </dataflow>
-<dataflow id="97" from="bn1_out_V" to="call_ln104" fromId="18" toId="26">
+<dataflow id="126" from="input_V_0" to="call_ln157" fromId="21" toId="31">
 </dataflow>
-<dataflow id="98" from="bn_moving_mean_1_V" to="call_ln104" fromId="65" toId="26">
+<dataflow id="127" from="conv1d_out_0_V" to="call_ln157" fromId="23" toId="31">
 </dataflow>
-<dataflow id="99" from="bn_gamma_1_V" to="call_ln104" fromId="66" toId="26">
+<dataflow id="128" from="conv1d_0_weights_V_0_0" to="call_ln157" fromId="77" toId="31">
 </dataflow>
-<dataflow id="100" from="bn_beta_1_V" to="call_ln104" fromId="67" toId="26">
+<dataflow id="129" from="conv1d_0_weights_V_1_0" to="call_ln157" fromId="78" toId="31">
 </dataflow>
-<dataflow id="101" from="batchnorm_1" to="call_ln104" fromId="94" toId="27">
+<dataflow id="130" from="conv1d_0_weights_V_2_0" to="call_ln157" fromId="79" toId="31">
 </dataflow>
-<dataflow id="102" from="conv1d_out_V" to="call_ln104" fromId="17" toId="27">
+<dataflow id="131" from="conv1d_0_biases_V" to="call_ln157" fromId="80" toId="31">
 </dataflow>
-<dataflow id="103" from="bn1_out_V" to="call_ln104" fromId="18" toId="27">
+<dataflow id="132" from="conv1d_0" to="call_ln157" fromId="124" toId="32">
 </dataflow>
-<dataflow id="104" from="bn_moving_mean_1_V" to="call_ln104" fromId="65" toId="27">
+<dataflow id="133" from="input_V_0" to="call_ln157" fromId="21" toId="32">
 </dataflow>
-<dataflow id="105" from="bn_gamma_1_V" to="call_ln104" fromId="66" toId="27">
+<dataflow id="134" from="conv1d_out_0_V" to="call_ln157" fromId="23" toId="32">
 </dataflow>
-<dataflow id="106" from="bn_beta_1_V" to="call_ln104" fromId="67" toId="27">
+<dataflow id="135" from="conv1d_0_weights_V_0_0" to="call_ln157" fromId="77" toId="32">
 </dataflow>
-<dataflow id="108" from="maxpool1d_2" to="call_ln107" fromId="107" toId="28">
+<dataflow id="136" from="conv1d_0_weights_V_1_0" to="call_ln157" fromId="78" toId="32">
 </dataflow>
-<dataflow id="109" from="bn1_out_V" to="call_ln107" fromId="18" toId="28">
+<dataflow id="137" from="conv1d_0_weights_V_2_0" to="call_ln157" fromId="79" toId="32">
 </dataflow>
-<dataflow id="110" from="maxpool_out_V" to="call_ln107" fromId="19" toId="28">
+<dataflow id="138" from="conv1d_0_biases_V" to="call_ln157" fromId="80" toId="32">
 </dataflow>
-<dataflow id="111" from="maxpool1d_2" to="call_ln107" fromId="107" toId="29">
+<dataflow id="140" from="batch_normalization_0" to="call_ln158" fromId="139" toId="33">
 </dataflow>
-<dataflow id="112" from="bn1_out_V" to="call_ln107" fromId="18" toId="29">
+<dataflow id="141" from="conv1d_out_0_V" to="call_ln158" fromId="23" toId="33">
 </dataflow>
-<dataflow id="113" from="maxpool_out_V" to="call_ln107" fromId="19" toId="29">
+<dataflow id="142" from="batch_norm_out_0_V" to="call_ln158" fromId="24" toId="33">
 </dataflow>
-<dataflow id="115" from="Loop_VITIS_LOOP_42_1_proc" to="call_ln0" fromId="114" toId="30">
+<dataflow id="143" from="batch_norm_0_mean_V" to="call_ln158" fromId="81" toId="33">
 </dataflow>
-<dataflow id="116" from="maxpool_out_V" to="call_ln0" fromId="19" toId="30">
+<dataflow id="144" from="batch_norm_0_variance_V" to="call_ln158" fromId="82" toId="33">
 </dataflow>
-<dataflow id="117" from="flatten_out_V" to="call_ln0" fromId="20" toId="30">
+<dataflow id="145" from="batch_norm_0_gamma_V" to="call_ln158" fromId="83" toId="33">
 </dataflow>
-<dataflow id="118" from="Loop_VITIS_LOOP_42_1_proc" to="call_ln0" fromId="114" toId="31">
+<dataflow id="146" from="batch_norm_0_beta_V" to="call_ln158" fromId="84" toId="33">
 </dataflow>
-<dataflow id="119" from="maxpool_out_V" to="call_ln0" fromId="19" toId="31">
+<dataflow id="147" from="batch_normalization_0" to="call_ln158" fromId="139" toId="34">
 </dataflow>
-<dataflow id="120" from="flatten_out_V" to="call_ln0" fromId="20" toId="31">
+<dataflow id="148" from="conv1d_out_0_V" to="call_ln158" fromId="23" toId="34">
 </dataflow>
-<dataflow id="122" from="dense_4" to="call_ln113" fromId="121" toId="32">
+<dataflow id="149" from="batch_norm_out_0_V" to="call_ln158" fromId="24" toId="34">
 </dataflow>
-<dataflow id="123" from="flatten_out_V" to="call_ln113" fromId="20" toId="32">
+<dataflow id="150" from="batch_norm_0_mean_V" to="call_ln158" fromId="81" toId="34">
 </dataflow>
-<dataflow id="124" from="dense1_out_V" to="call_ln113" fromId="21" toId="32">
+<dataflow id="151" from="batch_norm_0_variance_V" to="call_ln158" fromId="82" toId="34">
 </dataflow>
-<dataflow id="125" from="dense_biases_4_V" to="call_ln113" fromId="68" toId="32">
+<dataflow id="152" from="batch_norm_0_gamma_V" to="call_ln158" fromId="83" toId="34">
 </dataflow>
-<dataflow id="126" from="dense_weights_4_V" to="call_ln113" fromId="69" toId="32">
+<dataflow id="153" from="batch_norm_0_beta_V" to="call_ln158" fromId="84" toId="34">
 </dataflow>
-<dataflow id="127" from="dense_4" to="call_ln113" fromId="121" toId="33">
+<dataflow id="155" from="max_pooling1d_0" to="call_ln159" fromId="154" toId="35">
 </dataflow>
-<dataflow id="128" from="flatten_out_V" to="call_ln113" fromId="20" toId="33">
+<dataflow id="156" from="batch_norm_out_0_V" to="call_ln159" fromId="24" toId="35">
 </dataflow>
-<dataflow id="129" from="dense1_out_V" to="call_ln113" fromId="21" toId="33">
+<dataflow id="157" from="max_pool_out_0_V" to="call_ln159" fromId="25" toId="35">
 </dataflow>
-<dataflow id="130" from="dense_biases_4_V" to="call_ln113" fromId="68" toId="33">
+<dataflow id="158" from="max_pooling1d_0" to="call_ln159" fromId="154" toId="36">
 </dataflow>
-<dataflow id="131" from="dense_weights_4_V" to="call_ln113" fromId="69" toId="33">
+<dataflow id="159" from="batch_norm_out_0_V" to="call_ln159" fromId="24" toId="36">
 </dataflow>
-<dataflow id="133" from="batchnorm_5" to="call_ln116" fromId="132" toId="34">
+<dataflow id="160" from="max_pool_out_0_V" to="call_ln159" fromId="25" toId="36">
 </dataflow>
-<dataflow id="134" from="dense1_out_V" to="call_ln116" fromId="21" toId="34">
+<dataflow id="162" from="Loop_VITIS_LOOP_79_1_proc" to="call_ln0" fromId="161" toId="37">
 </dataflow>
-<dataflow id="135" from="bn2_out_V" to="call_ln116" fromId="22" toId="34">
+<dataflow id="163" from="max_pool_out_0_V" to="call_ln0" fromId="25" toId="37">
 </dataflow>
-<dataflow id="136" from="bn_moving_mean_5_V" to="call_ln116" fromId="70" toId="34">
+<dataflow id="164" from="flatten_out_0_V" to="call_ln0" fromId="26" toId="37">
 </dataflow>
-<dataflow id="137" from="bn_moving_variance_5_V" to="call_ln116" fromId="71" toId="34">
+<dataflow id="165" from="Loop_VITIS_LOOP_79_1_proc" to="call_ln0" fromId="161" toId="38">
 </dataflow>
-<dataflow id="138" from="bn_gamma_5_V" to="call_ln116" fromId="72" toId="34">
+<dataflow id="166" from="max_pool_out_0_V" to="call_ln0" fromId="25" toId="38">
 </dataflow>
-<dataflow id="139" from="bn_beta_5_V" to="call_ln116" fromId="73" toId="34">
+<dataflow id="167" from="flatten_out_0_V" to="call_ln0" fromId="26" toId="38">
 </dataflow>
-<dataflow id="140" from="batchnorm_5" to="call_ln116" fromId="132" toId="35">
+<dataflow id="169" from="dense_0" to="call_ln161" fromId="168" toId="39">
 </dataflow>
-<dataflow id="141" from="dense1_out_V" to="call_ln116" fromId="21" toId="35">
+<dataflow id="170" from="flatten_out_0_V" to="call_ln161" fromId="26" toId="39">
 </dataflow>
-<dataflow id="142" from="bn2_out_V" to="call_ln116" fromId="22" toId="35">
+<dataflow id="171" from="dense_out_0_V" to="call_ln161" fromId="27" toId="39">
 </dataflow>
-<dataflow id="143" from="bn_moving_mean_5_V" to="call_ln116" fromId="70" toId="35">
+<dataflow id="172" from="dense_0_biases_V" to="call_ln161" fromId="85" toId="39">
 </dataflow>
-<dataflow id="144" from="bn_moving_variance_5_V" to="call_ln116" fromId="71" toId="35">
+<dataflow id="173" from="dense_0_weights_V" to="call_ln161" fromId="86" toId="39">
 </dataflow>
-<dataflow id="145" from="bn_gamma_5_V" to="call_ln116" fromId="72" toId="35">
+<dataflow id="174" from="dense_0" to="call_ln161" fromId="168" toId="40">
 </dataflow>
-<dataflow id="146" from="bn_beta_5_V" to="call_ln116" fromId="73" toId="35">
+<dataflow id="175" from="flatten_out_0_V" to="call_ln161" fromId="26" toId="40">
 </dataflow>
-<dataflow id="148" from="dense_output_7" to="call_ln119" fromId="147" toId="36">
+<dataflow id="176" from="dense_out_0_V" to="call_ln161" fromId="27" toId="40">
 </dataflow>
-<dataflow id="149" from="bn2_out_V" to="call_ln119" fromId="22" toId="36">
+<dataflow id="177" from="dense_0_biases_V" to="call_ln161" fromId="85" toId="40">
 </dataflow>
-<dataflow id="150" from="dense_output_out_V" to="call_ln119" fromId="23" toId="36">
+<dataflow id="178" from="dense_0_weights_V" to="call_ln161" fromId="86" toId="40">
 </dataflow>
-<dataflow id="151" from="dense_weights_7_V" to="call_ln119" fromId="74" toId="36">
+<dataflow id="180" from="batch_normalization_1" to="call_ln162" fromId="179" toId="41">
 </dataflow>
-<dataflow id="152" from="dense_biases_7_V" to="call_ln119" fromId="75" toId="36">
+<dataflow id="181" from="dense_out_0_V" to="call_ln162" fromId="27" toId="41">
 </dataflow>
-<dataflow id="153" from="f_x_lsb_table_V" to="call_ln119" fromId="76" toId="36">
+<dataflow id="182" from="batch_norm_out_1_V" to="call_ln162" fromId="28" toId="41">
 </dataflow>
-<dataflow id="154" from="exp_x_msb_2_m_1_table_V" to="call_ln119" fromId="77" toId="36">
+<dataflow id="183" from="batch_norm_1_mean_V" to="call_ln162" fromId="87" toId="41">
 </dataflow>
-<dataflow id="155" from="exp_x_msb_1_table_V" to="call_ln119" fromId="78" toId="36">
+<dataflow id="184" from="batch_norm_1_variance_V" to="call_ln162" fromId="88" toId="41">
 </dataflow>
-<dataflow id="156" from="dense_output_7" to="call_ln119" fromId="147" toId="37">
+<dataflow id="185" from="batch_norm_1_gamma_V" to="call_ln162" fromId="89" toId="41">
 </dataflow>
-<dataflow id="157" from="bn2_out_V" to="call_ln119" fromId="22" toId="37">
+<dataflow id="186" from="batch_norm_1_beta_V" to="call_ln162" fromId="90" toId="41">
 </dataflow>
-<dataflow id="158" from="dense_output_out_V" to="call_ln119" fromId="23" toId="37">
+<dataflow id="187" from="batch_normalization_1" to="call_ln162" fromId="179" toId="42">
 </dataflow>
-<dataflow id="159" from="dense_weights_7_V" to="call_ln119" fromId="74" toId="37">
+<dataflow id="188" from="dense_out_0_V" to="call_ln162" fromId="27" toId="42">
 </dataflow>
-<dataflow id="160" from="dense_biases_7_V" to="call_ln119" fromId="75" toId="37">
+<dataflow id="189" from="batch_norm_out_1_V" to="call_ln162" fromId="28" toId="42">
 </dataflow>
-<dataflow id="161" from="f_x_lsb_table_V" to="call_ln119" fromId="76" toId="37">
+<dataflow id="190" from="batch_norm_1_mean_V" to="call_ln162" fromId="87" toId="42">
 </dataflow>
-<dataflow id="162" from="exp_x_msb_2_m_1_table_V" to="call_ln119" fromId="77" toId="37">
+<dataflow id="191" from="batch_norm_1_variance_V" to="call_ln162" fromId="88" toId="42">
 </dataflow>
-<dataflow id="163" from="exp_x_msb_1_table_V" to="call_ln119" fromId="78" toId="37">
+<dataflow id="192" from="batch_norm_1_gamma_V" to="call_ln162" fromId="89" toId="42">
 </dataflow>
-<dataflow id="165" from="softmax_7" to="call_ln122" fromId="164" toId="38">
+<dataflow id="193" from="batch_norm_1_beta_V" to="call_ln162" fromId="90" toId="42">
 </dataflow>
-<dataflow id="166" from="dense_output_out_V" to="call_ln122" fromId="23" toId="38">
+<dataflow id="195" from="dense_1" to="call_ln163" fromId="194" toId="43">
 </dataflow>
-<dataflow id="167" from="output_r" to="call_ln122" fromId="64" toId="38">
+<dataflow id="196" from="batch_norm_out_1_V" to="call_ln163" fromId="28" toId="43">
 </dataflow>
-<dataflow id="169" from="_ssdm_op_SpecDataflowPipeline" to="specdataflowpipeline_ln98" fromId="168" toId="39">
+<dataflow id="197" from="output_V" to="call_ln163" fromId="22" toId="43">
 </dataflow>
-<dataflow id="171" from="StgValue_170" to="specdataflowpipeline_ln98" fromId="170" toId="39">
+<dataflow id="198" from="dense_1_weights_V_0" to="call_ln163" fromId="91" toId="43">
 </dataflow>
-<dataflow id="173" from="StgValue_172" to="specdataflowpipeline_ln98" fromId="172" toId="39">
+<dataflow id="199" from="dense_1_weights_V_1" to="call_ln163" fromId="92" toId="43">
 </dataflow>
-<dataflow id="175" from="empty_8" to="specdataflowpipeline_ln98" fromId="174" toId="39">
+<dataflow id="200" from="dense_1_weights_V_2" to="call_ln163" fromId="93" toId="43">
 </dataflow>
-<dataflow id="177" from="_ssdm_op_SpecTopModule" to="spectopmodule_ln88" fromId="176" toId="40">
+<dataflow id="201" from="dense_1_weights_V_3" to="call_ln163" fromId="94" toId="43">
 </dataflow>
-<dataflow id="179" from="empty_2" to="spectopmodule_ln88" fromId="178" toId="40">
+<dataflow id="202" from="dense_1_weights_V_4" to="call_ln163" fromId="95" toId="43">
 </dataflow>
-<dataflow id="181" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="180" toId="41">
+<dataflow id="203" from="dense_1_weights_V_5" to="call_ln163" fromId="96" toId="43">
 </dataflow>
-<dataflow id="182" from="input_r" to="specinterface_ln0" fromId="63" toId="41">
+<dataflow id="204" from="dense_1_weights_V_6" to="call_ln163" fromId="97" toId="43">
 </dataflow>
-<dataflow id="184" from="empty_7" to="specinterface_ln0" fromId="183" toId="41">
+<dataflow id="205" from="dense_1_weights_V_7" to="call_ln163" fromId="98" toId="43">
 </dataflow>
-<dataflow id="185" from="StgValue_172" to="specinterface_ln0" fromId="172" toId="41">
+<dataflow id="206" from="dense_1_weights_V_8" to="call_ln163" fromId="99" toId="43">
 </dataflow>
-<dataflow id="186" from="StgValue_172" to="specinterface_ln0" fromId="172" toId="41">
+<dataflow id="207" from="dense_1_weights_V_9" to="call_ln163" fromId="100" toId="43">
 </dataflow>
-<dataflow id="187" from="empty_8" to="specinterface_ln0" fromId="174" toId="41">
+<dataflow id="208" from="dense_1_weights_V_10" to="call_ln163" fromId="101" toId="43">
 </dataflow>
-<dataflow id="188" from="StgValue_170" to="specinterface_ln0" fromId="170" toId="41">
+<dataflow id="209" from="dense_1_weights_V_11" to="call_ln163" fromId="102" toId="43">
 </dataflow>
-<dataflow id="189" from="StgValue_172" to="specinterface_ln0" fromId="172" toId="41">
+<dataflow id="210" from="dense_1_weights_V_12" to="call_ln163" fromId="103" toId="43">
 </dataflow>
-<dataflow id="190" from="empty_8" to="specinterface_ln0" fromId="174" toId="41">
+<dataflow id="211" from="dense_1_weights_V_13" to="call_ln163" fromId="104" toId="43">
 </dataflow>
-<dataflow id="191" from="empty_8" to="specinterface_ln0" fromId="174" toId="41">
+<dataflow id="212" from="dense_1_weights_V_14" to="call_ln163" fromId="105" toId="43">
 </dataflow>
-<dataflow id="192" from="empty_8" to="specinterface_ln0" fromId="174" toId="41">
+<dataflow id="213" from="dense_1_weights_V_15" to="call_ln163" fromId="106" toId="43">
 </dataflow>
-<dataflow id="193" from="StgValue_172" to="specinterface_ln0" fromId="172" toId="41">
+<dataflow id="214" from="dense_1_biases_V" to="call_ln163" fromId="107" toId="43">
 </dataflow>
-<dataflow id="194" from="StgValue_172" to="specinterface_ln0" fromId="172" toId="41">
+<dataflow id="215" from="dense_1" to="call_ln163" fromId="194" toId="44">
 </dataflow>
-<dataflow id="195" from="StgValue_172" to="specinterface_ln0" fromId="172" toId="41">
+<dataflow id="216" from="batch_norm_out_1_V" to="call_ln163" fromId="28" toId="44">
 </dataflow>
-<dataflow id="196" from="StgValue_172" to="specinterface_ln0" fromId="172" toId="41">
+<dataflow id="217" from="output_V" to="call_ln163" fromId="22" toId="44">
 </dataflow>
-<dataflow id="197" from="empty_8" to="specinterface_ln0" fromId="174" toId="41">
+<dataflow id="218" from="dense_1_weights_V_0" to="call_ln163" fromId="91" toId="44">
 </dataflow>
-<dataflow id="198" from="empty_8" to="specinterface_ln0" fromId="174" toId="41">
+<dataflow id="219" from="dense_1_weights_V_1" to="call_ln163" fromId="92" toId="44">
 </dataflow>
-<dataflow id="199" from="StgValue_170" to="specinterface_ln0" fromId="170" toId="41">
+<dataflow id="220" from="dense_1_weights_V_2" to="call_ln163" fromId="93" toId="44">
 </dataflow>
-<dataflow id="200" from="StgValue_172" to="specinterface_ln0" fromId="172" toId="41">
+<dataflow id="221" from="dense_1_weights_V_3" to="call_ln163" fromId="94" toId="44">
 </dataflow>
-<dataflow id="202" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="201" toId="42">
+<dataflow id="222" from="dense_1_weights_V_4" to="call_ln163" fromId="95" toId="44">
 </dataflow>
-<dataflow id="203" from="input_r" to="specbitsmap_ln0" fromId="63" toId="42">
+<dataflow id="223" from="dense_1_weights_V_5" to="call_ln163" fromId="96" toId="44">
 </dataflow>
-<dataflow id="204" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="180" toId="43">
+<dataflow id="224" from="dense_1_weights_V_6" to="call_ln163" fromId="97" toId="44">
 </dataflow>
-<dataflow id="205" from="output_r" to="specinterface_ln0" fromId="64" toId="43">
+<dataflow id="225" from="dense_1_weights_V_7" to="call_ln163" fromId="98" toId="44">
 </dataflow>
-<dataflow id="206" from="empty_7" to="specinterface_ln0" fromId="183" toId="43">
+<dataflow id="226" from="dense_1_weights_V_8" to="call_ln163" fromId="99" toId="44">
 </dataflow>
-<dataflow id="207" from="StgValue_172" to="specinterface_ln0" fromId="172" toId="43">
+<dataflow id="227" from="dense_1_weights_V_9" to="call_ln163" fromId="100" toId="44">
 </dataflow>
-<dataflow id="208" from="StgValue_172" to="specinterface_ln0" fromId="172" toId="43">
+<dataflow id="228" from="dense_1_weights_V_10" to="call_ln163" fromId="101" toId="44">
 </dataflow>
-<dataflow id="209" from="empty_8" to="specinterface_ln0" fromId="174" toId="43">
+<dataflow id="229" from="dense_1_weights_V_11" to="call_ln163" fromId="102" toId="44">
 </dataflow>
-<dataflow id="210" from="StgValue_170" to="specinterface_ln0" fromId="170" toId="43">
+<dataflow id="230" from="dense_1_weights_V_12" to="call_ln163" fromId="103" toId="44">
 </dataflow>
-<dataflow id="211" from="StgValue_172" to="specinterface_ln0" fromId="172" toId="43">
+<dataflow id="231" from="dense_1_weights_V_13" to="call_ln163" fromId="104" toId="44">
 </dataflow>
-<dataflow id="212" from="empty_8" to="specinterface_ln0" fromId="174" toId="43">
+<dataflow id="232" from="dense_1_weights_V_14" to="call_ln163" fromId="105" toId="44">
 </dataflow>
-<dataflow id="213" from="empty_8" to="specinterface_ln0" fromId="174" toId="43">
+<dataflow id="233" from="dense_1_weights_V_15" to="call_ln163" fromId="106" toId="44">
 </dataflow>
-<dataflow id="214" from="empty_8" to="specinterface_ln0" fromId="174" toId="43">
+<dataflow id="234" from="dense_1_biases_V" to="call_ln163" fromId="107" toId="44">
 </dataflow>
-<dataflow id="215" from="StgValue_172" to="specinterface_ln0" fromId="172" toId="43">
+<dataflow id="236" from="Loop_VITIS_LOOP_166_3_proc9" to="call_ln0" fromId="235" toId="45">
 </dataflow>
-<dataflow id="216" from="StgValue_172" to="specinterface_ln0" fromId="172" toId="43">
+<dataflow id="237" from="output_V" to="call_ln0" fromId="22" toId="45">
 </dataflow>
-<dataflow id="217" from="StgValue_172" to="specinterface_ln0" fromId="172" toId="43">
+<dataflow id="238" from="output_stream" to="call_ln0" fromId="76" toId="45">
 </dataflow>
-<dataflow id="218" from="StgValue_172" to="specinterface_ln0" fromId="172" toId="43">
+<dataflow id="239" from="Loop_VITIS_LOOP_166_3_proc9" to="call_ln0" fromId="235" toId="46">
 </dataflow>
-<dataflow id="219" from="empty_8" to="specinterface_ln0" fromId="174" toId="43">
+<dataflow id="240" from="output_V" to="call_ln0" fromId="22" toId="46">
 </dataflow>
-<dataflow id="220" from="empty_8" to="specinterface_ln0" fromId="174" toId="43">
+<dataflow id="241" from="output_stream" to="call_ln0" fromId="76" toId="46">
 </dataflow>
-<dataflow id="221" from="StgValue_170" to="specinterface_ln0" fromId="170" toId="43">
+<dataflow id="243" from="_ssdm_op_SpecDataflowPipeline" to="specdataflowpipeline_ln156" fromId="242" toId="47">
 </dataflow>
-<dataflow id="222" from="StgValue_172" to="specinterface_ln0" fromId="172" toId="43">
+<dataflow id="245" from="StgValue_244" to="specdataflowpipeline_ln156" fromId="244" toId="47">
 </dataflow>
-<dataflow id="223" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="201" toId="44">
+<dataflow id="247" from="StgValue_246" to="specdataflowpipeline_ln156" fromId="246" toId="47">
 </dataflow>
-<dataflow id="224" from="output_r" to="specbitsmap_ln0" fromId="64" toId="44">
+<dataflow id="249" from="empty_2" to="specdataflowpipeline_ln156" fromId="248" toId="47">
 </dataflow>
-<dataflow id="225" from="softmax_7" to="call_ln122" fromId="164" toId="45">
+<dataflow id="251" from="_ssdm_op_SpecTopModule" to="spectopmodule_ln132" fromId="250" toId="48">
 </dataflow>
-<dataflow id="226" from="dense_output_out_V" to="call_ln122" fromId="23" toId="45">
+<dataflow id="253" from="empty_7" to="spectopmodule_ln132" fromId="252" toId="48">
 </dataflow>
-<dataflow id="227" from="output_r" to="call_ln122" fromId="64" toId="45">
+<dataflow id="255" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="254" toId="49">
+</dataflow>
+<dataflow id="256" from="input_stream" to="specinterface_ln0" fromId="75" toId="49">
+</dataflow>
+<dataflow id="258" from="empty_11" to="specinterface_ln0" fromId="257" toId="49">
+</dataflow>
+<dataflow id="260" from="StgValue_259" to="specinterface_ln0" fromId="259" toId="49">
+</dataflow>
+<dataflow id="261" from="StgValue_259" to="specinterface_ln0" fromId="259" toId="49">
+</dataflow>
+<dataflow id="263" from="empty_1" to="specinterface_ln0" fromId="262" toId="49">
+</dataflow>
+<dataflow id="264" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="49">
+</dataflow>
+<dataflow id="265" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="49">
+</dataflow>
+<dataflow id="266" from="empty_2" to="specinterface_ln0" fromId="248" toId="49">
+</dataflow>
+<dataflow id="267" from="empty_2" to="specinterface_ln0" fromId="248" toId="49">
+</dataflow>
+<dataflow id="268" from="empty_2" to="specinterface_ln0" fromId="248" toId="49">
+</dataflow>
+<dataflow id="269" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="49">
+</dataflow>
+<dataflow id="270" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="49">
+</dataflow>
+<dataflow id="271" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="49">
+</dataflow>
+<dataflow id="272" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="49">
+</dataflow>
+<dataflow id="273" from="empty_2" to="specinterface_ln0" fromId="248" toId="49">
+</dataflow>
+<dataflow id="274" from="empty_2" to="specinterface_ln0" fromId="248" toId="49">
+</dataflow>
+<dataflow id="275" from="StgValue_244" to="specinterface_ln0" fromId="244" toId="49">
+</dataflow>
+<dataflow id="276" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="49">
+</dataflow>
+<dataflow id="278" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="277" toId="50">
+</dataflow>
+<dataflow id="279" from="input_stream" to="specbitsmap_ln0" fromId="75" toId="50">
+</dataflow>
+<dataflow id="280" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="254" toId="51">
+</dataflow>
+<dataflow id="281" from="output_stream" to="specinterface_ln0" fromId="76" toId="51">
+</dataflow>
+<dataflow id="282" from="empty_11" to="specinterface_ln0" fromId="257" toId="51">
+</dataflow>
+<dataflow id="283" from="StgValue_259" to="specinterface_ln0" fromId="259" toId="51">
+</dataflow>
+<dataflow id="284" from="StgValue_259" to="specinterface_ln0" fromId="259" toId="51">
+</dataflow>
+<dataflow id="285" from="empty_1" to="specinterface_ln0" fromId="262" toId="51">
+</dataflow>
+<dataflow id="286" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="51">
+</dataflow>
+<dataflow id="287" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="51">
+</dataflow>
+<dataflow id="288" from="empty_2" to="specinterface_ln0" fromId="248" toId="51">
+</dataflow>
+<dataflow id="289" from="empty_2" to="specinterface_ln0" fromId="248" toId="51">
+</dataflow>
+<dataflow id="290" from="empty_2" to="specinterface_ln0" fromId="248" toId="51">
+</dataflow>
+<dataflow id="291" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="51">
+</dataflow>
+<dataflow id="292" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="51">
+</dataflow>
+<dataflow id="293" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="51">
+</dataflow>
+<dataflow id="294" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="51">
+</dataflow>
+<dataflow id="295" from="empty_2" to="specinterface_ln0" fromId="248" toId="51">
+</dataflow>
+<dataflow id="296" from="empty_2" to="specinterface_ln0" fromId="248" toId="51">
+</dataflow>
+<dataflow id="297" from="StgValue_244" to="specinterface_ln0" fromId="244" toId="51">
+</dataflow>
+<dataflow id="298" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="51">
+</dataflow>
+<dataflow id="299" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="277" toId="52">
+</dataflow>
+<dataflow id="300" from="output_stream" to="specbitsmap_ln0" fromId="76" toId="52">
+</dataflow>
+<dataflow id="301" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="254" toId="53">
+</dataflow>
+<dataflow id="302" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="53">
+</dataflow>
+<dataflow id="304" from="empty_3" to="specinterface_ln0" fromId="303" toId="53">
+</dataflow>
+<dataflow id="305" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="53">
+</dataflow>
+<dataflow id="306" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="53">
+</dataflow>
+<dataflow id="307" from="empty_2" to="specinterface_ln0" fromId="248" toId="53">
+</dataflow>
+<dataflow id="308" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="53">
+</dataflow>
+<dataflow id="309" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="53">
+</dataflow>
+<dataflow id="311" from="empty_4" to="specinterface_ln0" fromId="310" toId="53">
+</dataflow>
+<dataflow id="312" from="empty_2" to="specinterface_ln0" fromId="248" toId="53">
+</dataflow>
+<dataflow id="313" from="empty_2" to="specinterface_ln0" fromId="248" toId="53">
+</dataflow>
+<dataflow id="314" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="53">
+</dataflow>
+<dataflow id="315" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="53">
+</dataflow>
+<dataflow id="316" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="53">
+</dataflow>
+<dataflow id="317" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="53">
+</dataflow>
+<dataflow id="318" from="empty_2" to="specinterface_ln0" fromId="248" toId="53">
+</dataflow>
+<dataflow id="319" from="empty_2" to="specinterface_ln0" fromId="248" toId="53">
+</dataflow>
+<dataflow id="320" from="StgValue_244" to="specinterface_ln0" fromId="244" toId="53">
+</dataflow>
+<dataflow id="321" from="StgValue_246" to="specinterface_ln0" fromId="246" toId="53">
 </dataflow>
 </dataflows>
 

@@ -5,7 +5,10 @@
     "__locale": "cpp",
     "ios": "cpp",
     "format": "cpp",
-    "ranges": "cpp"
+    "ranges": "cpp",
+    "valarray": "cpp",
+    "complex": "cpp",
+    "cmath": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",

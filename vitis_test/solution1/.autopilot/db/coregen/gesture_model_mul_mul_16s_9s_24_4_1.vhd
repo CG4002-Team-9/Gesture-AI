@@ -3,7 +3,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity gesture_model_mul_mul_16s_9s_24_4_1_DSP48_9 is
+entity gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5 is
 port (
     clk: in std_logic;
     rst: in std_logic;
@@ -14,7 +14,7 @@ port (
 
 end entity;
 
-architecture behav of gesture_model_mul_mul_16s_9s_24_4_1_DSP48_9 is
+architecture behav of gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5 is
     signal a_cvt: signed(16 - 1 downto 0);
     signal b_cvt: signed(9 - 1 downto 0);
     signal p_cvt: signed(24 - 1 downto 0);
@@ -65,7 +65,7 @@ entity gesture_model_mul_mul_16s_9s_24_4_1 is
 end entity;
 
 architecture arch of gesture_model_mul_mul_16s_9s_24_4_1 is
-    component gesture_model_mul_mul_16s_9s_24_4_1_DSP48_9 is
+    component gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5 is
         port (
             clk : IN STD_LOGIC;
             rst : IN STD_LOGIC;
@@ -78,7 +78,7 @@ architecture arch of gesture_model_mul_mul_16s_9s_24_4_1 is
 
 
 begin
-    gesture_model_mul_mul_16s_9s_24_4_1_DSP48_9_U :  component gesture_model_mul_mul_16s_9s_24_4_1_DSP48_9
+    gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5_U :  component gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5
     port map (
         clk => clk,
         rst => reset,

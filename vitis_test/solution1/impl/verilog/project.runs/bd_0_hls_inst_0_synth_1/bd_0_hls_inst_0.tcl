@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/prince/vitis_test/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.tcl"
+  variable script "/home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.tcl"
   variable category "vivado_synth"
 }
 
@@ -79,19 +79,19 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/prince/vitis_test/solution1/impl/verilog/project.cache/wt [current_project]
-set_property parent.project_path /home/prince/vitis_test/solution1/impl/verilog/project.xpr [current_project]
+set_property webtalk.parent_dir /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.cache/wt [current_project]
+set_property parent.project_path /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths /home/prince/vitis_test/solution1/impl/ip [current_project]
+set_property ip_repo_paths /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/ip [current_project]
 update_ip_catalog
-set_property ip_output_repo /home/prince/vitis_test/solution1/impl/verilog/project.cache/ip [current_project]
+set_property ip_output_repo /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet /home/prince/vitis_test/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0.xci
-set_property used_in_implementation false [get_files -all /home/prince/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/gesture_model_ooc.xdc]
+read_ip -quiet /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0.xci
+set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/gesture_model_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -107,7 +107,7 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cacheID [config_ip_cache -export -no_bom  -synth_opts { -directive sdx_optimization_effort_high }  -dir /home/prince/vitis_test/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1 -new_name bd_0_hls_inst_0 -ip [get_ips bd_0_hls_inst_0]]
+set cacheID [config_ip_cache -export -no_bom  -synth_opts { -directive sdx_optimization_effort_high }  -dir /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1 -new_name bd_0_hls_inst_0 -ip [get_ips bd_0_hls_inst_0]]
 
 OPTRACE "Configure IP Cache" END { }
 if { $cacheID == "" } {
@@ -162,32 +162,32 @@ create_report "bd_0_hls_inst_0_synth_1_synth_report_utilization_0" "report_utili
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force /home/prince/vitis_test/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp /home/prince/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0.dcp
+  file copy -force /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub /home/prince/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_stub.v
+  write_verilog -force -mode synth_stub /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub /home/prince/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_stub.vhdl
+  write_vhdl -force -mode synth_stub /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim /home/prince/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_sim_netlist.v
+  write_verilog -force -mode funcsim /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim /home/prince/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -197,47 +197,47 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force /home/prince/vitis_test/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp /home/prince/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0.dcp
+  file copy -force /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force /home/prince/vitis_test/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0_stub.v /home/prince/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_stub.v
+  file rename -force /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0_stub.v /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/prince/vitis_test/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0_stub.vhdl /home/prince/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_stub.vhdl
+  file rename -force /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0_stub.vhdl /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/prince/vitis_test/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0_sim_netlist.v /home/prince/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_sim_netlist.v
+  file rename -force /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0_sim_netlist.v /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/prince/vitis_test/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0_sim_netlist.vhdl /home/prince/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_sim_netlist.vhdl
+  file rename -force /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0_sim_netlist.vhdl /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cacheID 
 
-if {[file isdir /home/prince/vitis_test/solution1/impl/verilog/project.ip_user_files/ip/bd_0_hls_inst_0]} {
+if {[file isdir /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.ip_user_files/ip/bd_0_hls_inst_0]} {
   catch { 
-    file copy -force /home/prince/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_stub.v /home/prince/vitis_test/solution1/impl/verilog/project.ip_user_files/ip/bd_0_hls_inst_0
+    file copy -force /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_stub.v /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.ip_user_files/ip/bd_0_hls_inst_0
   }
 }
 
-if {[file isdir /home/prince/vitis_test/solution1/impl/verilog/project.ip_user_files/ip/bd_0_hls_inst_0]} {
+if {[file isdir /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.ip_user_files/ip/bd_0_hls_inst_0]} {
   catch { 
-    file copy -force /home/prince/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_stub.vhdl /home/prince/vitis_test/solution1/impl/verilog/project.ip_user_files/ip/bd_0_hls_inst_0
+    file copy -force /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_stub.vhdl /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.ip_user_files/ip/bd_0_hls_inst_0
   }
 }
 file delete __synthesis_is_running__

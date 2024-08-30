@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'gesture_model'
 ================================================================
-* Date:           Thu Aug 29 18:14:01 2024
+* Date:           Fri Aug 30 03:01:54 2024
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        vitis_test
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  6.589 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  7.272 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -29,24 +29,25 @@
     |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
     |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
     +---------+---------+----------+----------+-------+-------+----------+
-    |    17280|    17280|  0.173 ms|  0.173 ms|  15110|  15110|  dataflow|
+    |    23078|    23078|  0.231 ms|  0.231 ms|  15110|  15110|  dataflow|
     +---------+---------+----------+----------+-------+-------+----------+
 
     + Detail: 
         * Instance: 
-        +------------------------------+---------------------------+---------+---------+----------+----------+-------+-------+---------+
-        |                              |                           |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
-        |           Instance           |           Module          |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
-        +------------------------------+---------------------------+---------+---------+----------+----------+-------+-------+---------+
-        |conv1d_0_U0                   |conv1d_0                   |      847|      847|  8.470 us|  8.470 us|    847|    847|       no|
-        |batchnorm_1_U0                |batchnorm_1                |      137|      137|  1.370 us|  1.370 us|    137|    137|       no|
-        |maxpool1d_2_U0                |maxpool1d_2                |       54|       54|  0.540 us|  0.540 us|     54|     54|       no|
-        |Loop_VITIS_LOOP_42_1_proc_U0  |Loop_VITIS_LOOP_42_1_proc  |      946|      946|  9.460 us|  9.460 us|    946|    946|       no|
-        |dense_4_U0                    |dense_4                    |    15109|    15109|  0.151 ms|  0.151 ms|  15109|  15109|       no|
-        |batchnorm_5_U0                |batchnorm_5                |       52|       52|  0.520 us|  0.520 us|     52|     52|       no|
-        |dense_output_7_U0             |dense_output_7             |       54|       54|  0.540 us|  0.540 us|     54|     54|       no|
-        |softmax_7_U0                  |softmax_7                  |       74|       74|  0.740 us|  0.740 us|     74|     74|       no|
-        +------------------------------+---------------------------+---------+---------+----------+----------+-------+-------+---------+
+        +--------------------------------+-----------------------------+---------+---------+-----------+-----------+-------+-------+---------+
+        |                                |                             |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
+        |            Instance            |            Module           |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
+        +--------------------------------+-----------------------------+---------+---------+-----------+-----------+-------+-------+---------+
+        |Loop_VITIS_LOOP_149_1_proc8_U0  |Loop_VITIS_LOOP_149_1_proc8  |      122|      122|   1.220 us|   1.220 us|    122|    122|       no|
+        |conv1d_0_U0                     |conv1d_0                     |     3782|     3782|  37.820 us|  37.820 us|   3782|   3782|       no|
+        |batch_normalization_0_U0        |batch_normalization_0        |     1942|     1942|  19.420 us|  19.420 us|   1942|   1942|       no|
+        |max_pooling1d_0_U0              |max_pooling1d_0              |      946|      946|   9.460 us|   9.460 us|    946|    946|       no|
+        |Loop_VITIS_LOOP_79_1_proc_U0    |Loop_VITIS_LOOP_79_1_proc    |      946|      946|   9.460 us|   9.460 us|    946|    946|       no|
+        |dense_0_U0                      |dense_0                      |    15109|    15109|   0.151 ms|   0.151 ms|  15109|  15109|       no|
+        |batch_normalization_1_U0        |batch_normalization_1        |       70|       70|   0.700 us|   0.700 us|     70|     70|       no|
+        |dense_1_U0                      |dense_1                      |      154|      154|   1.540 us|   1.540 us|    154|    154|       no|
+        |Loop_VITIS_LOOP_166_3_proc9_U0  |Loop_VITIS_LOOP_166_3_proc9  |       23|       23|   0.230 us|   0.230 us|     23|     23|       no|
+        +--------------------------------+-----------------------------+---------+---------+-----------+-----------+-------+-------+---------+
 
         * Loop: 
         N/A
@@ -63,34 +64,36 @@
 |DSP              |        -|    -|       -|      -|    -|
 |Expression       |        -|    -|       0|      2|    -|
 |FIFO             |        -|    -|       -|      -|    -|
-|Instance         |       15|   32|    7122|   7539|    -|
-|Memory           |        6|    -|      95|     26|    0|
+|Instance         |        7|   48|    8643|  14432|    0|
+|Memory           |       14|    -|     143|     26|    0|
 |Multiplexer      |        -|    -|       -|      -|    -|
 |Register         |        -|    -|       -|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |       21|   32|    7217|   7567|    0|
+|Total            |       21|   48|    8786|  14460|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      432|  360|  141120|  70560|    0|
 +-----------------+---------+-----+--------+-------+-----+
-|Utilization (%)  |        4|    8|       5|     10|    0|
+|Utilization (%)  |        4|   13|       6|     20|    0|
 +-----------------+---------+-----+--------+-------+-----+
 
 + Detail: 
     * Instance: 
-    +------------------------------+---------------------------+---------+----+------+------+-----+
-    |           Instance           |           Module          | BRAM_18K| DSP|  FF  |  LUT | URAM|
-    +------------------------------+---------------------------+---------+----+------+------+-----+
-    |Loop_VITIS_LOOP_42_1_proc_U0  |Loop_VITIS_LOOP_42_1_proc  |        0|   0|    23|    70|    0|
-    |batchnorm_1_U0                |batchnorm_1                |        0|   1|  1620|  1224|    0|
-    |batchnorm_5_U0                |batchnorm_5                |        0|   1|  1716|  2284|    0|
-    |conv1d_0_U0                   |conv1d_0                   |        0|  10|   120|   966|    0|
-    |dense_4_U0                    |dense_4                    |        7|   1|   269|   408|    0|
-    |dense_output_7_U0             |dense_output_7             |        8|  19|  1714|  1142|    0|
-    |maxpool1d_2_U0                |maxpool1d_2                |        0|   0|    15|   101|    0|
-    |softmax_7_U0                  |softmax_7                  |        0|   0|  1645|  1344|    0|
-    +------------------------------+---------------------------+---------+----+------+------+-----+
-    |Total                         |                           |       15|  32|  7122|  7539|    0|
-    +------------------------------+---------------------------+---------+----+------+------+-----+
+    +--------------------------------+-----------------------------+---------+----+------+------+-----+
+    |            Instance            |            Module           | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +--------------------------------+-----------------------------+---------+----+------+------+-----+
+    |Loop_VITIS_LOOP_149_1_proc8_U0  |Loop_VITIS_LOOP_149_1_proc8  |        0|   0|     9|    64|    0|
+    |Loop_VITIS_LOOP_166_3_proc9_U0  |Loop_VITIS_LOOP_166_3_proc9  |        0|   0|    10|    74|    0|
+    |Loop_VITIS_LOOP_79_1_proc_U0    |Loop_VITIS_LOOP_79_1_proc    |        0|   0|    46|   261|    0|
+    |batch_normalization_0_U0        |batch_normalization_0        |        0|   1|  2152|  2936|    0|
+    |batch_normalization_1_U0        |batch_normalization_1        |        0|   1|  1772|  2605|    0|
+    |control_s_axi_U                 |control_s_axi                |        0|   0|    36|    40|    0|
+    |conv1d_0_U0                     |conv1d_0                     |        0|   3|   188|   392|    0|
+    |dense_0_U0                      |dense_0                      |        7|   1|   269|   408|    0|
+    |dense_1_U0                      |dense_1                      |        0|  42|  4127|  7429|    0|
+    |max_pooling1d_0_U0              |max_pooling1d_0              |        0|   0|    34|   223|    0|
+    +--------------------------------+-----------------------------+---------+----+------+------+-----+
+    |Total                           |                             |        7|  48|  8643| 14432|    0|
+    +--------------------------------+-----------------------------+---------+----+------+------+-----+
 
     * DSP: 
     N/A
@@ -99,15 +102,16 @@
     +----------------------+----------------------------------+---------+----+----+-----+------+-----+------+-------------+
     |        Memory        |              Module              | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
     +----------------------+----------------------------------+---------+----+----+-----+------+-----+------+-------------+
-    |bn1_out_V_U           |bn1_out_V_RAM_AUTO_1R1W           |        2|   0|   0|    0|   105|   16|     1|         1680|
-    |bn2_out_V_U           |bn2_out_V_RAM_AUTO_1R1W           |        0|  64|   8|    0|    16|   16|     1|          256|
-    |conv1d_out_V_U        |conv1d_out_V_RAM_AUTO_1R1W        |        1|   0|   0|    0|   105|   15|     1|         1575|
-    |dense1_out_V_U        |dense1_out_V_RAM_AUTO_1R1W        |        0|  15|   8|    0|    16|   15|     1|          240|
-    |dense_output_out_V_U  |dense_output_out_V_RAM_AUTO_1R1W  |        0|  16|  10|    0|    20|   16|     1|          320|
-    |flatten_out_V_U       |flatten_out_V_RAM_AUTO_1R1W       |        2|   0|   0|    0|   944|   16|     1|        15104|
-    |maxpool_out_V_U       |maxpool_out_V_RAM_AUTO_1R1W       |        1|   0|   0|    0|    52|   16|     1|          832|
+    |batch_norm_out_0_V_U  |batch_norm_out_0_V_RAM_AUTO_1R1W  |        4|   0|   0|    0|  1888|   16|     1|        30208|
+    |batch_norm_out_1_V_U  |batch_norm_out_1_V_RAM_AUTO_1R1W  |        0|  64|   8|    0|    16|   16|     1|          256|
+    |conv1d_out_0_V_U      |conv1d_out_0_V_RAM_AUTO_1R1W      |        4|   0|   0|    0|  1888|   15|     1|        28320|
+    |dense_out_0_V_U       |dense_out_0_V_RAM_AUTO_1R1W       |        0|  15|   8|    0|    16|   15|     1|          240|
+    |input_V_0_U           |input_V_0_RAM_AUTO_1R1W           |        2|   0|   0|    0|   120|   16|     1|         1920|
+    |max_pool_out_0_V_U    |max_pool_out_0_V_RAM_AUTO_1R1W    |        2|   0|   0|    0|   944|   16|     1|        15104|
+    |flatten_out_0_V_U     |max_pool_out_0_V_RAM_AUTO_1R1W    |        2|   0|   0|    0|   944|   16|     1|        15104|
+    |output_V_U            |output_V_RAM_AUTO_1R1W            |        0|  64|  10|    0|    20|   16|     1|          320|
     +----------------------+----------------------------------+---------+----+----+-----+------+-----+------+-------------+
-    |Total                 |                                  |        6|  95|  26|    0|  1258|  110|     7|        20007|
+    |Total                 |                                  |       14| 143|  26|    0|  5836|  126|     8|        91472|
     +----------------------+----------------------------------+---------+----+----+-----+------+-----+------+-------------+
 
     * FIFO: 
@@ -134,34 +138,34 @@
 == Interface
 ================================================================
 * Summary: 
-+-------------------+-----+-----+------------+---------------+--------------+
-|     RTL Ports     | Dir | Bits|  Protocol  | Source Object |    C Type    |
-+-------------------+-----+-----+------------+---------------+--------------+
-|ap_clk             |   in|    1|  ap_ctrl_hs|  gesture_model|  return value|
-|ap_rst             |   in|    1|  ap_ctrl_hs|  gesture_model|  return value|
-|ap_start           |   in|    1|  ap_ctrl_hs|  gesture_model|  return value|
-|ap_done            |  out|    1|  ap_ctrl_hs|  gesture_model|  return value|
-|ap_ready           |  out|    1|  ap_ctrl_hs|  gesture_model|  return value|
-|ap_idle            |  out|    1|  ap_ctrl_hs|  gesture_model|  return value|
-|input_r_address0   |  out|    7|   ap_memory|        input_r|         array|
-|input_r_ce0        |  out|    1|   ap_memory|        input_r|         array|
-|input_r_d0         |  out|   16|   ap_memory|        input_r|         array|
-|input_r_q0         |   in|   16|   ap_memory|        input_r|         array|
-|input_r_we0        |  out|    1|   ap_memory|        input_r|         array|
-|input_r_address1   |  out|    7|   ap_memory|        input_r|         array|
-|input_r_ce1        |  out|    1|   ap_memory|        input_r|         array|
-|input_r_d1         |  out|   16|   ap_memory|        input_r|         array|
-|input_r_q1         |   in|   16|   ap_memory|        input_r|         array|
-|input_r_we1        |  out|    1|   ap_memory|        input_r|         array|
-|output_r_address0  |  out|    5|   ap_memory|       output_r|         array|
-|output_r_ce0       |  out|    1|   ap_memory|       output_r|         array|
-|output_r_d0        |  out|   16|   ap_memory|       output_r|         array|
-|output_r_q0        |   in|   16|   ap_memory|       output_r|         array|
-|output_r_we0       |  out|    1|   ap_memory|       output_r|         array|
-|output_r_address1  |  out|    5|   ap_memory|       output_r|         array|
-|output_r_ce1       |  out|    1|   ap_memory|       output_r|         array|
-|output_r_d1        |  out|   16|   ap_memory|       output_r|         array|
-|output_r_q1        |   in|   16|   ap_memory|       output_r|         array|
-|output_r_we1       |  out|    1|   ap_memory|       output_r|         array|
-+-------------------+-----+-----+------------+---------------+--------------+
++-----------------------+-----+-----+------------+---------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  | Source Object |    C Type    |
++-----------------------+-----+-----+------------+---------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|       s_axi|        control|   return void|
+|s_axi_control_AWREADY  |  out|    1|       s_axi|        control|   return void|
+|s_axi_control_AWADDR   |   in|    4|       s_axi|        control|   return void|
+|s_axi_control_WVALID   |   in|    1|       s_axi|        control|   return void|
+|s_axi_control_WREADY   |  out|    1|       s_axi|        control|   return void|
+|s_axi_control_WDATA    |   in|   32|       s_axi|        control|   return void|
+|s_axi_control_WSTRB    |   in|    4|       s_axi|        control|   return void|
+|s_axi_control_ARVALID  |   in|    1|       s_axi|        control|   return void|
+|s_axi_control_ARREADY  |  out|    1|       s_axi|        control|   return void|
+|s_axi_control_ARADDR   |   in|    4|       s_axi|        control|   return void|
+|s_axi_control_RVALID   |  out|    1|       s_axi|        control|   return void|
+|s_axi_control_RREADY   |   in|    1|       s_axi|        control|   return void|
+|s_axi_control_RDATA    |  out|   32|       s_axi|        control|   return void|
+|s_axi_control_RRESP    |  out|    2|       s_axi|        control|   return void|
+|s_axi_control_BVALID   |  out|    1|       s_axi|        control|   return void|
+|s_axi_control_BREADY   |   in|    1|       s_axi|        control|   return void|
+|s_axi_control_BRESP    |  out|    2|       s_axi|        control|   return void|
+|ap_clk                 |   in|    1|  ap_ctrl_hs|  gesture_model|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_hs|  gesture_model|  return value|
+|interrupt              |  out|    1|  ap_ctrl_hs|  gesture_model|  return value|
+|input_stream_TDATA     |   in|   16|        axis|   input_stream|       pointer|
+|input_stream_TVALID    |   in|    1|        axis|   input_stream|       pointer|
+|input_stream_TREADY    |  out|    1|        axis|   input_stream|       pointer|
+|output_stream_TDATA    |  out|   16|        axis|  output_stream|       pointer|
+|output_stream_TVALID   |  out|    1|        axis|  output_stream|       pointer|
+|output_stream_TREADY   |   in|    1|        axis|  output_stream|       pointer|
++-----------------------+-----+-----+------------+---------------+--------------+
 

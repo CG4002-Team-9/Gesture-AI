@@ -18,14 +18,16 @@
 using namespace std;
 
 // wrapc file define:
-#define AUTOTB_TVIN_input_r "../tv/cdatafile/c.gesture_model.autotvin_input_r.dat"
-#define AUTOTB_TVOUT_input_r "../tv/cdatafile/c.gesture_model.autotvout_input_r.dat"
-#define AUTOTB_TVIN_output_r "../tv/cdatafile/c.gesture_model.autotvin_output_r.dat"
-#define AUTOTB_TVOUT_output_r "../tv/cdatafile/c.gesture_model.autotvout_output_r.dat"
+#define AUTOTB_TVIN_input_stream "../tv/cdatafile/c.gesture_model.autotvin_input_stream.dat"
+#define WRAPC_STREAM_SIZE_IN_input_stream "../tv/stream_size/stream_size_in_input_stream.dat"
+#define WRAPC_STREAM_INGRESS_STATUS_input_stream "../tv/stream_size/stream_ingress_status_input_stream.dat"
+#define AUTOTB_TVOUT_output_stream "../tv/cdatafile/c.gesture_model.autotvout_output_stream.dat"
+#define WRAPC_STREAM_SIZE_OUT_output_stream "../tv/stream_size/stream_size_out_output_stream.dat"
+#define WRAPC_STREAM_EGRESS_STATUS_output_stream "../tv/stream_size/stream_egress_status_output_stream.dat"
 
 
 // tvout file define:
-#define AUTOTB_TVOUT_PC_output_r "../tv/rtldatafile/rtl.gesture_model.autotvout_output_r.dat"
+#define AUTOTB_TVOUT_PC_output_stream "../tv/rtldatafile/rtl.gesture_model.autotvout_output_stream.dat"
 
 
 namespace hls::sim
@@ -953,81 +955,56 @@ extern "C"
 void gesture_model_hw_stub_wrapper(void*, void*);
 
 extern "C"
-void apatb_gesture_model_hw(void* __xlx_apatb_param_input_r, void* __xlx_apatb_param_output_r)
+void apatb_gesture_model_hw(void* __xlx_apatb_param_input_stream, void* __xlx_apatb_param_output_stream)
 {
-#ifdef USE_BINARY_TV_FILE
-  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port0 {
-#else
-  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port0 {
-#endif
+  static hls::sim::Stream<hls::sim::Byte<2>> port0 {
     .width = 16,
-    .asize = 2,
-    .hbm = false,
-    .name = { "input_r" },
+    .name = "input_stream",
 #ifdef POST_CHECK
+    .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_input_stream),
 #else
-    .owriter = nullptr,
-#ifdef USE_BINARY_TV_FILE
-    .iwriter = new hls::sim::Output(AUTOTB_TVIN_input_r),
-#else
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_input_r),
-#endif
+    .writer = new hls::sim::Writer(AUTOTB_TVIN_input_stream),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_IN_input_stream),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_INGRESS_STATUS_input_stream),
 #endif
   };
-  port0.param = { __xlx_apatb_param_input_r };
-  port0.depth = { 120 };
-  port0.offset = {  };
-  port0.hasWrite = { false };
+  port0.param = (hls::stream<hls::sim::Byte<2>>*)__xlx_apatb_param_input_stream;
+  port0.hasWrite = false;
 
-#ifdef USE_BINARY_TV_FILE
-  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port1 {
-#else
-  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port1 {
-#endif
+  static hls::sim::Stream<hls::sim::Byte<2>> port1 {
     .width = 16,
-    .asize = 2,
-    .hbm = false,
-    .name = { "output_r" },
+    .name = "output_stream",
 #ifdef POST_CHECK
-#ifdef USE_BINARY_TV_FILE
-    .reader = new hls::sim::Input(AUTOTB_TVOUT_PC_output_r),
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_stream),
 #else
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_r),
-#endif
-#else
-#ifdef USE_BINARY_TV_FILE
-    .owriter = new hls::sim::Output(AUTOTB_TVOUT_output_r),
-#else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_output_r),
-#endif
-#ifdef USE_BINARY_TV_FILE
-    .iwriter = new hls::sim::Output(AUTOTB_TVIN_output_r),
-#else
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_output_r),
-#endif
+    .writer = new hls::sim::Writer(AUTOTB_TVOUT_output_stream),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_OUT_output_stream),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_EGRESS_STATUS_output_stream),
 #endif
   };
-  port1.param = { __xlx_apatb_param_output_r };
-  port1.depth = { 20 };
-  port1.offset = {  };
-  port1.hasWrite = { true };
+  port1.param = (hls::stream<hls::sim::Byte<2>>*)__xlx_apatb_param_output_stream;
+  port1.hasWrite = true;
 
   refine_signal_handler();
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
+    check(port0);
     check(port1);
 #else
     static hls::sim::RefTCL tcl("../tv/cdatafile/ref.tcl");
     CodeState = DUMP_INPUTS;
-    dump(port0, port0.iwriter, tcl.AESL_transaction);
-    dump(port1, port1.iwriter, tcl.AESL_transaction);
-    port0.doTCL(tcl);
-    port1.doTCL(tcl);
+    port0.markSize();
+    port0.buffer();
+    port1.markSize();
     CodeState = CALL_C_DUT;
-    gesture_model_hw_stub_wrapper(__xlx_apatb_param_input_r, __xlx_apatb_param_output_r);
+    gesture_model_hw_stub_wrapper(__xlx_apatb_param_input_stream, __xlx_apatb_param_output_stream);
+    port1.buffer();
+    dump(port0, tcl.AESL_transaction);
+    port0.doTCL(tcl);
     CodeState = DUMP_OUTPUTS;
-    dump(port1, port1.owriter, tcl.AESL_transaction);
+    dump(port1, tcl.AESL_transaction);
+    port1.doTCL(tcl);
     tcl.AESL_transaction++;
 #endif
   } catch (const hls::sim::SimException &e) {

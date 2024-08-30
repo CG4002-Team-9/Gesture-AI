@@ -2,103 +2,33 @@
 <AdditionalInfo>
   <CTypeInfo>
       <RtlPort>
-        <name>input_r_address0</name>
-        <type>Unsigned</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>input_r_address1</name>
-        <type>Unsigned</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>input_r_ce0</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>input_r_ce1</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>input_r_d0</name>
+        <name>input_stream_TDATA</name>
         <type>Signed</type>
-        <fractionWidth>8</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>input_r_d1</name>
-        <type>Signed</type>
-        <fractionWidth>8</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>input_r_q0</name>
-        <type>Signed</type>
-        <fractionWidth>8</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>input_r_q1</name>
-        <type>Signed</type>
-        <fractionWidth>8</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>input_r_we0</name>
-        <type>bool</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>input_r_we1</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_r_address0</name>
-        <type>Unsigned</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_r_address1</name>
-        <type>Unsigned</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_r_ce0</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_r_ce1</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_r_d0</name>
+        <name>input_stream_TREADY</name>
         <type>Signed</type>
-        <fractionWidth>8</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_r_d1</name>
-        <type>Signed</type>
-        <fractionWidth>8</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_r_q0</name>
-        <type>Signed</type>
-        <fractionWidth>8</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_r_q1</name>
-        <type>Signed</type>
-        <fractionWidth>8</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_r_we0</name>
-        <type>bool</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>output_r_we1</name>
-        <type>bool</type>
+        <name>input_stream_TVALID</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>output_stream_TDATA</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>output_stream_TREADY</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>output_stream_TVALID</name>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
   </CTypeInfo>
@@ -108,7 +38,7 @@
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>17280</latency>
+    <latency>23078</latency>
     <II>15110</II>
   </modelParameters>
 </AdditionalInfo>

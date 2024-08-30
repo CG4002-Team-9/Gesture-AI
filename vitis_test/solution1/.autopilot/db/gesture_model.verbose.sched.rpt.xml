@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'gesture_model'" level="0">
-<item name = "Date">Thu Aug 29 18:13:58 2024
+<item name = "Date">Fri Aug 30 03:01:51 2024
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">vitis_test</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.589 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.272 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">17280, 17280, 0.173 ms, 0.173 ms, 15110, 15110, dataflow</column>
+<column name="">23078, 23078, 0.231 ms, 0.231 ms, 15110, 15110, dataflow</column>
 </table>
 </item>
 <item name = "Detail">

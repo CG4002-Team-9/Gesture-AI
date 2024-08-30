@@ -1,5 +1,5 @@
    
-    parameter PROC_NUM = 8;
+    parameter PROC_NUM = 9;
     parameter ST_IDLE = 3'b000;
     parameter ST_FILTER_FAKE = 3'b001;
     parameter ST_DL_DETECTED = 3'b010;
@@ -185,34 +185,37 @@
     endfunction
 
     // get the proc path based on dl vector
-    function [488:0] proc_path(input [PROC_NUM - 1:0] dl_vec);
+    function [504:0] proc_path(input [PROC_NUM - 1:0] dl_vec);
         integer index;
         begin
             index = proc_index(dl_vec);
             case (index)
                 0 : begin
-                    proc_path = "gesture_model_gesture_model.conv1d_0_U0";
+                    proc_path = "gesture_model_gesture_model.Loop_VITIS_LOOP_149_1_proc8_U0";
                 end
                 1 : begin
-                    proc_path = "gesture_model_gesture_model.batchnorm_1_U0";
+                    proc_path = "gesture_model_gesture_model.conv1d_0_U0";
                 end
                 2 : begin
-                    proc_path = "gesture_model_gesture_model.maxpool1d_2_U0";
+                    proc_path = "gesture_model_gesture_model.batch_normalization_0_U0";
                 end
                 3 : begin
-                    proc_path = "gesture_model_gesture_model.Loop_VITIS_LOOP_42_1_proc_U0";
+                    proc_path = "gesture_model_gesture_model.max_pooling1d_0_U0";
                 end
                 4 : begin
-                    proc_path = "gesture_model_gesture_model.dense_4_U0";
+                    proc_path = "gesture_model_gesture_model.Loop_VITIS_LOOP_79_1_proc_U0";
                 end
                 5 : begin
-                    proc_path = "gesture_model_gesture_model.batchnorm_5_U0";
+                    proc_path = "gesture_model_gesture_model.dense_0_U0";
                 end
                 6 : begin
-                    proc_path = "gesture_model_gesture_model.dense_output_7_U0";
+                    proc_path = "gesture_model_gesture_model.batch_normalization_1_U0";
                 end
                 7 : begin
-                    proc_path = "gesture_model_gesture_model.softmax_7_U0";
+                    proc_path = "gesture_model_gesture_model.dense_1_U0";
+                end
+                8 : begin
+                    proc_path = "gesture_model_gesture_model.Loop_VITIS_LOOP_166_3_proc9_U0";
                 end
                 default : begin
                     proc_path = "unknown";
@@ -232,7 +235,7 @@
     endtask
 
     // print the start of a cycle
-    task print_cycle_start(input reg [488:0] proc_path, input integer cycle_id);
+    task print_cycle_start(input reg [504:0] proc_path, input integer cycle_id);
         begin
             $display("/////////////////////////");
             $display("// Dependence cycle %0d:", cycle_id);
@@ -257,7 +260,7 @@
     endtask
 
     // print one proc component in the cycle
-    task print_cycle_proc_comp(input reg [488:0] proc_path, input integer cycle_comp_id);
+    task print_cycle_proc_comp(input reg [504:0] proc_path, input integer cycle_comp_id);
         begin
             $display("// (%0d): Process: %0s", cycle_comp_id, proc_path);
             $fdisplay(fp, "Dependence_Process_ID %0d", cycle_comp_id);
@@ -277,15 +280,15 @@
                 0 : begin
                     case(index2)
                     1: begin
-                        if (~conv1d_out_V_U.i_full_n & conv1d_0_U0.ap_done & ap_done_reg_0 & ~conv1d_out_V_U.t_read) begin
-                            if (~conv1d_out_V_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.conv1d_out_V_U' written by process 'gesture_model_gesture_model.batchnorm_1_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.conv1d_out_V_U");
+                        if (~input_V_0_U.i_full_n & Loop_VITIS_LOOP_149_1_proc8_U0.ap_done & ap_done_reg_0 & ~input_V_0_U.t_read) begin
+                            if (~input_V_0_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.input_V_0_U' written by process 'gesture_model_gesture_model.conv1d_0_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.input_V_0_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~conv1d_out_V_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.conv1d_out_V_U' read by process 'gesture_model_gesture_model.batchnorm_1_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.conv1d_out_V_U");
+                            else if (~input_V_0_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.input_V_0_U' read by process 'gesture_model_gesture_model.conv1d_0_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.input_V_0_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
@@ -295,29 +298,29 @@
                 1 : begin
                     case(index2)
                     0: begin
-                        if (~conv1d_out_V_U.t_empty_n & batchnorm_1_U0.ap_idle & ~conv1d_out_V_U.i_write) begin
-                            if (~conv1d_out_V_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.conv1d_out_V_U' written by process 'gesture_model_gesture_model.conv1d_0_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.conv1d_out_V_U");
+                        if (~input_V_0_U.t_empty_n & conv1d_0_U0.ap_idle & ~input_V_0_U.i_write) begin
+                            if (~input_V_0_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.input_V_0_U' written by process 'gesture_model_gesture_model.Loop_VITIS_LOOP_149_1_proc8_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.input_V_0_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~conv1d_out_V_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.conv1d_out_V_U' read by process 'gesture_model_gesture_model.conv1d_0_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.conv1d_out_V_U");
+                            else if (~input_V_0_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.input_V_0_U' read by process 'gesture_model_gesture_model.Loop_VITIS_LOOP_149_1_proc8_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.input_V_0_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
                     end
                     2: begin
-                        if (~bn1_out_V_U.i_full_n & batchnorm_1_U0.ap_done & ap_done_reg_1 & ~bn1_out_V_U.t_read) begin
-                            if (~bn1_out_V_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.bn1_out_V_U' written by process 'gesture_model_gesture_model.maxpool1d_2_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.bn1_out_V_U");
+                        if (~conv1d_out_0_V_U.i_full_n & conv1d_0_U0.ap_done & ap_done_reg_1 & ~conv1d_out_0_V_U.t_read) begin
+                            if (~conv1d_out_0_V_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.conv1d_out_0_V_U' written by process 'gesture_model_gesture_model.batch_normalization_0_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.conv1d_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~bn1_out_V_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.bn1_out_V_U' read by process 'gesture_model_gesture_model.maxpool1d_2_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.bn1_out_V_U");
+                            else if (~conv1d_out_0_V_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.conv1d_out_0_V_U' read by process 'gesture_model_gesture_model.batch_normalization_0_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.conv1d_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
@@ -327,29 +330,29 @@
                 2 : begin
                     case(index2)
                     1: begin
-                        if (~bn1_out_V_U.t_empty_n & maxpool1d_2_U0.ap_idle & ~bn1_out_V_U.i_write) begin
-                            if (~bn1_out_V_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.bn1_out_V_U' written by process 'gesture_model_gesture_model.batchnorm_1_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.bn1_out_V_U");
+                        if (~conv1d_out_0_V_U.t_empty_n & batch_normalization_0_U0.ap_idle & ~conv1d_out_0_V_U.i_write) begin
+                            if (~conv1d_out_0_V_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.conv1d_out_0_V_U' written by process 'gesture_model_gesture_model.conv1d_0_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.conv1d_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~bn1_out_V_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.bn1_out_V_U' read by process 'gesture_model_gesture_model.batchnorm_1_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.bn1_out_V_U");
+                            else if (~conv1d_out_0_V_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.conv1d_out_0_V_U' read by process 'gesture_model_gesture_model.conv1d_0_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.conv1d_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
                     end
                     3: begin
-                        if (~maxpool_out_V_U.i_full_n & maxpool1d_2_U0.ap_done & ap_done_reg_2 & ~maxpool_out_V_U.t_read) begin
-                            if (~maxpool_out_V_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.maxpool_out_V_U' written by process 'gesture_model_gesture_model.Loop_VITIS_LOOP_42_1_proc_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.maxpool_out_V_U");
+                        if (~batch_norm_out_0_V_U.i_full_n & batch_normalization_0_U0.ap_done & ap_done_reg_2 & ~batch_norm_out_0_V_U.t_read) begin
+                            if (~batch_norm_out_0_V_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.batch_norm_out_0_V_U' written by process 'gesture_model_gesture_model.max_pooling1d_0_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.batch_norm_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~maxpool_out_V_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.maxpool_out_V_U' read by process 'gesture_model_gesture_model.Loop_VITIS_LOOP_42_1_proc_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.maxpool_out_V_U");
+                            else if (~batch_norm_out_0_V_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.batch_norm_out_0_V_U' read by process 'gesture_model_gesture_model.max_pooling1d_0_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.batch_norm_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
@@ -359,29 +362,29 @@
                 3 : begin
                     case(index2)
                     2: begin
-                        if (~maxpool_out_V_U.t_empty_n & Loop_VITIS_LOOP_42_1_proc_U0.ap_idle & ~maxpool_out_V_U.i_write) begin
-                            if (~maxpool_out_V_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.maxpool_out_V_U' written by process 'gesture_model_gesture_model.maxpool1d_2_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.maxpool_out_V_U");
+                        if (~batch_norm_out_0_V_U.t_empty_n & max_pooling1d_0_U0.ap_idle & ~batch_norm_out_0_V_U.i_write) begin
+                            if (~batch_norm_out_0_V_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.batch_norm_out_0_V_U' written by process 'gesture_model_gesture_model.batch_normalization_0_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.batch_norm_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~maxpool_out_V_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.maxpool_out_V_U' read by process 'gesture_model_gesture_model.maxpool1d_2_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.maxpool_out_V_U");
+                            else if (~batch_norm_out_0_V_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.batch_norm_out_0_V_U' read by process 'gesture_model_gesture_model.batch_normalization_0_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.batch_norm_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
                     end
                     4: begin
-                        if (~flatten_out_V_U.i_full_n & Loop_VITIS_LOOP_42_1_proc_U0.ap_done & ap_done_reg_3 & ~flatten_out_V_U.t_read) begin
-                            if (~flatten_out_V_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.flatten_out_V_U' written by process 'gesture_model_gesture_model.dense_4_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.flatten_out_V_U");
+                        if (~max_pool_out_0_V_U.i_full_n & max_pooling1d_0_U0.ap_done & ap_done_reg_3 & ~max_pool_out_0_V_U.t_read) begin
+                            if (~max_pool_out_0_V_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.max_pool_out_0_V_U' written by process 'gesture_model_gesture_model.Loop_VITIS_LOOP_79_1_proc_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.max_pool_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~flatten_out_V_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.flatten_out_V_U' read by process 'gesture_model_gesture_model.dense_4_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.flatten_out_V_U");
+                            else if (~max_pool_out_0_V_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.max_pool_out_0_V_U' read by process 'gesture_model_gesture_model.Loop_VITIS_LOOP_79_1_proc_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.max_pool_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
@@ -391,29 +394,29 @@
                 4 : begin
                     case(index2)
                     3: begin
-                        if (~flatten_out_V_U.t_empty_n & dense_4_U0.ap_idle & ~flatten_out_V_U.i_write) begin
-                            if (~flatten_out_V_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.flatten_out_V_U' written by process 'gesture_model_gesture_model.Loop_VITIS_LOOP_42_1_proc_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.flatten_out_V_U");
+                        if (~max_pool_out_0_V_U.t_empty_n & Loop_VITIS_LOOP_79_1_proc_U0.ap_idle & ~max_pool_out_0_V_U.i_write) begin
+                            if (~max_pool_out_0_V_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.max_pool_out_0_V_U' written by process 'gesture_model_gesture_model.max_pooling1d_0_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.max_pool_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~flatten_out_V_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.flatten_out_V_U' read by process 'gesture_model_gesture_model.Loop_VITIS_LOOP_42_1_proc_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.flatten_out_V_U");
+                            else if (~max_pool_out_0_V_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.max_pool_out_0_V_U' read by process 'gesture_model_gesture_model.max_pooling1d_0_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.max_pool_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
                     end
                     5: begin
-                        if (~dense1_out_V_U.i_full_n & dense_4_U0.ap_done & ap_done_reg_4 & ~dense1_out_V_U.t_read) begin
-                            if (~dense1_out_V_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.dense1_out_V_U' written by process 'gesture_model_gesture_model.batchnorm_5_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.dense1_out_V_U");
+                        if (~flatten_out_0_V_U.i_full_n & Loop_VITIS_LOOP_79_1_proc_U0.ap_done & ap_done_reg_4 & ~flatten_out_0_V_U.t_read) begin
+                            if (~flatten_out_0_V_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.flatten_out_0_V_U' written by process 'gesture_model_gesture_model.dense_0_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.flatten_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~dense1_out_V_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.dense1_out_V_U' read by process 'gesture_model_gesture_model.batchnorm_5_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.dense1_out_V_U");
+                            else if (~flatten_out_0_V_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.flatten_out_0_V_U' read by process 'gesture_model_gesture_model.dense_0_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.flatten_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
@@ -423,29 +426,29 @@
                 5 : begin
                     case(index2)
                     4: begin
-                        if (~dense1_out_V_U.t_empty_n & batchnorm_5_U0.ap_idle & ~dense1_out_V_U.i_write) begin
-                            if (~dense1_out_V_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.dense1_out_V_U' written by process 'gesture_model_gesture_model.dense_4_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.dense1_out_V_U");
+                        if (~flatten_out_0_V_U.t_empty_n & dense_0_U0.ap_idle & ~flatten_out_0_V_U.i_write) begin
+                            if (~flatten_out_0_V_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.flatten_out_0_V_U' written by process 'gesture_model_gesture_model.Loop_VITIS_LOOP_79_1_proc_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.flatten_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~dense1_out_V_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.dense1_out_V_U' read by process 'gesture_model_gesture_model.dense_4_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.dense1_out_V_U");
+                            else if (~flatten_out_0_V_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.flatten_out_0_V_U' read by process 'gesture_model_gesture_model.Loop_VITIS_LOOP_79_1_proc_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.flatten_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
                     end
                     6: begin
-                        if (~bn2_out_V_U.i_full_n & batchnorm_5_U0.ap_done & ap_done_reg_5 & ~bn2_out_V_U.t_read) begin
-                            if (~bn2_out_V_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.bn2_out_V_U' written by process 'gesture_model_gesture_model.dense_output_7_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.bn2_out_V_U");
+                        if (~dense_out_0_V_U.i_full_n & dense_0_U0.ap_done & ap_done_reg_5 & ~dense_out_0_V_U.t_read) begin
+                            if (~dense_out_0_V_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.dense_out_0_V_U' written by process 'gesture_model_gesture_model.batch_normalization_1_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.dense_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~bn2_out_V_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.bn2_out_V_U' read by process 'gesture_model_gesture_model.dense_output_7_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.bn2_out_V_U");
+                            else if (~dense_out_0_V_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.dense_out_0_V_U' read by process 'gesture_model_gesture_model.batch_normalization_1_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.dense_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
@@ -455,29 +458,29 @@
                 6 : begin
                     case(index2)
                     5: begin
-                        if (~bn2_out_V_U.t_empty_n & dense_output_7_U0.ap_idle & ~bn2_out_V_U.i_write) begin
-                            if (~bn2_out_V_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.bn2_out_V_U' written by process 'gesture_model_gesture_model.batchnorm_5_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.bn2_out_V_U");
+                        if (~dense_out_0_V_U.t_empty_n & batch_normalization_1_U0.ap_idle & ~dense_out_0_V_U.i_write) begin
+                            if (~dense_out_0_V_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.dense_out_0_V_U' written by process 'gesture_model_gesture_model.dense_0_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.dense_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~bn2_out_V_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.bn2_out_V_U' read by process 'gesture_model_gesture_model.batchnorm_5_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.bn2_out_V_U");
+                            else if (~dense_out_0_V_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.dense_out_0_V_U' read by process 'gesture_model_gesture_model.dense_0_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.dense_out_0_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
                     end
                     7: begin
-                        if (~dense_output_out_V_U.i_full_n & dense_output_7_U0.ap_done & ap_done_reg_6 & ~dense_output_out_V_U.t_read) begin
-                            if (~dense_output_out_V_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.dense_output_out_V_U' written by process 'gesture_model_gesture_model.softmax_7_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.dense_output_out_V_U");
+                        if (~batch_norm_out_1_V_U.i_full_n & batch_normalization_1_U0.ap_done & ap_done_reg_6 & ~batch_norm_out_1_V_U.t_read) begin
+                            if (~batch_norm_out_1_V_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.batch_norm_out_1_V_U' written by process 'gesture_model_gesture_model.dense_1_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.batch_norm_out_1_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~dense_output_out_V_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.dense_output_out_V_U' read by process 'gesture_model_gesture_model.softmax_7_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.dense_output_out_V_U");
+                            else if (~batch_norm_out_1_V_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.batch_norm_out_1_V_U' read by process 'gesture_model_gesture_model.dense_1_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.batch_norm_out_1_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
@@ -487,15 +490,47 @@
                 7 : begin
                     case(index2)
                     6: begin
-                        if (~dense_output_out_V_U.t_empty_n & softmax_7_U0.ap_idle & ~dense_output_out_V_U.i_write) begin
-                            if (~dense_output_out_V_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.dense_output_out_V_U' written by process 'gesture_model_gesture_model.dense_output_7_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.dense_output_out_V_U");
+                        if (~batch_norm_out_1_V_U.t_empty_n & dense_1_U0.ap_idle & ~batch_norm_out_1_V_U.i_write) begin
+                            if (~batch_norm_out_1_V_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.batch_norm_out_1_V_U' written by process 'gesture_model_gesture_model.batch_normalization_1_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.batch_norm_out_1_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~dense_output_out_V_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.dense_output_out_V_U' read by process 'gesture_model_gesture_model.dense_output_7_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.dense_output_out_V_U");
+                            else if (~batch_norm_out_1_V_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.batch_norm_out_1_V_U' read by process 'gesture_model_gesture_model.batch_normalization_1_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.batch_norm_out_1_V_U");
+                                $fdisplay(fp, "Dependence_Channel_status FULL");
+                            end
+                        end
+                    end
+                    8: begin
+                        if (~output_V_U.i_full_n & dense_1_U0.ap_done & ap_done_reg_7 & ~output_V_U.t_read) begin
+                            if (~output_V_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.output_V_U' written by process 'gesture_model_gesture_model.Loop_VITIS_LOOP_166_3_proc9_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.output_V_U");
+                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
+                            end
+                            else if (~output_V_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.output_V_U' read by process 'gesture_model_gesture_model.Loop_VITIS_LOOP_166_3_proc9_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.output_V_U");
+                                $fdisplay(fp, "Dependence_Channel_status FULL");
+                            end
+                        end
+                    end
+                    endcase
+                end
+                8 : begin
+                    case(index2)
+                    7: begin
+                        if (~output_V_U.t_empty_n & Loop_VITIS_LOOP_166_3_proc9_U0.ap_idle & ~output_V_U.i_write) begin
+                            if (~output_V_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'gesture_model_gesture_model.output_V_U' written by process 'gesture_model_gesture_model.dense_1_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.output_V_U");
+                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
+                            end
+                            else if (~output_V_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'gesture_model_gesture_model.output_V_U' read by process 'gesture_model_gesture_model.dense_1_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path gesture_model_gesture_model.output_V_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end

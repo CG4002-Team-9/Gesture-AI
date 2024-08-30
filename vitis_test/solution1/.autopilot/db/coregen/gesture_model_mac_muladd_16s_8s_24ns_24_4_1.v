@@ -5,7 +5,7 @@
 // ==============================================================
 `timescale 1 ns / 1 ps
 
-module gesture_model_mac_muladd_16s_8s_24ns_24_4_1_DSP48_3(
+module gesture_model_mac_muladd_16s_8s_24ns_24_4_1_DSP48_1(
     input clk,
     input rst,
     input ce,
@@ -69,7 +69,7 @@ output[dout_WIDTH - 1:0] dout;
 
 
 
-gesture_model_mac_muladd_16s_8s_24ns_24_4_1_DSP48_3 gesture_model_mac_muladd_16s_8s_24ns_24_4_1_DSP48_3_U(
+gesture_model_mac_muladd_16s_8s_24ns_24_4_1_DSP48_1 gesture_model_mac_muladd_16s_8s_24ns_24_4_1_DSP48_1_U(
     .clk( clk ),
     .rst( reset ),
     .ce( ce ),

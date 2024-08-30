@@ -7,592 +7,691 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="gesture_model_gesture_model,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-2-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=6.589375,HLS_SYN_LAT=17280,HLS_SYN_TPT=15110,HLS_SYN_MEM=21,HLS_SYN_DSP=0,HLS_SYN_FF=7217,HLS_SYN_LUT=7567,HLS_VERSION=2022_2}" *)
+(* CORE_GENERATION_INFO="gesture_model_gesture_model,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-2-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.271652,HLS_SYN_LAT=23078,HLS_SYN_TPT=15110,HLS_SYN_MEM=21,HLS_SYN_DSP=0,HLS_SYN_FF=8786,HLS_SYN_LUT=14460,HLS_VERSION=2022_2}" *)
 
 module gesture_model (
         ap_clk,
-        ap_rst,
-        input_r_address0,
-        input_r_ce0,
-        input_r_d0,
-        input_r_q0,
-        input_r_we0,
-        input_r_address1,
-        input_r_ce1,
-        input_r_d1,
-        input_r_q1,
-        input_r_we1,
-        output_r_address0,
-        output_r_ce0,
-        output_r_d0,
-        output_r_q0,
-        output_r_we0,
-        output_r_address1,
-        output_r_ce1,
-        output_r_d1,
-        output_r_q1,
-        output_r_we1,
-        ap_start,
-        ap_done,
-        ap_ready,
-        ap_idle
+        ap_rst_n,
+        s_axi_control_AWVALID,
+        s_axi_control_AWREADY,
+        s_axi_control_AWADDR,
+        s_axi_control_WVALID,
+        s_axi_control_WREADY,
+        s_axi_control_WDATA,
+        s_axi_control_WSTRB,
+        s_axi_control_ARVALID,
+        s_axi_control_ARREADY,
+        s_axi_control_ARADDR,
+        s_axi_control_RVALID,
+        s_axi_control_RREADY,
+        s_axi_control_RDATA,
+        s_axi_control_RRESP,
+        s_axi_control_BVALID,
+        s_axi_control_BREADY,
+        s_axi_control_BRESP,
+        interrupt,
+        input_stream_TDATA,
+        output_stream_TDATA,
+        input_stream_TVALID,
+        input_stream_TREADY,
+        output_stream_TVALID,
+        output_stream_TREADY
 );
 
+parameter    C_S_AXI_CONTROL_DATA_WIDTH = 32;
+parameter    C_S_AXI_CONTROL_ADDR_WIDTH = 4;
+parameter    C_S_AXI_DATA_WIDTH = 32;
+
+parameter C_S_AXI_CONTROL_WSTRB_WIDTH = (32 / 8);
+parameter C_S_AXI_WSTRB_WIDTH = (32 / 8);
 
 input   ap_clk;
-input   ap_rst;
-output  [6:0] input_r_address0;
-output   input_r_ce0;
-output  [15:0] input_r_d0;
-input  [15:0] input_r_q0;
-output   input_r_we0;
-output  [6:0] input_r_address1;
-output   input_r_ce1;
-output  [15:0] input_r_d1;
-input  [15:0] input_r_q1;
-output   input_r_we1;
-output  [4:0] output_r_address0;
-output   output_r_ce0;
-output  [15:0] output_r_d0;
-input  [15:0] output_r_q0;
-output   output_r_we0;
-output  [4:0] output_r_address1;
-output   output_r_ce1;
-output  [15:0] output_r_d1;
-input  [15:0] output_r_q1;
-output   output_r_we1;
-input   ap_start;
-output   ap_done;
-output   ap_ready;
-output   ap_idle;
+input   ap_rst_n;
+input   s_axi_control_AWVALID;
+output   s_axi_control_AWREADY;
+input  [C_S_AXI_CONTROL_ADDR_WIDTH - 1:0] s_axi_control_AWADDR;
+input   s_axi_control_WVALID;
+output   s_axi_control_WREADY;
+input  [C_S_AXI_CONTROL_DATA_WIDTH - 1:0] s_axi_control_WDATA;
+input  [C_S_AXI_CONTROL_WSTRB_WIDTH - 1:0] s_axi_control_WSTRB;
+input   s_axi_control_ARVALID;
+output   s_axi_control_ARREADY;
+input  [C_S_AXI_CONTROL_ADDR_WIDTH - 1:0] s_axi_control_ARADDR;
+output   s_axi_control_RVALID;
+input   s_axi_control_RREADY;
+output  [C_S_AXI_CONTROL_DATA_WIDTH - 1:0] s_axi_control_RDATA;
+output  [1:0] s_axi_control_RRESP;
+output   s_axi_control_BVALID;
+input   s_axi_control_BREADY;
+output  [1:0] s_axi_control_BRESP;
+output   interrupt;
+input  [15:0] input_stream_TDATA;
+output  [15:0] output_stream_TDATA;
+input   input_stream_TVALID;
+output   input_stream_TREADY;
+output   output_stream_TVALID;
+input   output_stream_TREADY;
 
-wire   [14:0] conv1d_out_V_i_q0;
-wire   [14:0] conv1d_out_V_t_q0;
-wire   [15:0] bn1_out_V_i_q0;
-wire   [15:0] bn1_out_V_i_q1;
-wire   [15:0] bn1_out_V_t_q0;
-wire   [15:0] bn1_out_V_t_q1;
-wire   [15:0] maxpool_out_V_i_q0;
-wire   [15:0] maxpool_out_V_t_q0;
-wire   [15:0] flatten_out_V_i_q0;
-wire   [15:0] flatten_out_V_t_q0;
-wire   [14:0] dense1_out_V_i_q0;
-wire   [14:0] dense1_out_V_t_q0;
-wire   [15:0] bn2_out_V_i_q0;
-wire   [15:0] bn2_out_V_i_q1;
-wire   [15:0] bn2_out_V_t_q0;
-wire   [15:0] bn2_out_V_t_q1;
-wire   [15:0] dense_output_out_V_i_q0;
-wire   [15:0] dense_output_out_V_t_q0;
+ reg    ap_rst_n_inv;
+wire   [15:0] input_V_0_i_q0;
+wire   [15:0] input_V_0_i_q1;
+wire   [15:0] input_V_0_t_q0;
+wire   [15:0] input_V_0_t_q1;
+wire   [15:0] output_V_i_q0;
+wire   [15:0] output_V_i_q1;
+wire   [15:0] output_V_t_q0;
+wire   [15:0] output_V_t_q1;
+wire   [14:0] conv1d_out_0_V_i_q0;
+wire   [14:0] conv1d_out_0_V_t_q0;
+wire   [15:0] batch_norm_out_0_V_i_q0;
+wire   [15:0] batch_norm_out_0_V_i_q1;
+wire   [15:0] batch_norm_out_0_V_t_q0;
+wire   [15:0] batch_norm_out_0_V_t_q1;
+wire   [15:0] max_pool_out_0_V_i_q0;
+wire   [15:0] max_pool_out_0_V_t_q0;
+wire   [15:0] flatten_out_0_V_i_q0;
+wire   [15:0] flatten_out_0_V_t_q0;
+wire   [14:0] dense_out_0_V_i_q0;
+wire   [14:0] dense_out_0_V_t_q0;
+wire   [15:0] batch_norm_out_1_V_i_q0;
+wire   [15:0] batch_norm_out_1_V_i_q1;
+wire   [15:0] batch_norm_out_1_V_t_q0;
+wire   [15:0] batch_norm_out_1_V_t_q1;
+wire    ap_start;
+wire    ap_ready;
+wire    ap_done;
+wire    ap_idle;
+wire    Loop_VITIS_LOOP_149_1_proc8_U0_ap_start;
+wire    Loop_VITIS_LOOP_149_1_proc8_U0_ap_done;
+wire    Loop_VITIS_LOOP_149_1_proc8_U0_ap_continue;
+wire    Loop_VITIS_LOOP_149_1_proc8_U0_ap_idle;
+wire    Loop_VITIS_LOOP_149_1_proc8_U0_ap_ready;
+wire    Loop_VITIS_LOOP_149_1_proc8_U0_input_stream_TREADY;
+wire   [6:0] Loop_VITIS_LOOP_149_1_proc8_U0_input_V_0_address0;
+wire    Loop_VITIS_LOOP_149_1_proc8_U0_input_V_0_ce0;
+wire    Loop_VITIS_LOOP_149_1_proc8_U0_input_V_0_we0;
+wire   [15:0] Loop_VITIS_LOOP_149_1_proc8_U0_input_V_0_d0;
 wire    conv1d_0_U0_ap_start;
 wire    conv1d_0_U0_ap_done;
 wire    conv1d_0_U0_ap_continue;
 wire    conv1d_0_U0_ap_idle;
 wire    conv1d_0_U0_ap_ready;
-wire   [6:0] conv1d_0_U0_input_r_address0;
-wire    conv1d_0_U0_input_r_ce0;
-wire   [6:0] conv1d_0_U0_input_r_address1;
-wire    conv1d_0_U0_input_r_ce1;
-wire   [6:0] conv1d_0_U0_output_r_address0;
+wire   [6:0] conv1d_0_U0_input_0_address0;
+wire    conv1d_0_U0_input_0_ce0;
+wire   [6:0] conv1d_0_U0_input_0_address1;
+wire    conv1d_0_U0_input_0_ce1;
+wire   [10:0] conv1d_0_U0_output_r_address0;
 wire    conv1d_0_U0_output_r_ce0;
 wire    conv1d_0_U0_output_r_we0;
 wire   [14:0] conv1d_0_U0_output_r_d0;
-wire    batchnorm_1_U0_ap_start;
-wire    batchnorm_1_U0_ap_done;
-wire    batchnorm_1_U0_ap_continue;
-wire    batchnorm_1_U0_ap_idle;
-wire    batchnorm_1_U0_ap_ready;
-wire   [6:0] batchnorm_1_U0_input_r_address0;
-wire    batchnorm_1_U0_input_r_ce0;
-wire   [6:0] batchnorm_1_U0_output_r_address0;
-wire    batchnorm_1_U0_output_r_ce0;
-wire    batchnorm_1_U0_output_r_we0;
-wire   [15:0] batchnorm_1_U0_output_r_d0;
-wire    maxpool1d_2_U0_ap_start;
-wire    maxpool1d_2_U0_ap_done;
-wire    maxpool1d_2_U0_ap_continue;
-wire    maxpool1d_2_U0_ap_idle;
-wire    maxpool1d_2_U0_ap_ready;
-wire   [6:0] maxpool1d_2_U0_input_r_address0;
-wire    maxpool1d_2_U0_input_r_ce0;
-wire   [6:0] maxpool1d_2_U0_input_r_address1;
-wire    maxpool1d_2_U0_input_r_ce1;
-wire   [5:0] maxpool1d_2_U0_output_r_address0;
-wire    maxpool1d_2_U0_output_r_ce0;
-wire    maxpool1d_2_U0_output_r_we0;
-wire   [15:0] maxpool1d_2_U0_output_r_d0;
-wire    Loop_VITIS_LOOP_42_1_proc_U0_ap_start;
-wire    Loop_VITIS_LOOP_42_1_proc_U0_ap_done;
-wire    Loop_VITIS_LOOP_42_1_proc_U0_ap_continue;
-wire    Loop_VITIS_LOOP_42_1_proc_U0_ap_idle;
-wire    Loop_VITIS_LOOP_42_1_proc_U0_ap_ready;
-wire   [5:0] Loop_VITIS_LOOP_42_1_proc_U0_maxpool_out_V_address0;
-wire    Loop_VITIS_LOOP_42_1_proc_U0_maxpool_out_V_ce0;
-wire   [9:0] Loop_VITIS_LOOP_42_1_proc_U0_flatten_out_V_address0;
-wire    Loop_VITIS_LOOP_42_1_proc_U0_flatten_out_V_ce0;
-wire    Loop_VITIS_LOOP_42_1_proc_U0_flatten_out_V_we0;
-wire   [15:0] Loop_VITIS_LOOP_42_1_proc_U0_flatten_out_V_d0;
-wire    dense_4_U0_ap_start;
-wire    dense_4_U0_ap_done;
-wire    dense_4_U0_ap_continue;
-wire    dense_4_U0_ap_idle;
-wire    dense_4_U0_ap_ready;
-wire   [9:0] dense_4_U0_input_r_address0;
-wire    dense_4_U0_input_r_ce0;
-wire   [3:0] dense_4_U0_output_r_address0;
-wire    dense_4_U0_output_r_ce0;
-wire    dense_4_U0_output_r_we0;
-wire   [14:0] dense_4_U0_output_r_d0;
-wire    batchnorm_5_U0_ap_continue;
-wire    batchnorm_5_U0_ap_start;
-wire    batchnorm_5_U0_ap_done;
-wire    batchnorm_5_U0_ap_idle;
-wire    batchnorm_5_U0_ap_ready;
-wire   [3:0] batchnorm_5_U0_input_r_address0;
-wire    batchnorm_5_U0_input_r_ce0;
-wire   [3:0] batchnorm_5_U0_output_r_address0;
-wire    batchnorm_5_U0_output_r_ce0;
-wire    batchnorm_5_U0_output_r_we0;
-wire   [15:0] batchnorm_5_U0_output_r_d0;
-wire    dense_output_7_U0_ap_start;
-wire    dense_output_7_U0_ap_done;
-wire    dense_output_7_U0_ap_continue;
-wire    dense_output_7_U0_ap_idle;
-wire    dense_output_7_U0_ap_ready;
-wire   [3:0] dense_output_7_U0_input_r_address0;
-wire    dense_output_7_U0_input_r_ce0;
-wire   [3:0] dense_output_7_U0_input_r_address1;
-wire    dense_output_7_U0_input_r_ce1;
-wire   [4:0] dense_output_7_U0_output_r_address0;
-wire    dense_output_7_U0_output_r_ce0;
-wire    dense_output_7_U0_output_r_we0;
-wire   [15:0] dense_output_7_U0_output_r_d0;
-wire    softmax_7_U0_ap_start;
-wire    softmax_7_U0_ap_done;
-wire    softmax_7_U0_ap_continue;
-wire    softmax_7_U0_ap_idle;
-wire    softmax_7_U0_ap_ready;
-wire   [4:0] softmax_7_U0_input_r_address0;
-wire    softmax_7_U0_input_r_ce0;
-wire   [4:0] softmax_7_U0_output_r_address0;
-wire    softmax_7_U0_output_r_ce0;
-wire    softmax_7_U0_output_r_we0;
-wire   [15:0] softmax_7_U0_output_r_d0;
-wire    conv1d_out_V_i_full_n;
-wire    conv1d_out_V_t_empty_n;
-wire    bn1_out_V_i_full_n;
-wire    bn1_out_V_t_empty_n;
-wire    maxpool_out_V_i_full_n;
-wire    maxpool_out_V_t_empty_n;
-wire    flatten_out_V_i_full_n;
-wire    flatten_out_V_t_empty_n;
-wire    dense1_out_V_i_full_n;
-wire    dense1_out_V_t_empty_n;
-wire    bn2_out_V_i_full_n;
-wire    bn2_out_V_t_empty_n;
-wire    dense_output_out_V_i_full_n;
-wire    dense_output_out_V_t_empty_n;
+wire    batch_normalization_0_U0_ap_start;
+wire    batch_normalization_0_U0_ap_done;
+wire    batch_normalization_0_U0_ap_continue;
+wire    batch_normalization_0_U0_ap_idle;
+wire    batch_normalization_0_U0_ap_ready;
+wire   [10:0] batch_normalization_0_U0_input_r_address0;
+wire    batch_normalization_0_U0_input_r_ce0;
+wire   [10:0] batch_normalization_0_U0_output_r_address0;
+wire    batch_normalization_0_U0_output_r_ce0;
+wire    batch_normalization_0_U0_output_r_we0;
+wire   [15:0] batch_normalization_0_U0_output_r_d0;
+wire    max_pooling1d_0_U0_ap_start;
+wire    max_pooling1d_0_U0_ap_done;
+wire    max_pooling1d_0_U0_ap_continue;
+wire    max_pooling1d_0_U0_ap_idle;
+wire    max_pooling1d_0_U0_ap_ready;
+wire   [10:0] max_pooling1d_0_U0_input_r_address0;
+wire    max_pooling1d_0_U0_input_r_ce0;
+wire   [10:0] max_pooling1d_0_U0_input_r_address1;
+wire    max_pooling1d_0_U0_input_r_ce1;
+wire   [9:0] max_pooling1d_0_U0_output_r_address0;
+wire    max_pooling1d_0_U0_output_r_ce0;
+wire    max_pooling1d_0_U0_output_r_we0;
+wire   [15:0] max_pooling1d_0_U0_output_r_d0;
+wire    Loop_VITIS_LOOP_79_1_proc_U0_ap_start;
+wire    Loop_VITIS_LOOP_79_1_proc_U0_ap_done;
+wire    Loop_VITIS_LOOP_79_1_proc_U0_ap_continue;
+wire    Loop_VITIS_LOOP_79_1_proc_U0_ap_idle;
+wire    Loop_VITIS_LOOP_79_1_proc_U0_ap_ready;
+wire   [9:0] Loop_VITIS_LOOP_79_1_proc_U0_max_pool_out_0_V_address0;
+wire    Loop_VITIS_LOOP_79_1_proc_U0_max_pool_out_0_V_ce0;
+wire   [9:0] Loop_VITIS_LOOP_79_1_proc_U0_flatten_out_0_V_address0;
+wire    Loop_VITIS_LOOP_79_1_proc_U0_flatten_out_0_V_ce0;
+wire    Loop_VITIS_LOOP_79_1_proc_U0_flatten_out_0_V_we0;
+wire   [15:0] Loop_VITIS_LOOP_79_1_proc_U0_flatten_out_0_V_d0;
+wire    dense_0_U0_ap_start;
+wire    dense_0_U0_ap_done;
+wire    dense_0_U0_ap_continue;
+wire    dense_0_U0_ap_idle;
+wire    dense_0_U0_ap_ready;
+wire   [9:0] dense_0_U0_input_r_address0;
+wire    dense_0_U0_input_r_ce0;
+wire   [3:0] dense_0_U0_output_r_address0;
+wire    dense_0_U0_output_r_ce0;
+wire    dense_0_U0_output_r_we0;
+wire   [14:0] dense_0_U0_output_r_d0;
+wire    batch_normalization_1_U0_ap_start;
+wire    batch_normalization_1_U0_ap_done;
+wire    batch_normalization_1_U0_ap_continue;
+wire    batch_normalization_1_U0_ap_idle;
+wire    batch_normalization_1_U0_ap_ready;
+wire   [3:0] batch_normalization_1_U0_input_r_address0;
+wire    batch_normalization_1_U0_input_r_ce0;
+wire   [3:0] batch_normalization_1_U0_output_r_address0;
+wire    batch_normalization_1_U0_output_r_ce0;
+wire    batch_normalization_1_U0_output_r_we0;
+wire   [15:0] batch_normalization_1_U0_output_r_d0;
+wire    dense_1_U0_ap_start;
+wire    dense_1_U0_ap_done;
+wire    dense_1_U0_ap_continue;
+wire    dense_1_U0_ap_idle;
+wire    dense_1_U0_ap_ready;
+wire   [3:0] dense_1_U0_input_r_address0;
+wire    dense_1_U0_input_r_ce0;
+wire   [3:0] dense_1_U0_input_r_address1;
+wire    dense_1_U0_input_r_ce1;
+wire   [4:0] dense_1_U0_output_r_address0;
+wire    dense_1_U0_output_r_ce0;
+wire    dense_1_U0_output_r_we0;
+wire   [15:0] dense_1_U0_output_r_d0;
+wire   [4:0] dense_1_U0_output_r_address1;
+wire    dense_1_U0_output_r_ce1;
+wire    Loop_VITIS_LOOP_166_3_proc9_U0_ap_start;
+wire    Loop_VITIS_LOOP_166_3_proc9_U0_ap_done;
+wire    Loop_VITIS_LOOP_166_3_proc9_U0_ap_continue;
+wire    Loop_VITIS_LOOP_166_3_proc9_U0_ap_idle;
+wire    Loop_VITIS_LOOP_166_3_proc9_U0_ap_ready;
+wire   [4:0] Loop_VITIS_LOOP_166_3_proc9_U0_output_V_address0;
+wire    Loop_VITIS_LOOP_166_3_proc9_U0_output_V_ce0;
+wire   [15:0] Loop_VITIS_LOOP_166_3_proc9_U0_output_stream_TDATA;
+wire    Loop_VITIS_LOOP_166_3_proc9_U0_output_stream_TVALID;
+wire    input_V_0_i_full_n;
+wire    input_V_0_t_empty_n;
+wire    conv1d_out_0_V_i_full_n;
+wire    conv1d_out_0_V_t_empty_n;
+wire    batch_norm_out_0_V_i_full_n;
+wire    batch_norm_out_0_V_t_empty_n;
+wire    max_pool_out_0_V_i_full_n;
+wire    max_pool_out_0_V_t_empty_n;
+wire    flatten_out_0_V_i_full_n;
+wire    flatten_out_0_V_t_empty_n;
+wire    dense_out_0_V_i_full_n;
+wire    dense_out_0_V_t_empty_n;
+wire    batch_norm_out_1_V_i_full_n;
+wire    batch_norm_out_1_V_t_empty_n;
+wire    output_V_i_full_n;
+wire    output_V_t_empty_n;
 
-gesture_model_conv1d_out_V_RAM_AUTO_1R1W #(
-    .DataWidth( 15 ),
-    .AddressRange( 105 ),
+gesture_model_input_V_0_RAM_AUTO_1R1W #(
+    .DataWidth( 16 ),
+    .AddressRange( 120 ),
     .AddressWidth( 7 ))
-conv1d_out_V_U(
+input_V_0_U(
     .clk(ap_clk),
-    .reset(ap_rst),
+    .reset(ap_rst_n_inv),
+    .i_address0(Loop_VITIS_LOOP_149_1_proc8_U0_input_V_0_address0),
+    .i_ce0(Loop_VITIS_LOOP_149_1_proc8_U0_input_V_0_ce0),
+    .i_we0(Loop_VITIS_LOOP_149_1_proc8_U0_input_V_0_we0),
+    .i_d0(Loop_VITIS_LOOP_149_1_proc8_U0_input_V_0_d0),
+    .i_q0(input_V_0_i_q0),
+    .i_address1(7'd0),
+    .i_ce1(1'b0),
+    .i_q1(input_V_0_i_q1),
+    .t_address0(conv1d_0_U0_input_0_address0),
+    .t_ce0(conv1d_0_U0_input_0_ce0),
+    .t_we0(1'b0),
+    .t_d0(16'd0),
+    .t_q0(input_V_0_t_q0),
+    .t_address1(conv1d_0_U0_input_0_address1),
+    .t_ce1(conv1d_0_U0_input_0_ce1),
+    .t_q1(input_V_0_t_q1),
+    .i_ce(1'b1),
+    .t_ce(1'b1),
+    .i_full_n(input_V_0_i_full_n),
+    .i_write(Loop_VITIS_LOOP_149_1_proc8_U0_ap_done),
+    .t_empty_n(input_V_0_t_empty_n),
+    .t_read(conv1d_0_U0_ap_ready)
+);
+
+gesture_model_output_V_RAM_AUTO_1R1W #(
+    .DataWidth( 16 ),
+    .AddressRange( 20 ),
+    .AddressWidth( 5 ))
+output_V_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .i_address0(dense_1_U0_output_r_address0),
+    .i_ce0(dense_1_U0_output_r_ce0),
+    .i_we0(dense_1_U0_output_r_we0),
+    .i_d0(dense_1_U0_output_r_d0),
+    .i_q0(output_V_i_q0),
+    .i_address1(dense_1_U0_output_r_address1),
+    .i_ce1(dense_1_U0_output_r_ce1),
+    .i_q1(output_V_i_q1),
+    .t_address0(Loop_VITIS_LOOP_166_3_proc9_U0_output_V_address0),
+    .t_ce0(Loop_VITIS_LOOP_166_3_proc9_U0_output_V_ce0),
+    .t_we0(1'b0),
+    .t_d0(16'd0),
+    .t_q0(output_V_t_q0),
+    .t_address1(5'd0),
+    .t_ce1(1'b0),
+    .t_q1(output_V_t_q1),
+    .i_ce(1'b1),
+    .t_ce(1'b1),
+    .i_full_n(output_V_i_full_n),
+    .i_write(dense_1_U0_ap_done),
+    .t_empty_n(output_V_t_empty_n),
+    .t_read(Loop_VITIS_LOOP_166_3_proc9_U0_ap_ready)
+);
+
+gesture_model_conv1d_out_0_V_RAM_AUTO_1R1W #(
+    .DataWidth( 15 ),
+    .AddressRange( 1888 ),
+    .AddressWidth( 11 ))
+conv1d_out_0_V_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
     .i_address0(conv1d_0_U0_output_r_address0),
     .i_ce0(conv1d_0_U0_output_r_ce0),
     .i_we0(conv1d_0_U0_output_r_we0),
     .i_d0(conv1d_0_U0_output_r_d0),
-    .i_q0(conv1d_out_V_i_q0),
-    .t_address0(batchnorm_1_U0_input_r_address0),
-    .t_ce0(batchnorm_1_U0_input_r_ce0),
+    .i_q0(conv1d_out_0_V_i_q0),
+    .t_address0(batch_normalization_0_U0_input_r_address0),
+    .t_ce0(batch_normalization_0_U0_input_r_ce0),
     .t_we0(1'b0),
     .t_d0(15'd0),
-    .t_q0(conv1d_out_V_t_q0),
+    .t_q0(conv1d_out_0_V_t_q0),
     .i_ce(1'b1),
     .t_ce(1'b1),
-    .i_full_n(conv1d_out_V_i_full_n),
+    .i_full_n(conv1d_out_0_V_i_full_n),
     .i_write(conv1d_0_U0_ap_done),
-    .t_empty_n(conv1d_out_V_t_empty_n),
-    .t_read(batchnorm_1_U0_ap_ready)
+    .t_empty_n(conv1d_out_0_V_t_empty_n),
+    .t_read(batch_normalization_0_U0_ap_ready)
 );
 
-gesture_model_bn1_out_V_RAM_AUTO_1R1W #(
+gesture_model_batch_norm_out_0_V_RAM_AUTO_1R1W #(
     .DataWidth( 16 ),
-    .AddressRange( 105 ),
-    .AddressWidth( 7 ))
-bn1_out_V_U(
+    .AddressRange( 1888 ),
+    .AddressWidth( 11 ))
+batch_norm_out_0_V_U(
     .clk(ap_clk),
-    .reset(ap_rst),
-    .i_address0(batchnorm_1_U0_output_r_address0),
-    .i_ce0(batchnorm_1_U0_output_r_ce0),
-    .i_we0(batchnorm_1_U0_output_r_we0),
-    .i_d0(batchnorm_1_U0_output_r_d0),
-    .i_q0(bn1_out_V_i_q0),
-    .i_address1(7'd0),
+    .reset(ap_rst_n_inv),
+    .i_address0(batch_normalization_0_U0_output_r_address0),
+    .i_ce0(batch_normalization_0_U0_output_r_ce0),
+    .i_we0(batch_normalization_0_U0_output_r_we0),
+    .i_d0(batch_normalization_0_U0_output_r_d0),
+    .i_q0(batch_norm_out_0_V_i_q0),
+    .i_address1(11'd0),
     .i_ce1(1'b0),
-    .i_q1(bn1_out_V_i_q1),
-    .t_address0(maxpool1d_2_U0_input_r_address0),
-    .t_ce0(maxpool1d_2_U0_input_r_ce0),
+    .i_q1(batch_norm_out_0_V_i_q1),
+    .t_address0(max_pooling1d_0_U0_input_r_address0),
+    .t_ce0(max_pooling1d_0_U0_input_r_ce0),
     .t_we0(1'b0),
     .t_d0(16'd0),
-    .t_q0(bn1_out_V_t_q0),
-    .t_address1(maxpool1d_2_U0_input_r_address1),
-    .t_ce1(maxpool1d_2_U0_input_r_ce1),
-    .t_q1(bn1_out_V_t_q1),
+    .t_q0(batch_norm_out_0_V_t_q0),
+    .t_address1(max_pooling1d_0_U0_input_r_address1),
+    .t_ce1(max_pooling1d_0_U0_input_r_ce1),
+    .t_q1(batch_norm_out_0_V_t_q1),
     .i_ce(1'b1),
     .t_ce(1'b1),
-    .i_full_n(bn1_out_V_i_full_n),
-    .i_write(batchnorm_1_U0_ap_done),
-    .t_empty_n(bn1_out_V_t_empty_n),
-    .t_read(maxpool1d_2_U0_ap_ready)
+    .i_full_n(batch_norm_out_0_V_i_full_n),
+    .i_write(batch_normalization_0_U0_ap_done),
+    .t_empty_n(batch_norm_out_0_V_t_empty_n),
+    .t_read(max_pooling1d_0_U0_ap_ready)
 );
 
-gesture_model_maxpool_out_V_RAM_AUTO_1R1W #(
-    .DataWidth( 16 ),
-    .AddressRange( 52 ),
-    .AddressWidth( 6 ))
-maxpool_out_V_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .i_address0(maxpool1d_2_U0_output_r_address0),
-    .i_ce0(maxpool1d_2_U0_output_r_ce0),
-    .i_we0(maxpool1d_2_U0_output_r_we0),
-    .i_d0(maxpool1d_2_U0_output_r_d0),
-    .i_q0(maxpool_out_V_i_q0),
-    .t_address0(Loop_VITIS_LOOP_42_1_proc_U0_maxpool_out_V_address0),
-    .t_ce0(Loop_VITIS_LOOP_42_1_proc_U0_maxpool_out_V_ce0),
-    .t_we0(1'b0),
-    .t_d0(16'd0),
-    .t_q0(maxpool_out_V_t_q0),
-    .i_ce(1'b1),
-    .t_ce(1'b1),
-    .i_full_n(maxpool_out_V_i_full_n),
-    .i_write(maxpool1d_2_U0_ap_done),
-    .t_empty_n(maxpool_out_V_t_empty_n),
-    .t_read(Loop_VITIS_LOOP_42_1_proc_U0_ap_ready)
-);
-
-gesture_model_flatten_out_V_RAM_AUTO_1R1W #(
+gesture_model_max_pool_out_0_V_RAM_AUTO_1R1W #(
     .DataWidth( 16 ),
     .AddressRange( 944 ),
     .AddressWidth( 10 ))
-flatten_out_V_U(
+max_pool_out_0_V_U(
     .clk(ap_clk),
-    .reset(ap_rst),
-    .i_address0(Loop_VITIS_LOOP_42_1_proc_U0_flatten_out_V_address0),
-    .i_ce0(Loop_VITIS_LOOP_42_1_proc_U0_flatten_out_V_ce0),
-    .i_we0(Loop_VITIS_LOOP_42_1_proc_U0_flatten_out_V_we0),
-    .i_d0(Loop_VITIS_LOOP_42_1_proc_U0_flatten_out_V_d0),
-    .i_q0(flatten_out_V_i_q0),
-    .t_address0(dense_4_U0_input_r_address0),
-    .t_ce0(dense_4_U0_input_r_ce0),
+    .reset(ap_rst_n_inv),
+    .i_address0(max_pooling1d_0_U0_output_r_address0),
+    .i_ce0(max_pooling1d_0_U0_output_r_ce0),
+    .i_we0(max_pooling1d_0_U0_output_r_we0),
+    .i_d0(max_pooling1d_0_U0_output_r_d0),
+    .i_q0(max_pool_out_0_V_i_q0),
+    .t_address0(Loop_VITIS_LOOP_79_1_proc_U0_max_pool_out_0_V_address0),
+    .t_ce0(Loop_VITIS_LOOP_79_1_proc_U0_max_pool_out_0_V_ce0),
     .t_we0(1'b0),
     .t_d0(16'd0),
-    .t_q0(flatten_out_V_t_q0),
+    .t_q0(max_pool_out_0_V_t_q0),
     .i_ce(1'b1),
     .t_ce(1'b1),
-    .i_full_n(flatten_out_V_i_full_n),
-    .i_write(Loop_VITIS_LOOP_42_1_proc_U0_ap_done),
-    .t_empty_n(flatten_out_V_t_empty_n),
-    .t_read(dense_4_U0_ap_ready)
+    .i_full_n(max_pool_out_0_V_i_full_n),
+    .i_write(max_pooling1d_0_U0_ap_done),
+    .t_empty_n(max_pool_out_0_V_t_empty_n),
+    .t_read(Loop_VITIS_LOOP_79_1_proc_U0_ap_ready)
 );
 
-gesture_model_dense1_out_V_RAM_AUTO_1R1W #(
+gesture_model_max_pool_out_0_V_RAM_AUTO_1R1W #(
+    .DataWidth( 16 ),
+    .AddressRange( 944 ),
+    .AddressWidth( 10 ))
+flatten_out_0_V_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .i_address0(Loop_VITIS_LOOP_79_1_proc_U0_flatten_out_0_V_address0),
+    .i_ce0(Loop_VITIS_LOOP_79_1_proc_U0_flatten_out_0_V_ce0),
+    .i_we0(Loop_VITIS_LOOP_79_1_proc_U0_flatten_out_0_V_we0),
+    .i_d0(Loop_VITIS_LOOP_79_1_proc_U0_flatten_out_0_V_d0),
+    .i_q0(flatten_out_0_V_i_q0),
+    .t_address0(dense_0_U0_input_r_address0),
+    .t_ce0(dense_0_U0_input_r_ce0),
+    .t_we0(1'b0),
+    .t_d0(16'd0),
+    .t_q0(flatten_out_0_V_t_q0),
+    .i_ce(1'b1),
+    .t_ce(1'b1),
+    .i_full_n(flatten_out_0_V_i_full_n),
+    .i_write(Loop_VITIS_LOOP_79_1_proc_U0_ap_done),
+    .t_empty_n(flatten_out_0_V_t_empty_n),
+    .t_read(dense_0_U0_ap_ready)
+);
+
+gesture_model_dense_out_0_V_RAM_AUTO_1R1W #(
     .DataWidth( 15 ),
     .AddressRange( 16 ),
     .AddressWidth( 4 ))
-dense1_out_V_U(
+dense_out_0_V_U(
     .clk(ap_clk),
-    .reset(ap_rst),
-    .i_address0(dense_4_U0_output_r_address0),
-    .i_ce0(dense_4_U0_output_r_ce0),
-    .i_we0(dense_4_U0_output_r_we0),
-    .i_d0(dense_4_U0_output_r_d0),
-    .i_q0(dense1_out_V_i_q0),
-    .t_address0(batchnorm_5_U0_input_r_address0),
-    .t_ce0(batchnorm_5_U0_input_r_ce0),
+    .reset(ap_rst_n_inv),
+    .i_address0(dense_0_U0_output_r_address0),
+    .i_ce0(dense_0_U0_output_r_ce0),
+    .i_we0(dense_0_U0_output_r_we0),
+    .i_d0(dense_0_U0_output_r_d0),
+    .i_q0(dense_out_0_V_i_q0),
+    .t_address0(batch_normalization_1_U0_input_r_address0),
+    .t_ce0(batch_normalization_1_U0_input_r_ce0),
     .t_we0(1'b0),
     .t_d0(15'd0),
-    .t_q0(dense1_out_V_t_q0),
+    .t_q0(dense_out_0_V_t_q0),
     .i_ce(1'b1),
     .t_ce(1'b1),
-    .i_full_n(dense1_out_V_i_full_n),
-    .i_write(dense_4_U0_ap_done),
-    .t_empty_n(dense1_out_V_t_empty_n),
-    .t_read(batchnorm_5_U0_ap_ready)
+    .i_full_n(dense_out_0_V_i_full_n),
+    .i_write(dense_0_U0_ap_done),
+    .t_empty_n(dense_out_0_V_t_empty_n),
+    .t_read(batch_normalization_1_U0_ap_ready)
 );
 
-gesture_model_bn2_out_V_RAM_AUTO_1R1W #(
+gesture_model_batch_norm_out_1_V_RAM_AUTO_1R1W #(
     .DataWidth( 16 ),
     .AddressRange( 16 ),
     .AddressWidth( 4 ))
-bn2_out_V_U(
+batch_norm_out_1_V_U(
     .clk(ap_clk),
-    .reset(ap_rst),
-    .i_address0(batchnorm_5_U0_output_r_address0),
-    .i_ce0(batchnorm_5_U0_output_r_ce0),
-    .i_we0(batchnorm_5_U0_output_r_we0),
-    .i_d0(batchnorm_5_U0_output_r_d0),
-    .i_q0(bn2_out_V_i_q0),
+    .reset(ap_rst_n_inv),
+    .i_address0(batch_normalization_1_U0_output_r_address0),
+    .i_ce0(batch_normalization_1_U0_output_r_ce0),
+    .i_we0(batch_normalization_1_U0_output_r_we0),
+    .i_d0(batch_normalization_1_U0_output_r_d0),
+    .i_q0(batch_norm_out_1_V_i_q0),
     .i_address1(4'd0),
     .i_ce1(1'b0),
-    .i_q1(bn2_out_V_i_q1),
-    .t_address0(dense_output_7_U0_input_r_address0),
-    .t_ce0(dense_output_7_U0_input_r_ce0),
+    .i_q1(batch_norm_out_1_V_i_q1),
+    .t_address0(dense_1_U0_input_r_address0),
+    .t_ce0(dense_1_U0_input_r_ce0),
     .t_we0(1'b0),
     .t_d0(16'd0),
-    .t_q0(bn2_out_V_t_q0),
-    .t_address1(dense_output_7_U0_input_r_address1),
-    .t_ce1(dense_output_7_U0_input_r_ce1),
-    .t_q1(bn2_out_V_t_q1),
+    .t_q0(batch_norm_out_1_V_t_q0),
+    .t_address1(dense_1_U0_input_r_address1),
+    .t_ce1(dense_1_U0_input_r_ce1),
+    .t_q1(batch_norm_out_1_V_t_q1),
     .i_ce(1'b1),
     .t_ce(1'b1),
-    .i_full_n(bn2_out_V_i_full_n),
-    .i_write(batchnorm_5_U0_ap_done),
-    .t_empty_n(bn2_out_V_t_empty_n),
-    .t_read(dense_output_7_U0_ap_ready)
+    .i_full_n(batch_norm_out_1_V_i_full_n),
+    .i_write(batch_normalization_1_U0_ap_done),
+    .t_empty_n(batch_norm_out_1_V_t_empty_n),
+    .t_read(dense_1_U0_ap_ready)
 );
 
-gesture_model_dense_output_out_V_RAM_AUTO_1R1W #(
-    .DataWidth( 16 ),
-    .AddressRange( 20 ),
-    .AddressWidth( 5 ))
-dense_output_out_V_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .i_address0(dense_output_7_U0_output_r_address0),
-    .i_ce0(dense_output_7_U0_output_r_ce0),
-    .i_we0(dense_output_7_U0_output_r_we0),
-    .i_d0(dense_output_7_U0_output_r_d0),
-    .i_q0(dense_output_out_V_i_q0),
-    .t_address0(softmax_7_U0_input_r_address0),
-    .t_ce0(softmax_7_U0_input_r_ce0),
-    .t_we0(1'b0),
-    .t_d0(16'd0),
-    .t_q0(dense_output_out_V_t_q0),
-    .i_ce(1'b1),
-    .t_ce(1'b1),
-    .i_full_n(dense_output_out_V_i_full_n),
-    .i_write(dense_output_7_U0_ap_done),
-    .t_empty_n(dense_output_out_V_t_empty_n),
-    .t_read(softmax_7_U0_ap_ready)
+gesture_model_control_s_axi #(
+    .C_S_AXI_ADDR_WIDTH( C_S_AXI_CONTROL_ADDR_WIDTH ),
+    .C_S_AXI_DATA_WIDTH( C_S_AXI_CONTROL_DATA_WIDTH ))
+control_s_axi_U(
+    .AWVALID(s_axi_control_AWVALID),
+    .AWREADY(s_axi_control_AWREADY),
+    .AWADDR(s_axi_control_AWADDR),
+    .WVALID(s_axi_control_WVALID),
+    .WREADY(s_axi_control_WREADY),
+    .WDATA(s_axi_control_WDATA),
+    .WSTRB(s_axi_control_WSTRB),
+    .ARVALID(s_axi_control_ARVALID),
+    .ARREADY(s_axi_control_ARREADY),
+    .ARADDR(s_axi_control_ARADDR),
+    .RVALID(s_axi_control_RVALID),
+    .RREADY(s_axi_control_RREADY),
+    .RDATA(s_axi_control_RDATA),
+    .RRESP(s_axi_control_RRESP),
+    .BVALID(s_axi_control_BVALID),
+    .BREADY(s_axi_control_BREADY),
+    .BRESP(s_axi_control_BRESP),
+    .ACLK(ap_clk),
+    .ARESET(ap_rst_n_inv),
+    .ACLK_EN(1'b1),
+    .ap_start(ap_start),
+    .interrupt(interrupt),
+    .ap_ready(ap_ready),
+    .ap_done(ap_done),
+    .ap_idle(ap_idle)
+);
+
+gesture_model_Loop_VITIS_LOOP_149_1_proc8 Loop_VITIS_LOOP_149_1_proc8_U0(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(Loop_VITIS_LOOP_149_1_proc8_U0_ap_start),
+    .ap_done(Loop_VITIS_LOOP_149_1_proc8_U0_ap_done),
+    .ap_continue(Loop_VITIS_LOOP_149_1_proc8_U0_ap_continue),
+    .ap_idle(Loop_VITIS_LOOP_149_1_proc8_U0_ap_idle),
+    .ap_ready(Loop_VITIS_LOOP_149_1_proc8_U0_ap_ready),
+    .input_stream_TVALID(input_stream_TVALID),
+    .input_stream_TDATA(input_stream_TDATA),
+    .input_stream_TREADY(Loop_VITIS_LOOP_149_1_proc8_U0_input_stream_TREADY),
+    .input_V_0_address0(Loop_VITIS_LOOP_149_1_proc8_U0_input_V_0_address0),
+    .input_V_0_ce0(Loop_VITIS_LOOP_149_1_proc8_U0_input_V_0_ce0),
+    .input_V_0_we0(Loop_VITIS_LOOP_149_1_proc8_U0_input_V_0_we0),
+    .input_V_0_d0(Loop_VITIS_LOOP_149_1_proc8_U0_input_V_0_d0)
 );
 
 gesture_model_conv1d_0 conv1d_0_U0(
     .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
+    .ap_rst(ap_rst_n_inv),
     .ap_start(conv1d_0_U0_ap_start),
     .ap_done(conv1d_0_U0_ap_done),
     .ap_continue(conv1d_0_U0_ap_continue),
     .ap_idle(conv1d_0_U0_ap_idle),
     .ap_ready(conv1d_0_U0_ap_ready),
-    .input_r_address0(conv1d_0_U0_input_r_address0),
-    .input_r_ce0(conv1d_0_U0_input_r_ce0),
-    .input_r_q0(input_r_q0),
-    .input_r_address1(conv1d_0_U0_input_r_address1),
-    .input_r_ce1(conv1d_0_U0_input_r_ce1),
-    .input_r_q1(input_r_q1),
+    .input_0_address0(conv1d_0_U0_input_0_address0),
+    .input_0_ce0(conv1d_0_U0_input_0_ce0),
+    .input_0_q0(input_V_0_t_q0),
+    .input_0_address1(conv1d_0_U0_input_0_address1),
+    .input_0_ce1(conv1d_0_U0_input_0_ce1),
+    .input_0_q1(input_V_0_t_q1),
     .output_r_address0(conv1d_0_U0_output_r_address0),
     .output_r_ce0(conv1d_0_U0_output_r_ce0),
     .output_r_we0(conv1d_0_U0_output_r_we0),
     .output_r_d0(conv1d_0_U0_output_r_d0)
 );
 
-gesture_model_batchnorm_1 batchnorm_1_U0(
+gesture_model_batch_normalization_0 batch_normalization_0_U0(
     .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(batchnorm_1_U0_ap_start),
-    .ap_done(batchnorm_1_U0_ap_done),
-    .ap_continue(batchnorm_1_U0_ap_continue),
-    .ap_idle(batchnorm_1_U0_ap_idle),
-    .ap_ready(batchnorm_1_U0_ap_ready),
-    .input_r_address0(batchnorm_1_U0_input_r_address0),
-    .input_r_ce0(batchnorm_1_U0_input_r_ce0),
-    .input_r_q0(conv1d_out_V_t_q0),
-    .output_r_address0(batchnorm_1_U0_output_r_address0),
-    .output_r_ce0(batchnorm_1_U0_output_r_ce0),
-    .output_r_we0(batchnorm_1_U0_output_r_we0),
-    .output_r_d0(batchnorm_1_U0_output_r_d0)
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(batch_normalization_0_U0_ap_start),
+    .ap_done(batch_normalization_0_U0_ap_done),
+    .ap_continue(batch_normalization_0_U0_ap_continue),
+    .ap_idle(batch_normalization_0_U0_ap_idle),
+    .ap_ready(batch_normalization_0_U0_ap_ready),
+    .input_r_address0(batch_normalization_0_U0_input_r_address0),
+    .input_r_ce0(batch_normalization_0_U0_input_r_ce0),
+    .input_r_q0(conv1d_out_0_V_t_q0),
+    .output_r_address0(batch_normalization_0_U0_output_r_address0),
+    .output_r_ce0(batch_normalization_0_U0_output_r_ce0),
+    .output_r_we0(batch_normalization_0_U0_output_r_we0),
+    .output_r_d0(batch_normalization_0_U0_output_r_d0)
 );
 
-gesture_model_maxpool1d_2 maxpool1d_2_U0(
+gesture_model_max_pooling1d_0 max_pooling1d_0_U0(
     .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(maxpool1d_2_U0_ap_start),
-    .ap_done(maxpool1d_2_U0_ap_done),
-    .ap_continue(maxpool1d_2_U0_ap_continue),
-    .ap_idle(maxpool1d_2_U0_ap_idle),
-    .ap_ready(maxpool1d_2_U0_ap_ready),
-    .input_r_address0(maxpool1d_2_U0_input_r_address0),
-    .input_r_ce0(maxpool1d_2_U0_input_r_ce0),
-    .input_r_q0(bn1_out_V_t_q0),
-    .input_r_address1(maxpool1d_2_U0_input_r_address1),
-    .input_r_ce1(maxpool1d_2_U0_input_r_ce1),
-    .input_r_q1(bn1_out_V_t_q1),
-    .output_r_address0(maxpool1d_2_U0_output_r_address0),
-    .output_r_ce0(maxpool1d_2_U0_output_r_ce0),
-    .output_r_we0(maxpool1d_2_U0_output_r_we0),
-    .output_r_d0(maxpool1d_2_U0_output_r_d0)
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(max_pooling1d_0_U0_ap_start),
+    .ap_done(max_pooling1d_0_U0_ap_done),
+    .ap_continue(max_pooling1d_0_U0_ap_continue),
+    .ap_idle(max_pooling1d_0_U0_ap_idle),
+    .ap_ready(max_pooling1d_0_U0_ap_ready),
+    .input_r_address0(max_pooling1d_0_U0_input_r_address0),
+    .input_r_ce0(max_pooling1d_0_U0_input_r_ce0),
+    .input_r_q0(batch_norm_out_0_V_t_q0),
+    .input_r_address1(max_pooling1d_0_U0_input_r_address1),
+    .input_r_ce1(max_pooling1d_0_U0_input_r_ce1),
+    .input_r_q1(batch_norm_out_0_V_t_q1),
+    .output_r_address0(max_pooling1d_0_U0_output_r_address0),
+    .output_r_ce0(max_pooling1d_0_U0_output_r_ce0),
+    .output_r_we0(max_pooling1d_0_U0_output_r_we0),
+    .output_r_d0(max_pooling1d_0_U0_output_r_d0)
 );
 
-gesture_model_Loop_VITIS_LOOP_42_1_proc Loop_VITIS_LOOP_42_1_proc_U0(
+gesture_model_Loop_VITIS_LOOP_79_1_proc Loop_VITIS_LOOP_79_1_proc_U0(
     .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(Loop_VITIS_LOOP_42_1_proc_U0_ap_start),
-    .ap_done(Loop_VITIS_LOOP_42_1_proc_U0_ap_done),
-    .ap_continue(Loop_VITIS_LOOP_42_1_proc_U0_ap_continue),
-    .ap_idle(Loop_VITIS_LOOP_42_1_proc_U0_ap_idle),
-    .ap_ready(Loop_VITIS_LOOP_42_1_proc_U0_ap_ready),
-    .maxpool_out_V_address0(Loop_VITIS_LOOP_42_1_proc_U0_maxpool_out_V_address0),
-    .maxpool_out_V_ce0(Loop_VITIS_LOOP_42_1_proc_U0_maxpool_out_V_ce0),
-    .maxpool_out_V_q0(maxpool_out_V_t_q0),
-    .flatten_out_V_address0(Loop_VITIS_LOOP_42_1_proc_U0_flatten_out_V_address0),
-    .flatten_out_V_ce0(Loop_VITIS_LOOP_42_1_proc_U0_flatten_out_V_ce0),
-    .flatten_out_V_we0(Loop_VITIS_LOOP_42_1_proc_U0_flatten_out_V_we0),
-    .flatten_out_V_d0(Loop_VITIS_LOOP_42_1_proc_U0_flatten_out_V_d0)
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(Loop_VITIS_LOOP_79_1_proc_U0_ap_start),
+    .ap_done(Loop_VITIS_LOOP_79_1_proc_U0_ap_done),
+    .ap_continue(Loop_VITIS_LOOP_79_1_proc_U0_ap_continue),
+    .ap_idle(Loop_VITIS_LOOP_79_1_proc_U0_ap_idle),
+    .ap_ready(Loop_VITIS_LOOP_79_1_proc_U0_ap_ready),
+    .max_pool_out_0_V_address0(Loop_VITIS_LOOP_79_1_proc_U0_max_pool_out_0_V_address0),
+    .max_pool_out_0_V_ce0(Loop_VITIS_LOOP_79_1_proc_U0_max_pool_out_0_V_ce0),
+    .max_pool_out_0_V_q0(max_pool_out_0_V_t_q0),
+    .flatten_out_0_V_address0(Loop_VITIS_LOOP_79_1_proc_U0_flatten_out_0_V_address0),
+    .flatten_out_0_V_ce0(Loop_VITIS_LOOP_79_1_proc_U0_flatten_out_0_V_ce0),
+    .flatten_out_0_V_we0(Loop_VITIS_LOOP_79_1_proc_U0_flatten_out_0_V_we0),
+    .flatten_out_0_V_d0(Loop_VITIS_LOOP_79_1_proc_U0_flatten_out_0_V_d0)
 );
 
-gesture_model_dense_4 dense_4_U0(
+gesture_model_dense_0 dense_0_U0(
     .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(dense_4_U0_ap_start),
-    .ap_done(dense_4_U0_ap_done),
-    .ap_continue(dense_4_U0_ap_continue),
-    .ap_idle(dense_4_U0_ap_idle),
-    .ap_ready(dense_4_U0_ap_ready),
-    .input_r_address0(dense_4_U0_input_r_address0),
-    .input_r_ce0(dense_4_U0_input_r_ce0),
-    .input_r_q0(flatten_out_V_t_q0),
-    .output_r_address0(dense_4_U0_output_r_address0),
-    .output_r_ce0(dense_4_U0_output_r_ce0),
-    .output_r_we0(dense_4_U0_output_r_we0),
-    .output_r_d0(dense_4_U0_output_r_d0)
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(dense_0_U0_ap_start),
+    .ap_done(dense_0_U0_ap_done),
+    .ap_continue(dense_0_U0_ap_continue),
+    .ap_idle(dense_0_U0_ap_idle),
+    .ap_ready(dense_0_U0_ap_ready),
+    .input_r_address0(dense_0_U0_input_r_address0),
+    .input_r_ce0(dense_0_U0_input_r_ce0),
+    .input_r_q0(flatten_out_0_V_t_q0),
+    .output_r_address0(dense_0_U0_output_r_address0),
+    .output_r_ce0(dense_0_U0_output_r_ce0),
+    .output_r_we0(dense_0_U0_output_r_we0),
+    .output_r_d0(dense_0_U0_output_r_d0)
 );
 
-gesture_model_batchnorm_5 batchnorm_5_U0(
-    .ap_continue(batchnorm_5_U0_ap_continue),
+gesture_model_batch_normalization_1 batch_normalization_1_U0(
     .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(batchnorm_5_U0_ap_start),
-    .ap_done(batchnorm_5_U0_ap_done),
-    .ap_idle(batchnorm_5_U0_ap_idle),
-    .ap_ready(batchnorm_5_U0_ap_ready),
-    .input_r_address0(batchnorm_5_U0_input_r_address0),
-    .input_r_ce0(batchnorm_5_U0_input_r_ce0),
-    .input_r_q0(dense1_out_V_t_q0),
-    .output_r_address0(batchnorm_5_U0_output_r_address0),
-    .output_r_ce0(batchnorm_5_U0_output_r_ce0),
-    .output_r_we0(batchnorm_5_U0_output_r_we0),
-    .output_r_d0(batchnorm_5_U0_output_r_d0)
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(batch_normalization_1_U0_ap_start),
+    .ap_done(batch_normalization_1_U0_ap_done),
+    .ap_continue(batch_normalization_1_U0_ap_continue),
+    .ap_idle(batch_normalization_1_U0_ap_idle),
+    .ap_ready(batch_normalization_1_U0_ap_ready),
+    .input_r_address0(batch_normalization_1_U0_input_r_address0),
+    .input_r_ce0(batch_normalization_1_U0_input_r_ce0),
+    .input_r_q0(dense_out_0_V_t_q0),
+    .output_r_address0(batch_normalization_1_U0_output_r_address0),
+    .output_r_ce0(batch_normalization_1_U0_output_r_ce0),
+    .output_r_we0(batch_normalization_1_U0_output_r_we0),
+    .output_r_d0(batch_normalization_1_U0_output_r_d0)
 );
 
-gesture_model_dense_output_7 dense_output_7_U0(
+gesture_model_dense_1 dense_1_U0(
     .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(dense_output_7_U0_ap_start),
-    .ap_done(dense_output_7_U0_ap_done),
-    .ap_continue(dense_output_7_U0_ap_continue),
-    .ap_idle(dense_output_7_U0_ap_idle),
-    .ap_ready(dense_output_7_U0_ap_ready),
-    .input_r_address0(dense_output_7_U0_input_r_address0),
-    .input_r_ce0(dense_output_7_U0_input_r_ce0),
-    .input_r_q0(bn2_out_V_t_q0),
-    .input_r_address1(dense_output_7_U0_input_r_address1),
-    .input_r_ce1(dense_output_7_U0_input_r_ce1),
-    .input_r_q1(bn2_out_V_t_q1),
-    .output_r_address0(dense_output_7_U0_output_r_address0),
-    .output_r_ce0(dense_output_7_U0_output_r_ce0),
-    .output_r_we0(dense_output_7_U0_output_r_we0),
-    .output_r_d0(dense_output_7_U0_output_r_d0)
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(dense_1_U0_ap_start),
+    .ap_done(dense_1_U0_ap_done),
+    .ap_continue(dense_1_U0_ap_continue),
+    .ap_idle(dense_1_U0_ap_idle),
+    .ap_ready(dense_1_U0_ap_ready),
+    .input_r_address0(dense_1_U0_input_r_address0),
+    .input_r_ce0(dense_1_U0_input_r_ce0),
+    .input_r_q0(batch_norm_out_1_V_t_q0),
+    .input_r_address1(dense_1_U0_input_r_address1),
+    .input_r_ce1(dense_1_U0_input_r_ce1),
+    .input_r_q1(batch_norm_out_1_V_t_q1),
+    .output_r_address0(dense_1_U0_output_r_address0),
+    .output_r_ce0(dense_1_U0_output_r_ce0),
+    .output_r_we0(dense_1_U0_output_r_we0),
+    .output_r_d0(dense_1_U0_output_r_d0),
+    .output_r_q0(output_V_i_q0),
+    .output_r_address1(dense_1_U0_output_r_address1),
+    .output_r_ce1(dense_1_U0_output_r_ce1),
+    .output_r_q1(output_V_i_q1)
 );
 
-gesture_model_softmax_7 softmax_7_U0(
+gesture_model_Loop_VITIS_LOOP_166_3_proc9 Loop_VITIS_LOOP_166_3_proc9_U0(
     .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(softmax_7_U0_ap_start),
-    .ap_done(softmax_7_U0_ap_done),
-    .ap_continue(softmax_7_U0_ap_continue),
-    .ap_idle(softmax_7_U0_ap_idle),
-    .ap_ready(softmax_7_U0_ap_ready),
-    .input_r_address0(softmax_7_U0_input_r_address0),
-    .input_r_ce0(softmax_7_U0_input_r_ce0),
-    .input_r_q0(dense_output_out_V_t_q0),
-    .output_r_address0(softmax_7_U0_output_r_address0),
-    .output_r_ce0(softmax_7_U0_output_r_ce0),
-    .output_r_we0(softmax_7_U0_output_r_we0),
-    .output_r_d0(softmax_7_U0_output_r_d0)
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(Loop_VITIS_LOOP_166_3_proc9_U0_ap_start),
+    .ap_done(Loop_VITIS_LOOP_166_3_proc9_U0_ap_done),
+    .ap_continue(Loop_VITIS_LOOP_166_3_proc9_U0_ap_continue),
+    .ap_idle(Loop_VITIS_LOOP_166_3_proc9_U0_ap_idle),
+    .ap_ready(Loop_VITIS_LOOP_166_3_proc9_U0_ap_ready),
+    .output_stream_TREADY(output_stream_TREADY),
+    .output_V_address0(Loop_VITIS_LOOP_166_3_proc9_U0_output_V_address0),
+    .output_V_ce0(Loop_VITIS_LOOP_166_3_proc9_U0_output_V_ce0),
+    .output_V_q0(output_V_t_q0),
+    .output_stream_TDATA(Loop_VITIS_LOOP_166_3_proc9_U0_output_stream_TDATA),
+    .output_stream_TVALID(Loop_VITIS_LOOP_166_3_proc9_U0_output_stream_TVALID)
 );
 
-assign Loop_VITIS_LOOP_42_1_proc_U0_ap_continue = flatten_out_V_i_full_n;
+assign Loop_VITIS_LOOP_149_1_proc8_U0_ap_continue = input_V_0_i_full_n;
 
-assign Loop_VITIS_LOOP_42_1_proc_U0_ap_start = maxpool_out_V_t_empty_n;
+assign Loop_VITIS_LOOP_149_1_proc8_U0_ap_start = ap_start;
 
-assign ap_done = softmax_7_U0_ap_done;
+assign Loop_VITIS_LOOP_166_3_proc9_U0_ap_continue = 1'b1;
 
-assign ap_idle = (softmax_7_U0_ap_idle & maxpool1d_2_U0_ap_idle & (dense_output_out_V_t_empty_n ^ 1'b1) & (bn2_out_V_t_empty_n ^ 1'b1) & (dense1_out_V_t_empty_n ^ 1'b1) & (flatten_out_V_t_empty_n ^ 1'b1) & (maxpool_out_V_t_empty_n ^ 1'b1) & (bn1_out_V_t_empty_n ^ 1'b1) & (conv1d_out_V_t_empty_n ^ 1'b1) & dense_output_7_U0_ap_idle & dense_4_U0_ap_idle & conv1d_0_U0_ap_idle & batchnorm_5_U0_ap_idle & batchnorm_1_U0_ap_idle & Loop_VITIS_LOOP_42_1_proc_U0_ap_idle);
+assign Loop_VITIS_LOOP_166_3_proc9_U0_ap_start = output_V_t_empty_n;
 
-assign ap_ready = conv1d_0_U0_ap_ready;
+assign Loop_VITIS_LOOP_79_1_proc_U0_ap_continue = flatten_out_0_V_i_full_n;
 
-assign batchnorm_1_U0_ap_continue = bn1_out_V_i_full_n;
+assign Loop_VITIS_LOOP_79_1_proc_U0_ap_start = max_pool_out_0_V_t_empty_n;
 
-assign batchnorm_1_U0_ap_start = conv1d_out_V_t_empty_n;
+assign ap_done = Loop_VITIS_LOOP_166_3_proc9_U0_ap_done;
 
-assign batchnorm_5_U0_ap_continue = bn2_out_V_i_full_n;
+assign ap_idle = (max_pooling1d_0_U0_ap_idle & (output_V_t_empty_n ^ 1'b1) & (batch_norm_out_1_V_t_empty_n ^ 1'b1) & (dense_out_0_V_t_empty_n ^ 1'b1) & (flatten_out_0_V_t_empty_n ^ 1'b1) & (max_pool_out_0_V_t_empty_n ^ 1'b1) & (batch_norm_out_0_V_t_empty_n ^ 1'b1) & (conv1d_out_0_V_t_empty_n ^ 1'b1) & (input_V_0_t_empty_n ^ 1'b1) & dense_1_U0_ap_idle & dense_0_U0_ap_idle & conv1d_0_U0_ap_idle & batch_normalization_1_U0_ap_idle & batch_normalization_0_U0_ap_idle & Loop_VITIS_LOOP_79_1_proc_U0_ap_idle & Loop_VITIS_LOOP_166_3_proc9_U0_ap_idle & Loop_VITIS_LOOP_149_1_proc8_U0_ap_idle);
 
-assign batchnorm_5_U0_ap_start = dense1_out_V_t_empty_n;
+assign ap_ready = Loop_VITIS_LOOP_149_1_proc8_U0_ap_ready;
 
-assign conv1d_0_U0_ap_continue = conv1d_out_V_i_full_n;
+always @ (*) begin
+    ap_rst_n_inv = ~ap_rst_n;
+end
 
-assign conv1d_0_U0_ap_start = ap_start;
+assign batch_normalization_0_U0_ap_continue = batch_norm_out_0_V_i_full_n;
 
-assign dense_4_U0_ap_continue = dense1_out_V_i_full_n;
+assign batch_normalization_0_U0_ap_start = conv1d_out_0_V_t_empty_n;
 
-assign dense_4_U0_ap_start = flatten_out_V_t_empty_n;
+assign batch_normalization_1_U0_ap_continue = batch_norm_out_1_V_i_full_n;
 
-assign dense_output_7_U0_ap_continue = dense_output_out_V_i_full_n;
+assign batch_normalization_1_U0_ap_start = dense_out_0_V_t_empty_n;
 
-assign dense_output_7_U0_ap_start = bn2_out_V_t_empty_n;
+assign conv1d_0_U0_ap_continue = conv1d_out_0_V_i_full_n;
 
-assign input_r_address0 = conv1d_0_U0_input_r_address0;
+assign conv1d_0_U0_ap_start = input_V_0_t_empty_n;
 
-assign input_r_address1 = conv1d_0_U0_input_r_address1;
+assign dense_0_U0_ap_continue = dense_out_0_V_i_full_n;
 
-assign input_r_ce0 = conv1d_0_U0_input_r_ce0;
+assign dense_0_U0_ap_start = flatten_out_0_V_t_empty_n;
 
-assign input_r_ce1 = conv1d_0_U0_input_r_ce1;
+assign dense_1_U0_ap_continue = output_V_i_full_n;
 
-assign input_r_d0 = 16'd0;
+assign dense_1_U0_ap_start = batch_norm_out_1_V_t_empty_n;
 
-assign input_r_d1 = 16'd0;
+assign input_stream_TREADY = Loop_VITIS_LOOP_149_1_proc8_U0_input_stream_TREADY;
 
-assign input_r_we0 = 1'b0;
+assign max_pooling1d_0_U0_ap_continue = max_pool_out_0_V_i_full_n;
 
-assign input_r_we1 = 1'b0;
+assign max_pooling1d_0_U0_ap_start = batch_norm_out_0_V_t_empty_n;
 
-assign maxpool1d_2_U0_ap_continue = maxpool_out_V_i_full_n;
+assign output_stream_TDATA = Loop_VITIS_LOOP_166_3_proc9_U0_output_stream_TDATA;
 
-assign maxpool1d_2_U0_ap_start = bn1_out_V_t_empty_n;
-
-assign output_r_address0 = softmax_7_U0_output_r_address0;
-
-assign output_r_address1 = 5'd0;
-
-assign output_r_ce0 = softmax_7_U0_output_r_ce0;
-
-assign output_r_ce1 = 1'b0;
-
-assign output_r_d0 = softmax_7_U0_output_r_d0;
-
-assign output_r_d1 = 16'd0;
-
-assign output_r_we0 = softmax_7_U0_output_r_we0;
-
-assign output_r_we1 = 1'b0;
-
-assign softmax_7_U0_ap_continue = 1'b1;
-
-assign softmax_7_U0_ap_start = dense_output_out_V_t_empty_n;
+assign output_stream_TVALID = Loop_VITIS_LOOP_166_3_proc9_U0_output_stream_TVALID;
 
 endmodule //gesture_model

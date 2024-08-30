@@ -236,34 +236,22 @@ class AESL_RUNTIME_BC {
     fstream file_token;
     string mName;
 };
+unsigned int ap_apatb_input_stream_cap_bc;
+static AESL_RUNTIME_BC __xlx_input_stream_V_size_Reader("../tv/stream_size/stream_size_in_input_stream.dat");
+unsigned int ap_apatb_output_stream_cap_bc;
+static AESL_RUNTIME_BC __xlx_output_stream_V_size_Reader("../tv/stream_size/stream_size_out_output_stream.dat");
 using hls::sim::Byte;
-extern "C" void gesture_model(Byte<2>*, Byte<2>*);
-extern "C" void apatb_gesture_model_hw(volatile void * __xlx_apatb_param_input_r, volatile void * __xlx_apatb_param_output_r) {
+struct __cosim_s2__ { char data[2]; };
+extern "C" void gesture_model(__cosim_s2__*, __cosim_s2__*);
+extern "C" void apatb_gesture_model_hw(volatile void * __xlx_apatb_param_input_stream, volatile void * __xlx_apatb_param_output_stream) {
 using hls::sim::createStream;
-  // Collect __xlx_input_r__tmp_vec
-std::vector<Byte<2>> __xlx_input_r__tmp_vec;
-for (size_t i = 0; i < 120; ++i){
-__xlx_input_r__tmp_vec.push_back(((Byte<2>*)__xlx_apatb_param_input_r)[i]);
-}
-  int __xlx_size_param_input_r = 120;
-  int __xlx_offset_param_input_r = 0;
-  int __xlx_offset_byte_param_input_r = 0*2;
-  // Collect __xlx_output_r__tmp_vec
-std::vector<Byte<2>> __xlx_output_r__tmp_vec;
-for (size_t i = 0; i < 20; ++i){
-__xlx_output_r__tmp_vec.push_back(((Byte<2>*)__xlx_apatb_param_output_r)[i]);
-}
-  int __xlx_size_param_output_r = 20;
-  int __xlx_offset_param_output_r = 0;
-  int __xlx_offset_byte_param_output_r = 0*2;
+auto* sinput_stream = createStream((hls::stream<__cosim_s2__>*)__xlx_apatb_param_input_stream);
+  //Create input buffer for output_stream
+  ap_apatb_output_stream_cap_bc = __xlx_output_stream_V_size_Reader.read_size();
+  __cosim_s2__* __xlx_output_stream_input_buffer= new __cosim_s2__[ap_apatb_output_stream_cap_bc];
+auto* soutput_stream = createStream((hls::stream<__cosim_s2__>*)__xlx_apatb_param_output_stream);
   // DUT call
-  gesture_model(__xlx_input_r__tmp_vec.data(), __xlx_output_r__tmp_vec.data());
-// print __xlx_apatb_param_input_r
-for (size_t i = 0; i < __xlx_size_param_input_r; ++i) {
-((Byte<2>*)__xlx_apatb_param_input_r)[i] = __xlx_input_r__tmp_vec[__xlx_offset_param_input_r+i];
-}
-// print __xlx_apatb_param_output_r
-for (size_t i = 0; i < __xlx_size_param_output_r; ++i) {
-((Byte<2>*)__xlx_apatb_param_output_r)[i] = __xlx_output_r__tmp_vec[__xlx_offset_param_output_r+i];
-}
+  gesture_model(sinput_stream->data<__cosim_s2__>(), soutput_stream->data<__cosim_s2__>());
+sinput_stream->transfer((hls::stream<__cosim_s2__>*)__xlx_apatb_param_input_stream);
+soutput_stream->transfer((hls::stream<__cosim_s2__>*)__xlx_apatb_param_output_stream);
 }

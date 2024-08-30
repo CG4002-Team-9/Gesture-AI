@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/prince/vitis_test/solution1/impl/verilog/project.runs/synth_1'
+HD_PWD='/home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

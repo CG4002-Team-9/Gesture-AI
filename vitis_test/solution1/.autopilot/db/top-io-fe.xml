@@ -1,14 +1,14 @@
 <root versionMajor = "1" versionMinor = "5">
   <kernel src_name="gesture_model" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
     <args>
-      <arg id="0" access_type="r" src_name="input" src_type="ap_fixed&lt;16, 8, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="16" src_size_or_depth="120">
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="input_r" hw_bitwidth="16" hw_size_or_depth="120" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
+      <arg id="0" access_type="r" src_name="input_stream" src_type="stream&lt;ap_fixed&lt;16, 8, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="input_stream" hw_bitwidth="16" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both"/>
         </hw>
       </arg>
-      <arg id="1" access_type="w" src_name="output" src_type="ap_fixed&lt;16, 8, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="16" src_size_or_depth="20">
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="output_r" hw_bitwidth="16" hw_size_or_depth="20" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
+      <arg id="1" access_type="w" src_name="output_stream" src_type="stream&lt;ap_fixed&lt;16, 8, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="output_stream" hw_bitwidth="16" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both"/>
         </hw>
       </arg>
     </args>

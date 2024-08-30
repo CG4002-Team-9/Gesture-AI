@@ -6,32 +6,32 @@
   </RunData>
   <TimingReport>
     <TargetClockPeriod>10.000</TargetClockPeriod>
-    <AchievedClockPeriod>4.634</AchievedClockPeriod>
+    <AchievedClockPeriod>3.778</AchievedClockPeriod>
     <CLOCK_NAME>ap_clk</CLOCK_NAME>
-    <CP_FINAL>4.634</CP_FINAL>
+    <CP_FINAL>3.778</CP_FINAL>
     <CP_ROUTE>NA</CP_ROUTE>
-    <CP_SYNTH>4.634</CP_SYNTH>
+    <CP_SYNTH>3.778</CP_SYNTH>
     <CP_TARGET>10.000</CP_TARGET>
-    <SLACK_FINAL>5.366</SLACK_FINAL>
+    <SLACK_FINAL>6.222</SLACK_FINAL>
     <SLACK_ROUTE/>
-    <SLACK_SYNTH>5.366</SLACK_SYNTH>
+    <SLACK_SYNTH>6.222</SLACK_SYNTH>
     <TIMING_MET>TRUE</TIMING_MET>
     <TNS_FINAL>0.000</TNS_FINAL>
     <TNS_ROUTE>NA</TNS_ROUTE>
     <TNS_SYNTH>0.000</TNS_SYNTH>
-    <WNS_FINAL>5.366</WNS_FINAL>
+    <WNS_FINAL>6.222</WNS_FINAL>
     <WNS_ROUTE>NA</WNS_ROUTE>
-    <WNS_SYNTH>5.366</WNS_SYNTH>
+    <WNS_SYNTH>6.222</WNS_SYNTH>
   </TimingReport>
   <AreaReport>
     <Resources>
-      <BRAM>17</BRAM>
+      <BRAM>19</BRAM>
       <CLB>0</CLB>
-      <DSP>32</DSP>
-      <FF>3204</FF>
+      <DSP>48</DSP>
+      <FF>8356</FF>
       <LATCH>0</LATCH>
-      <LUT>4034</LUT>
-      <SRL>184</SRL>
+      <LUT>11175</LUT>
+      <SRL>424</SRL>
       <URAM>0</URAM>
     </Resources>
     <AvailableResources>
@@ -45,433 +45,425 @@
   </AreaReport>
   <RtlModules>
     <RtlModule CELL="inst" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="gesture_model" DISPNAME="inst" RTLNAME="gesture_model">
-      <SubModules count="15">Loop_VITIS_LOOP_42_1_proc_U0 batchnorm_1_U0 batchnorm_5_U0 bn1_out_V_U bn2_out_V_U conv1d_0_U0 conv1d_out_V_U dense1_out_V_U dense_4_U0 dense_output_7_U0 dense_output_out_V_U flatten_out_V_U maxpool1d_2_U0 maxpool_out_V_U softmax_7_U0</SubModules>
-      <Resources BRAM="17" DSP="32" FF="3204" LUT="4034"/>
+      <SubModules count="18">Loop_VITIS_LOOP_149_1_proc8_U0 Loop_VITIS_LOOP_166_3_proc9_U0 Loop_VITIS_LOOP_79_1_proc_U0 batch_norm_out_0_V_U batch_norm_out_1_V_U batch_normalization_0_U0 batch_normalization_1_U0 control_s_axi_U conv1d_0_U0 conv1d_out_0_V_U dense_0_U0 dense_1_U0 dense_out_0_V_U flatten_out_0_V_U input_V_0_U max_pool_out_0_V_U max_pooling1d_0_U0 output_V_U</SubModules>
+      <Resources BRAM="19" DSP="48" FF="8356" LUT="11175"/>
     </RtlModule>
-    <RtlModule CELL="inst/Loop_VITIS_LOOP_42_1_proc_U0" DEPTH="1" TYPE="function" MODULENAME="Loop_VITIS_LOOP_42_1_proc" DISPNAME="Loop_VITIS_LOOP_42_1_proc_U0" RTLNAME="gesture_model_Loop_VITIS_LOOP_42_1_proc">
+    <RtlModule CELL="inst/Loop_VITIS_LOOP_149_1_proc8_U0" DEPTH="1" TYPE="function" MODULENAME="Loop_VITIS_LOOP_149_1_proc8" DISPNAME="Loop_VITIS_LOOP_149_1_proc8_U0" RTLNAME="gesture_model_Loop_VITIS_LOOP_149_1_proc8">
+      <SubModules count="2">flow_control_loop_pipe_U regslice_both_input_stream_U</SubModules>
+      <Resources FF="45" LUT="49"/>
+      <LocalResources FF="8"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Loop_VITIS_LOOP_149_1_proc8_U0/flow_control_loop_pipe_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe" DISPNAME="flow_control_loop_pipe_U" RTLNAME="gesture_model_flow_control_loop_pipe">
+      <Resources FF="1" LUT="11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Loop_VITIS_LOOP_149_1_proc8_U0/regslice_both_input_stream_U" BINDMODULE="gesture_model_regslice_both" DEPTH="2" TYPE="rtl" MODULENAME="regslice_both" DISPNAME="regslice_both_input_stream_U" RTLNAME="gesture_model_regslice_both">
+      <Resources FF="36" LUT="38"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Loop_VITIS_LOOP_166_3_proc9_U0" DEPTH="1" TYPE="function" MODULENAME="Loop_VITIS_LOOP_166_3_proc9" DISPNAME="Loop_VITIS_LOOP_166_3_proc9_U0" RTLNAME="gesture_model_Loop_VITIS_LOOP_166_3_proc9">
+      <SubModules count="2">flow_control_loop_pipe_U regslice_both_output_stream_U</SubModules>
+      <Resources FF="45" LUT="36"/>
+      <LocalResources FF="8" LUT="5"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Loop_VITIS_LOOP_166_3_proc9_U0/flow_control_loop_pipe_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe" DISPNAME="flow_control_loop_pipe_U" RTLNAME="gesture_model_flow_control_loop_pipe">
+      <Resources FF="1" LUT="10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Loop_VITIS_LOOP_166_3_proc9_U0/regslice_both_output_stream_U" BINDMODULE="gesture_model_regslice_both" DEPTH="2" TYPE="rtl" MODULENAME="regslice_both" DISPNAME="regslice_both_output_stream_U" RTLNAME="gesture_model_regslice_both">
+      <Resources FF="36" LUT="21"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Loop_VITIS_LOOP_79_1_proc_U0" DEPTH="1" TYPE="function" MODULENAME="Loop_VITIS_LOOP_79_1_proc" DISPNAME="Loop_VITIS_LOOP_79_1_proc_U0" RTLNAME="gesture_model_Loop_VITIS_LOOP_79_1_proc">
       <SubModules count="1">flow_control_loop_pipe_U</SubModules>
-      <Resources FF="23" LUT="30"/>
-      <LocalResources FF="22" LUT="2"/>
+      <Resources FF="42" LUT="67"/>
+      <LocalResources FF="41" LUT="36"/>
     </RtlModule>
-    <RtlModule CELL="inst/Loop_VITIS_LOOP_42_1_proc_U0/flow_control_loop_pipe_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe" DISPNAME="flow_control_loop_pipe_U" RTLNAME="gesture_model_flow_control_loop_pipe">
-      <Resources FF="1" LUT="28"/>
+    <RtlModule CELL="inst/Loop_VITIS_LOOP_79_1_proc_U0/flow_control_loop_pipe_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe" DISPNAME="flow_control_loop_pipe_U" RTLNAME="gesture_model_flow_control_loop_pipe">
+      <Resources FF="1" LUT="31"/>
     </RtlModule>
-    <RtlModule CELL="inst/batchnorm_1_U0" DEPTH="1" TYPE="function" MODULENAME="batchnorm_1" DISPNAME="batchnorm_1_U0" RTLNAME="gesture_model_batchnorm_1">
-      <SubModules count="4">bn_moving_mean_1_V_U flow_control_loop_pipe_U mac_muladd_24s_9ns_15s_24_4_1_U20 sdiv_24ns_1ns_24_28_1_U19</SubModules>
-      <Resources DSP="1" FF="260" LUT="311"/>
-      <LocalResources FF="70" LUT="17"/>
+    <RtlModule CELL="inst/batch_norm_out_0_V_U" BINDMODULE="gesture_model_batch_norm_out_0_V_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="batch_norm_out_0_V_RAM_AUTO_1R1W" DISPNAME="batch_norm_out_0_V_U" RTLNAME="gesture_model_batch_norm_out_0_V_RAM_AUTO_1R1W">
+      <Resources BRAM="4" FF="40" LUT="83"/>
+      <LocalResources FF="40" LUT="5"/>
+      <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="batch_norm_out_0_V_U" SOURCE="vitis_test/nnet/core.cpp:142" URAM="0" VARIABLE="batch_norm_out_0_V"/>
     </RtlModule>
-    <RtlModule CELL="inst/batchnorm_1_U0/bn_moving_mean_1_V_U" BINDMODULE="gesture_model_batchnorm_1_bn_moving_mean_1_V_ROM_AUTO_1R" DEPTH="2" TYPE="resource" MODULENAME="batchnorm_1_bn_moving_mean_1_V_ROM_AUTO_1R" DISPNAME="bn_moving_mean_1_V_U" RTLNAME="gesture_model_batchnorm_1_bn_moving_mean_1_V_ROM_AUTO_1R">
+    <RtlModule CELL="inst/batch_norm_out_1_V_U" BINDMODULE="gesture_model_batch_norm_out_1_V_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="batch_norm_out_1_V_RAM_AUTO_1R1W" DISPNAME="batch_norm_out_1_V_U" RTLNAME="gesture_model_batch_norm_out_1_V_RAM_AUTO_1R1W">
+      <Resources FF="104" LUT="148"/>
+      <LocalResources FF="40" LUT="4"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="batch_norm_out_1_V_U" SOURCE="vitis_test/nnet/core.cpp:146" URAM="0" VARIABLE="batch_norm_out_1_V"/>
+    </RtlModule>
+    <RtlModule CELL="inst/batch_normalization_0_U0" DEPTH="1" TYPE="function" MODULENAME="batch_normalization_0" DISPNAME="batch_normalization_0_U0" RTLNAME="gesture_model_batch_normalization_0">
+      <SubModules count="10">batch_norm_0_beta_V_U batch_norm_0_gamma_V_U batch_norm_0_mean_V_U batch_norm_0_variance_V_U dsqrt_64ns_64ns_64_21_no_dsp_1_U15 flow_control_loop_delay_pipe_U frp_pipeline_valid_U mac_muladd_24s_9ns_15s_24_4_1_U17 pf_output_r_d0_U sdiv_24ns_16s_24_28_1_U16</SubModules>
+      <Resources DSP="1" FF="2370" LUT="2967"/>
+      <LocalResources FF="136" LUT="96"/>
+    </RtlModule>
+    <RtlModule CELL="inst/batch_normalization_0_U0/batch_norm_0_beta_V_U" BINDMODULE="gesture_model_batch_normalization_0_batch_norm_0_beta_V_ROM_AUTO_1R" DEPTH="2" TYPE="resource" MODULENAME="batch_normalization_0_batch_norm_0_beta_V_ROM_AUTO_1R" DISPNAME="batch_norm_0_beta_V_U" RTLNAME="gesture_model_batch_normalization_0_batch_norm_0_beta_V_ROM_AUTO_1R">
+      <Resources FF="7"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="batch_norm_0_beta_V_U" SOURCE="" URAM="0" VARIABLE="batch_norm_0_beta_V"/>
+    </RtlModule>
+    <RtlModule CELL="inst/batch_normalization_0_U0/batch_norm_0_gamma_V_U" BINDMODULE="gesture_model_batch_normalization_0_batch_norm_0_gamma_V_ROM_AUTO_1R" DEPTH="2" TYPE="resource" MODULENAME="batch_normalization_0_batch_norm_0_gamma_V_ROM_AUTO_1R" DISPNAME="batch_norm_0_gamma_V_U" RTLNAME="gesture_model_batch_normalization_0_batch_norm_0_gamma_V_ROM_AUTO_1R">
+      <Resources FF="9"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="batch_norm_0_gamma_V_U" SOURCE="" URAM="0" VARIABLE="batch_norm_0_gamma_V"/>
+    </RtlModule>
+    <RtlModule CELL="inst/batch_normalization_0_U0/batch_norm_0_mean_V_U" BINDMODULE="gesture_model_batch_normalization_0_batch_norm_0_mean_V_ROM_AUTO_1R" DEPTH="2" TYPE="resource" MODULENAME="batch_normalization_0_batch_norm_0_mean_V_ROM_AUTO_1R" DISPNAME="batch_norm_0_mean_V_U" RTLNAME="gesture_model_batch_normalization_0_batch_norm_0_mean_V_ROM_AUTO_1R">
       <Resources FF="4"/>
-      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="bn_moving_mean_1_V_U" SOURCE="" URAM="0" VARIABLE="bn_moving_mean_1_V"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="batch_norm_0_mean_V_U" SOURCE="" URAM="0" VARIABLE="batch_norm_0_mean_V"/>
     </RtlModule>
-    <RtlModule CELL="inst/batchnorm_1_U0/flow_control_loop_pipe_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe" DISPNAME="flow_control_loop_pipe_U" RTLNAME="gesture_model_flow_control_loop_pipe">
-      <Resources FF="1" LUT="20"/>
+    <RtlModule CELL="inst/batch_normalization_0_U0/batch_norm_0_variance_V_U" BINDMODULE="gesture_model_batch_normalization_0_batch_norm_0_variance_V_ROM_AUTO_1R" DEPTH="2" TYPE="resource" MODULENAME="batch_normalization_0_batch_norm_0_variance_V_ROM_AUTO_1R" DISPNAME="batch_norm_0_variance_V_U" RTLNAME="gesture_model_batch_normalization_0_batch_norm_0_variance_V_ROM_AUTO_1R">
+      <Resources FF="1"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="batch_norm_0_variance_V_U" SOURCE="" URAM="0" VARIABLE="batch_norm_0_variance_V"/>
     </RtlModule>
-    <RtlModule CELL="inst/batchnorm_1_U0/mac_muladd_24s_9ns_15s_24_4_1_U20" BINDMODULE="gesture_model_mac_muladd_24s_9ns_15s_24_4_1" DEPTH="2" TYPE="resource" MODULENAME="mac_muladd_24s_9ns_15s_24_4_1" DISPNAME="mac_muladd_24s_9ns_15s_24_4_1_U20" RTLNAME="gesture_model_mac_muladd_24s_9ns_15s_24_4_1">
-      <Resources DSP="1" LUT="10"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_27_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_24s_9ns_15s_24_4_1_U20" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:837" URAM="0" VARIABLE="mul_ln837"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_27_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_24s_9ns_15s_24_4_1_U20" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="ret_V"/>
+    <RtlModule CELL="inst/batch_normalization_0_U0/dsqrt_64ns_64ns_64_21_no_dsp_1_U15" BINDMODULE="gesture_model_dsqrt_64ns_64ns_64_21_no_dsp_1" DEPTH="2" TYPE="resource" MODULENAME="dsqrt_64ns_64ns_64_21_no_dsp_1" DISPNAME="dsqrt_64ns_64ns_64_21_no_dsp_1_U15" RTLNAME="gesture_model_dsqrt_64ns_64ns_64_21_no_dsp_1">
+      <Resources FF="1173" LUT="1562"/>
+      <LocalResources FF="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="20" LOOP="VITIS_LOOP_45_1_VITIS_LOOP_47_2" OPTYPE="dsqrt" PRAGMA="" RTLNAME="dsqrt_64ns_64ns_64_21_no_dsp_1_U15" SOURCE="vitis_test/nnet/core.cpp:49" URAM="0" VARIABLE="d"/>
     </RtlModule>
-    <RtlModule CELL="inst/batchnorm_1_U0/sdiv_24ns_1ns_24_28_1_U19" BINDMODULE="gesture_model_sdiv_24ns_1ns_24_28_1" DEPTH="2" TYPE="rtl" MODULENAME="sdiv_24ns_1ns_24_28_1" DISPNAME="sdiv_24ns_1ns_24_28_1_U19" RTLNAME="gesture_model_sdiv_24ns_1ns_24_28_1">
-      <Resources FF="185" LUT="264"/>
-      <LocalResources FF="16" LUT="33"/>
+    <RtlModule CELL="inst/batch_normalization_0_U0/flow_control_loop_delay_pipe_U" BINDMODULE="gesture_model_flow_control_loop_delay_pipe" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_delay_pipe" DISPNAME="flow_control_loop_delay_pipe_U" RTLNAME="gesture_model_flow_control_loop_delay_pipe">
+      <Resources FF="2" LUT="41"/>
     </RtlModule>
-    <RtlModule CELL="inst/batchnorm_5_U0" DEPTH="1" TYPE="function" MODULENAME="batchnorm_5" DISPNAME="batchnorm_5_U0" RTLNAME="gesture_model_batchnorm_5">
-      <SubModules count="6">bn_moving_mean_5_V_U bn_moving_variance_5_V_U flow_control_loop_delay_pipe_U grp_sqrt_fixed_17_9_s_fu_134 mac_muladd_24s_10ns_16s_24_4_1_U39 sdiv_24ns_10ns_24_28_1_U38</SubModules>
-      <Resources DSP="1" FF="846" LUT="947"/>
-      <LocalResources FF="71" LUT="18"/>
+    <RtlModule CELL="inst/batch_normalization_0_U0/frp_pipeline_valid_U" BINDMODULE="gesture_model_frp_pipeline_valid" DEPTH="2" TYPE="rtl" MODULENAME="frp_pipeline_valid" DISPNAME="frp_pipeline_valid_U" RTLNAME="gesture_model_frp_pipeline_valid">
+      <Resources FF="60" LUT="8"/>
     </RtlModule>
-    <RtlModule CELL="inst/batchnorm_5_U0/bn_moving_mean_5_V_U" BINDMODULE="gesture_model_batchnorm_5_bn_moving_mean_5_V_ROM_AUTO_1R" DEPTH="2" TYPE="resource" MODULENAME="batchnorm_5_bn_moving_mean_5_V_ROM_AUTO_1R" DISPNAME="bn_moving_mean_5_V_U" RTLNAME="gesture_model_batchnorm_5_bn_moving_mean_5_V_ROM_AUTO_1R">
+    <RtlModule CELL="inst/batch_normalization_0_U0/mac_muladd_24s_9ns_15s_24_4_1_U17" BINDMODULE="gesture_model_mac_muladd_24s_9ns_15s_24_4_1" DEPTH="2" TYPE="resource" MODULENAME="mac_muladd_24s_9ns_15s_24_4_1" DISPNAME="mac_muladd_24s_9ns_15s_24_4_1_U17" RTLNAME="gesture_model_mac_muladd_24s_9ns_15s_24_4_1">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_45_1_VITIS_LOOP_47_2" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_24s_9ns_15s_24_4_1_U17" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273" URAM="0" VARIABLE="r_V_5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_45_1_VITIS_LOOP_47_2" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_24s_9ns_15s_24_4_1_U17" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="ret_V"/>
+    </RtlModule>
+    <RtlModule CELL="inst/batch_normalization_0_U0/pf_output_r_d0_U" BINDMODULE="gesture_model_frp_fifoout" DEPTH="2" TYPE="rtl" MODULENAME="frp_fifoout" DISPNAME="pf_output_r_d0_U" RTLNAME="gesture_model_frp_fifoout">
+      <Resources FF="11" LUT="105"/>
+    </RtlModule>
+    <RtlModule CELL="inst/batch_normalization_0_U0/sdiv_24ns_16s_24_28_1_U16" BINDMODULE="gesture_model_sdiv_24ns_16s_24_28_1" DEPTH="2" TYPE="rtl" MODULENAME="sdiv_24ns_16s_24_28_1" DISPNAME="sdiv_24ns_16s_24_28_1_U16" RTLNAME="gesture_model_sdiv_24ns_16s_24_28_1">
+      <Resources FF="967" LUT="1155"/>
+      <LocalResources FF="32" LUT="316"/>
+    </RtlModule>
+    <RtlModule CELL="inst/batch_normalization_1_U0" DEPTH="1" TYPE="function" MODULENAME="batch_normalization_1" DISPNAME="batch_normalization_1_U0" RTLNAME="gesture_model_batch_normalization_1">
+      <SubModules count="8">batch_norm_1_mean_V_U batch_norm_1_variance_V_U dsqrt_64ns_64ns_64_21_no_dsp_1_U38 flow_control_loop_delay_pipe_U frp_pipeline_valid_U mac_muladd_24s_10ns_16s_24_4_1_U40 pf_output_r_d0_U sdiv_24ns_16s_24_28_1_U39</SubModules>
+      <Resources DSP="1" FF="2495" LUT="3039"/>
+      <LocalResources FF="156" LUT="31"/>
+    </RtlModule>
+    <RtlModule CELL="inst/batch_normalization_1_U0/batch_norm_1_mean_V_U" BINDMODULE="gesture_model_batch_normalization_1_batch_norm_1_mean_V_ROM_AUTO_1R" DEPTH="2" TYPE="resource" MODULENAME="batch_normalization_1_batch_norm_1_mean_V_ROM_AUTO_1R" DISPNAME="batch_norm_1_mean_V_U" RTLNAME="gesture_model_batch_normalization_1_batch_norm_1_mean_V_ROM_AUTO_1R">
       <Resources FF="9" LUT="5"/>
-      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="bn_moving_mean_5_V_U" SOURCE="" URAM="0" VARIABLE="bn_moving_mean_5_V"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="batch_norm_1_mean_V_U" SOURCE="" URAM="0" VARIABLE="batch_norm_1_mean_V"/>
     </RtlModule>
-    <RtlModule CELL="inst/batchnorm_5_U0/bn_moving_variance_5_V_U" BINDMODULE="gesture_model_batchnorm_5_bn_moving_variance_5_V_ROM_AUTO_1R" DEPTH="2" TYPE="resource" MODULENAME="batchnorm_5_bn_moving_variance_5_V_ROM_AUTO_1R" DISPNAME="bn_moving_variance_5_V_U" RTLNAME="gesture_model_batchnorm_5_bn_moving_variance_5_V_ROM_AUTO_1R">
-      <Resources FF="8"/>
-      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="bn_moving_variance_5_V_U" SOURCE="" URAM="0" VARIABLE="bn_moving_variance_5_V"/>
+    <RtlModule CELL="inst/batch_normalization_1_U0/batch_norm_1_variance_V_U" BINDMODULE="gesture_model_batch_normalization_1_batch_norm_1_variance_V_ROM_AUTO_1R" DEPTH="2" TYPE="resource" MODULENAME="batch_normalization_1_batch_norm_1_variance_V_ROM_AUTO_1R" DISPNAME="batch_norm_1_variance_V_U" RTLNAME="gesture_model_batch_normalization_1_batch_norm_1_variance_V_ROM_AUTO_1R">
+      <Resources FF="8" LUT="45"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="batch_norm_1_variance_V_U" SOURCE="" URAM="0" VARIABLE="batch_norm_1_variance_V"/>
     </RtlModule>
-    <RtlModule CELL="inst/batchnorm_5_U0/flow_control_loop_delay_pipe_U" BINDMODULE="gesture_model_flow_control_loop_delay_pipe" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_delay_pipe" DISPNAME="flow_control_loop_delay_pipe_U" RTLNAME="gesture_model_flow_control_loop_delay_pipe">
-      <Resources FF="2" LUT="22"/>
+    <RtlModule CELL="inst/batch_normalization_1_U0/dsqrt_64ns_64ns_64_21_no_dsp_1_U38" BINDMODULE="gesture_model_dsqrt_64ns_64ns_64_21_no_dsp_1" DEPTH="2" TYPE="resource" MODULENAME="dsqrt_64ns_64ns_64_21_no_dsp_1" DISPNAME="dsqrt_64ns_64ns_64_21_no_dsp_1_U38" RTLNAME="gesture_model_dsqrt_64ns_64ns_64_21_no_dsp_1">
+      <Resources FF="1282" LUT="1676"/>
+      <LocalResources FF="56"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="20" LOOP="VITIS_LOOP_103_1" OPTYPE="dsqrt" PRAGMA="" RTLNAME="dsqrt_64ns_64ns_64_21_no_dsp_1_U38" SOURCE="vitis_test/nnet/core.cpp:105" URAM="0" VARIABLE="d"/>
     </RtlModule>
-    <RtlModule CELL="inst/batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134" DEPTH="2" TYPE="function" MODULENAME="sqrt_fixed_17_9_s" DISPNAME="grp_sqrt_fixed_17_9_s_fu_134" RTLNAME="gesture_model_sqrt_fixed_17_9_s">
-      <Resources FF="44" LUT="124"/>
+    <RtlModule CELL="inst/batch_normalization_1_U0/flow_control_loop_delay_pipe_U" BINDMODULE="gesture_model_flow_control_loop_delay_pipe" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_delay_pipe" DISPNAME="flow_control_loop_delay_pipe_U" RTLNAME="gesture_model_flow_control_loop_delay_pipe">
+      <Resources FF="2" LUT="21"/>
     </RtlModule>
-    <RtlModule CELL="inst/batchnorm_5_U0/mac_muladd_24s_10ns_16s_24_4_1_U39" BINDMODULE="gesture_model_mac_muladd_24s_10ns_16s_24_4_1" DEPTH="2" TYPE="resource" MODULENAME="mac_muladd_24s_10ns_16s_24_4_1" DISPNAME="mac_muladd_24s_10ns_16s_24_4_1_U39" RTLNAME="gesture_model_mac_muladd_24s_10ns_16s_24_4_1">
-      <Resources DSP="1" LUT="11"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_60_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_24s_10ns_16s_24_4_1_U39" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:837" URAM="0" VARIABLE="mul_ln837"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_60_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_24s_10ns_16s_24_4_1_U39" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="ret_V"/>
+    <RtlModule CELL="inst/batch_normalization_1_U0/frp_pipeline_valid_U" BINDMODULE="gesture_model_frp_pipeline_valid" DEPTH="2" TYPE="rtl" MODULENAME="frp_pipeline_valid" DISPNAME="frp_pipeline_valid_U" RTLNAME="gesture_model_frp_pipeline_valid">
+      <Resources FF="60" LUT="8"/>
     </RtlModule>
-    <RtlModule CELL="inst/batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38" BINDMODULE="gesture_model_sdiv_24ns_10ns_24_28_1" DEPTH="2" TYPE="rtl" MODULENAME="sdiv_24ns_10ns_24_28_1" DISPNAME="sdiv_24ns_10ns_24_28_1_U38" RTLNAME="gesture_model_sdiv_24ns_10ns_24_28_1">
-      <Resources FF="712" LUT="767"/>
-      <LocalResources FF="16" LUT="64"/>
+    <RtlModule CELL="inst/batch_normalization_1_U0/mac_muladd_24s_10ns_16s_24_4_1_U40" BINDMODULE="gesture_model_mac_muladd_24s_10ns_16s_24_4_1" DEPTH="2" TYPE="resource" MODULENAME="mac_muladd_24s_10ns_16s_24_4_1" DISPNAME="mac_muladd_24s_10ns_16s_24_4_1_U40" RTLNAME="gesture_model_mac_muladd_24s_10ns_16s_24_4_1">
+      <Resources DSP="1" LUT="10"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_103_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_24s_10ns_16s_24_4_1_U40" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273" URAM="0" VARIABLE="r_V_3"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_103_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_24s_10ns_16s_24_4_1_U40" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="ret_V"/>
     </RtlModule>
-    <RtlModule CELL="inst/bn1_out_V_U" BINDMODULE="gesture_model_bn1_out_V_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="bn1_out_V_RAM_AUTO_1R1W" DISPNAME="bn1_out_V_U" RTLNAME="gesture_model_bn1_out_V_RAM_AUTO_1R1W">
-      <Resources FF="105" LUT="376"/>
-      <LocalResources FF="41" LUT="10"/>
-      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="bn1_out_V_U" SOURCE="vitis_test/nnet/core.cpp:91" URAM="0" VARIABLE="bn1_out_V"/>
+    <RtlModule CELL="inst/batch_normalization_1_U0/pf_output_r_d0_U" BINDMODULE="gesture_model_frp_fifoout" DEPTH="2" TYPE="rtl" MODULENAME="frp_fifoout" DISPNAME="pf_output_r_d0_U" RTLNAME="gesture_model_frp_fifoout">
+      <Resources FF="11" LUT="88"/>
     </RtlModule>
-    <RtlModule CELL="inst/bn2_out_V_U" BINDMODULE="gesture_model_bn2_out_V_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="bn2_out_V_RAM_AUTO_1R1W" DISPNAME="bn2_out_V_U" RTLNAME="gesture_model_bn2_out_V_RAM_AUTO_1R1W">
-      <Resources FF="105" LUT="147"/>
-      <LocalResources FF="41" LUT="5"/>
-      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="bn2_out_V_U" SOURCE="vitis_test/nnet/core.cpp:95" URAM="0" VARIABLE="bn2_out_V"/>
+    <RtlModule CELL="inst/batch_normalization_1_U0/sdiv_24ns_16s_24_28_1_U39" BINDMODULE="gesture_model_sdiv_24ns_16s_24_28_1" DEPTH="2" TYPE="rtl" MODULENAME="sdiv_24ns_16s_24_28_1" DISPNAME="sdiv_24ns_16s_24_28_1_U39" RTLNAME="gesture_model_sdiv_24ns_16s_24_28_1">
+      <Resources FF="967" LUT="1155"/>
+      <LocalResources FF="32" LUT="316"/>
+    </RtlModule>
+    <RtlModule CELL="inst/control_s_axi_U" BINDMODULE="gesture_model_control_s_axi" DEPTH="1" TYPE="rtl" MODULENAME="control_s_axi" DISPNAME="control_s_axi_U" RTLNAME="gesture_model_control_s_axi">
+      <Resources FF="27" LUT="23"/>
     </RtlModule>
     <RtlModule CELL="inst/conv1d_0_U0" DEPTH="1" TYPE="function" MODULENAME="conv1d_0" DISPNAME="conv1d_0_U0" RTLNAME="gesture_model_conv1d_0">
-      <SubModules count="11">flow_control_loop_pipe_U mac_muladd_16s_5ns_24s_24_4_1_U5 mac_muladd_16s_6ns_24s_24_4_1_U6 mac_muladd_16s_6ns_24s_24_4_1_U8 mac_muladd_16s_7ns_22s_24_4_1_U2 mac_muladd_16s_7s_24s_24_4_1_U10 mac_muladd_16s_7s_24s_24_4_1_U3 mac_muladd_16s_7s_24s_24_4_1_U7 mac_muladd_16s_7s_24s_24_4_1_U9 mac_muladd_16s_8s_24ns_24_4_1_U4 mul_mul_16s_5ns_22_4_1_U1</SubModules>
-      <Resources DSP="10" FF="105" LUT="406"/>
-      <LocalResources FF="104" LUT="174"/>
+      <SubModules count="6">conv1d_0_biases_V_U conv1d_0_weights_V_1_0_U flow_control_loop_pipe_U mac_muladd_16s_8s_24ns_24_4_1_U5 mac_muladd_16s_8s_24ns_24_4_1_U6 mul_mul_16s_8s_24_4_1_U4</SubModules>
+      <Resources DSP="3" FF="99" LUT="159"/>
+      <LocalResources FF="83" LUT="29"/>
+    </RtlModule>
+    <RtlModule CELL="inst/conv1d_0_U0/conv1d_0_biases_V_U" BINDMODULE="gesture_model_conv1d_0_conv1d_0_biases_V_ROM_AUTO_1R" DEPTH="2" TYPE="resource" MODULENAME="conv1d_0_conv1d_0_biases_V_ROM_AUTO_1R" DISPNAME="conv1d_0_biases_V_U" RTLNAME="gesture_model_conv1d_0_conv1d_0_biases_V_ROM_AUTO_1R">
+      <Resources FF="7" LUT="5"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="conv1d_0_biases_V_U" SOURCE="" URAM="0" VARIABLE="conv1d_0_biases_V"/>
+    </RtlModule>
+    <RtlModule CELL="inst/conv1d_0_U0/conv1d_0_weights_V_1_0_U" BINDMODULE="gesture_model_conv1d_0_conv1d_0_weights_V_1_0_ROM_AUTO_1R" DEPTH="2" TYPE="resource" MODULENAME="conv1d_0_conv1d_0_weights_V_1_0_ROM_AUTO_1R" DISPNAME="conv1d_0_weights_V_1_0_U" RTLNAME="gesture_model_conv1d_0_conv1d_0_weights_V_1_0_ROM_AUTO_1R">
+      <Resources FF="8" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="conv1d_0_weights_V_1_0_U" SOURCE="" URAM="0" VARIABLE="conv1d_0_weights_V_1_0"/>
     </RtlModule>
     <RtlModule CELL="inst/conv1d_0_U0/flow_control_loop_pipe_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe" DISPNAME="flow_control_loop_pipe_U" RTLNAME="gesture_model_flow_control_loop_pipe">
-      <Resources FF="1" LUT="48"/>
+      <Resources FF="1" LUT="79"/>
     </RtlModule>
-    <RtlModule CELL="inst/conv1d_0_U0/mac_muladd_16s_5ns_24s_24_4_1_U5" BINDMODULE="gesture_model_mac_muladd_16s_5ns_24s_24_4_1" DEPTH="2" TYPE="resource" MODULENAME="mac_muladd_16s_5ns_24s_24_4_1" DISPNAME="mac_muladd_16s_5ns_24s_24_4_1_U5" RTLNAME="gesture_model_mac_muladd_16s_5ns_24s_24_4_1">
-      <Resources DSP="1" LUT="27"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_5ns_24s_24_4_1_U5" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273" URAM="0" VARIABLE="mul_ln1273_2"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_5ns_24s_24_4_1_U5" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_21"/>
+    <RtlModule CELL="inst/conv1d_0_U0/mac_muladd_16s_8s_24ns_24_4_1_U5" BINDMODULE="gesture_model_mac_muladd_16s_8s_24ns_24_4_1" DEPTH="2" TYPE="resource" MODULENAME="mac_muladd_16s_8s_24ns_24_4_1" DISPNAME="mac_muladd_16s_8s_24ns_24_4_1_U5" RTLNAME="gesture_model_mac_muladd_16s_8s_24ns_24_4_1">
+      <Resources DSP="1" LUT="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_26_1_VITIS_LOOP_28_2" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_8s_24ns_24_4_1_U5" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:813" URAM="0" VARIABLE="mul_ln813"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_26_1_VITIS_LOOP_28_2" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_8s_24ns_24_4_1_U5" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347"/>
     </RtlModule>
-    <RtlModule CELL="inst/conv1d_0_U0/mac_muladd_16s_6ns_24s_24_4_1_U6" BINDMODULE="gesture_model_mac_muladd_16s_6ns_24s_24_4_1" DEPTH="2" TYPE="resource" MODULENAME="mac_muladd_16s_6ns_24s_24_4_1" DISPNAME="mac_muladd_16s_6ns_24s_24_4_1_U6" RTLNAME="gesture_model_mac_muladd_16s_6ns_24s_24_4_1">
-      <Resources DSP="1" LUT="17"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_6ns_24s_24_4_1_U6" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273" URAM="0" VARIABLE="mul_ln1273_3"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_6ns_24s_24_4_1_U6" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_23"/>
+    <RtlModule CELL="inst/conv1d_0_U0/mac_muladd_16s_8s_24ns_24_4_1_U6" BINDMODULE="gesture_model_mac_muladd_16s_8s_24ns_24_4_1" DEPTH="2" TYPE="resource" MODULENAME="mac_muladd_16s_8s_24ns_24_4_1" DISPNAME="mac_muladd_16s_8s_24ns_24_4_1_U6" RTLNAME="gesture_model_mac_muladd_16s_8s_24ns_24_4_1">
+      <Resources DSP="1" LUT="46"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_26_1_VITIS_LOOP_28_2" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_8s_24ns_24_4_1_U6" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:813" URAM="0" VARIABLE="mul_ln813_1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_26_1_VITIS_LOOP_28_2" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_8s_24ns_24_4_1_U6" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_15"/>
     </RtlModule>
-    <RtlModule CELL="inst/conv1d_0_U0/mac_muladd_16s_6ns_24s_24_4_1_U8" BINDMODULE="gesture_model_mac_muladd_16s_6ns_24s_24_4_1" DEPTH="2" TYPE="resource" MODULENAME="mac_muladd_16s_6ns_24s_24_4_1" DISPNAME="mac_muladd_16s_6ns_24s_24_4_1_U8" RTLNAME="gesture_model_mac_muladd_16s_6ns_24s_24_4_1">
-      <Resources DSP="1" LUT="17"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_6ns_24s_24_4_1_U8" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273" URAM="0" VARIABLE="mul_ln1273_5"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_6ns_24s_24_4_1_U8" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_26"/>
-    </RtlModule>
-    <RtlModule CELL="inst/conv1d_0_U0/mac_muladd_16s_7ns_22s_24_4_1_U2" BINDMODULE="gesture_model_mac_muladd_16s_7ns_22s_24_4_1" DEPTH="2" TYPE="resource" MODULENAME="mac_muladd_16s_7ns_22s_24_4_1" DISPNAME="mac_muladd_16s_7ns_22s_24_4_1_U2" RTLNAME="gesture_model_mac_muladd_16s_7ns_22s_24_4_1">
+    <RtlModule CELL="inst/conv1d_0_U0/mul_mul_16s_8s_24_4_1_U4" BINDMODULE="gesture_model_mul_mul_16s_8s_24_4_1" DEPTH="2" TYPE="resource" MODULENAME="mul_mul_16s_8s_24_4_1" DISPNAME="mul_mul_16s_8s_24_4_1_U4" RTLNAME="gesture_model_mul_mul_16s_8s_24_4_1">
       <Resources DSP="1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_7ns_22s_24_4_1_U2" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:813" URAM="0" VARIABLE="mul_ln813"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_7ns_22s_24_4_1_U2" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_26_1_VITIS_LOOP_28_2" OPTYPE="mul" PRAGMA="" RTLNAME="mul_mul_16s_8s_24_4_1_U4" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273" URAM="0" VARIABLE="mul_ln1273"/>
     </RtlModule>
-    <RtlModule CELL="inst/conv1d_0_U0/mac_muladd_16s_7s_24s_24_4_1_U10" BINDMODULE="gesture_model_mac_muladd_16s_7s_24s_24_4_1" DEPTH="2" TYPE="resource" MODULENAME="mac_muladd_16s_7s_24s_24_4_1" DISPNAME="mac_muladd_16s_7s_24s_24_4_1_U10" RTLNAME="gesture_model_mac_muladd_16s_7s_24s_24_4_1">
-      <Resources DSP="1" LUT="49"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_7s_24s_24_4_1_U10" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273" URAM="0" VARIABLE="mul_ln1273_7"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_7s_24s_24_4_1_U10" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_29"/>
-    </RtlModule>
-    <RtlModule CELL="inst/conv1d_0_U0/mac_muladd_16s_7s_24s_24_4_1_U3" BINDMODULE="gesture_model_mac_muladd_16s_7s_24s_24_4_1" DEPTH="2" TYPE="resource" MODULENAME="mac_muladd_16s_7s_24s_24_4_1" DISPNAME="mac_muladd_16s_7s_24s_24_4_1_U3" RTLNAME="gesture_model_mac_muladd_16s_7s_24s_24_4_1">
-      <Resources DSP="1" LUT="28"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_7s_24s_24_4_1_U3" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273" URAM="0" VARIABLE="mul_ln1273_1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_7s_24s_24_4_1_U3" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_16"/>
-    </RtlModule>
-    <RtlModule CELL="inst/conv1d_0_U0/mac_muladd_16s_7s_24s_24_4_1_U7" BINDMODULE="gesture_model_mac_muladd_16s_7s_24s_24_4_1" DEPTH="2" TYPE="resource" MODULENAME="mac_muladd_16s_7s_24s_24_4_1" DISPNAME="mac_muladd_16s_7s_24s_24_4_1_U7" RTLNAME="gesture_model_mac_muladd_16s_7s_24s_24_4_1">
-      <Resources DSP="1" LUT="11"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_7s_24s_24_4_1_U7" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273" URAM="0" VARIABLE="mul_ln1273_4"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_7s_24s_24_4_1_U7" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_25"/>
-    </RtlModule>
-    <RtlModule CELL="inst/conv1d_0_U0/mac_muladd_16s_7s_24s_24_4_1_U9" BINDMODULE="gesture_model_mac_muladd_16s_7s_24s_24_4_1" DEPTH="2" TYPE="resource" MODULENAME="mac_muladd_16s_7s_24s_24_4_1" DISPNAME="mac_muladd_16s_7s_24s_24_4_1_U9" RTLNAME="gesture_model_mac_muladd_16s_7s_24s_24_4_1">
-      <Resources DSP="1" LUT="2"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_7s_24s_24_4_1_U9" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273" URAM="0" VARIABLE="mul_ln1273_6"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_7s_24s_24_4_1_U9" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_28"/>
-    </RtlModule>
-    <RtlModule CELL="inst/conv1d_0_U0/mac_muladd_16s_8s_24ns_24_4_1_U4" BINDMODULE="gesture_model_mac_muladd_16s_8s_24ns_24_4_1" DEPTH="2" TYPE="resource" MODULENAME="mac_muladd_16s_8s_24ns_24_4_1" DISPNAME="mac_muladd_16s_8s_24ns_24_4_1_U4" RTLNAME="gesture_model_mac_muladd_16s_8s_24ns_24_4_1">
-      <Resources DSP="1" LUT="33"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_8s_24ns_24_4_1_U4" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:813" URAM="0" VARIABLE="mul_ln813_1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_8s_24ns_24_4_1_U4" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_19"/>
-    </RtlModule>
-    <RtlModule CELL="inst/conv1d_0_U0/mul_mul_16s_5ns_22_4_1_U1" BINDMODULE="gesture_model_mul_mul_16s_5ns_22_4_1" DEPTH="2" TYPE="resource" MODULENAME="mul_mul_16s_5ns_22_4_1" DISPNAME="mul_mul_16s_5ns_22_4_1_U1" RTLNAME="gesture_model_mul_mul_16s_5ns_22_4_1">
-      <Resources DSP="1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_14_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_mul_16s_5ns_22_4_1_U1" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273" URAM="0" VARIABLE="mul_ln1273"/>
-    </RtlModule>
-    <RtlModule CELL="inst/conv1d_out_V_U" BINDMODULE="gesture_model_conv1d_out_V_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="conv1d_out_V_RAM_AUTO_1R1W" DISPNAME="conv1d_out_V_U" RTLNAME="gesture_model_conv1d_out_V_RAM_AUTO_1R1W">
-      <Resources FF="21" LUT="199"/>
-      <LocalResources FF="6" LUT="3"/>
-      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv1d_out_V_U" SOURCE="vitis_test/nnet/core.cpp:90" URAM="0" VARIABLE="conv1d_out_V"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense1_out_V_U" BINDMODULE="gesture_model_dense1_out_V_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="dense1_out_V_RAM_AUTO_1R1W" DISPNAME="dense1_out_V_U" RTLNAME="gesture_model_dense1_out_V_RAM_AUTO_1R1W">
-      <Resources FF="21" LUT="59"/>
-      <LocalResources FF="6" LUT="7"/>
-      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="dense1_out_V_U" SOURCE="vitis_test/nnet/core.cpp:94" URAM="0" VARIABLE="dense1_out_V"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_4_U0" DEPTH="1" TYPE="function" MODULENAME="dense_4" DISPNAME="dense_4_U0" RTLNAME="gesture_model_dense_4">
-      <SubModules count="4">dense_biases_4_V_U dense_weights_4_V_U flow_control_loop_pipe_U mac_muladd_16s_7s_24s_24_4_1_U32</SubModules>
-      <Resources BRAM="7" DSP="1" FF="82" LUT="155"/>
-      <LocalResources FF="73" LUT="8"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_4_U0/dense_biases_4_V_U" BINDMODULE="gesture_model_dense_4_dense_biases_4_V_ROM_AUTO_1R" DEPTH="2" TYPE="resource" MODULENAME="dense_4_dense_biases_4_V_ROM_AUTO_1R" DISPNAME="dense_biases_4_V_U" RTLNAME="gesture_model_dense_4_dense_biases_4_V_ROM_AUTO_1R">
-      <Resources FF="8" LUT="9"/>
-      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="dense_biases_4_V_U" SOURCE="" URAM="0" VARIABLE="dense_biases_4_V"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_4_U0/dense_weights_4_V_U" BINDMODULE="gesture_model_dense_4_dense_weights_4_V_ROM_AUTO_1R" DEPTH="2" TYPE="resource" MODULENAME="dense_4_dense_weights_4_V_ROM_AUTO_1R" DISPNAME="dense_weights_4_V_U" RTLNAME="gesture_model_dense_4_dense_weights_4_V_ROM_AUTO_1R">
-      <Resources BRAM="7" LUT="4"/>
-      <BindNode BINDTYPE="storage" BRAM="7" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="dense_weights_4_V_U" SOURCE="" URAM="0" VARIABLE="dense_weights_4_V"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_4_U0/flow_control_loop_pipe_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe" DISPNAME="flow_control_loop_pipe_U" RTLNAME="gesture_model_flow_control_loop_pipe">
-      <Resources FF="1" LUT="52"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_4_U0/mac_muladd_16s_7s_24s_24_4_1_U32" BINDMODULE="gesture_model_mac_muladd_16s_7s_24s_24_4_1" DEPTH="2" TYPE="resource" MODULENAME="mac_muladd_16s_7s_24s_24_4_1" DISPNAME="mac_muladd_16s_7s_24s_24_4_1_U32" RTLNAME="gesture_model_mac_muladd_16s_7s_24s_24_4_1">
-      <Resources DSP="1" LUT="82"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_49_1_VITIS_LOOP_51_2" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_7s_24s_24_4_1_U32" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273" URAM="0" VARIABLE="r_V_4"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_49_1_VITIS_LOOP_51_2" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_7s_24s_24_4_1_U32" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="ret_V"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0" DEPTH="1" TYPE="function" MODULENAME="dense_output_7" DISPNAME="dense_output_7_U0" RTLNAME="gesture_model_dense_output_7">
-      <SubModules count="1">grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201</SubModules>
-      <Resources BRAM="8" DSP="19" FF="510" LUT="240"/>
-      <LocalResources FF="268" LUT="17"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201" DEPTH="2" TYPE="function" MODULENAME="dense_output_7_Pipeline_VITIS_LOOP_67_1" DISPNAME="grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201" RTLNAME="gesture_model_dense_output_7_Pipeline_VITIS_LOOP_67_1">
-      <SubModules count="20">dense_biases_7_V_U dense_weights_7_V_U flow_control_loop_pipe_sequential_init_U grp_exp_17_9_s_fu_435 mac_muladd_16s_9s_24ns_24_4_1_U57 mac_muladd_16s_9s_24ns_24_4_1_U58 mac_muladd_16s_9s_24ns_24_4_1_U59 mac_muladd_16s_9s_24ns_24_4_1_U60 mac_muladd_16s_9s_24ns_24_4_1_U61 mac_muladd_16s_9s_24ns_24_4_1_U62 mac_muladd_16s_9s_24ns_24_4_1_U63 mac_muladd_16s_9s_24ns_24_4_1_U64 mac_muladd_16s_9s_24ns_24_4_1_U65 mac_muladd_16s_9s_24ns_24_4_1_U66 mac_muladd_16s_9s_24ns_24_4_1_U67 mac_muladd_16s_9s_24ns_24_4_1_U68 mac_muladd_16s_9s_24ns_24_4_1_U69 mac_muladd_16s_9s_24ns_24_4_1_U70 mac_muladd_16s_9s_24ns_24_4_1_U71 mul_mul_16s_9s_24_4_1_U56</SubModules>
-      <Resources BRAM="8" DSP="19" FF="242" LUT="223"/>
-      <LocalResources FF="117" LUT="39"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/dense_biases_7_V_U" BINDMODULE="gesture_model_dense_output_7_Pipeline_VITIS_LOOP_67_1_dense_biases_7_V_ROM_AUTO_1R" DEPTH="3" TYPE="resource" MODULENAME="dense_output_7_Pipeline_VITIS_LOOP_67_1_dense_biases_7_V_ROM_AUTO_1R" DISPNAME="dense_biases_7_V_U" RTLNAME="gesture_model_dense_output_7_Pipeline_VITIS_LOOP_67_1_dense_biases_7_V_ROM_AUTO_1R">
-      <Resources FF="8" LUT="6"/>
-      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="dense_biases_7_V_U" SOURCE="" URAM="0" VARIABLE="dense_biases_7_V"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/dense_weights_7_V_U" BINDMODULE="gesture_model_dense_output_7_Pipeline_VITIS_LOOP_67_1_dense_weights_7_V_ROM_AUTO_1R" DEPTH="3" TYPE="resource" MODULENAME="dense_output_7_Pipeline_VITIS_LOOP_67_1_dense_weights_7_V_ROM_AUTO_1R" DISPNAME="dense_weights_7_V_U" RTLNAME="gesture_model_dense_output_7_Pipeline_VITIS_LOOP_67_1_dense_weights_7_V_ROM_AUTO_1R">
-      <Resources BRAM="8" LUT="12"/>
-      <BindNode BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="" RTLNAME="dense_weights_7_V_U" SOURCE="" URAM="0" VARIABLE="dense_weights_7_V"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/flow_control_loop_pipe_sequential_init_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="gesture_model_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="16"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/grp_exp_17_9_s_fu_435" DEPTH="3" TYPE="function" MODULENAME="exp_17_9_s" DISPNAME="grp_exp_17_9_s_fu_435" RTLNAME="gesture_model_exp_17_9_s">
-      <SubModules count="5">exp_x_msb_1_table_V_U exp_x_msb_2_m_1_table_V_U f_x_lsb_table_V_U mul_25ns_25ns_50_1_1_U48 mul_mul_25ns_18ns_43_4_1_U49</SubModules>
-      <Resources DSP="3" FF="115" LUT="136"/>
-      <LocalResources FF="42" LUT="67"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/grp_exp_17_9_s_fu_435/exp_x_msb_1_table_V_U" BINDMODULE="gesture_model_exp_17_9_s_exp_x_msb_1_table_V_ROM_AUTO_1R" DEPTH="4" TYPE="resource" MODULENAME="exp_17_9_s_exp_x_msb_1_table_V_ROM_AUTO_1R" DISPNAME="exp_x_msb_1_table_V_U" RTLNAME="gesture_model_exp_17_9_s_exp_x_msb_1_table_V_ROM_AUTO_1R">
-      <Resources FF="25" LUT="41"/>
-      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="exp_x_msb_1_table_V_U" SOURCE="" URAM="0" VARIABLE="exp_x_msb_1_table_V"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/grp_exp_17_9_s_fu_435/exp_x_msb_2_m_1_table_V_U" BINDMODULE="gesture_model_exp_17_9_s_exp_x_msb_2_m_1_table_V_ROM_AUTO_1R" DEPTH="4" TYPE="resource" MODULENAME="exp_17_9_s_exp_x_msb_2_m_1_table_V_ROM_AUTO_1R" DISPNAME="exp_x_msb_2_m_1_table_V_U" RTLNAME="gesture_model_exp_17_9_s_exp_x_msb_2_m_1_table_V_ROM_AUTO_1R">
-      <Resources FF="25"/>
-      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="exp_x_msb_2_m_1_table_V_U" SOURCE="" URAM="0" VARIABLE="exp_x_msb_2_m_1_table_V"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/grp_exp_17_9_s_fu_435/f_x_lsb_table_V_U" BINDMODULE="gesture_model_exp_17_9_s_f_x_lsb_table_V_ROM_AUTO_1R" DEPTH="4" TYPE="resource" MODULENAME="exp_17_9_s_f_x_lsb_table_V_ROM_AUTO_1R" DISPNAME="f_x_lsb_table_V_U" RTLNAME="gesture_model_exp_17_9_s_f_x_lsb_table_V_ROM_AUTO_1R">
-      <Resources FF="3" LUT="1"/>
-      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="f_x_lsb_table_V_U" SOURCE="" URAM="0" VARIABLE="f_x_lsb_table_V"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/grp_exp_17_9_s_fu_435/mul_25ns_25ns_50_1_1_U48" BINDMODULE="gesture_model_mul_25ns_25ns_50_1_1" DEPTH="4" TYPE="resource" MODULENAME="mul_25ns_25ns_50_1_1" DISPNAME="mul_25ns_25ns_50_1_1_U48" RTLNAME="gesture_model_mul_25ns_25ns_50_1_1">
-      <Resources DSP="2" LUT="13"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="2" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_25ns_25ns_50_1_1_U48" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273" URAM="0" VARIABLE="r_V"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/grp_exp_17_9_s_fu_435/mul_mul_25ns_18ns_43_4_1_U49" BINDMODULE="gesture_model_mul_mul_25ns_18ns_43_4_1" DEPTH="4" TYPE="resource" MODULENAME="mul_mul_25ns_18ns_43_4_1" DISPNAME="mul_mul_25ns_18ns_43_4_1_U49" RTLNAME="gesture_model_mul_mul_25ns_18ns_43_4_1">
-      <Resources DSP="1" FF="20" LUT="16"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_mul_25ns_18ns_43_4_1_U49" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273" URAM="0" VARIABLE="r_V_3"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/mac_muladd_16s_9s_24ns_24_4_1_U57" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U57" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-      <Resources DSP="1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U57" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U57" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/mac_muladd_16s_9s_24ns_24_4_1_U58" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U58" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-      <Resources DSP="1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U58" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U58" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_1"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/mac_muladd_16s_9s_24ns_24_4_1_U59" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U59" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-      <Resources DSP="1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U59" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_2"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U59" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_2"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/mac_muladd_16s_9s_24ns_24_4_1_U60" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U60" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-      <Resources DSP="1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U60" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_3"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U60" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_3"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/mac_muladd_16s_9s_24ns_24_4_1_U61" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U61" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-      <Resources DSP="1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U61" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_4"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U61" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_4"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/mac_muladd_16s_9s_24ns_24_4_1_U62" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U62" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-      <Resources DSP="1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U62" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_5"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U62" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_5"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/mac_muladd_16s_9s_24ns_24_4_1_U63" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U63" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-      <Resources DSP="1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U63" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_6"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U63" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_6"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/mac_muladd_16s_9s_24ns_24_4_1_U64" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U64" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-      <Resources DSP="1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U64" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_7"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U64" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_7"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/mac_muladd_16s_9s_24ns_24_4_1_U65" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U65" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-      <Resources DSP="1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U65" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_8"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U65" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_8"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/mac_muladd_16s_9s_24ns_24_4_1_U66" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U66" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-      <Resources DSP="1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U66" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_9"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U66" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_9"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/mac_muladd_16s_9s_24ns_24_4_1_U67" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U67" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-      <Resources DSP="1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U67" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_10"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U67" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_10"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/mac_muladd_16s_9s_24ns_24_4_1_U68" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U68" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-      <Resources DSP="1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U68" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_11"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U68" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_11"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/mac_muladd_16s_9s_24ns_24_4_1_U69" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U69" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-      <Resources DSP="1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U69" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_12"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U69" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_12"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/mac_muladd_16s_9s_24ns_24_4_1_U70" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U70" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-      <Resources DSP="1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U70" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_13"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U70" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_13"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/mac_muladd_16s_9s_24ns_24_4_1_U71" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U71" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-      <Resources DSP="1" LUT="14"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U71" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_14"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U71" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_14"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_7_U0/grp_dense_output_7_Pipeline_VITIS_LOOP_67_1_fu_201/mul_mul_16s_9s_24_4_1_U56" BINDMODULE="gesture_model_mul_mul_16s_9s_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mul_mul_16s_9s_24_4_1" DISPNAME="mul_mul_16s_9s_24_4_1_U56" RTLNAME="gesture_model_mul_mul_16s_9s_24_4_1">
-      <Resources DSP="1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_67_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_mul_16s_9s_24_4_1_U56" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:818" URAM="0" VARIABLE="mul_ln818"/>
-    </RtlModule>
-    <RtlModule CELL="inst/dense_output_out_V_U" BINDMODULE="gesture_model_dense_output_out_V_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="dense_output_out_V_RAM_AUTO_1R1W" DISPNAME="dense_output_out_V_U" RTLNAME="gesture_model_dense_output_out_V_RAM_AUTO_1R1W">
-      <Resources FF="22" LUT="100"/>
+    <RtlModule CELL="inst/conv1d_out_0_V_U" BINDMODULE="gesture_model_conv1d_out_0_V_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="conv1d_out_0_V_RAM_AUTO_1R1W" DISPNAME="conv1d_out_0_V_U" RTLNAME="gesture_model_conv1d_out_0_V_RAM_AUTO_1R1W">
+      <Resources BRAM="4" FF="6" LUT="19"/>
       <LocalResources FF="6" LUT="4"/>
-      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="dense_output_out_V_U" SOURCE="vitis_test/nnet/core.cpp:96" URAM="0" VARIABLE="dense_output_out_V"/>
+      <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv1d_out_0_V_U" SOURCE="vitis_test/nnet/core.cpp:141" URAM="0" VARIABLE="conv1d_out_0_V"/>
     </RtlModule>
-    <RtlModule CELL="inst/flatten_out_V_U" BINDMODULE="gesture_model_flatten_out_V_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="flatten_out_V_RAM_AUTO_1R1W" DISPNAME="flatten_out_V_U" RTLNAME="gesture_model_flatten_out_V_RAM_AUTO_1R1W">
-      <Resources BRAM="2" FF="6" LUT="5"/>
-      <LocalResources FF="6" LUT="5"/>
-      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="flatten_out_V_U" SOURCE="vitis_test/nnet/core.cpp:93" URAM="0" VARIABLE="flatten_out_V"/>
+    <RtlModule CELL="inst/dense_0_U0" DEPTH="1" TYPE="function" MODULENAME="dense_0" DISPNAME="dense_0_U0" RTLNAME="gesture_model_dense_0">
+      <SubModules count="4">dense_0_biases_V_U dense_0_weights_V_U flow_control_loop_pipe_U mac_muladd_16s_7s_24s_24_4_1_U32</SubModules>
+      <Resources BRAM="7" DSP="1" FF="82" LUT="152"/>
+      <LocalResources FF="73" LUT="16"/>
     </RtlModule>
-    <RtlModule CELL="inst/maxpool1d_2_U0" DEPTH="1" TYPE="function" MODULENAME="maxpool1d_2" DISPNAME="maxpool1d_2_U0" RTLNAME="gesture_model_maxpool1d_2">
-      <SubModules count="1">flow_control_loop_pipe_U</SubModules>
-      <Resources FF="15" LUT="33"/>
-      <LocalResources FF="14" LUT="6"/>
+    <RtlModule CELL="inst/dense_0_U0/dense_0_biases_V_U" BINDMODULE="gesture_model_dense_0_dense_0_biases_V_ROM_AUTO_1R" DEPTH="2" TYPE="resource" MODULENAME="dense_0_dense_0_biases_V_ROM_AUTO_1R" DISPNAME="dense_0_biases_V_U" RTLNAME="gesture_model_dense_0_dense_0_biases_V_ROM_AUTO_1R">
+      <Resources FF="8" LUT="10"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="dense_0_biases_V_U" SOURCE="" URAM="0" VARIABLE="dense_0_biases_V"/>
     </RtlModule>
-    <RtlModule CELL="inst/maxpool1d_2_U0/flow_control_loop_pipe_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe" DISPNAME="flow_control_loop_pipe_U" RTLNAME="gesture_model_flow_control_loop_pipe">
-      <Resources FF="1" LUT="27"/>
+    <RtlModule CELL="inst/dense_0_U0/dense_0_weights_V_U" BINDMODULE="gesture_model_dense_0_dense_0_weights_V_ROM_AUTO_1R" DEPTH="2" TYPE="resource" MODULENAME="dense_0_dense_0_weights_V_ROM_AUTO_1R" DISPNAME="dense_0_weights_V_U" RTLNAME="gesture_model_dense_0_dense_0_weights_V_ROM_AUTO_1R">
+      <Resources BRAM="7" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="7" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="dense_0_weights_V_U" SOURCE="" URAM="0" VARIABLE="dense_0_weights_V"/>
     </RtlModule>
-    <RtlModule CELL="inst/maxpool_out_V_U" BINDMODULE="gesture_model_maxpool_out_V_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="maxpool_out_V_RAM_AUTO_1R1W" DISPNAME="maxpool_out_V_U" RTLNAME="gesture_model_maxpool_out_V_RAM_AUTO_1R1W">
-      <Resources FF="22" LUT="118"/>
-      <LocalResources FF="6" LUT="5"/>
-      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="maxpool_out_V_U" SOURCE="vitis_test/nnet/core.cpp:92" URAM="0" VARIABLE="maxpool_out_V"/>
+    <RtlModule CELL="inst/dense_0_U0/flow_control_loop_pipe_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe" DISPNAME="flow_control_loop_pipe_U" RTLNAME="gesture_model_flow_control_loop_pipe">
+      <Resources FF="1" LUT="54"/>
     </RtlModule>
-    <RtlModule CELL="inst/softmax_7_U0" DEPTH="1" TYPE="function" MODULENAME="softmax_7" DISPNAME="softmax_7_U0" RTLNAME="gesture_model_softmax_7">
-      <SubModules count="2">grp_softmax_7_Pipeline_VITIS_LOOP_79_1_fu_24 grp_softmax_7_Pipeline_VITIS_LOOP_82_2_fu_31</SubModules>
-      <Resources FF="1061" LUT="915"/>
-      <LocalResources FF="6" LUT="1"/>
+    <RtlModule CELL="inst/dense_0_U0/mac_muladd_16s_7s_24s_24_4_1_U32" BINDMODULE="gesture_model_mac_muladd_16s_7s_24s_24_4_1" DEPTH="2" TYPE="resource" MODULENAME="mac_muladd_16s_7s_24s_24_4_1" DISPNAME="mac_muladd_16s_7s_24s_24_4_1_U32" RTLNAME="gesture_model_mac_muladd_16s_7s_24s_24_4_1">
+      <Resources DSP="1" LUT="72"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_90_1_VITIS_LOOP_93_2" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_7s_24s_24_4_1_U32" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273" URAM="0" VARIABLE="r_V_1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_90_1_VITIS_LOOP_93_2" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_7s_24s_24_4_1_U32" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="ret_V"/>
     </RtlModule>
-    <RtlModule CELL="inst/softmax_7_U0/grp_softmax_7_Pipeline_VITIS_LOOP_79_1_fu_24" DEPTH="2" TYPE="function" MODULENAME="softmax_7_Pipeline_VITIS_LOOP_79_1" DISPNAME="grp_softmax_7_Pipeline_VITIS_LOOP_79_1_fu_24" RTLNAME="gesture_model_softmax_7_Pipeline_VITIS_LOOP_79_1">
+    <RtlModule CELL="inst/dense_1_U0" DEPTH="1" TYPE="function" MODULENAME="dense_1" DISPNAME="dense_1_U0" RTLNAME="gesture_model_dense_1">
+      <SubModules count="4">dexp_64ns_64ns_64_13_full_dsp_1_U109 grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233 grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291 grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298</SubModules>
+      <Resources DSP="42" FF="2740" LUT="3613"/>
+      <LocalResources FF="274" LUT="11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U109" BINDMODULE="gesture_model_dexp_64ns_64ns_64_13_full_dsp_1" DEPTH="2" TYPE="rtl" MODULENAME="dexp_64ns_64ns_64_13_full_dsp_1" DISPNAME="dexp_64ns_64ns_64_13_full_dsp_1_U109" RTLNAME="gesture_model_dexp_64ns_64ns_64_13_full_dsp_1">
+      <Resources DSP="26" FF="1028" LUT="1842"/>
+      <LocalResources FF="60"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233" DEPTH="2" TYPE="function" MODULENAME="dense_1_Pipeline_VITIS_LOOP_111_1" DISPNAME="grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233" RTLNAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_111_1">
+      <SubModules count="18">dense_1_biases_V_U flow_control_loop_pipe_sequential_init_U mac_muladd_16s_9s_24ns_24_4_1_U50 mac_muladd_16s_9s_24ns_24_4_1_U51 mac_muladd_16s_9s_24ns_24_4_1_U52 mac_muladd_16s_9s_24ns_24_4_1_U53 mac_muladd_16s_9s_24ns_24_4_1_U54 mac_muladd_16s_9s_24ns_24_4_1_U55 mac_muladd_16s_9s_24ns_24_4_1_U56 mac_muladd_16s_9s_24ns_24_4_1_U57 mac_muladd_16s_9s_24ns_24_4_1_U58 mac_muladd_16s_9s_24ns_24_4_1_U59 mac_muladd_16s_9s_24ns_24_4_1_U60 mac_muladd_16s_9s_24ns_24_4_1_U61 mac_muladd_16s_9s_24ns_24_4_1_U62 mac_muladd_16s_9s_24ns_24_4_1_U63 mac_muladd_16s_9s_24ns_24_4_1_U64 mul_mul_16s_9s_24_4_1_U49</SubModules>
+      <Resources DSP="16" FF="119" LUT="151"/>
+      <LocalResources FF="110" LUT="47"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/dense_1_biases_V_U" BINDMODULE="gesture_model_dense_1_Pipeline_VITIS_LOOP_111_1_dense_1_biases_V_ROM_AUTO_1R" DEPTH="3" TYPE="resource" MODULENAME="dense_1_Pipeline_VITIS_LOOP_111_1_dense_1_biases_V_ROM_AUTO_1R" DISPNAME="dense_1_biases_V_U" RTLNAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_111_1_dense_1_biases_V_ROM_AUTO_1R">
+      <Resources FF="7" LUT="5"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="dense_1_biases_V_U" SOURCE="" URAM="0" VARIABLE="dense_1_biases_V"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/flow_control_loop_pipe_sequential_init_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="gesture_model_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="17"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U50" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U50" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
+      <Resources DSP="1" LUT="5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U50" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U50" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U51" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U51" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
+      <Resources DSP="1" LUT="5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U51" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U51" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U52" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U52" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
+      <Resources DSP="1" LUT="5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U52" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_2"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U52" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U53" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U53" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
+      <Resources DSP="1" LUT="5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U53" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_3"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U53" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U54" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U54" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
+      <Resources DSP="1" LUT="5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U54" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_4"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U54" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U55" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U55" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
+      <Resources DSP="1" LUT="5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U55" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U55" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_5"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U56" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U56" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
+      <Resources DSP="1" LUT="5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U56" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_6"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U56" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_6"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U57" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U57" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
+      <Resources DSP="1" LUT="5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U57" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_7"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U57" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U58" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U58" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
+      <Resources DSP="1" LUT="5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U58" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_8"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U58" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_8"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U59" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U59" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
+      <Resources DSP="1" LUT="5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U59" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_9"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U59" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_9"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U60" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U60" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
+      <Resources DSP="1" LUT="5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U60" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_10"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U60" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U61" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U61" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
+      <Resources DSP="1" LUT="5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U61" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_11"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U61" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U62" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U62" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
+      <Resources DSP="1" LUT="5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U62" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_12"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U62" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_12"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U63" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U63" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
+      <Resources DSP="1" LUT="5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U63" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_13"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U63" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_13"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U64" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_16s_9s_24ns_24_4_1" DISPNAME="mac_muladd_16s_9s_24ns_24_4_1_U64" RTLNAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
+      <Resources DSP="1" LUT="13"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U64" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="mul_ln1347_14"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_9s_24ns_24_4_1_U64" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_14"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/mul_mul_16s_9s_24_4_1_U49" BINDMODULE="gesture_model_mul_mul_16s_9s_24_4_1" DEPTH="3" TYPE="resource" MODULENAME="mul_mul_16s_9s_24_4_1" DISPNAME="mul_mul_16s_9s_24_4_1_U49" RTLNAME="gesture_model_mul_mul_16s_9s_24_4_1">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_111_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_mul_16s_9s_24_4_1_U49" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:818" URAM="0" VARIABLE="mul_ln818"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291" DEPTH="2" TYPE="function" MODULENAME="dense_1_Pipeline_VITIS_LOOP_122_3" DISPNAME="grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291" RTLNAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_122_3">
       <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="24" LUT="9"/>
-      <LocalResources FF="22"/>
+      <Resources FF="117" LUT="168"/>
+      <LocalResources FF="115" LUT="155"/>
     </RtlModule>
-    <RtlModule CELL="inst/softmax_7_U0/grp_softmax_7_Pipeline_VITIS_LOOP_79_1_fu_24/flow_control_loop_pipe_sequential_init_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="gesture_model_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="9"/>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291/flow_control_loop_pipe_sequential_init_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="gesture_model_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="13"/>
     </RtlModule>
-    <RtlModule CELL="inst/softmax_7_U0/grp_softmax_7_Pipeline_VITIS_LOOP_82_2_fu_31" DEPTH="2" TYPE="function" MODULENAME="softmax_7_Pipeline_VITIS_LOOP_82_2" DISPNAME="grp_softmax_7_Pipeline_VITIS_LOOP_82_2_fu_31" RTLNAME="gesture_model_softmax_7_Pipeline_VITIS_LOOP_82_2">
-      <SubModules count="2">flow_control_loop_pipe_sequential_init_U sdiv_24ns_16s_16_28_1_U97</SubModules>
-      <Resources FF="1031" LUT="905"/>
-      <LocalResources FF="61" LUT="10"/>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298" DEPTH="2" TYPE="function" MODULENAME="dense_1_Pipeline_VITIS_LOOP_126_4" DISPNAME="grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298" RTLNAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_126_4">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U sdiv_24ns_16s_16_28_1_U105</SubModules>
+      <Resources FF="1202" LUT="1441"/>
+      <LocalResources FF="232" LUT="375"/>
     </RtlModule>
-    <RtlModule CELL="inst/softmax_7_U0/grp_softmax_7_Pipeline_VITIS_LOOP_82_2_fu_31/flow_control_loop_pipe_sequential_init_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="gesture_model_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="18"/>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298/flow_control_loop_pipe_sequential_init_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="gesture_model_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="26"/>
     </RtlModule>
-    <RtlModule CELL="inst/softmax_7_U0/grp_softmax_7_Pipeline_VITIS_LOOP_82_2_fu_31/sdiv_24ns_16s_16_28_1_U97" BINDMODULE="gesture_model_sdiv_24ns_16s_16_28_1" DEPTH="3" TYPE="rtl" MODULENAME="sdiv_24ns_16s_16_28_1" DISPNAME="sdiv_24ns_16s_16_28_1_U97" RTLNAME="gesture_model_sdiv_24ns_16s_16_28_1">
-      <Resources FF="968" LUT="877"/>
-      <LocalResources FF="48" LUT="31"/>
+    <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298/sdiv_24ns_16s_16_28_1_U105" BINDMODULE="gesture_model_sdiv_24ns_16s_16_28_1" DEPTH="3" TYPE="rtl" MODULENAME="sdiv_24ns_16s_16_28_1" DISPNAME="sdiv_24ns_16s_16_28_1_U105" RTLNAME="gesture_model_sdiv_24ns_16s_16_28_1">
+      <Resources FF="968" LUT="1040"/>
+      <LocalResources FF="48" LUT="209"/>
+    </RtlModule>
+    <RtlModule CELL="inst/dense_out_0_V_U" BINDMODULE="gesture_model_dense_out_0_V_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="dense_out_0_V_RAM_AUTO_1R1W" DISPNAME="dense_out_0_V_U" RTLNAME="gesture_model_dense_out_0_V_RAM_AUTO_1R1W">
+      <Resources FF="21" LUT="31"/>
+      <LocalResources FF="6" LUT="6"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="dense_out_0_V_U" SOURCE="vitis_test/nnet/core.cpp:145" URAM="0" VARIABLE="dense_out_0_V"/>
+    </RtlModule>
+    <RtlModule CELL="inst/flatten_out_0_V_U" BINDMODULE="gesture_model_max_pool_out_0_V_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="max_pool_out_0_V_RAM_AUTO_1R1W" DISPNAME="flatten_out_0_V_U" RTLNAME="gesture_model_max_pool_out_0_V_RAM_AUTO_1R1W">
+      <Resources BRAM="2" FF="6" LUT="6"/>
+      <LocalResources FF="6" LUT="6"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="flatten_out_0_V_U" SOURCE="vitis_test/nnet/core.cpp:144" URAM="0" VARIABLE="flatten_out_0_V"/>
+    </RtlModule>
+    <RtlModule CELL="inst/input_V_0_U" BINDMODULE="gesture_model_input_V_0_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="input_V_0_RAM_AUTO_1R1W" DISPNAME="input_V_0_U" RTLNAME="gesture_model_input_V_0_RAM_AUTO_1R1W">
+      <Resources FF="105" LUT="437"/>
+      <LocalResources FF="41" LUT="5"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="input_V_0_U" SOURCE="vitis_test/nnet/core.cpp:138" URAM="0" VARIABLE="input_V_0"/>
+    </RtlModule>
+    <RtlModule CELL="inst/max_pool_out_0_V_U" BINDMODULE="gesture_model_max_pool_out_0_V_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="max_pool_out_0_V_RAM_AUTO_1R1W" DISPNAME="max_pool_out_0_V_U" RTLNAME="gesture_model_max_pool_out_0_V_RAM_AUTO_1R1W">
+      <Resources BRAM="2" FF="6" LUT="6"/>
+      <LocalResources FF="6" LUT="5"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="max_pool_out_0_V_U" SOURCE="vitis_test/nnet/core.cpp:143" URAM="0" VARIABLE="max_pool_out_0_V"/>
+    </RtlModule>
+    <RtlModule CELL="inst/max_pooling1d_0_U0" DEPTH="1" TYPE="function" MODULENAME="max_pooling1d_0" DISPNAME="max_pooling1d_0_U0" RTLNAME="gesture_model_max_pooling1d_0">
+      <SubModules count="1">flow_control_loop_pipe_U</SubModules>
+      <Resources FF="34" LUT="65"/>
+      <LocalResources FF="33" LUT="22"/>
+    </RtlModule>
+    <RtlModule CELL="inst/max_pooling1d_0_U0/flow_control_loop_pipe_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe" DISPNAME="flow_control_loop_pipe_U" RTLNAME="gesture_model_flow_control_loop_pipe">
+      <Resources FF="1" LUT="43"/>
+    </RtlModule>
+    <RtlModule CELL="inst/output_V_U" BINDMODULE="gesture_model_output_V_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="output_V_RAM_AUTO_1R1W" DISPNAME="output_V_U" RTLNAME="gesture_model_output_V_RAM_AUTO_1R1W">
+      <Resources FF="89" LUT="275"/>
+      <LocalResources FF="25" LUT="5"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="output_V_U" SOURCE="vitis_test/nnet/core.cpp:139" URAM="0" VARIABLE="output_V"/>
     </RtlModule>
   </RtlModules>
   <TimingPaths>
-    <TPATH DATAPATH_DELAY="4.552" DATAPATH_LOGIC_DELAY="1.248" DATAPATH_NET_DELAY="3.304" ENDPOINT_PIN="batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[4]_srl2/D" LOGIC_LEVELS="15" MAX_FANOUT="38" SLACK="5.366" STARTPOINT_PIN="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]/C">
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="245"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT1" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_8" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_11" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[5]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[4]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="10"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/divisor0_reg[4]_srl2_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[4]_srl2" PRIMITIVE_TYPE="CLB.SRL.SRL16E" LINE_NUMBER="118"/>
+    <TPATH DATAPATH_DELAY="3.729" DATAPATH_LOGIC_DELAY="3.405" DATAPATH_NET_DELAY="0.324" ENDPOINT_PIN="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[56]/D" LOGIC_LEVELS="13" MAX_FANOUT="2" SLACK="6.222" STARTPOINT_PIN="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST/CLK">
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q[24]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[24]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[32]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[40]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[48]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[56]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[56]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
     </TPATH>
-    <TPATH DATAPATH_DELAY="4.542" DATAPATH_LOGIC_DELAY="1.216" DATAPATH_NET_DELAY="3.326" ENDPOINT_PIN="batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[6]_srl2/D" LOGIC_LEVELS="15" MAX_FANOUT="38" SLACK="5.376" STARTPOINT_PIN="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]/C">
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="245"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT1" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_8" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_11" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[5]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[8]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="10"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/divisor0_reg[6]_srl2_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[6]_srl2" PRIMITIVE_TYPE="CLB.SRL.SRL16E" LINE_NUMBER="118"/>
+    <TPATH DATAPATH_DELAY="3.728" DATAPATH_LOGIC_DELAY="3.405" DATAPATH_NET_DELAY="0.323" ENDPOINT_PIN="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[54]/D" LOGIC_LEVELS="13" MAX_FANOUT="2" SLACK="6.223" STARTPOINT_PIN="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST/CLK">
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q[24]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[24]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[32]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[40]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[48]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[56]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[54]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
     </TPATH>
-    <TPATH DATAPATH_DELAY="4.542" DATAPATH_LOGIC_DELAY="1.216" DATAPATH_NET_DELAY="3.326" ENDPOINT_PIN="batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[7]_srl2/D" LOGIC_LEVELS="15" MAX_FANOUT="38" SLACK="5.376" STARTPOINT_PIN="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]/C">
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="245"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT1" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_8" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_11" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[5]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[8]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="10"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/divisor0_reg[7]_srl2_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[7]_srl2" PRIMITIVE_TYPE="CLB.SRL.SRL16E" LINE_NUMBER="118"/>
+    <TPATH DATAPATH_DELAY="3.716" DATAPATH_LOGIC_DELAY="3.392" DATAPATH_NET_DELAY="0.324" ENDPOINT_PIN="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[55]/D" LOGIC_LEVELS="13" MAX_FANOUT="2" SLACK="6.235" STARTPOINT_PIN="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST/CLK">
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q[24]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[24]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[32]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[40]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[48]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[56]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[55]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
     </TPATH>
-    <TPATH DATAPATH_DELAY="4.542" DATAPATH_LOGIC_DELAY="1.216" DATAPATH_NET_DELAY="3.326" ENDPOINT_PIN="batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[8]_srl2/D" LOGIC_LEVELS="15" MAX_FANOUT="38" SLACK="5.376" STARTPOINT_PIN="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]/C">
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="245"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT1" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_8" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_11" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[5]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[8]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="10"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/divisor0_reg[8]_srl2_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[8]_srl2" PRIMITIVE_TYPE="CLB.SRL.SRL16E" LINE_NUMBER="118"/>
+    <TPATH DATAPATH_DELAY="3.702" DATAPATH_LOGIC_DELAY="3.383" DATAPATH_NET_DELAY="0.319" ENDPOINT_PIN="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[48]/D" LOGIC_LEVELS="12" MAX_FANOUT="2" SLACK="6.249" STARTPOINT_PIN="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST/CLK">
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q[24]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[24]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[32]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[40]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[48]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[48]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
     </TPATH>
-    <TPATH DATAPATH_DELAY="4.488" DATAPATH_LOGIC_DELAY="1.184" DATAPATH_NET_DELAY="3.304" ENDPOINT_PIN="batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[5]_srl2/D" LOGIC_LEVELS="15" MAX_FANOUT="38" SLACK="5.430" STARTPOINT_PIN="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]/C">
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FH_V_25_reg_1405_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="245"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1649_5_fu_898_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT1" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/x_l_FL_V_3_fu_974_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_2_fu_1089_p2__0_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_8" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[0]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_11" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/icmp_ln1651_3_fu_1269_p2__0_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[5]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/ap_return_int_reg[5]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="10"/>
-      <CELL NAME="batchnorm_5_U0/grp_sqrt_fixed_17_9_s_fu_134/divisor0_reg[5]_srl2_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="259"/>
-      <CELL NAME="batchnorm_5_U0/sdiv_24ns_10ns_24_28_1_U38/divisor0_reg[5]_srl2" PRIMITIVE_TYPE="CLB.SRL.SRL16E" LINE_NUMBER="118"/>
+    <TPATH DATAPATH_DELAY="3.701" DATAPATH_LOGIC_DELAY="3.383" DATAPATH_NET_DELAY="0.318" ENDPOINT_PIN="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[46]/D" LOGIC_LEVELS="12" MAX_FANOUT="2" SLACK="6.250" STARTPOINT_PIN="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST/CLK">
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q[24]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[24]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[32]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[40]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[48]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[46]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
     </TPATH>
   </TimingPaths>
   <VivadoReportFiles>
@@ -483,7 +475,7 @@
     <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/gesture_model_utilization_hierarchical_synth.rpt"/>
   </VivadoReportFiles>
   <GeneralInfo NAME="General Information">
-    <item NAME="Date" VALUE="Thu Aug 29 18:17:55 +08 2024"/>
+    <item NAME="Date" VALUE="Fri Aug 30 03:16:14 +08 2024"/>
     <item NAME="Version" VALUE="2022.2 (Build 3670227 on Oct 13 2022)"/>
     <item NAME="Project" VALUE="vitis_test"/>
     <item NAME="Solution" VALUE="solution1 (Vivado IP Flow Target)"/>

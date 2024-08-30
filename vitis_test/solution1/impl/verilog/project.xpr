@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="61" Path="/home/prince/vitis_test/solution1/impl/verilog/project.xpr">
+<Project Version="7" Minor="61" Path="/home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="64830ca1e59447aab7eb6d803627cd8d"/>
+    <Option Name="Id" Val="3797eecc20d7411aaa8f6d3bcaf25a09"/>
     <Option Name="Part" Val="xczu3eg-sbva484-2-i"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>

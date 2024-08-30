@@ -8,13 +8,13 @@ set PipelineFlag 1
 set DataflowTaskPipelineFlag 1
 set TrivialPipelineFlag 0
 set noPortSwitchingFlag 0
-set FloatingPointFlag 0
+set FloatingPointFlag 1
 set FftOrFirFlag 0
 set NbRWValue 0
 set intNbAccess 0
 set NewDSPMapping 1
 set HasDSPModule 1
-set ResetLevelFlag 1
+set ResetLevelFlag 0
 set ResetStyle control
 set ResetSyncFlag 1
 set ResetRegisterFlag 0
@@ -44,13 +44,13 @@ set SCTraceOption all
 set TargetInfo xczu3eg:-sbva484:-2-i
 set SourceFiles {sc {} c ../nnet/core.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile /home/prince/vitis_test/solution1/solution1.directive
-set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
+set DirectiveFile /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/solution1.directive
+set TBFiles {verilog ../testbench/main.cpp bc ../testbench/main.cpp vhdl ../testbench/main.cpp sc ../testbench/main.cpp cas ../testbench/main.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
-set TBTops {bc "" c "" sc "" cas "" vhdl "" verilog ""}
-set TBInstNames {bc "" c "" sc "" cas "" vhdl "" verilog ""}
+set TBTops {verilog {} bc {} vhdl {} sc {} cas {} c {}}
+set TBInstNames {verilog {} bc {} vhdl {} sc {} cas {} c {}}
 set XDCFiles {}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set TBTVFileNotFound {}

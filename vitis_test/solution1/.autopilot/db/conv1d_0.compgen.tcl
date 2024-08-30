@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 1
-set name gesture_model_mul_mul_16s_5ns_22_4_1
+set id 4
+set name gesture_model_mul_mul_16s_8s_24_4_1
 set corename simcore_mul
 set op mul
 set stage_num 4
@@ -11,12 +11,12 @@ set reset_width 1
 set reset_signed 0
 set in0_width 16
 set in0_signed 1
-set in1_width 5
-set in1_signed 0
+set in1_width 8
+set in1_signed 1
 set ce_width 1
 set ce_signed 0
-set out_width 22
-set arg_lists {i0 {16 1 +} i1 {5 0 +} p {22 1 +} acc {0} }
+set out_width 24
+set arg_lists {i0 {16 1 +} i1 {8 1 +} p {24 1 +} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1
@@ -55,125 +55,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 2
-set name gesture_model_mac_muladd_16s_7ns_22s_24_4_1
-set corename simcore_mac
-set op mac
-set stage_num 4
-set clk_width 1
-set clk_signed 0
-set reset_width 1
-set reset_signed 0
-set in0_width 16
-set in0_signed 1
-set in1_width 7
-set in1_signed 0
-set in2_width 22
-set in2_signed 1
-set ce_width 1
-set ce_signed 0
-set out_width 24
-set arg_lists {i0 {16 1 +} i1 {7 0 +} m {24 1 +} i2 {22 1 +} p {24 1 +} c_reg {1} rnd {0} acc {0} }
-set TrueReset 0
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1
-}
-
-
-set op mac
-set corename DSP48
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
-}
-}
-
-
-set id 3
-set name gesture_model_mac_muladd_16s_7s_24s_24_4_1
-set corename simcore_mac
-set op mac
-set stage_num 4
-set clk_width 1
-set clk_signed 0
-set reset_width 1
-set reset_signed 0
-set in0_width 16
-set in0_signed 1
-set in1_width 7
-set in1_signed 1
-set in2_width 24
-set in2_signed 1
-set ce_width 1
-set ce_signed 0
-set out_width 24
-set arg_lists {i0 {16 1 +} i1 {7 1 +} m {23 1 +} i2 {24 1 +} p {24 1 +} c_reg {1} rnd {0} acc {0} }
-set TrueReset 0
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1
-}
-
-
-set op mac
-set corename DSP48
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
-}
-}
-
-
-set id 4
+set id 5
 set name gesture_model_mac_muladd_16s_8s_24ns_24_4_1
 set corename simcore_mac
 set op mac
@@ -232,121 +114,23 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 5
-set name gesture_model_mac_muladd_16s_5ns_24s_24_4_1
-set corename simcore_mac
-set op mac
-set stage_num 4
-set clk_width 1
-set clk_signed 0
-set reset_width 1
-set reset_signed 0
-set in0_width 16
-set in0_signed 1
-set in1_width 5
-set in1_signed 0
-set in2_width 24
-set in2_signed 1
-set ce_width 1
-set ce_signed 0
-set out_width 24
-set arg_lists {i0 {16 1 +} i1 {5 0 +} m {22 1 +} i2 {24 1 +} p {24 1 +} c_reg {1} rnd {0} acc {0} }
-set TrueReset 0
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler gesture_model_conv1d_0_conv1d_0_weights_V_0_0_ROM_AUTO_1R BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
-set op mac
-set corename DSP48
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
-}
-}
-
-
-set id 6
-set name gesture_model_mac_muladd_16s_6ns_24s_24_4_1
-set corename simcore_mac
-set op mac
-set stage_num 4
-set clk_width 1
-set clk_signed 0
-set reset_width 1
-set reset_signed 0
-set in0_width 16
-set in0_signed 1
-set in1_width 6
-set in1_signed 0
-set in2_width 24
-set in2_signed 1
-set ce_width 1
-set ce_signed 0
-set out_width 24
-set arg_lists {i0 {16 1 +} i1 {6 0 +} m {23 1 +} i2 {24 1 +} p {24 1 +} c_reg {1} rnd {0} acc {0} }
-set TrueReset 0
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler gesture_model_conv1d_0_conv1d_0_weights_V_1_0_ROM_AUTO_1R BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
-set op mac
-set corename DSP48
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler gesture_model_conv1d_0_conv1d_0_weights_V_2_0_ROM_AUTO_1R BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler gesture_model_conv1d_0_conv1d_0_biases_V_ROM_AUTO_1R BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
@@ -361,17 +145,17 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 17 \
-    name input_r \
+    id 13 \
+    name input_0 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename input_r \
+    corename input_0 \
     op interface \
-    ports { input_r_address0 { O 7 vector } input_r_ce0 { O 1 bit } input_r_q0 { I 16 vector } input_r_address1 { O 7 vector } input_r_ce1 { O 1 bit } input_r_q1 { I 16 vector } } \
+    ports { input_0_address0 { O 7 vector } input_0_ce0 { O 1 bit } input_0_q0 { I 16 vector } input_0_address1 { O 7 vector } input_0_ce1 { O 1 bit } input_0_q1 { I 16 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_r'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_0'"
 }
 }
 
@@ -380,14 +164,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 18 \
+    id 14 \
     name output_r \
     reset_level 1 \
     sync_rst true \
     dir O \
     corename output_r \
     op interface \
-    ports { output_r_address0 { O 7 vector } output_r_ce0 { O 1 bit } output_r_we0 { O 1 bit } output_r_d0 { O 15 vector } } \
+    ports { output_r_address0 { O 11 vector } output_r_ce0 { O 1 bit } output_r_we0 { O 1 bit } output_r_d0 { O 15 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'output_r'"
