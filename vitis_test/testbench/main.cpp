@@ -3,7 +3,7 @@
 #include "core.h"
 
 // declare epsilon for Batch Normalization
-#define epsilon 0.00001
+#define epsilon 0.001
 
 // Custom abs function for fixed_p type
 fixed_p custom_abs(fixed_p x)
@@ -42,7 +42,7 @@ void batch_normalization_0(fixed_p input[118][16], fixed_p output[118][16])
     {
         for (int j = 0; j < 16; j++) // Loop over channels
         {
-            output[i][j] = batch_norm_0_gamma[j] * ((input[i][j] - batch_norm_0_mean[j]) / sqrt(batch_norm_0_variance[j] + epsilon)) + batch_norm_0_beta[j];
+            output[i][j] = batch_norm_0_gamma[j] * ((input[i][j] - batch_norm_0_mean[j]) / (fixed_p)sqrt(batch_norm_0_variance[j] + (fixed_p)epsilon)) + batch_norm_0_beta[j];
         }
     }
 }
@@ -96,7 +96,7 @@ void batch_normalization_1(fixed_p input[16], fixed_p output[16])
 {
     for (int i = 0; i < 16; i++) // Loop over neurons
     {
-        output[i] = batch_norm_1_gamma[i] * ((input[i] - batch_norm_1_mean[i]) / sqrt(batch_norm_1_variance[i] + epsilon)) + batch_norm_1_beta[i];
+        output[i] = batch_norm_1_gamma[i] * ((input[i] - batch_norm_1_mean[i]) / (fixed_p)sqrt(batch_norm_1_variance[i] + (fixed_p)epsilon)) + batch_norm_1_beta[i];
     }
 }
 
@@ -115,11 +115,11 @@ void dense_1(fixed_p input[16], fixed_p output[20])
     fixed_p softmax_sum = 0;
     for (int i = 0; i < 20; i++)
     {
-        softmax_sum += exp(output[i]);
+        softmax_sum += (fixed_p)exp(output[i]);
     }
     for (int i = 0; i < 20; i++)
     {
-        output[i] = exp(output[i]) / softmax_sum;
+        output[i] = (fixed_p)exp(output[i]) / softmax_sum;
     }
 }
 
@@ -140,52 +140,83 @@ void gesture_model(fixed_p input[120][1], fixed_p output[20])
     dense_1(batch_norm_out_1, output);
 }
 
+#include "test_arrays.h"
 // Define the main function for the testbench
 int main()
 {
-    // Initialize test input data
-    fixed_p test_input[120][1] = {-0.2956391, -0.30225477, -0.28902343, -0.22948243, -0.13024744, 0.1674575, 0.31300214, 0.37254313, 0.23361416, 0.17407317, 0.25346118, 0.31961778, 0.22038282, -0.0111654755, -0.19640408, -0.22948243, -0.25594506, -0.25594506, -0.22286676, -0.20963542, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.028696978, -0.099931, -0.099931, -0.08798679, -0.052154236, -0.18354048, -0.21937305, -0.33881515, -0.17159627, -0.3865919, -0.43436876, -0.5179782, -0.33881515, -0.11187521, 0.007566822, 0.09117623, 0.11506465, 0.1747857, 0.2703393, 0.11506465, 0.11506465, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, -0.10769476, 0.24327675, 0.20938249, 0.051209383, -0.19734825, -0.18605016, -0.10696365, -0.08436748, 0.10769988, 0.06250754, -0.36681944, -0.10696365, 0.051209383, -0.16345407, -0.29903102, -0.16345407, 0.039911374, 0.17548823, 0.25457484, 0.25457484, 0.22068058, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536, -0.00019682536};
-    fixed_p expected_output[20] = {3.0313356e-07, 9.0047004e-05, 1.9447634e-07, 1.1036491e-06, 4.7699444e-08, 8.882679e-09, 6.492682e-10, 2.7675742e-07, 4.6352783e-11, 4.3214847e-08, 1.2921311e-08, 8.836113e-08, 0.0016296564, 0.9982724, 3.2907217e-09, 1.4798805e-11, 1.9421445e-07, 2.8317223e-07, 5.998917e-08, 5.270516e-06};
     fixed_p model_output[20];
+    int total_tests = 10;
+    int passed_tests = 0;
 
-    // Call the top-level function
-    gesture_model(test_input, model_output);
-
-    // Compare the model output with the expected output
-    bool pass = true;
-    for (int i = 0; i < 20; i++)
+    for (int test_num = 0; test_num < total_tests; test_num++)
     {
-        if (custom_abs(model_output[i] - expected_output[i]) > fixed_p(1e-2))
+        // Initialize test input data for the current test case
+        fixed_p test_input_new[120][1];
+        fixed_p expected_output_new[20];
+
+        // Fill the test_input_new array with the test_input array values for the current test case
+        for (int i = 0; i < 120; i++)
+        {
+            test_input_new[i][0] = test_input[test_num][i][0];
+        }
+
+        // Fill the expected_output_new array with the expected_output array values for the current test case
+        for (int i = 0; i < 20; i++)
+        {
+            expected_output_new[i] = expected_output[test_num][i];
+        }
+
+        // Call the top-level function
+        gesture_model(test_input_new, model_output);
+
+        // Compare the model output with the expected output
+        bool pass = true;
+        for (int i = 0; i < 20; i++)
+        {
+            if (custom_abs(model_output[i] - expected_output_new[i]) > fixed_p(1e-2))
+            {
+                std::cout << "Test " << test_num + 1 << " - Mismatch at index " << i << ": Expected " << expected_output_new[i]
+                          << " but got " << model_output[i] << std::endl;
+            }
+        }
+
+        // Find the predicted class (the index of the max value in the model_output array)
+        int predicted_class = 0;
+        fixed_p max_value = model_output[0];
+        for (int i = 1; i < 20; i++)
+        {
+            if (model_output[i] > max_value)
+            {
+                max_value = model_output[i];
+                predicted_class = i;
+            }
+        }
+
+        // Print the predicted class and compare with expected class
+        std::cout << "Test " << test_num + 1 << " - Predicted Class: " << predicted_class << std::endl;
+        if (predicted_class == expected_class[test_num])
+        {
+            std::cout << "Test " << test_num + 1 << " - Class Match Passed!" << std::endl;
+        }
+        else
         {
             pass = false;
-            std::cout << "Mismatch at index " << i << ": Expected " << expected_output[i]
-                      << " but got " << model_output[i] << std::endl;
+            std::cout << "Test " << test_num + 1 << " - Class Match Failed! Expected Class: " << expected_class[test_num] << std::endl;
         }
-    }
 
-    // Find the predicted class (the index of the max value in the model_output array)
-    int predicted_class = 0;
-    fixed_p max_value = model_output[0];
-    for (int i = 1; i < 20; i++)
-    {
-        if (model_output[i] > max_value)
+        if (pass)
         {
-            max_value = model_output[i];
-            predicted_class = i;
+            std::cout << "Test " << test_num + 1 << " - Test Passed!" << std::endl;
+            passed_tests++;
+        }
+        else
+        {
+            std::cout << "Test " << test_num + 1 << " - Test Failed!" << std::endl;
         }
     }
 
-    // Print the predicted class
-    std::cout << "Predicted Class: " << predicted_class << std::endl;
-
-    if (pass)
-    {
-        std::cout << "Test Passed!" << std::endl;
-    }
-    else
-    {
-        std::cout << "Test Failed!" << std::endl;
-    }
+    // Print the summary of test results
+    std::cout << "Total tests passed: " << passed_tests << " out of " << total_tests << std::endl;
 
     return 0;
 }
