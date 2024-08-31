@@ -9,7 +9,13 @@
 						"ACLK": { "actual": "ap_clk"},
 						"ARESETN": { "actual": "ap_rst_n"},
 						"TDATA": { "actual": "input_stream_TDATA"},
+						"TDEST": { "actual": "input_stream_TDEST"},
+						"TID": { "actual": "input_stream_TID"},
+						"TKEEP": { "actual": "input_stream_TKEEP"},
+						"TLAST": { "actual": "input_stream_TLAST"},
 						"TREADY": { "actual": "input_stream_TREADY"},
+						"TSTRB": { "actual": "input_stream_TSTRB"},
+						"TUSER": { "actual": "input_stream_TUSER"},
 						"TVALID": { "actual": "input_stream_TVALID"}
 					}
 				},
@@ -19,7 +25,13 @@
 						"ACLK": { "actual": "ap_clk"},
 						"ARESETN": { "actual": "ap_rst_n"},
 						"TDATA": { "actual": "output_stream_TDATA"},
+						"TDEST": { "actual": "output_stream_TDEST"},
+						"TID": { "actual": "output_stream_TID"},
+						"TKEEP": { "actual": "output_stream_TKEEP"},
+						"TLAST": { "actual": "output_stream_TLAST"},
 						"TREADY": { "actual": "output_stream_TREADY"},
+						"TSTRB": { "actual": "output_stream_TSTRB"},
+						"TUSER": { "actual": "output_stream_TUSER"},
 						"TVALID": { "actual": "output_stream_TVALID"}
 					}
 				},

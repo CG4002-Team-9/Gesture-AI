@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xC90C6AB182AF7C2B",
+      "boundary_crc": "0x8701C1C443B42832",
       "device": "xczu3eg-sbva484-2-i",
       "gen_directory": "../../../../project.gen/sources_1/bd/bd_0",
       "name": "bd_0",
@@ -27,16 +27,16 @@
             "value": "100000000.0"
           },
           "HAS_TKEEP": {
-            "value": "0"
+            "value": "1"
           },
           "HAS_TLAST": {
-            "value": "0"
+            "value": "1"
           },
           "HAS_TREADY": {
             "value": "1"
           },
           "HAS_TSTRB": {
-            "value": "0"
+            "value": "1"
           },
           "INSERT_VIP": {
             "value": "0",
@@ -50,16 +50,16 @@
             "value_src": "default"
           },
           "TDATA_NUM_BYTES": {
-            "value": "2"
+            "value": "4"
           },
           "TDEST_WIDTH": {
-            "value": "0"
+            "value": "1"
           },
           "TID_WIDTH": {
-            "value": "0"
+            "value": "1"
           },
           "TUSER_WIDTH": {
-            "value": "0"
+            "value": "1"
           }
         },
         "port_maps": {
@@ -74,7 +74,43 @@
           "TDATA": {
             "physical_name": "input_stream_tdata",
             "direction": "I",
-            "left": "15",
+            "left": "31",
+            "right": "0"
+          },
+          "TKEEP": {
+            "physical_name": "input_stream_tkeep",
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "TSTRB": {
+            "physical_name": "input_stream_tstrb",
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "TUSER": {
+            "physical_name": "input_stream_tuser",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "TLAST": {
+            "physical_name": "input_stream_tlast",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "TID": {
+            "physical_name": "input_stream_tid",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "TDEST": {
+            "physical_name": "input_stream_tdest",
+            "direction": "I",
+            "left": "0",
             "right": "0"
           }
         }
@@ -92,11 +128,11 @@
             "value": "100000000.0"
           },
           "HAS_TKEEP": {
-            "value": "0",
+            "value": "1",
             "value_src": "const_prop"
           },
           "HAS_TLAST": {
-            "value": "0",
+            "value": "1",
             "value_src": "const_prop"
           },
           "HAS_TREADY": {
@@ -104,7 +140,7 @@
             "value_src": "const_prop"
           },
           "HAS_TSTRB": {
-            "value": "0",
+            "value": "1",
             "value_src": "const_prop"
           },
           "INSERT_VIP": {
@@ -120,19 +156,19 @@
             "value_src": "default"
           },
           "TDATA_NUM_BYTES": {
-            "value": "2",
+            "value": "4",
             "value_src": "const_prop"
           },
           "TDEST_WIDTH": {
-            "value": "0",
+            "value": "1",
             "value_src": "const_prop"
           },
           "TID_WIDTH": {
-            "value": "0",
+            "value": "1",
             "value_src": "const_prop"
           },
           "TUSER_WIDTH": {
-            "value": "0",
+            "value": "1",
             "value_src": "const_prop"
           }
         },
@@ -148,7 +184,43 @@
           "TDATA": {
             "physical_name": "output_stream_tdata",
             "direction": "O",
-            "left": "15",
+            "left": "31",
+            "right": "0"
+          },
+          "TKEEP": {
+            "physical_name": "output_stream_tkeep",
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "TSTRB": {
+            "physical_name": "output_stream_tstrb",
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "TUSER": {
+            "physical_name": "output_stream_tuser",
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "TLAST": {
+            "physical_name": "output_stream_tlast",
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "TID": {
+            "physical_name": "output_stream_tid",
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "TDEST": {
+            "physical_name": "output_stream_tdest",
+            "direction": "O",
+            "left": "0",
             "right": "0"
           }
         }

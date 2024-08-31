@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'gesture_model'" level="0">
-<item name = "Date">Fri Aug 30 03:01:51 2024
+<item name = "Date">Sat Aug 31 19:36:51 2024
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">vitis_test</item>
@@ -31,15 +31,16 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_Loop_VITIS_LOOP_149_1_proc8_fu_144">Loop_VITIS_LOOP_149_1_proc8, 122, 122, 1.220 us, 1.220 us, 122, 122, no</column>
-<column name="grp_conv1d_0_fu_151">conv1d_0, 3782, 3782, 37.820 us, 37.820 us, 3782, 3782, no</column>
-<column name="grp_batch_normalization_0_fu_165">batch_normalization_0, 1942, 1942, 19.420 us, 19.420 us, 1942, 1942, no</column>
-<column name="grp_max_pooling1d_0_fu_179">max_pooling1d_0, 946, 946, 9.460 us, 9.460 us, 946, 946, no</column>
-<column name="grp_Loop_VITIS_LOOP_79_1_proc_fu_185">Loop_VITIS_LOOP_79_1_proc, 946, 946, 9.460 us, 9.460 us, 946, 946, no</column>
-<column name="grp_dense_0_fu_191">dense_0, 15109, 15109, 0.151 ms, 0.151 ms, 15109, 15109, no</column>
-<column name="grp_batch_normalization_1_fu_201">batch_normalization_1, 70, 70, 0.700 us, 0.700 us, 70, 70, no</column>
-<column name="grp_dense_1_fu_215">dense_1, 154, 154, 1.540 us, 1.540 us, 154, 154, no</column>
-<column name="grp_Loop_VITIS_LOOP_166_3_proc9_fu_255">Loop_VITIS_LOOP_166_3_proc9, 23, 23, 0.230 us, 0.230 us, 23, 23, no</column>
+<column name="grp_Loop_VITIS_LOOP_147_1_proc9_fu_176">Loop_VITIS_LOOP_147_1_proc9, 122, 122, 1.220 us, 1.220 us, 122, 122, no</column>
+<column name="grp_conv1d_0_fu_195">conv1d_0, 3782, 3782, 37.820 us, 37.820 us, 3782, 3782, no</column>
+<column name="grp_batch_normalization_0_fu_209">batch_normalization_0, 1942, 1942, 19.420 us, 19.420 us, 1942, 1942, no</column>
+<column name="grp_max_pooling1d_0_fu_223">max_pooling1d_0, 946, 946, 9.460 us, 9.460 us, 946, 946, no</column>
+<column name="grp_Loop_VITIS_LOOP_77_1_proc_fu_229">Loop_VITIS_LOOP_77_1_proc, 946, 946, 9.460 us, 9.460 us, 946, 946, no</column>
+<column name="grp_dense_0_fu_235">dense_0, 15109, 15109, 0.151 ms, 0.151 ms, 15109, 15109, no</column>
+<column name="grp_batch_normalization_1_fu_245">batch_normalization_1, 70, 70, 0.700 us, 0.700 us, 70, 70, no</column>
+<column name="grp_dense_1_fu_259">dense_1, 154, 154, 1.540 us, 1.540 us, 154, 154, no</column>
+<column name="grp_Loop_VITIS_LOOP_167_3_proc_fu_299">Loop_VITIS_LOOP_167_3_proc, 25, 25, 0.250 us, 0.250 us, 25, 25, no</column>
+<column name="grp_Block_for_end111_proc_fu_304">Block_for_end111_proc, 2, 2, 20.000 ns, 20.000 ns, 2, 2, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

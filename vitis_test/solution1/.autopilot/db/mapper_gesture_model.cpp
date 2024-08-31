@@ -236,22 +236,87 @@ class AESL_RUNTIME_BC {
     fstream file_token;
     string mName;
 };
-unsigned int ap_apatb_input_stream_cap_bc;
-static AESL_RUNTIME_BC __xlx_input_stream_V_size_Reader("../tv/stream_size/stream_size_in_input_stream.dat");
-unsigned int ap_apatb_output_stream_cap_bc;
-static AESL_RUNTIME_BC __xlx_output_stream_V_size_Reader("../tv/stream_size/stream_size_out_output_stream.dat");
+unsigned int ap_apatb_input_stream_V_data_V_cap_bc;
+static AESL_RUNTIME_BC __xlx_input_stream_V_data_V_V_size_Reader("../tv/stream_size/stream_size_in_input_stream_V_data_V.dat");
+unsigned int ap_apatb_input_stream_V_keep_V_cap_bc;
+static AESL_RUNTIME_BC __xlx_input_stream_V_keep_V_V_size_Reader("../tv/stream_size/stream_size_in_input_stream_V_keep_V.dat");
+unsigned int ap_apatb_input_stream_V_strb_V_cap_bc;
+static AESL_RUNTIME_BC __xlx_input_stream_V_strb_V_V_size_Reader("../tv/stream_size/stream_size_in_input_stream_V_strb_V.dat");
+unsigned int ap_apatb_input_stream_V_user_V_cap_bc;
+static AESL_RUNTIME_BC __xlx_input_stream_V_user_V_V_size_Reader("../tv/stream_size/stream_size_in_input_stream_V_user_V.dat");
+unsigned int ap_apatb_input_stream_V_last_V_cap_bc;
+static AESL_RUNTIME_BC __xlx_input_stream_V_last_V_V_size_Reader("../tv/stream_size/stream_size_in_input_stream_V_last_V.dat");
+unsigned int ap_apatb_input_stream_V_id_V_cap_bc;
+static AESL_RUNTIME_BC __xlx_input_stream_V_id_V_V_size_Reader("../tv/stream_size/stream_size_in_input_stream_V_id_V.dat");
+unsigned int ap_apatb_input_stream_V_dest_V_cap_bc;
+static AESL_RUNTIME_BC __xlx_input_stream_V_dest_V_V_size_Reader("../tv/stream_size/stream_size_in_input_stream_V_dest_V.dat");
+unsigned int ap_apatb_output_stream_V_data_V_cap_bc;
+static AESL_RUNTIME_BC __xlx_output_stream_V_data_V_V_size_Reader("../tv/stream_size/stream_size_out_output_stream_V_data_V.dat");
+unsigned int ap_apatb_output_stream_V_keep_V_cap_bc;
+static AESL_RUNTIME_BC __xlx_output_stream_V_keep_V_V_size_Reader("../tv/stream_size/stream_size_out_output_stream_V_keep_V.dat");
+unsigned int ap_apatb_output_stream_V_strb_V_cap_bc;
+static AESL_RUNTIME_BC __xlx_output_stream_V_strb_V_V_size_Reader("../tv/stream_size/stream_size_out_output_stream_V_strb_V.dat");
+unsigned int ap_apatb_output_stream_V_user_V_cap_bc;
+static AESL_RUNTIME_BC __xlx_output_stream_V_user_V_V_size_Reader("../tv/stream_size/stream_size_out_output_stream_V_user_V.dat");
+unsigned int ap_apatb_output_stream_V_last_V_cap_bc;
+static AESL_RUNTIME_BC __xlx_output_stream_V_last_V_V_size_Reader("../tv/stream_size/stream_size_out_output_stream_V_last_V.dat");
+unsigned int ap_apatb_output_stream_V_id_V_cap_bc;
+static AESL_RUNTIME_BC __xlx_output_stream_V_id_V_V_size_Reader("../tv/stream_size/stream_size_out_output_stream_V_id_V.dat");
+unsigned int ap_apatb_output_stream_V_dest_V_cap_bc;
+static AESL_RUNTIME_BC __xlx_output_stream_V_dest_V_V_size_Reader("../tv/stream_size/stream_size_out_output_stream_V_dest_V.dat");
 using hls::sim::Byte;
-struct __cosim_s2__ { char data[2]; };
-extern "C" void gesture_model(__cosim_s2__*, __cosim_s2__*);
-extern "C" void apatb_gesture_model_hw(volatile void * __xlx_apatb_param_input_stream, volatile void * __xlx_apatb_param_output_stream) {
+extern "C" void gesture_model(volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *);
+extern "C" void apatb_gesture_model_hw(volatile void * __xlx_apatb_param_input_stream_V_data_V, volatile void * __xlx_apatb_param_input_stream_V_keep_V, volatile void * __xlx_apatb_param_input_stream_V_strb_V, volatile void * __xlx_apatb_param_input_stream_V_user_V, volatile void * __xlx_apatb_param_input_stream_V_last_V, volatile void * __xlx_apatb_param_input_stream_V_id_V, volatile void * __xlx_apatb_param_input_stream_V_dest_V, volatile void * __xlx_apatb_param_output_stream_V_data_V, volatile void * __xlx_apatb_param_output_stream_V_keep_V, volatile void * __xlx_apatb_param_output_stream_V_strb_V, volatile void * __xlx_apatb_param_output_stream_V_user_V, volatile void * __xlx_apatb_param_output_stream_V_last_V, volatile void * __xlx_apatb_param_output_stream_V_id_V, volatile void * __xlx_apatb_param_output_stream_V_dest_V) {
 using hls::sim::createStream;
-auto* sinput_stream = createStream((hls::stream<__cosim_s2__>*)__xlx_apatb_param_input_stream);
-  //Create input buffer for output_stream
-  ap_apatb_output_stream_cap_bc = __xlx_output_stream_V_size_Reader.read_size();
-  __cosim_s2__* __xlx_output_stream_input_buffer= new __cosim_s2__[ap_apatb_output_stream_cap_bc];
-auto* soutput_stream = createStream((hls::stream<__cosim_s2__>*)__xlx_apatb_param_output_stream);
+auto* sinput_stream_V_data_V = createStream((hls::stream<int>*)__xlx_apatb_param_input_stream_V_data_V);
+auto* sinput_stream_V_keep_V = createStream((hls::stream<char>*)__xlx_apatb_param_input_stream_V_keep_V);
+auto* sinput_stream_V_strb_V = createStream((hls::stream<char>*)__xlx_apatb_param_input_stream_V_strb_V);
+auto* sinput_stream_V_user_V = createStream((hls::stream<char>*)__xlx_apatb_param_input_stream_V_user_V);
+auto* sinput_stream_V_last_V = createStream((hls::stream<char>*)__xlx_apatb_param_input_stream_V_last_V);
+auto* sinput_stream_V_id_V = createStream((hls::stream<char>*)__xlx_apatb_param_input_stream_V_id_V);
+auto* sinput_stream_V_dest_V = createStream((hls::stream<char>*)__xlx_apatb_param_input_stream_V_dest_V);
+  //Create input buffer for output_stream_V_data_V
+  ap_apatb_output_stream_V_data_V_cap_bc = __xlx_output_stream_V_data_V_V_size_Reader.read_size();
+  int* __xlx_output_stream_V_data_V_input_buffer= new int[ap_apatb_output_stream_V_data_V_cap_bc];
+auto* soutput_stream_V_data_V = createStream((hls::stream<int>*)__xlx_apatb_param_output_stream_V_data_V);
+  //Create input buffer for output_stream_V_keep_V
+  ap_apatb_output_stream_V_keep_V_cap_bc = __xlx_output_stream_V_keep_V_V_size_Reader.read_size();
+  char* __xlx_output_stream_V_keep_V_input_buffer= new char[ap_apatb_output_stream_V_keep_V_cap_bc];
+auto* soutput_stream_V_keep_V = createStream((hls::stream<char>*)__xlx_apatb_param_output_stream_V_keep_V);
+  //Create input buffer for output_stream_V_strb_V
+  ap_apatb_output_stream_V_strb_V_cap_bc = __xlx_output_stream_V_strb_V_V_size_Reader.read_size();
+  char* __xlx_output_stream_V_strb_V_input_buffer= new char[ap_apatb_output_stream_V_strb_V_cap_bc];
+auto* soutput_stream_V_strb_V = createStream((hls::stream<char>*)__xlx_apatb_param_output_stream_V_strb_V);
+  //Create input buffer for output_stream_V_user_V
+  ap_apatb_output_stream_V_user_V_cap_bc = __xlx_output_stream_V_user_V_V_size_Reader.read_size();
+  char* __xlx_output_stream_V_user_V_input_buffer= new char[ap_apatb_output_stream_V_user_V_cap_bc];
+auto* soutput_stream_V_user_V = createStream((hls::stream<char>*)__xlx_apatb_param_output_stream_V_user_V);
+  //Create input buffer for output_stream_V_last_V
+  ap_apatb_output_stream_V_last_V_cap_bc = __xlx_output_stream_V_last_V_V_size_Reader.read_size();
+  char* __xlx_output_stream_V_last_V_input_buffer= new char[ap_apatb_output_stream_V_last_V_cap_bc];
+auto* soutput_stream_V_last_V = createStream((hls::stream<char>*)__xlx_apatb_param_output_stream_V_last_V);
+  //Create input buffer for output_stream_V_id_V
+  ap_apatb_output_stream_V_id_V_cap_bc = __xlx_output_stream_V_id_V_V_size_Reader.read_size();
+  char* __xlx_output_stream_V_id_V_input_buffer= new char[ap_apatb_output_stream_V_id_V_cap_bc];
+auto* soutput_stream_V_id_V = createStream((hls::stream<char>*)__xlx_apatb_param_output_stream_V_id_V);
+  //Create input buffer for output_stream_V_dest_V
+  ap_apatb_output_stream_V_dest_V_cap_bc = __xlx_output_stream_V_dest_V_V_size_Reader.read_size();
+  char* __xlx_output_stream_V_dest_V_input_buffer= new char[ap_apatb_output_stream_V_dest_V_cap_bc];
+auto* soutput_stream_V_dest_V = createStream((hls::stream<char>*)__xlx_apatb_param_output_stream_V_dest_V);
   // DUT call
-  gesture_model(sinput_stream->data<__cosim_s2__>(), soutput_stream->data<__cosim_s2__>());
-sinput_stream->transfer((hls::stream<__cosim_s2__>*)__xlx_apatb_param_input_stream);
-soutput_stream->transfer((hls::stream<__cosim_s2__>*)__xlx_apatb_param_output_stream);
+  gesture_model(sinput_stream_V_data_V->data<int>(), sinput_stream_V_keep_V->data<char>(), sinput_stream_V_strb_V->data<char>(), sinput_stream_V_user_V->data<char>(), sinput_stream_V_last_V->data<char>(), sinput_stream_V_id_V->data<char>(), sinput_stream_V_dest_V->data<char>(), soutput_stream_V_data_V->data<int>(), soutput_stream_V_keep_V->data<char>(), soutput_stream_V_strb_V->data<char>(), soutput_stream_V_user_V->data<char>(), soutput_stream_V_last_V->data<char>(), soutput_stream_V_id_V->data<char>(), soutput_stream_V_dest_V->data<char>());
+sinput_stream_V_data_V->transfer((hls::stream<int>*)__xlx_apatb_param_input_stream_V_data_V);
+sinput_stream_V_keep_V->transfer((hls::stream<char>*)__xlx_apatb_param_input_stream_V_keep_V);
+sinput_stream_V_strb_V->transfer((hls::stream<char>*)__xlx_apatb_param_input_stream_V_strb_V);
+sinput_stream_V_user_V->transfer((hls::stream<char>*)__xlx_apatb_param_input_stream_V_user_V);
+sinput_stream_V_last_V->transfer((hls::stream<char>*)__xlx_apatb_param_input_stream_V_last_V);
+sinput_stream_V_id_V->transfer((hls::stream<char>*)__xlx_apatb_param_input_stream_V_id_V);
+sinput_stream_V_dest_V->transfer((hls::stream<char>*)__xlx_apatb_param_input_stream_V_dest_V);
+soutput_stream_V_data_V->transfer((hls::stream<int>*)__xlx_apatb_param_output_stream_V_data_V);
+soutput_stream_V_keep_V->transfer((hls::stream<char>*)__xlx_apatb_param_output_stream_V_keep_V);
+soutput_stream_V_strb_V->transfer((hls::stream<char>*)__xlx_apatb_param_output_stream_V_strb_V);
+soutput_stream_V_user_V->transfer((hls::stream<char>*)__xlx_apatb_param_output_stream_V_user_V);
+soutput_stream_V_last_V->transfer((hls::stream<char>*)__xlx_apatb_param_output_stream_V_last_V);
+soutput_stream_V_id_V->transfer((hls::stream<char>*)__xlx_apatb_param_output_stream_V_id_V);
+soutput_stream_V_dest_V->transfer((hls::stream<char>*)__xlx_apatb_param_output_stream_V_dest_V);
 }

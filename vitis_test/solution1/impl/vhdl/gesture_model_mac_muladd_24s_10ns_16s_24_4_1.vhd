@@ -7,7 +7,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity gesture_model_mac_muladd_24s_10ns_16s_24_4_1_DSP48_4 is
+entity gesture_model_mac_muladd_24s_10ns_16s_24_4_1_DSP48_3 is
 port (
     clk: in  std_logic;
     rst: in  std_logic;
@@ -19,7 +19,7 @@ port (
 
 end entity;
 
-architecture behav of gesture_model_mac_muladd_24s_10ns_16s_24_4_1_DSP48_4 is
+architecture behav of gesture_model_mac_muladd_24s_10ns_16s_24_4_1_DSP48_3 is
     signal a       : signed(27-1 downto 0);
     signal b       : signed(18-1 downto 0);
     signal c       : signed(48-1 downto 0);
@@ -73,7 +73,7 @@ entity gesture_model_mac_muladd_24s_10ns_16s_24_4_1 is
 end entity;
 
 architecture arch of gesture_model_mac_muladd_24s_10ns_16s_24_4_1 is
-    component gesture_model_mac_muladd_24s_10ns_16s_24_4_1_DSP48_4 is
+    component gesture_model_mac_muladd_24s_10ns_16s_24_4_1_DSP48_3 is
         port (
             clk : IN STD_LOGIC;
             rst : IN STD_LOGIC;
@@ -87,7 +87,7 @@ architecture arch of gesture_model_mac_muladd_24s_10ns_16s_24_4_1 is
 
 
 begin
-    gesture_model_mac_muladd_24s_10ns_16s_24_4_1_DSP48_4_U :  component gesture_model_mac_muladd_24s_10ns_16s_24_4_1_DSP48_4
+    gesture_model_mac_muladd_24s_10ns_16s_24_4_1_DSP48_3_U :  component gesture_model_mac_muladd_24s_10ns_16s_24_4_1_DSP48_3
     port map (
         clk => clk,
         rst => reset,

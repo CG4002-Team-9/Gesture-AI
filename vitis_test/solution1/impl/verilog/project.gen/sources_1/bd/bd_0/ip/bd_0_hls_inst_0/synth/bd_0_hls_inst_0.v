@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:gesture_model:1.0
-// IP Revision: 2113712232
+// IP Revision: 2113714657
 
 (* X_CORE_INFO = "gesture_model,Vivado 2022.2" *)
 (* CHECK_LICENSE_TYPE = "bd_0_hls_inst_0,gesture_model,{}" *)
-(* CORE_GENERATION_INFO = "bd_0_hls_inst_0,gesture_model,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=gesture_model,x_ipVersion=1.0,x_ipCoreRevision=2113712232,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_ADDR_WIDTH=4,C_S_AXI_CONTROL_DATA_WIDTH=32}" *)
+(* CORE_GENERATION_INFO = "bd_0_hls_inst_0,gesture_model,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=gesture_model,x_ipVersion=1.0,x_ipCoreRevision=2113714657,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_ADDR_WIDTH=4,C_S_AXI_CONTROL_DATA_WIDTH=32}" *)
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module bd_0_hls_inst_0 (
@@ -79,9 +79,21 @@ module bd_0_hls_inst_0 (
   input_stream_TVALID,
   input_stream_TREADY,
   input_stream_TDATA,
+  input_stream_TKEEP,
+  input_stream_TSTRB,
+  input_stream_TUSER,
+  input_stream_TLAST,
+  input_stream_TID,
+  input_stream_TDEST,
   output_stream_TVALID,
   output_stream_TREADY,
-  output_stream_TDATA
+  output_stream_TDATA,
+  output_stream_TKEEP,
+  output_stream_TSTRB,
+  output_stream_TUSER,
+  output_stream_TLAST,
+  output_stream_TID,
+  output_stream_TDEST
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control AWADDR" *)
@@ -133,16 +145,40 @@ output wire interrupt;
 input wire input_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream TREADY" *)
 output wire input_stream_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME input_stream, TDATA_NUM_BYTES 2, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000.0, PHASE 0.0, CLK_DOMAIN bd_0_ap_clk_0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream TDATA" *)
-input wire [15 : 0] input_stream_TDATA;
+input wire [31 : 0] input_stream_TDATA;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream TKEEP" *)
+input wire [3 : 0] input_stream_TKEEP;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream TSTRB" *)
+input wire [3 : 0] input_stream_TSTRB;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream TUSER" *)
+input wire [0 : 0] input_stream_TUSER;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream TLAST" *)
+input wire [0 : 0] input_stream_TLAST;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream TID" *)
+input wire [0 : 0] input_stream_TID;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME input_stream, TDATA_NUM_BYTES 4, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000.0, PHASE 0.0, CLK_DOMAIN bd_0_ap_clk_0, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream TDEST" *)
+input wire [0 : 0] input_stream_TDEST;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream TVALID" *)
 output wire output_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream TREADY" *)
 input wire output_stream_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME output_stream, TDATA_NUM_BYTES 2, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000.0, PHASE 0.0, CLK_DOMAIN bd_0_ap_clk_0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream TDATA" *)
-output wire [15 : 0] output_stream_TDATA;
+output wire [31 : 0] output_stream_TDATA;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream TKEEP" *)
+output wire [3 : 0] output_stream_TKEEP;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream TSTRB" *)
+output wire [3 : 0] output_stream_TSTRB;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream TUSER" *)
+output wire [0 : 0] output_stream_TUSER;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream TLAST" *)
+output wire [0 : 0] output_stream_TLAST;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream TID" *)
+output wire [0 : 0] output_stream_TID;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME output_stream, TDATA_NUM_BYTES 4, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000.0, PHASE 0.0, CLK_DOMAIN bd_0_ap_clk_0, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream TDEST" *)
+output wire [0 : 0] output_stream_TDEST;
 
 (* SDX_KERNEL = "true" *)
 (* SDX_KERNEL_TYPE = "hls" *)
@@ -174,8 +210,20 @@ output wire [15 : 0] output_stream_TDATA;
     .input_stream_TVALID(input_stream_TVALID),
     .input_stream_TREADY(input_stream_TREADY),
     .input_stream_TDATA(input_stream_TDATA),
+    .input_stream_TKEEP(input_stream_TKEEP),
+    .input_stream_TSTRB(input_stream_TSTRB),
+    .input_stream_TUSER(input_stream_TUSER),
+    .input_stream_TLAST(input_stream_TLAST),
+    .input_stream_TID(input_stream_TID),
+    .input_stream_TDEST(input_stream_TDEST),
     .output_stream_TVALID(output_stream_TVALID),
     .output_stream_TREADY(output_stream_TREADY),
-    .output_stream_TDATA(output_stream_TDATA)
+    .output_stream_TDATA(output_stream_TDATA),
+    .output_stream_TKEEP(output_stream_TKEEP),
+    .output_stream_TSTRB(output_stream_TSTRB),
+    .output_stream_TUSER(output_stream_TUSER),
+    .output_stream_TLAST(output_stream_TLAST),
+    .output_stream_TID(output_stream_TID),
+    .output_stream_TDEST(output_stream_TDEST)
   );
 endmodule

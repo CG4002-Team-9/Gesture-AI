@@ -7,7 +7,37 @@
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
+        <name>input_stream_TDEST</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_stream_TID</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_stream_TKEEP</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_stream_TLAST</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
         <name>input_stream_TREADY</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_stream_TSTRB</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_stream_TUSER</name>
         <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
@@ -22,7 +52,37 @@
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
+        <name>output_stream_TDEST</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>output_stream_TID</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>output_stream_TKEEP</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>output_stream_TLAST</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
         <name>output_stream_TREADY</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>output_stream_TSTRB</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>output_stream_TUSER</name>
         <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>

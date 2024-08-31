@@ -1,0 +1,541 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Aug 31 18:11:34 2024
+# Process ID: 79160
+# Current directory: /home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.runs/design_1_zynq_ultra_ps_e_0_0_synth_1
+# Command line: vivado -log design_1_zynq_ultra_ps_e_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_zynq_ultra_ps_e_0_0.tcl
+# Log file: /home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0.vds
+# Journal file: /home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/vivado.jou
+# Running On: prince-ThinkPad-E14-Gen-5, OS: Linux, CPU Frequency: 1800.018 MHz, CPU Physical cores: 14, Host memory: 16411 MB
+#-----------------------------------------------------------
+source design_1_zynq_ultra_ps_e_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1264.098 ; gain = 0.027 ; free physical = 826 ; free virtual = 9015
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/prince/Documents/capstone/Gesture-AI/vitis_test'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:gesture_model:1.0'. The one found in IP location '/home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/ip' will take precedence over the same IP in location /home/prince/Documents/capstone/Gesture-AI/vitis_test/export
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_zynq_ultra_ps_e_0_0
+Command: synth_design -top design_1_zynq_ultra_ps_e_0_0 -part xczu3eg-sbva484-2-i -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-2-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 79604
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'dp_audi_ref_clk', assumed default net type 'wire' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:2349]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2361.891 ; gain = 233.832 ; free physical = 187 ; free virtual = 2035
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1537.954; parent = 1421.910; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3270.559; parent = 2367.832; children = 902.727
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/synth/design_1_zynq_ultra_ps_e_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:68]
+INFO: [Synth 8-6157] synthesizing module 'BUFG_PS' [/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1317]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG_PS' (0#1) [/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1317]
+INFO: [Synth 8-6157] synthesizing module 'PS8' [/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:110670]
+INFO: [Synth 8-6155] done synthesizing module 'PS8' (0#1) [/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:110670]
+WARNING: [Synth 8-689] width (5) of port connection 'EMIOSDIO0DATAOUT' does not match port width (8) of module 'PS8' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:4534]
+WARNING: [Synth 8-689] width (5) of port connection 'EMIOSDIO0DATAENA' does not match port width (8) of module 'PS8' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:4535]
+WARNING: [Synth 8-689] width (5) of port connection 'EMIOSDIO1DATAOUT' does not match port width (8) of module 'PS8' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:4547]
+WARNING: [Synth 8-689] width (5) of port connection 'EMIOSDIO1DATAENA' does not match port width (8) of module 'PS8' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:4548]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN0OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN1OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN2OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN3OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP0OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP1OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP2OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP3OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PADO' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_BOOTMODE' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_CLK' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DONEB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMA' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMACTN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMALERTN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMBA' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMBG' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCK' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCKE' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCKN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCSN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDM' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDQ' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDQS' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDQSN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMODT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMPARITY' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMRAMRSTN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_ERROROUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_ERRORSTATUS' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_INITB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTCK' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTDI' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTDO' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTMS' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MIO' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PORB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PROGB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_RCALIBINOUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_SRSTB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_ZQ' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PADI' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+WARNING: [Synth 8-7023] instance 'PS8_i' of module 'PS8' has 1015 connections declared, but only 957 given [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:3724]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e' (0#1) [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:68]
+WARNING: [Synth 8-7071] port 'emio_enet0_signal_detect' of module 'zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/synth/design_1_zynq_ultra_ps_e_0_0.v:232]
+WARNING: [Synth 8-7071] port 'emio_enet1_signal_detect' of module 'zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/synth/design_1_zynq_ultra_ps_e_0_0.v:232]
+WARNING: [Synth 8-7071] port 'emio_enet2_signal_detect' of module 'zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/synth/design_1_zynq_ultra_ps_e_0_0.v:232]
+WARNING: [Synth 8-7071] port 'emio_enet3_signal_detect' of module 'zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/synth/design_1_zynq_ultra_ps_e_0_0.v:232]
+WARNING: [Synth 8-7023] instance 'inst' of module 'zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e' has 1491 connections declared, but only 1487 given [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/synth/design_1_zynq_ultra_ps_e_0_0.v:232]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (0#1) [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/synth/design_1_zynq_ultra_ps_e_0_0.v:53]
+WARNING: [Synth 8-3848] Net dp_audio_ref_clk in module/entity zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e does not have driver. [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:223]
+WARNING: [Synth 8-3848] Net irq_ipi_pl_0 in module/entity zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e does not have driver. [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:1243]
+WARNING: [Synth 8-3848] Net irq_ipi_pl_1 in module/entity zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e does not have driver. [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:1244]
+WARNING: [Synth 8-3848] Net irq_ipi_pl_2 in module/entity zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e does not have driver. [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:1245]
+WARNING: [Synth 8-3848] Net irq_ipi_pl_3 in module/entity zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e does not have driver. [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:1246]
+WARNING: [Synth 8-7129] Port dp_audio_ref_clk in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq_ipi_pl_0 in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq_ipi_pl_1 in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq_ipi_pl_2 in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq_ipi_pl_3 in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port saxihpc0_fpd_rclk in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port saxihpc0_fpd_wclk in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port saxihpc1_fpd_rclk in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port saxihpc1_fpd_wclk in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port saxihp0_fpd_rclk in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port saxihp0_fpd_wclk in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port saxihp1_fpd_rclk in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port saxihp1_fpd_wclk in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port saxihp2_fpd_rclk in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port saxihp2_fpd_wclk in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port saxihp3_fpd_rclk in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port saxihp3_fpd_wclk in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port saxi_lpd_rclk in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port saxi_lpd_wclk in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_awuser[15] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_awuser[14] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_awuser[13] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_awuser[12] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_awuser[11] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_awuser[10] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_awuser[9] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_awuser[8] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_awuser[7] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_awuser[6] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_aruser[15] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_aruser[14] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_aruser[13] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_aruser[12] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_aruser[11] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_aruser[10] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_aruser[9] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_aruser[8] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_aruser[7] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sacefpd_aruser[6] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_clk[3] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_clk[2] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_clk[1] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_clk[0] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[31] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[30] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[29] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[28] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[27] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[26] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[25] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[24] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[23] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[22] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[21] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[20] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[19] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[18] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[17] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[16] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[15] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[14] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[13] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[12] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[11] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[10] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[9] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[8] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[7] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[6] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[5] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[4] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[3] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[2] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[1] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc_in[0] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[31] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[30] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[29] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[28] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[27] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[26] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[25] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[24] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[23] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[22] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[21] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[20] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[19] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[18] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[17] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[16] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[15] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[14] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[13] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[12] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[11] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[10] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[9] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[8] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+WARNING: [Synth 8-7129] Port test_adc2_in[7] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 2443.797 ; gain = 315.738 ; free physical = 186 ; free virtual = 3699
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1623.504; parent = 1510.352; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3407.012; parent = 2443.801; children = 963.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 2461.609 ; gain = 333.551 ; free physical = 198 ; free virtual = 3700
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1623.504; parent = 1510.352; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3424.824; parent = 2461.613; children = 963.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 2461.609 ; gain = 333.551 ; free physical = 186 ; free virtual = 3692
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1623.504; parent = 1510.352; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3424.824; parent = 2461.613; children = 963.211
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2467.547 ; gain = 0.000 ; free physical = 263 ; free virtual = 3545
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2550.422 ; gain = 0.000 ; free physical = 237 ; free virtual = 2579
+Finished Parsing XDC File [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc] for cell 'inst'
+Parsing XDC File [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2550.422 ; gain = 0.000 ; free physical = 255 ; free virtual = 2574
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2550.422 ; gain = 0.000 ; free physical = 234 ; free virtual = 2549
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 2550.422 ; gain = 422.363 ; free physical = 2142 ; free virtual = 4635
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1623.504; parent = 1510.352; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3513.637; parent = 2550.426; children = 963.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-2-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:40 . Memory (MB): peak = 2550.422 ; gain = 422.363 ; free physical = 2142 ; free virtual = 4635
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1623.504; parent = 1510.352; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3513.637; parent = 2550.426; children = 963.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst/PS8_i. (constraint file  /home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc, line 25).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:40 . Memory (MB): peak = 2550.422 ; gain = 422.363 ; free physical = 2134 ; free virtual = 4628
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1623.504; parent = 1510.352; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3513.637; parent = 2550.426; children = 963.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 2550.422 ; gain = 422.363 ; free physical = 2098 ; free virtual = 4591
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1623.504; parent = 1510.352; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3513.637; parent = 2550.426; children = 963.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:42 . Memory (MB): peak = 2550.422 ; gain = 422.363 ; free physical = 2063 ; free virtual = 4588
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1623.504; parent = 1510.352; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3513.637; parent = 2550.426; children = 963.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:01:00 . Memory (MB): peak = 4091.484 ; gain = 1963.426 ; free physical = 207 ; free virtual = 2106
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2818.002; parent = 2705.041; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5054.699; parent = 4091.488; children = 963.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:01:00 . Memory (MB): peak = 4116.492 ; gain = 1988.434 ; free physical = 173 ; free virtual = 2071
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2835.837; parent = 2722.876; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5079.707; parent = 4116.496; children = 963.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:01:00 . Memory (MB): peak = 4132.508 ; gain = 2004.449 ; free physical = 236 ; free virtual = 2018
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2835.837; parent = 2722.876; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5095.723; parent = 4132.512; children = 963.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3295] tying undriven pin trace_ctl_pipe[0]_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[31] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[30] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[29] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[28] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[27] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[26] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[25] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[24] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[23] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[22] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[21] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[20] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[19] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[18] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[17] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[16] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[15] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[14] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[13] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[12] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[11] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[10] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[9] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[8] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[7] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[6] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[5] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[4] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[3] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[2] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[1] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[0] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_ctl_pipe[7]_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_ctl_pipe[6]_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_ctl_pipe[5]_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_ctl_pipe[4]_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_ctl_pipe[3]_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_ctl_pipe[2]_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_ctl_pipe[1]_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[31] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[30] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[29] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[28] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[27] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[26] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[25] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[24] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[23] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[22] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[21] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[20] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[19] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[18] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[17] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[16] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[15] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[14] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[13] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[12] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[11] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[10] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[9] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[8] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[7] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[6] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[5] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[4] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[3] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[2] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[1] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[0] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[31] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[30] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[29] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[28] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[27] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[26] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[25] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[24] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[23] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[22] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[21] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[20] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[19] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[18] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[17] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[16] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[15] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[14] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[13] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[12] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[11] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[10] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[9] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[8] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[7] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[6] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[5] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[4] to constant 0
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 4135.477 ; gain = 2007.418 ; free physical = 162 ; free virtual = 1794
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2835.837; parent = 2722.876; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5098.691; parent = 4135.480; children = 963.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 4135.477 ; gain = 2007.418 ; free physical = 162 ; free virtual = 1794
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2835.837; parent = 2722.876; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5098.691; parent = 4135.480; children = 963.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 4135.477 ; gain = 2007.418 ; free physical = 162 ; free virtual = 1794
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2835.837; parent = 2722.876; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5098.691; parent = 4135.480; children = 963.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 4135.477 ; gain = 2007.418 ; free physical = 162 ; free virtual = 1794
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2835.837; parent = 2722.876; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5098.691; parent = 4135.480; children = 963.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 4135.477 ; gain = 2007.418 ; free physical = 162 ; free virtual = 1794
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2835.837; parent = 2722.876; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5098.691; parent = 4135.480; children = 963.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 4135.477 ; gain = 2007.418 ; free physical = 162 ; free virtual = 1794
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2835.837; parent = 2722.876; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5098.691; parent = 4135.480; children = 963.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG_PS |     1|
+|2     |LUT1    |   264|
+|3     |PS8     |     1|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 4135.477 ; gain = 2007.418 ; free physical = 152 ; free virtual = 1785
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2835.837; parent = 2722.876; children = 116.044
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5098.691; parent = 4135.480; children = 963.211
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 570 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:00:55 . Memory (MB): peak = 4135.477 ; gain = 1918.605 ; free physical = 188 ; free virtual = 1821
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 4135.484 ; gain = 2007.418 ; free physical = 188 ; free virtual = 1821
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:08 ; elapsed = 00:00:00.03 . Memory (MB): peak = 4135.484 ; gain = 0.000 ; free physical = 283 ; free virtual = 1942
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4169.164 ; gain = 0.000 ; free physical = 336 ; free virtual = 1997
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 997e58bb
+INFO: [Common 17-83] Releasing license: Synthesis
+131 Infos, 175 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:15 . Memory (MB): peak = 4169.164 ; gain = 2870.551 ; free physical = 1524 ; free virtual = 3189
+INFO: [Common 17-1381] The checkpoint '/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_zynq_ultra_ps_e_0_0, cache-ID = 823ce695330e2837
+INFO: [Common 17-1381] The checkpoint '/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_zynq_ultra_ps_e_0_0_utilization_synth.rpt -pb design_1_zynq_ultra_ps_e_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Aug 31 18:13:09 2024...

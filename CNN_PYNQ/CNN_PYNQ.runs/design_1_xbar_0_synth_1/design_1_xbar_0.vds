@@ -1,0 +1,394 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Aug 31 18:11:34 2024
+# Process ID: 79162
+# Current directory: /home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.runs/design_1_xbar_0_synth_1
+# Command line: vivado -log design_1_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xbar_0.tcl
+# Log file: /home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.runs/design_1_xbar_0_synth_1/design_1_xbar_0.vds
+# Journal file: /home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.runs/design_1_xbar_0_synth_1/vivado.jou
+# Running On: prince-ThinkPad-E14-Gen-5, OS: Linux, CPU Frequency: 1800.000 MHz, CPU Physical cores: 14, Host memory: 16411 MB
+#-----------------------------------------------------------
+source design_1_xbar_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1329.582 ; gain = 120.996 ; free physical = 889 ; free virtual = 9078
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/prince/Documents/capstone/Gesture-AI/vitis_test'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:gesture_model:1.0'. The one found in IP location '/home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/ip' will take precedence over the same IP in location /home/prince/Documents/capstone/Gesture-AI/vitis_test/export
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_xbar_0
+Command: synth_design -top design_1_xbar_0 -part xczu3eg-sbva484-2-i -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-2-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 79524
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2354.367 ; gain = 234.801 ; free physical = 174 ; free virtual = 3510
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1599.272; parent = 1458.254; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3323.516; parent = 2360.309; children = 963.207
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_xbar_0/synth/design_1_xbar_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axis_switch_v1_1_27_axis_switch' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/1b0f/hdl/axis_switch_v1_1_vl_rfs.v:3089]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v:809]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' (0#1) [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v:809]
+INFO: [Synth 8-6157] synthesizing module 'axis_switch_v1_1_27_axisc_decoder' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/1b0f/hdl/axis_switch_v1_1_vl_rfs.v:478]
+INFO: [Synth 8-6157] synthesizing module 'axis_register_slice_v1_1_27_axisc_register_slice' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/6ba3/hdl/axis_register_slice_v1_1_vl_rfs.v:1935]
+INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice_v1_1_27_axisc_register_slice' (0#1) [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/6ba3/hdl/axis_register_slice_v1_1_vl_rfs.v:1935]
+INFO: [Synth 8-6157] synthesizing module 'axis_register_slice_v1_1_27_axisc_register_slice__parameterized0' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/6ba3/hdl/axis_register_slice_v1_1_vl_rfs.v:1935]
+INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice_v1_1_27_axisc_register_slice__parameterized0' (0#1) [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/6ba3/hdl/axis_register_slice_v1_1_vl_rfs.v:1935]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v:991]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' (0#1) [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v:991]
+INFO: [Synth 8-6155] done synthesizing module 'axis_switch_v1_1_27_axisc_decoder' (0#1) [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/1b0f/hdl/axis_switch_v1_1_vl_rfs.v:478]
+INFO: [Synth 8-6157] synthesizing module 'axis_switch_v1_1_27_axisc_transfer_mux' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/1b0f/hdl/axis_switch_v1_1_vl_rfs.v:818]
+INFO: [Synth 8-6157] synthesizing module 'axis_switch_v1_1_27_axisc_arb_responder' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/1b0f/hdl/axis_switch_v1_1_vl_rfs.v:1122]
+INFO: [Synth 8-6155] done synthesizing module 'axis_switch_v1_1_27_axisc_arb_responder' (0#1) [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/1b0f/hdl/axis_switch_v1_1_vl_rfs.v:1122]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_mux_enc' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_mux_enc' (0#1) [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v:65]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_mux_enc__parameterized0' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_mux_enc__parameterized0' (0#1) [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v:65]
+INFO: [Synth 8-6157] synthesizing module 'axis_register_slice_v1_1_27_axisc_register_slice__parameterized1' [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/6ba3/hdl/axis_register_slice_v1_1_vl_rfs.v:1935]
+INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice_v1_1_27_axisc_register_slice__parameterized1' (0#1) [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/6ba3/hdl/axis_register_slice_v1_1_vl_rfs.v:1935]
+INFO: [Synth 8-6155] done synthesizing module 'axis_switch_v1_1_27_axisc_transfer_mux' (0#1) [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/1b0f/hdl/axis_switch_v1_1_vl_rfs.v:818]
+INFO: [Synth 8-6155] done synthesizing module 'axis_switch_v1_1_27_axis_switch' (0#1) [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ipshared/1b0f/hdl/axis_switch_v1_1_vl_rfs.v:3089]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_xbar_0/synth/design_1_xbar_0.v:53]
+WARNING: [Synth 8-7129] Port ACLK in module axis_register_slice_v1_1_27_axisc_register_slice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK2X in module axis_register_slice_v1_1_27_axisc_register_slice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axis_register_slice_v1_1_27_axisc_register_slice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLKEN in module axis_register_slice_v1_1_27_axisc_register_slice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S[0] in module axis_infrastructure_v1_1_0_mux_enc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S[0] in module axis_infrastructure_v1_1_0_mux_enc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXIS_TLAST in module axis_switch_v1_1_27_axisc_arb_responder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARB_SEL[0] in module axis_switch_v1_1_27_axisc_transfer_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mi_enable in module axis_switch_v1_1_27_axisc_transfer_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mi_mux[3] in module axis_switch_v1_1_27_axisc_transfer_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mi_mux[2] in module axis_switch_v1_1_27_axisc_transfer_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mi_mux[1] in module axis_switch_v1_1_27_axisc_transfer_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mi_mux[0] in module axis_switch_v1_1_27_axisc_transfer_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK2X in module axis_register_slice_v1_1_27_axisc_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK2X in module axis_register_slice_v1_1_27_axisc_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port si_mux[3] in module axis_switch_v1_1_27_axisc_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port si_mux[2] in module axis_switch_v1_1_27_axisc_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port si_mux[1] in module axis_switch_v1_1_27_axisc_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port si_mux[0] in module axis_switch_v1_1_27_axisc_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port si_enable[0] in module axis_switch_v1_1_27_axisc_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TSTRB[0] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TKEEP[0] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TLAST in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TID[0] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TUSER[0] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arb_gnt[1] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arb_gnt[0] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arb_sel[1] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arb_sel[0] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_aclk in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_aresetn in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_awvalid in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_awaddr[6] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_awaddr[5] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_awaddr[4] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_awaddr[3] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_awaddr[2] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_awaddr[1] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_awaddr[0] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wvalid in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[31] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[30] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[29] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[28] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[27] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[26] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[25] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[24] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[23] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[22] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[21] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[20] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[19] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[18] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[17] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[16] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[15] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[14] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[13] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[12] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[11] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[10] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[9] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[8] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[7] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[6] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[5] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[4] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[3] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[2] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[1] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_wdata[0] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_bready in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_arvalid in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_araddr[6] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_araddr[5] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_araddr[4] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_araddr[3] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_araddr[2] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_araddr[1] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_araddr[0] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_rready in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2429.273 ; gain = 309.707 ; free physical = 233 ; free virtual = 2170
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1599.272; parent = 1458.254; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3392.484; parent = 2429.277; children = 963.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2444.117 ; gain = 324.551 ; free physical = 223 ; free virtual = 2197
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1599.272; parent = 1458.254; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3407.328; parent = 2444.121; children = 963.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2444.117 ; gain = 324.551 ; free physical = 233 ; free virtual = 2222
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1599.272; parent = 1458.254; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3407.328; parent = 2444.121; children = 963.207
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2444.117 ; gain = 0.000 ; free physical = 199 ; free virtual = 2216
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2608.867 ; gain = 0.000 ; free physical = 222 ; free virtual = 2620
+Finished Parsing XDC File [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.runs/design_1_xbar_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.runs/design_1_xbar_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2608.867 ; gain = 0.000 ; free physical = 212 ; free virtual = 2614
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2608.867 ; gain = 0.000 ; free physical = 179 ; free virtual = 2589
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 2608.867 ; gain = 489.301 ; free physical = 2055 ; free virtual = 4460
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1599.272; parent = 1458.254; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3572.078; parent = 2608.871; children = 963.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-2-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 2608.867 ; gain = 489.301 ; free physical = 2034 ; free virtual = 4474
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1599.272; parent = 1458.254; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3572.078; parent = 2608.871; children = 963.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.runs/design_1_xbar_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 2608.867 ; gain = 489.301 ; free physical = 2028 ; free virtual = 4478
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1599.272; parent = 1458.254; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3572.078; parent = 2608.871; children = 963.207
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_AB_reg_slice.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_AB_reg_slice.state_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 2608.867 ; gain = 489.301 ; free physical = 1906 ; free virtual = 4410
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1599.272; parent = 1458.254; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3572.078; parent = 2608.871; children = 963.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                9 Bit    Registers := 2     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input    9 Bit        Muxes := 1     
+	   5 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 4     
+	   4 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port s_axis_tstrb[0] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[0] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tlast[0] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tid[0] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tuser[0] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arb_gnt[1] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arb_gnt[0] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arb_sel[1] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arb_sel[0] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_aclk in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_aresetn in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_awvalid in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_awaddr[6] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_awaddr[5] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_awaddr[4] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_awaddr[3] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_awaddr[2] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_ctrl_awaddr[1] in module axis_switch_v1_1_27_axis_switch is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:43 . Memory (MB): peak = 2608.867 ; gain = 489.301 ; free physical = 2098 ; free virtual = 4591
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1599.272; parent = 1458.254; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3572.078; parent = 2608.871; children = 963.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:59 . Memory (MB): peak = 2979.680 ; gain = 860.113 ; free physical = 921 ; free virtual = 3511
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1787.801; parent = 1678.551; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3942.891; parent = 2979.684; children = 963.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:59 . Memory (MB): peak = 2999.711 ; gain = 880.145 ; free physical = 866 ; free virtual = 3464
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1787.801; parent = 1678.551; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3962.922; parent = 2999.715; children = 963.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:01:00 . Memory (MB): peak = 3001.727 ; gain = 882.160 ; free physical = 857 ; free virtual = 3467
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1787.812; parent = 1678.562; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3964.938; parent = 3001.730; children = 963.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 3007.664 ; gain = 888.098 ; free physical = 183 ; free virtual = 1965
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1787.901; parent = 1678.651; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3970.875; parent = 3007.668; children = 963.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 3007.664 ; gain = 888.098 ; free physical = 178 ; free virtual = 1960
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1787.901; parent = 1678.651; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3970.875; parent = 3007.668; children = 963.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 3007.664 ; gain = 888.098 ; free physical = 190 ; free virtual = 1971
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1787.901; parent = 1678.651; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3970.875; parent = 3007.668; children = 963.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 3007.664 ; gain = 888.098 ; free physical = 176 ; free virtual = 1958
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1787.901; parent = 1678.651; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3970.875; parent = 3007.668; children = 963.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 3007.664 ; gain = 888.098 ; free physical = 177 ; free virtual = 1945
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1787.901; parent = 1678.651; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3970.875; parent = 3007.668; children = 963.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 3007.664 ; gain = 888.098 ; free physical = 176 ; free virtual = 1933
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1787.901; parent = 1678.651; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3970.875; parent = 3007.668; children = 963.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |     2|
+|3     |LUT3 |    15|
+|4     |LUT4 |     2|
+|5     |LUT5 |     1|
+|6     |LUT6 |     9|
+|7     |FDRE |    32|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 3007.664 ; gain = 888.098 ; free physical = 244 ; free virtual = 2001
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1787.901; parent = 1678.651; children = 141.019
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3970.875; parent = 3007.668; children = 963.207
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 63 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 3007.664 ; gain = 723.348 ; free physical = 223 ; free virtual = 1991
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:01:05 . Memory (MB): peak = 3007.672 ; gain = 888.098 ; free physical = 205 ; free virtual = 1973
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3021.602 ; gain = 0.000 ; free physical = 253 ; free virtual = 2016
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3060.457 ; gain = 0.000 ; free physical = 249 ; free virtual = 1859
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 544ac248
+INFO: [Common 17-83] Releasing license: Synthesis
+47 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:14 . Memory (MB): peak = 3060.457 ; gain = 1730.875 ; free physical = 378 ; free virtual = 1990
+INFO: [Common 17-1381] The checkpoint '/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.runs/design_1_xbar_0_synth_1/design_1_xbar_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_xbar_0, cache-ID = 6ba4396e4d29a246
+INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/prince/Documents/capstone/Gesture-AI/CNN_PYNQ/CNN_PYNQ.runs/design_1_xbar_0_synth_1/design_1_xbar_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_xbar_0_utilization_synth.rpt -pb design_1_xbar_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Aug 31 18:13:05 2024...

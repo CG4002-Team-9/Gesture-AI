@@ -5,7 +5,7 @@
 // ==============================================================
 #ifndef __gesture_model_mul_mul_16s_9s_24_4_1__HH__
 #define __gesture_model_mul_mul_16s_9s_24_4_1__HH__
-#include "gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5.h"
+#include "gesture_model_mul_mul_16s_9s_24_4_1_DSP48_4.h"
 
 template<
     int ID,
@@ -23,15 +23,15 @@ SC_MODULE(gesture_model_mul_mul_16s_9s_24_4_1) {
 
 
 
-    gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5 gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5_U;
+    gesture_model_mul_mul_16s_9s_24_4_1_DSP48_4 gesture_model_mul_mul_16s_9s_24_4_1_DSP48_4_U;
 
-    SC_CTOR(gesture_model_mul_mul_16s_9s_24_4_1):  gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5_U ("gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5_U") {
-        gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5_U.clk(clk);
-        gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5_U.rst(reset);
-        gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5_U.ce(ce);
-        gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5_U.a(din0);
-        gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5_U.b(din1);
-        gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5_U.p(dout);
+    SC_CTOR(gesture_model_mul_mul_16s_9s_24_4_1):  gesture_model_mul_mul_16s_9s_24_4_1_DSP48_4_U ("gesture_model_mul_mul_16s_9s_24_4_1_DSP48_4_U") {
+        gesture_model_mul_mul_16s_9s_24_4_1_DSP48_4_U.clk(clk);
+        gesture_model_mul_mul_16s_9s_24_4_1_DSP48_4_U.rst(reset);
+        gesture_model_mul_mul_16s_9s_24_4_1_DSP48_4_U.ce(ce);
+        gesture_model_mul_mul_16s_9s_24_4_1_DSP48_4_U.a(din0);
+        gesture_model_mul_mul_16s_9s_24_4_1_DSP48_4_U.b(din1);
+        gesture_model_mul_mul_16s_9s_24_4_1_DSP48_4_U.p(dout);
 
     }
 

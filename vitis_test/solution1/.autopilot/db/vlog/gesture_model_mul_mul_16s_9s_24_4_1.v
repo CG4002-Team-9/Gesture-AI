@@ -1,7 +1,7 @@
 
 `timescale 1 ns / 1 ps
 
-  module gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5(clk, rst, ce, a, b, p);
+  module gesture_model_mul_mul_16s_9s_24_4_1_DSP48_4(clk, rst, ce, a, b, p);
 input clk;
 input rst;
 input ce;
@@ -51,7 +51,7 @@ output[dout_WIDTH - 1:0] dout;
 
 
 
-gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5 gesture_model_mul_mul_16s_9s_24_4_1_DSP48_5_U(
+gesture_model_mul_mul_16s_9s_24_4_1_DSP48_4 gesture_model_mul_mul_16s_9s_24_4_1_DSP48_4_U(
     .clk( clk ),
     .rst( reset ),
     .ce( ce ),

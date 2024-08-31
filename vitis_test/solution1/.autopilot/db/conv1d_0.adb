@@ -70,7 +70,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2925706720</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>15</bitwidth>
@@ -110,7 +110,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926115168</coreId>
+              <coreId>1886217536</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -152,7 +152,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926006256</coreId>
+              <coreId>2811903440</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -194,7 +194,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>256</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -218,10 +218,10 @@
             <Obj>
               <type>0</type>
               <id>10</id>
-              <name>indvar_flatten_write_ln26</name>
+              <name>indvar_flatten_write_ln25</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -237,7 +237,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
@@ -250,7 +250,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926327216</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -275,10 +275,10 @@
             <Obj>
               <type>0</type>
               <id>11</id>
-              <name>i_write_ln26</name>
+              <name>i_write_ln25</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -294,7 +294,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
@@ -307,7 +307,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926383168</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -332,10 +332,10 @@
             <Obj>
               <type>0</type>
               <id>12</id>
-              <name>j_write_ln26</name>
+              <name>j_write_ln25</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -351,7 +351,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
@@ -364,7 +364,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926372464</coreId>
+              <coreId>512</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -389,10 +389,10 @@
             <Obj>
               <type>0</type>
               <id>13</id>
-              <name>br_ln26</name>
+              <name>br_ln25</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -408,7 +408,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
@@ -421,7 +421,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>3569427925</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -448,7 +448,7 @@
               <name>indvar_flatten_load</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -464,7 +464,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
@@ -477,7 +477,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>543516513</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -502,10 +502,10 @@
             <Obj>
               <type>0</type>
               <id>17</id>
-              <name>icmp_ln26</name>
+              <name>icmp_ln25</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -521,13 +521,13 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln26_fu_208_p2</rtlName>
+              <rtlName>icmp_ln25_fu_208_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -559,10 +559,10 @@
             <Obj>
               <type>0</type>
               <id>18</id>
-              <name>add_ln26</name>
+              <name>add_ln25</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -578,13 +578,13 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln26_fu_214_p2</rtlName>
+              <rtlName>add_ln25_fu_214_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -616,10 +616,10 @@
             <Obj>
               <type>0</type>
               <id>19</id>
-              <name>br_ln26</name>
+              <name>br_ln25</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -635,7 +635,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
@@ -648,7 +648,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>2811905320</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -677,7 +677,7 @@
               <name>j_load</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>28</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -693,7 +693,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>28</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -706,7 +706,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>2811906560</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -788,10 +788,10 @@
             <Obj>
               <type>0</type>
               <id>25</id>
-              <name>icmp_ln28</name>
+              <name>icmp_ln27</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>28</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -807,13 +807,13 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>28</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln28_fu_226_p2</rtlName>
+              <rtlName>icmp_ln27_fu_226_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -845,10 +845,10 @@
             <Obj>
               <type>0</type>
               <id>26</id>
-              <name>select_ln26</name>
+              <name>select_ln25</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -864,13 +864,13 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>select_ln26_fu_232_p3</rtlName>
+              <rtlName>select_ln25_fu_232_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -960,10 +960,10 @@
             <Obj>
               <type>0</type>
               <id>28</id>
-              <name>select_ln26_1</name>
+              <name>select_ln25_1</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -979,13 +979,13 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>select_ln26_1_fu_246_p3</rtlName>
+              <rtlName>select_ln25_1_fu_246_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -1021,7 +1021,7 @@
               <name>tmp</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>38</lineNumber>
+              <lineNumber>37</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -1037,7 +1037,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>38</second>
+                      <second>37</second>
                     </item>
                   </second>
                 </item>
@@ -1050,7 +1050,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>11</coreId>
+              <coreId>1601200424</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -1076,10 +1076,10 @@
             <Obj>
               <type>0</type>
               <id>30</id>
-              <name>zext_ln26</name>
+              <name>zext_ln25</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -1095,20 +1095,20 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln26_fu_262_p1</rtlName>
+              <rtlName>zext_ln25_fu_262_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>11</coreId>
+              <coreId>1819113532</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1164,7 +1164,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>2811907488</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -1193,7 +1193,7 @@
               <name>input_0_load</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -1209,7 +1209,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
@@ -1246,10 +1246,10 @@
             <Obj>
               <type>0</type>
               <id>33</id>
-              <name>sext_ln26</name>
+              <name>sext_ln25</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -1265,7 +1265,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
@@ -1278,7 +1278,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926009728</coreId>
+              <coreId>1281315657</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>24</bitwidth>
@@ -1359,10 +1359,10 @@
             <Obj>
               <type>0</type>
               <id>35</id>
-              <name>select_ln26_2</name>
+              <name>select_ln25_2</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -1378,13 +1378,13 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>select_ln26_2_fu_273_p3</rtlName>
+              <rtlName>select_ln25_2_fu_273_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -1417,10 +1417,10 @@
             <Obj>
               <type>0</type>
               <id>36</id>
-              <name>zext_ln26_1</name>
+              <name>zext_ln25_1</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -1436,20 +1436,20 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln26_1_fu_281_p1</rtlName>
+              <rtlName>zext_ln25_1_fu_281_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2925993288</coreId>
+              <coreId>2811962496</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1505,7 +1505,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>176</coreId>
+              <coreId>2811984176</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -1534,7 +1534,7 @@
               <name>input_0_load_1</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -1550,7 +1550,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
@@ -1587,10 +1587,10 @@
             <Obj>
               <type>0</type>
               <id>39</id>
-              <name>sext_ln26_1</name>
+              <name>sext_ln25_1</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -1606,7 +1606,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
@@ -1619,7 +1619,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2925997416</coreId>
+              <coreId>2811987544</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>24</bitwidth>
@@ -1700,10 +1700,10 @@
             <Obj>
               <type>0</type>
               <id>41</id>
-              <name>select_ln26_3</name>
+              <name>select_ln25_3</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -1719,13 +1719,13 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>select_ln26_3_fu_292_p3</rtlName>
+              <rtlName>select_ln25_3_fu_292_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -1758,10 +1758,10 @@
             <Obj>
               <type>0</type>
               <id>42</id>
-              <name>zext_ln26_2</name>
+              <name>zext_ln25_2</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -1777,20 +1777,20 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln26_2_fu_341_p1</rtlName>
+              <rtlName>zext_ln25_2_fu_341_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2925999984</coreId>
+              <coreId>3569479720</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1846,7 +1846,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2925998640</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -1875,7 +1875,7 @@
               <name>input_0_load_2</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -1891,7 +1891,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
@@ -1928,10 +1928,10 @@
             <Obj>
               <type>0</type>
               <id>45</id>
-              <name>sext_ln26_2</name>
+              <name>sext_ln25_2</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -1947,7 +1947,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
@@ -1960,7 +1960,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926347920</coreId>
+              <coreId>2811991696</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>24</bitwidth>
@@ -1987,7 +1987,7 @@
               <name>j_cast</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -2003,7 +2003,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>26</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
@@ -2016,7 +2016,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>2812127184</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -2040,10 +2040,10 @@
             <Obj>
               <type>0</type>
               <id>48</id>
-              <name>zext_ln38</name>
+              <name>zext_ln37</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>38</lineNumber>
+              <lineNumber>37</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -2059,20 +2059,20 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>38</second>
+                      <second>37</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln38_fu_306_p1</rtlName>
+              <rtlName>zext_ln37_fu_306_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926394808</coreId>
+              <coreId>2812140768</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -2096,10 +2096,10 @@
             <Obj>
               <type>0</type>
               <id>49</id>
-              <name>add_ln38</name>
+              <name>add_ln37</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>38</lineNumber>
+              <lineNumber>37</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -2115,13 +2115,13 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>38</second>
+                      <second>37</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln38_fu_310_p2</rtlName>
+              <rtlName>add_ln37_fu_310_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -2153,10 +2153,10 @@
             <Obj>
               <type>0</type>
               <id>50</id>
-              <name>zext_ln38_1</name>
+              <name>zext_ln37_1</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>38</lineNumber>
+              <lineNumber>37</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -2172,20 +2172,20 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>38</second>
+                      <second>37</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln38_1_fu_398_p1</rtlName>
+              <rtlName>zext_ln37_1_fu_398_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3415726755</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -2212,7 +2212,7 @@
               <name>output_addr</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>38</lineNumber>
+              <lineNumber>37</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -2228,7 +2228,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>38</second>
+                      <second>37</second>
                     </item>
                   </second>
                 </item>
@@ -2241,7 +2241,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>2812127184</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -2299,7 +2299,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>176</coreId>
+              <coreId>2812145904</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>4</bitwidth>
@@ -2413,7 +2413,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926470288</coreId>
+              <coreId>480</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>24</bitwidth>
@@ -2462,7 +2462,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>mul_mul_16s_8s_24_4_1_U4</rtlName>
+              <rtlName>mul_mul_16s_8s_24_4_1_U16</rtlName>
               <control>auto</control>
               <opType>mul</opType>
               <implIndex>dsp48</implIndex>
@@ -2526,7 +2526,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926473056</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2585,7 +2585,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926455904</coreId>
+              <coreId>2812149520</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>24</bitwidth>
@@ -2757,7 +2757,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>2812155712</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>24</bitwidth>
@@ -2806,7 +2806,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>mac_muladd_16s_8s_24ns_24_4_1_U5</rtlName>
+              <rtlName>mac_muladd_16s_8s_24ns_24_4_1_U17</rtlName>
               <control>auto</control>
               <opType>mul</opType>
               <implIndex>dsp48</implIndex>
@@ -2863,7 +2863,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>mac_muladd_16s_8s_24ns_24_4_1_U5</rtlName>
+              <rtlName>mac_muladd_16s_8s_24ns_24_4_1_U17</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>dsp48</implIndex>
@@ -2927,7 +2927,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3415505401</coreId>
+              <coreId>2811911952</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2986,7 +2986,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1936683105</coreId>
+              <coreId>807414835</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>24</bitwidth>
@@ -3044,7 +3044,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>543516513</coreId>
+              <coreId>2811915072</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>4</bitwidth>
@@ -3158,7 +3158,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1819243365</coreId>
+              <coreId>1919950848</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>24</bitwidth>
@@ -3207,7 +3207,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>mac_muladd_16s_8s_24ns_24_4_1_U6</rtlName>
+              <rtlName>mac_muladd_16s_8s_24ns_24_4_1_U18</rtlName>
               <control>auto</control>
               <opType>mul</opType>
               <implIndex>dsp48</implIndex>
@@ -3264,7 +3264,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>mac_muladd_16s_8s_24ns_24_4_1_U6</rtlName>
+              <rtlName>mac_muladd_16s_8s_24ns_24_4_1_U18</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>dsp48</implIndex>
@@ -3328,7 +3328,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>176</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -3387,7 +3387,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926342064</coreId>
+              <coreId>2811923744</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>4</bitwidth>
@@ -3501,7 +3501,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1007225406</coreId>
+              <coreId>1663985010</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -3616,7 +3616,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926347760</coreId>
+              <coreId>2811929440</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>15</bitwidth>
@@ -3869,10 +3869,10 @@
             <Obj>
               <type>0</type>
               <id>81</id>
-              <name>output_addr_write_ln38</name>
+              <name>output_addr_write_ln37</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>38</lineNumber>
+              <lineNumber>37</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -3888,7 +3888,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>38</second>
+                      <second>37</second>
                     </item>
                   </second>
                 </item>
@@ -3926,10 +3926,10 @@
             <Obj>
               <type>0</type>
               <id>82</id>
-              <name>add_ln28</name>
+              <name>add_ln27</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>28</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -3945,13 +3945,13 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>28</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln28_fu_316_p2</rtlName>
+              <rtlName>add_ln27_fu_316_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -3983,10 +3983,10 @@
             <Obj>
               <type>0</type>
               <id>83</id>
-              <name>indvar_flatten_write_ln28</name>
+              <name>indvar_flatten_write_ln27</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>28</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -4002,7 +4002,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>28</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -4015,7 +4015,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>480</coreId>
+              <coreId>1852402789</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -4042,10 +4042,10 @@
             <Obj>
               <type>0</type>
               <id>84</id>
-              <name>i_write_ln28</name>
+              <name>i_write_ln27</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>28</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -4061,7 +4061,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>28</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -4074,7 +4074,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>825899058</coreId>
+              <coreId>1031369833</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -4101,10 +4101,10 @@
             <Obj>
               <type>0</type>
               <id>85</id>
-              <name>j_write_ln28</name>
+              <name>j_write_ln27</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>28</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -4120,7 +4120,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>28</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -4133,7 +4133,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1702258035</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -4160,10 +4160,10 @@
             <Obj>
               <type>0</type>
               <id>86</id>
-              <name>br_ln28</name>
+              <name>br_ln27</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>28</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -4179,7 +4179,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>28</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -4192,7 +4192,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926360160</coreId>
+              <coreId>1852390259</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -4216,10 +4216,10 @@
             <Obj>
               <type>0</type>
               <id>88</id>
-              <name>_ln41</name>
+              <name>_ln40</name>
               <fileName>vitis_test/nnet/core.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>41</lineNumber>
+              <lineNumber>40</lineNumber>
               <contextFuncName>conv1d_0</contextFuncName>
               <contextNormFuncName>conv1d_0</contextNormFuncName>
               <inlineStackInfo>
@@ -4235,7 +4235,7 @@
                         <first>vitis_test/nnet/core.cpp</first>
                         <second>conv1d_0</second>
                       </first>
-                      <second>41</second>
+                      <second>40</second>
                     </item>
                   </second>
                 </item>
@@ -4248,7 +4248,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926318144</coreId>
+              <coreId>1885548133</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -4457,7 +4457,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926336096</coreId>
+              <coreId>2811917392</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -4519,7 +4519,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926362944</coreId>
+              <coreId>1180195618</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -4550,7 +4550,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926363600</coreId>
+              <coreId>1769234797</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -4581,7 +4581,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1629513844</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -4612,7 +4612,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1413567571</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -4643,7 +4643,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926365728</coreId>
+              <coreId>1380012127</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -4674,7 +4674,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>784</coreId>
+              <coreId>6107442</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -4705,7 +4705,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1330007625</coreId>
+              <coreId>1629888521</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>4</bitwidth>
@@ -4736,7 +4736,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2925720080</coreId>
+              <coreId>543649385</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -4767,7 +4767,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>176</coreId>
+              <coreId>1952673397</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -4798,7 +4798,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3415620253</coreId>
+              <coreId>1852714868</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -4829,7 +4829,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926370560</coreId>
+              <coreId>2811648032</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -4860,7 +4860,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926372448</coreId>
+              <coreId>2811749280</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -4891,7 +4891,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926372720</coreId>
+              <coreId>1948279909</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -4922,7 +4922,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926367520</coreId>
+              <coreId>1145391171</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -4953,7 +4953,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2926358480</coreId>
+              <coreId>1313423906</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -4984,7 +4984,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>875650866</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>15</bitwidth>
@@ -5015,7 +5015,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>304</coreId>
+              <coreId>1701081711</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -5120,7 +5120,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>52</coreId>
+            <coreId>2811906112</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -5212,7 +5212,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>2926361120</coreId>
+            <coreId>1446736751</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -6316,8 +6316,8 @@
       </item>
       <item class_id_reference="22" object_id="_254">
         <mId>3</mId>
-        <mTag>VITIS_LOOP_26_1_VITIS_LOOP_28_2</mTag>
-        <mNormTag>VITIS_LOOP_26_1_VITIS_LOOP_28_2</mNormTag>
+        <mTag>VITIS_LOOP_25_1_VITIS_LOOP_27_2</mTag>
+        <mNormTag>VITIS_LOOP_25_1_VITIS_LOOP_27_2</mNormTag>
         <mType>1</mType>
         <sub_regions>
           <count>0</count>
@@ -7094,7 +7094,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln26_fu_214_p2 ( + ) </first>
+          <first>add_ln25_fu_214_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -7117,7 +7117,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln28_fu_316_p2 ( + ) </first>
+          <first>add_ln27_fu_316_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -7140,7 +7140,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln38_fu_310_p2 ( + ) </first>
+          <first>add_ln37_fu_310_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -7255,7 +7255,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln26_fu_208_p2 ( icmp ) </first>
+          <first>icmp_ln25_fu_208_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -7278,7 +7278,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln28_fu_226_p2 ( icmp ) </first>
+          <first>icmp_ln27_fu_226_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -7328,7 +7328,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln26_1_fu_246_p3 ( select ) </first>
+          <first>select_ln25_1_fu_246_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -7355,7 +7355,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln26_2_fu_273_p3 ( select ) </first>
+          <first>select_ln25_2_fu_273_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -7382,7 +7382,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln26_3_fu_292_p3 ( select ) </first>
+          <first>select_ln25_3_fu_292_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -7409,7 +7409,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln26_fu_232_p3 ( select ) </first>
+          <first>select_ln25_fu_232_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -7937,7 +7937,7 @@
         <count>20</count>
         <item_version>0</item_version>
         <item>
-          <first>add_ln38_reg_525</first>
+          <first>add_ln37_reg_525</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -8165,7 +8165,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln26_reg_500</first>
+          <first>icmp_ln25_reg_500</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -8184,7 +8184,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln26_reg_500_pp0_iter1_reg</first>
+          <first>icmp_ln25_reg_500_pp0_iter1_reg</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -8298,7 +8298,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln26_3_reg_514</first>
+          <first>select_ln25_3_reg_514</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -8328,7 +8328,7 @@
           </second>
         </item>
         <item>
-          <first>mac_muladd_16s_8s_24ns_24_4_1_U5</first>
+          <first>mac_muladd_16s_8s_24ns_24_4_1_U17</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8339,7 +8339,7 @@
           </second>
         </item>
         <item>
-          <first>mac_muladd_16s_8s_24ns_24_4_1_U6</first>
+          <first>mac_muladd_16s_8s_24ns_24_4_1_U18</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8350,7 +8350,7 @@
           </second>
         </item>
         <item>
-          <first>mul_mul_16s_8s_24_4_1_U4</first>
+          <first>mul_mul_16s_8s_24_4_1_U16</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8401,7 +8401,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln26_fu_214_p2 ( + ) </first>
+          <first>add_ln25_fu_214_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8409,7 +8409,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln28_fu_316_p2 ( + ) </first>
+          <first>add_ln27_fu_316_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8417,7 +8417,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln38_fu_310_p2 ( + ) </first>
+          <first>add_ln37_fu_310_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8433,7 +8433,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln26_fu_208_p2 ( icmp ) </first>
+          <first>icmp_ln25_fu_208_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8441,7 +8441,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln28_fu_226_p2 ( icmp ) </first>
+          <first>icmp_ln27_fu_226_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8457,7 +8457,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln26_1_fu_246_p3 ( select ) </first>
+          <first>select_ln25_1_fu_246_p3 ( select ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8465,7 +8465,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln26_2_fu_273_p3 ( select ) </first>
+          <first>select_ln25_2_fu_273_p3 ( select ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8473,7 +8473,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln26_3_fu_292_p3 ( select ) </first>
+          <first>select_ln25_3_fu_292_p3 ( select ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8481,7 +8481,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln26_fu_232_p3 ( select ) </first>
+          <first>select_ln25_fu_232_p3 ( select ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -9124,7 +9124,7 @@
       <count>1</count>
       <item_version>0</item_version>
       <item class_id="48" tracking_level="1" version="0" object_id="_366">
-        <region_name>VITIS_LOOP_26_1_VITIS_LOOP_28_2</region_name>
+        <region_name>VITIS_LOOP_25_1_VITIS_LOOP_27_2</region_name>
         <basic_blocks>
           <count>2</count>
           <item_version>0</item_version>
@@ -9768,7 +9768,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln26_fu_214</first>
+        <first>add_ln25_fu_214</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -9776,7 +9776,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln28_fu_316</first>
+        <first>add_ln27_fu_316</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -9784,7 +9784,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln38_fu_310</first>
+        <first>add_ln37_fu_310</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -9864,7 +9864,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln26_fu_208</first>
+        <first>icmp_ln25_fu_208</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -9872,7 +9872,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln28_fu_226</first>
+        <first>icmp_ln27_fu_226</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -9944,7 +9944,7 @@
         </second>
       </item>
       <item>
-        <first>select_ln26_1_fu_246</first>
+        <first>select_ln25_1_fu_246</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -9952,7 +9952,7 @@
         </second>
       </item>
       <item>
-        <first>select_ln26_2_fu_273</first>
+        <first>select_ln25_2_fu_273</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -9960,7 +9960,7 @@
         </second>
       </item>
       <item>
-        <first>select_ln26_3_fu_292</first>
+        <first>select_ln25_3_fu_292</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -9968,7 +9968,7 @@
         </second>
       </item>
       <item>
-        <first>select_ln26_fu_232</first>
+        <first>select_ln25_fu_232</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10000,7 +10000,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln26_1_fu_349</first>
+        <first>sext_ln25_1_fu_349</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10008,7 +10008,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln26_2_fu_356</first>
+        <first>sext_ln25_2_fu_356</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10016,7 +10016,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln26_fu_337</first>
+        <first>sext_ln25_fu_337</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10080,7 +10080,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln26_1_fu_281</first>
+        <first>zext_ln25_1_fu_281</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10088,7 +10088,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln26_2_fu_341</first>
+        <first>zext_ln25_2_fu_341</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10096,7 +10096,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln26_fu_262</first>
+        <first>zext_ln25_fu_262</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10104,7 +10104,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln38_1_fu_398</first>
+        <first>zext_ln37_1_fu_398</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10112,7 +10112,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln38_fu_306</first>
+        <first>zext_ln37_fu_306</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10187,7 +10187,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln26_store_fu_190</first>
+        <first>store_ln25_store_fu_190</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10195,7 +10195,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln26_store_fu_195</first>
+        <first>store_ln25_store_fu_195</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10203,7 +10203,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln26_store_fu_200</first>
+        <first>store_ln25_store_fu_200</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10211,7 +10211,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln28_store_fu_322</first>
+        <first>store_ln27_store_fu_322</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10219,7 +10219,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln28_store_fu_327</first>
+        <first>store_ln27_store_fu_327</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10227,7 +10227,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln28_store_fu_332</first>
+        <first>store_ln27_store_fu_332</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10537,7 +10537,7 @@
       <count>25</count>
       <item_version>0</item_version>
       <item>
-        <first>add_ln38_reg_525</first>
+        <first>add_ln37_reg_525</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10617,7 +10617,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln26_reg_500</first>
+        <first>icmp_ln25_reg_500</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10682,7 +10682,7 @@
         </second>
       </item>
       <item>
-        <first>select_ln26_3_reg_514</first>
+        <first>select_ln25_3_reg_514</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10714,7 +10714,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln26_1_reg_560</first>
+        <first>sext_ln25_1_reg_560</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10722,7 +10722,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln26_2_reg_575</first>
+        <first>sext_ln25_2_reg_575</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10730,7 +10730,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln26_reg_540</first>
+        <first>sext_ln25_reg_540</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

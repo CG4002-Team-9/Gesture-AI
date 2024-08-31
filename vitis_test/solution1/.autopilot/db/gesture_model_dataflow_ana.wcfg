@@ -37,21 +37,21 @@
          <obj_property name="Render_Data">/apatb_gesture_model_top/AESL_inst_gesture_model//AESL_inst_gesture_model_activity.dataflowTxWaveData.Cycles</obj_property>
          <obj_property name="Value_Data">/apatb_gesture_model_top/AESL_inst_gesture_model//AESL_inst_gesture_model_activity.dataflowTxWaveData.OutStanding</obj_property>
          <obj_property name="Detail_Data">/apatb_gesture_model_top/AESL_inst_gesture_model//AESL_inst_gesture_model_activity.dataflowTxTooltipData</obj_property>
-         <wvobject type="group" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_149_1_proc8_U0/Loop_VITIS_LOOP_149_1_proc8_U0_activity">
-            <obj_property name="label">Loop_VITIS_LOOP_149_1_proc8_U0_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_147_1_proc9_U0/Loop_VITIS_LOOP_147_1_proc9_U0_activity">
+            <obj_property name="label">Loop_VITIS_LOOP_147_1_proc9_U0_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">Loop_VITIS_LOOP_149_1_proc8_U0_activity</obj_property>
-            <obj_property name="ObjectShortName">Loop_VITIS_LOOP_149_1_proc8_U0_activity</obj_property>
+            <obj_property name="ElementShortName">Loop_VITIS_LOOP_147_1_proc9_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">Loop_VITIS_LOOP_147_1_proc9_U0_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_149_1_proc8_U0/Loop_VITIS_LOOP_149_1_proc8_U0_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_149_1_proc8_U0/Loop_VITIS_LOOP_149_1_proc8_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_149_1_proc8_U0/Loop_VITIS_LOOP_149_1_proc8_U0_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_147_1_proc9_U0/Loop_VITIS_LOOP_147_1_proc9_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_147_1_proc9_U0/Loop_VITIS_LOOP_147_1_proc9_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_147_1_proc9_U0/Loop_VITIS_LOOP_147_1_proc9_U0_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
          <wvobject type="group" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/conv1d_0_U0/conv1d_0_U0_activity">
             <obj_property name="label">conv1d_0_U0_activity</obj_property>
@@ -101,21 +101,21 @@
             <obj_property name="Value_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/max_pooling1d_0_U0/max_pooling1d_0_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
             <obj_property name="Detail_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/max_pooling1d_0_U0/max_pooling1d_0_U0_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/Loop_VITIS_LOOP_79_1_proc_U0_activity">
-            <obj_property name="label">Loop_VITIS_LOOP_79_1_proc_U0_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/Loop_VITIS_LOOP_77_1_proc_U0_activity">
+            <obj_property name="label">Loop_VITIS_LOOP_77_1_proc_U0_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">Loop_VITIS_LOOP_79_1_proc_U0_activity</obj_property>
-            <obj_property name="ObjectShortName">Loop_VITIS_LOOP_79_1_proc_U0_activity</obj_property>
+            <obj_property name="ElementShortName">Loop_VITIS_LOOP_77_1_proc_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">Loop_VITIS_LOOP_77_1_proc_U0_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/Loop_VITIS_LOOP_79_1_proc_U0_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/Loop_VITIS_LOOP_79_1_proc_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/Loop_VITIS_LOOP_79_1_proc_U0_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/Loop_VITIS_LOOP_77_1_proc_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/Loop_VITIS_LOOP_77_1_proc_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/Loop_VITIS_LOOP_77_1_proc_U0_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
          <wvobject type="group" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_0_U0/dense_0_U0_activity">
             <obj_property name="label">dense_0_U0_activity</obj_property>
@@ -164,70 +164,102 @@
             <obj_property name="Render_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/dense_1_U0_activity.dataflowTxWaveData.Cycles</obj_property>
             <obj_property name="Value_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/dense_1_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
             <obj_property name="Detail_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/dense_1_U0_activity.dataflowTxTooltipData</obj_property>
-            <wvobject type="group" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233_activity">
-               <obj_property name="label">grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233_activity</obj_property>
+            <wvobject type="group" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233_activity">
+               <obj_property name="label">grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233_activity</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <obj_property name="UseFullPath">true</obj_property>
-               <obj_property name="ElementShortName">grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233_activity</obj_property>
-               <obj_property name="ObjectShortName">grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233_activity</obj_property>
+               <obj_property name="ElementShortName">grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233_activity</obj_property>
                <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
                <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
                <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
                <obj_property name="UseCustomSignalColor">true</obj_property>
                <obj_property name="CustomSignalColor">turquoise</obj_property>
                <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-               <obj_property name="Render_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233_activity.dataflowTxWaveData.Cycles</obj_property>
-               <obj_property name="Value_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233_activity.dataflowTxWaveData.OutStanding</obj_property>
-               <obj_property name="Detail_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233_activity.dataflowTxTooltipData</obj_property>
+               <obj_property name="Render_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233_activity.dataflowTxTooltipData</obj_property>
             </wvobject>
-            <wvobject type="group" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291/grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291_activity">
-               <obj_property name="label">grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291_activity</obj_property>
+            <wvobject type="group" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291/grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291_activity">
+               <obj_property name="label">grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291_activity</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <obj_property name="UseFullPath">true</obj_property>
-               <obj_property name="ElementShortName">grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291_activity</obj_property>
-               <obj_property name="ObjectShortName">grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291_activity</obj_property>
+               <obj_property name="ElementShortName">grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291_activity</obj_property>
                <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
                <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
                <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
                <obj_property name="UseCustomSignalColor">true</obj_property>
                <obj_property name="CustomSignalColor">turquoise</obj_property>
                <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-               <obj_property name="Render_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291/grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291_activity.dataflowTxWaveData.Cycles</obj_property>
-               <obj_property name="Value_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291/grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291_activity.dataflowTxWaveData.OutStanding</obj_property>
-               <obj_property name="Detail_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291/grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291_activity.dataflowTxTooltipData</obj_property>
+               <obj_property name="Render_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291/grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291/grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291/grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291_activity.dataflowTxTooltipData</obj_property>
             </wvobject>
-            <wvobject type="group" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298/grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298_activity">
-               <obj_property name="label">grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298_activity</obj_property>
+            <wvobject type="group" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298/grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298_activity">
+               <obj_property name="label">grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298_activity</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <obj_property name="UseFullPath">true</obj_property>
-               <obj_property name="ElementShortName">grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298_activity</obj_property>
-               <obj_property name="ObjectShortName">grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298_activity</obj_property>
+               <obj_property name="ElementShortName">grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298_activity</obj_property>
                <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
                <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
                <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
                <obj_property name="UseCustomSignalColor">true</obj_property>
                <obj_property name="CustomSignalColor">turquoise</obj_property>
                <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-               <obj_property name="Render_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298/grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298_activity.dataflowTxWaveData.Cycles</obj_property>
-               <obj_property name="Value_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298/grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298_activity.dataflowTxWaveData.OutStanding</obj_property>
-               <obj_property name="Detail_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298/grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298_activity.dataflowTxTooltipData</obj_property>
+               <obj_property name="Render_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298/grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298/grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298/grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298_activity.dataflowTxTooltipData</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_166_3_proc9_U0/Loop_VITIS_LOOP_166_3_proc9_U0_activity">
-            <obj_property name="label">Loop_VITIS_LOOP_166_3_proc9_U0_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/Loop_VITIS_LOOP_167_3_proc_U0_activity">
+            <obj_property name="label">Loop_VITIS_LOOP_167_3_proc_U0_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">Loop_VITIS_LOOP_166_3_proc9_U0_activity</obj_property>
-            <obj_property name="ObjectShortName">Loop_VITIS_LOOP_166_3_proc9_U0_activity</obj_property>
+            <obj_property name="ElementShortName">Loop_VITIS_LOOP_167_3_proc_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">Loop_VITIS_LOOP_167_3_proc_U0_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_166_3_proc9_U0/Loop_VITIS_LOOP_166_3_proc9_U0_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_166_3_proc9_U0/Loop_VITIS_LOOP_166_3_proc9_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_166_3_proc9_U0/Loop_VITIS_LOOP_166_3_proc9_U0_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/Loop_VITIS_LOOP_167_3_proc_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/Loop_VITIS_LOOP_167_3_proc_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/Loop_VITIS_LOOP_167_3_proc_U0_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32/grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32_activity">
+               <obj_property name="label">grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32/grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32/grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32/grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Block_for_end111_proc_U0/Block_for_end111_proc_U0_activity">
+            <obj_property name="label">Block_for_end111_proc_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">Block_for_end111_proc_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">Block_for_end111_proc_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Block_for_end111_proc_U0/Block_for_end111_proc_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Block_for_end111_proc_U0/Block_for_end111_proc_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_gesture_model_top/AESL_inst_gesture_model/Block_for_end111_proc_U0/Block_for_end111_proc_U0_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
       </wvobject>
    </wvobject>
@@ -238,9 +270,9 @@
    <wvobject type="group" fp_name="AESL_inst_gesture_model_group">
       <obj_property name="label">AESL_inst_gesture_model</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="protoinst" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_149_1_proc8_U0/Loop_VITIS_LOOP_149_1_proc8_U0_activity">
-         <obj_property name="ElementShortName">Loop_VITIS_LOOP_149_1_proc8_U0_activity</obj_property>
-         <obj_property name="ObjectShortName">Loop_VITIS_LOOP_149_1_proc8_U0_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_147_1_proc9_U0/Loop_VITIS_LOOP_147_1_proc9_U0_activity">
+         <obj_property name="ElementShortName">Loop_VITIS_LOOP_147_1_proc9_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">Loop_VITIS_LOOP_147_1_proc9_U0_activity</obj_property>
       </wvobject>
       <wvobject type="protoinst" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/conv1d_0_U0/conv1d_0_U0_activity">
          <obj_property name="ElementShortName">conv1d_0_U0_activity</obj_property>
@@ -254,9 +286,9 @@
          <obj_property name="ElementShortName">max_pooling1d_0_U0_activity</obj_property>
          <obj_property name="ObjectShortName">max_pooling1d_0_U0_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/Loop_VITIS_LOOP_79_1_proc_U0_activity">
-         <obj_property name="ElementShortName">Loop_VITIS_LOOP_79_1_proc_U0_activity</obj_property>
-         <obj_property name="ObjectShortName">Loop_VITIS_LOOP_79_1_proc_U0_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/Loop_VITIS_LOOP_77_1_proc_U0_activity">
+         <obj_property name="ElementShortName">Loop_VITIS_LOOP_77_1_proc_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">Loop_VITIS_LOOP_77_1_proc_U0_activity</obj_property>
       </wvobject>
       <wvobject type="protoinst" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_0_U0/dense_0_U0_activity">
          <obj_property name="ElementShortName">dense_0_U0_activity</obj_property>
@@ -270,9 +302,13 @@
          <obj_property name="ElementShortName">dense_1_U0_activity</obj_property>
          <obj_property name="ObjectShortName">dense_1_U0_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_166_3_proc9_U0/Loop_VITIS_LOOP_166_3_proc9_U0_activity">
-         <obj_property name="ElementShortName">Loop_VITIS_LOOP_166_3_proc9_U0_activity</obj_property>
-         <obj_property name="ObjectShortName">Loop_VITIS_LOOP_166_3_proc9_U0_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/Loop_VITIS_LOOP_167_3_proc_U0_activity">
+         <obj_property name="ElementShortName">Loop_VITIS_LOOP_167_3_proc_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">Loop_VITIS_LOOP_167_3_proc_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Block_for_end111_proc_U0/Block_for_end111_proc_U0_activity">
+         <obj_property name="ElementShortName">Block_for_end111_proc_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">Block_for_end111_proc_U0_activity</obj_property>
       </wvobject>
       <wvobject type="group" fp_name="AESL_inst_gesture_model_Handshake_group">
          <obj_property name="label">Block-level handshake</obj_property>
@@ -290,58 +326,58 @@
             <obj_property name="ObjectShortName">ap_done</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="Loop_VITIS_LOOP_149_1_proc8_U0_group">
-         <obj_property name="label">Loop_VITIS_LOOP_149_1_proc8_U0</obj_property>
+      <wvobject type="group" fp_name="Loop_VITIS_LOOP_147_1_proc9_U0_group">
+         <obj_property name="label">Loop_VITIS_LOOP_147_1_proc9_U0</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="Loop_VITIS_LOOP_149_1_proc8_U0_Input_group">
+         <wvobject type="group" fp_name="Loop_VITIS_LOOP_147_1_proc9_U0_Input_group">
             <obj_property name="label">Input Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="Loop_VITIS_LOOP_149_1_proc8_U0_Handshake_group">
+         <wvobject type="group" fp_name="Loop_VITIS_LOOP_147_1_proc9_U0_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_149_1_proc8_U0/ap_start">
+            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_147_1_proc9_U0/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_149_1_proc8_U0/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_147_1_proc9_U0/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_149_1_proc8_U0/ap_done">
+            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_147_1_proc9_U0/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_149_1_proc8_U0/ap_continue">
+            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_147_1_proc9_U0/ap_continue">
                <obj_property name="ElementShortName">ap_continue</obj_property>
                <obj_property name="ObjectShortName">ap_continue</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="Loop_VITIS_LOOP_149_1_proc8_U0_Output_group">
+         <wvobject type="group" fp_name="Loop_VITIS_LOOP_147_1_proc9_U0_Output_group">
             <obj_property name="label">Output Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject type="group" fp_name="input_V_0_group">
                <obj_property name="label">input_V_0(input_V_0_U, PIPO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_149_1_proc8_U0/input_V_0_address0">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_147_1_proc9_U0/input_V_0_address0">
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_149_1_proc8_U0/input_V_0_d0">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_147_1_proc9_U0/input_V_0_d0">
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_149_1_proc8_U0/input_V_0_ce0">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_147_1_proc9_U0/input_V_0_ce0">
                   <obj_property name="ElementShortName">input_V_0_ce0</obj_property>
                   <obj_property name="ObjectShortName">input_V_0_ce0</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_149_1_proc8_U0/input_V_0_we0">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_147_1_proc9_U0/input_V_0_we0">
                   <obj_property name="ElementShortName">input_V_0_we0</obj_property>
                   <obj_property name="ObjectShortName">input_V_0_we0</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_149_1_proc8_U0/ap_done">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_147_1_proc9_U0/ap_done">
                   <obj_property name="ElementShortName">ap_done</obj_property>
                   <obj_property name="ObjectShortName">ap_done</obj_property>
                   <obj_property name="label">ap_done(i_write)</obj_property>
                   <obj_property name="DisplayName">label</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_149_1_proc8_U0/ap_continue">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_147_1_proc9_U0/ap_continue">
                   <obj_property name="ElementShortName">ap_continue</obj_property>
                   <obj_property name="ObjectShortName">ap_continue</obj_property>
                   <obj_property name="label">ap_continue(i_full_n)</obj_property>
@@ -728,24 +764,24 @@
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="Loop_VITIS_LOOP_79_1_proc_U0_group">
-         <obj_property name="label">Loop_VITIS_LOOP_79_1_proc_U0</obj_property>
+      <wvobject type="group" fp_name="Loop_VITIS_LOOP_77_1_proc_U0_group">
+         <obj_property name="label">Loop_VITIS_LOOP_77_1_proc_U0</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="Loop_VITIS_LOOP_79_1_proc_U0_Input_group">
+         <wvobject type="group" fp_name="Loop_VITIS_LOOP_77_1_proc_U0_Input_group">
             <obj_property name="label">Input Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject type="group" fp_name="max_pool_out_0_V_group">
                <obj_property name="label">max_pool_out_0_V(max_pool_out_0_V_U, PIPO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/max_pool_out_0_V_address0">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/max_pool_out_0_V_address0">
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/max_pool_out_0_V_q0">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/max_pool_out_0_V_q0">
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/max_pool_out_0_V_ce0">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/max_pool_out_0_V_ce0">
                   <obj_property name="ElementShortName">max_pool_out_0_V_ce0</obj_property>
                   <obj_property name="ObjectShortName">max_pool_out_0_V_ce0</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/ap_ready">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/ap_ready">
                   <obj_property name="ElementShortName">ap_ready</obj_property>
                   <obj_property name="ObjectShortName">ap_ready</obj_property>
                   <obj_property name="label">ap_ready(t_read)</obj_property>
@@ -753,51 +789,51 @@
                </wvobject>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="Loop_VITIS_LOOP_79_1_proc_U0_Handshake_group">
+         <wvobject type="group" fp_name="Loop_VITIS_LOOP_77_1_proc_U0_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/ap_start">
+            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/ap_done">
+            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/ap_continue">
+            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/ap_continue">
                <obj_property name="ElementShortName">ap_continue</obj_property>
                <obj_property name="ObjectShortName">ap_continue</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="Loop_VITIS_LOOP_79_1_proc_U0_Output_group">
+         <wvobject type="group" fp_name="Loop_VITIS_LOOP_77_1_proc_U0_Output_group">
             <obj_property name="label">Output Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject type="group" fp_name="flatten_out_0_V_group">
                <obj_property name="label">flatten_out_0_V(flatten_out_0_V_U, PIPO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/flatten_out_0_V_address0">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/flatten_out_0_V_address0">
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/flatten_out_0_V_d0">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/flatten_out_0_V_d0">
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/flatten_out_0_V_ce0">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/flatten_out_0_V_ce0">
                   <obj_property name="ElementShortName">flatten_out_0_V_ce0</obj_property>
                   <obj_property name="ObjectShortName">flatten_out_0_V_ce0</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/flatten_out_0_V_we0">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/flatten_out_0_V_we0">
                   <obj_property name="ElementShortName">flatten_out_0_V_we0</obj_property>
                   <obj_property name="ObjectShortName">flatten_out_0_V_we0</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/ap_done">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/ap_done">
                   <obj_property name="ElementShortName">ap_done</obj_property>
                   <obj_property name="ObjectShortName">ap_done</obj_property>
                   <obj_property name="label">ap_done(i_write)</obj_property>
                   <obj_property name="DisplayName">label</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_79_1_proc_U0/ap_continue">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_77_1_proc_U0/ap_continue">
                   <obj_property name="ElementShortName">ap_continue</obj_property>
                   <obj_property name="ObjectShortName">ap_continue</obj_property>
                   <obj_property name="label">ap_continue(i_full_n)</obj_property>
@@ -1073,17 +1109,17 @@
       <wvobject type="group" fp_name="dense_1_U0_group">
          <obj_property name="label">dense_1_U0</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="protoinst" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233_activity">
-            <obj_property name="ElementShortName">grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233_activity</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233_activity">
+            <obj_property name="ElementShortName">grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233_activity</obj_property>
          </wvobject>
-         <wvobject type="protoinst" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291/grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291_activity">
-            <obj_property name="ElementShortName">grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291_activity</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291/grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291_activity">
+            <obj_property name="ElementShortName">grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291_activity</obj_property>
          </wvobject>
-         <wvobject type="protoinst" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298/grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298_activity">
-            <obj_property name="ElementShortName">grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298_activity</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298/grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298_activity">
+            <obj_property name="ElementShortName">grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298_activity</obj_property>
          </wvobject>
          <wvobject type="group" fp_name="dense_1_U0_Input_group">
             <obj_property name="label">Input Channels</obj_property>
@@ -1437,85 +1473,89 @@
             <obj_property name="label">Output Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233_group">
-            <obj_property name="label">grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233</obj_property>
+         <wvobject type="group" fp_name="grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233_group">
+            <obj_property name="label">grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="group" fp_name="grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233_Handshake_group">
+            <wvobject type="group" fp_name="grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233_Handshake_group">
                <obj_property name="label">Block-level handshake</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/ap_start">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/ap_start">
                   <obj_property name="ElementShortName">ap_start</obj_property>
                   <obj_property name="ObjectShortName">ap_start</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/ap_ready">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/ap_ready">
                   <obj_property name="ElementShortName">ap_ready</obj_property>
                   <obj_property name="ObjectShortName">ap_ready</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_111_1_fu_233/ap_done">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/ap_done">
                   <obj_property name="ElementShortName">ap_done</obj_property>
                   <obj_property name="ObjectShortName">ap_done</obj_property>
                </wvobject>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291_group">
-            <obj_property name="label">grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291</obj_property>
+         <wvobject type="group" fp_name="grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291_group">
+            <obj_property name="label">grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="group" fp_name="grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291_Handshake_group">
+            <wvobject type="group" fp_name="grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291_Handshake_group">
                <obj_property name="label">Block-level handshake</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291/ap_start">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291/ap_start">
                   <obj_property name="ElementShortName">ap_start</obj_property>
                   <obj_property name="ObjectShortName">ap_start</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291/ap_ready">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291/ap_ready">
                   <obj_property name="ElementShortName">ap_ready</obj_property>
                   <obj_property name="ObjectShortName">ap_ready</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_122_3_fu_291/ap_done">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291/ap_done">
                   <obj_property name="ElementShortName">ap_done</obj_property>
                   <obj_property name="ObjectShortName">ap_done</obj_property>
                </wvobject>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298_group">
-            <obj_property name="label">grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298</obj_property>
+         <wvobject type="group" fp_name="grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298_group">
+            <obj_property name="label">grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="group" fp_name="grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298_Handshake_group">
+            <wvobject type="group" fp_name="grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298_Handshake_group">
                <obj_property name="label">Block-level handshake</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298/ap_start">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298/ap_start">
                   <obj_property name="ElementShortName">ap_start</obj_property>
                   <obj_property name="ObjectShortName">ap_start</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298/ap_ready">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298/ap_ready">
                   <obj_property name="ElementShortName">ap_ready</obj_property>
                   <obj_property name="ObjectShortName">ap_ready</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_126_4_fu_298/ap_done">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298/ap_done">
                   <obj_property name="ElementShortName">ap_done</obj_property>
                   <obj_property name="ObjectShortName">ap_done</obj_property>
                </wvobject>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="Loop_VITIS_LOOP_166_3_proc9_U0_group">
-         <obj_property name="label">Loop_VITIS_LOOP_166_3_proc9_U0</obj_property>
+      <wvobject type="group" fp_name="Loop_VITIS_LOOP_167_3_proc_U0_group">
+         <obj_property name="label">Loop_VITIS_LOOP_167_3_proc_U0</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="Loop_VITIS_LOOP_166_3_proc9_U0_Input_group">
+         <wvobject type="protoinst" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32/grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32_activity">
+            <obj_property name="ElementShortName">grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="Loop_VITIS_LOOP_167_3_proc_U0_Input_group">
             <obj_property name="label">Input Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject type="group" fp_name="output_V_group">
                <obj_property name="label">output_V(output_V_U, PIPO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_166_3_proc9_U0/output_V_address0">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/output_V_address0">
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_166_3_proc9_U0/output_V_q0">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/output_V_q0">
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_166_3_proc9_U0/output_V_ce0">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/output_V_ce0">
                   <obj_property name="ElementShortName">output_V_ce0</obj_property>
                   <obj_property name="ObjectShortName">output_V_ce0</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_166_3_proc9_U0/ap_ready">
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/ap_ready">
                   <obj_property name="ElementShortName">ap_ready</obj_property>
                   <obj_property name="ObjectShortName">ap_ready</obj_property>
                   <obj_property name="label">ap_ready(t_read)</obj_property>
@@ -1523,27 +1563,79 @@
                </wvobject>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="Loop_VITIS_LOOP_166_3_proc9_U0_Handshake_group">
+         <wvobject type="group" fp_name="Loop_VITIS_LOOP_167_3_proc_U0_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_166_3_proc9_U0/ap_start">
+            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_166_3_proc9_U0/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_166_3_proc9_U0/ap_done">
+            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_166_3_proc9_U0/ap_continue">
+            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/ap_continue">
                <obj_property name="ElementShortName">ap_continue</obj_property>
                <obj_property name="ObjectShortName">ap_continue</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="Loop_VITIS_LOOP_166_3_proc9_U0_Output_group">
+         <wvobject type="group" fp_name="Loop_VITIS_LOOP_167_3_proc_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32_group">
+            <obj_property name="label">grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Loop_VITIS_LOOP_167_3_proc_U0/grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="Block_for_end111_proc_U0_group">
+         <obj_property name="label">Block_for_end111_proc_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="Block_for_end111_proc_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="Block_for_end111_proc_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Block_for_end111_proc_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Block_for_end111_proc_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Block_for_end111_proc_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_gesture_model_top/AESL_inst_gesture_model/Block_for_end111_proc_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="Block_for_end111_proc_U0_Output_group">
             <obj_property name="label">Output Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
          </wvobject>

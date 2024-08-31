@@ -1,196 +1,275 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1724958115506">
-  <ports id="1" name="input_stream" type="PortType" originalName="input_stream" coreId="1885414944" bitwidth="16">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1725104217061">
+  <ports id="1" name="input_stream_V_data_V" type="PortType" originalName="input_stream" coreId="1885414944" bitwidth="32">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="output_stream" type="PortType" originalName="output_stream" coreId="2932551984" bitwidth="16" direction="DirOut">
+  <ports id="2" name="input_stream_V_keep_V" type="PortType" originalName="input_stream" coreId="139" bitwidth="4">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="3" name="input_stream_V_strb_V" type="PortType" originalName="input_stream" coreId="2620469712" bitwidth="4">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="4" name="input_stream_V_user_V" type="PortType" originalName="input_stream" coreId="4294967040" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="5" name="input_stream_V_last_V" type="PortType" originalName="input_stream" coreId="2620356768" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="6" name="input_stream_V_id_V" type="PortType" originalName="input_stream" coreId="4014326701" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="7" name="input_stream_V_dest_V" type="PortType" originalName="input_stream" coreId="2619007888" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="8" name="output_stream_V_data_V" type="PortType" originalName="output_stream" coreId="2619075792" bitwidth="32" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <edges id="71" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
-  <edges id="72" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
-  <edges id="75" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
-  <edges id="76" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
-  <edges id="79" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
-  <edges id="80" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
-  <edges id="83" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
-  <edges id="84" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
-  <edges id="87" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
-  <edges id="88" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
-  <edges id="91" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
-  <edges id="92" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
-  <edges id="95" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
-  <edges id="96" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
-  <edges id="99" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="100" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="103" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
-  <edges id="104" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@ports.1"/>
-  <edges id="105" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
-  <edges id="106" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
-  <edges id="107" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
-  <edges id="108" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
-  <edges id="109" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
-  <edges id="110" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
-  <edges id="111" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
-  <edges id="112" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
-  <edges id="113" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
-  <edges id="114" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
-  <edges id="115" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
-  <edges id="116" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
-  <edges id="117" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
-  <edges id="118" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
-  <edges id="119" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="120" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="121" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="122" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="123" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="124" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="125" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="126" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="127" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="128" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="129" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="130" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="131" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="132" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="133" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="134" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="135" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="216" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
-  <edges id="217" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="218" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
-  <edges id="219" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
-  <edges id="220" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
-  <edges id="221" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
-  <edges id="222" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
-  <edges id="223" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
-  <edges id="224" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
-  <edges id="225" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
-  <edges id="226" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
-  <edges id="227" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
-  <edges id="228" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
-  <edges id="229" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
-  <edges id="230" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
-  <edges id="231" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
-  <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="255" RegionName="gesture_model">
-    <basic_blocks id="59" name="gesture_model" type="BlockType">
-      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="input_V_0" lineNumber="138" originalName="input.V[0]" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="input_V_0_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="83" contextFuncName="gesture_model" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="138" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
+  <ports id="9" name="output_stream_V_keep_V" type="PortType" originalName="output_stream" coreId="2619776256" bitwidth="4" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="10" name="output_stream_V_strb_V" type="PortType" originalName="output_stream" coreId="4294967142" bitwidth="4" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="11" name="output_stream_V_user_V" type="PortType" originalName="output_stream" coreId="2619987728" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="12" name="output_stream_V_last_V" type="PortType" originalName="output_stream" coreId="2619987728" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="13" name="output_stream_V_id_V" type="PortType" originalName="output_stream" coreId="2620701696" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="14" name="output_stream_V_dest_V" type="PortType" originalName="output_stream" coreId="157" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <edges id="100" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="101" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="102" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="103" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="104" source_obj="//@ports.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="105" source_obj="//@ports.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="106" source_obj="//@ports.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="107" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="110" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="111" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="114" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="115" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="118" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="119" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="122" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="123" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="126" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="127" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="130" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="131" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="134" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="135" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="138" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="139" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="140" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.18"/>
+  <edges id="143" source_obj="//@regions.0/@basic_blocks.0/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="144" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@ports.7"/>
+  <edges id="145" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@ports.8"/>
+  <edges id="146" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@ports.9"/>
+  <edges id="147" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@ports.10"/>
+  <edges id="148" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@ports.11"/>
+  <edges id="149" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@ports.12"/>
+  <edges id="150" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@ports.13"/>
+  <edges id="151" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="152" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="153" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="154" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="155" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="156" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="157" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="158" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="159" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="160" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="161" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="162" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="163" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="164" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="165" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="166" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="167" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="168" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="169" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="170" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="171" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="172" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="173" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="174" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="175" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="176" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="177" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="178" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="179" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="180" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="181" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="182" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="320" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="321" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="322" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="323" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="324" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="325" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="326" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="327" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="328" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="329" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="330" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="331" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="332" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="333" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="334" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="335" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="356" RegionName="gesture_model">
+    <basic_blocks id="88" name="gesture_model" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="input_V_0" lineNumber="136" originalName="input.V[0]" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="input_V_0_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="83" contextFuncName="gesture_model" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="136" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
         <dataOutputObjs>call</dataOutputObjs>
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="output_V" lineNumber="139" originalName="output.V" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="output_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="83" contextFuncName="gesture_model" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="output_V" lineNumber="137" originalName="output.V" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="output_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="83" contextFuncName="gesture_model" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="137" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="conv1d_out_0_V" lineNumber="139" originalName="conv1d_out_0.V" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="conv1d_out_0_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="83" contextFuncName="gesture_model" bitwidth="15" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="139" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
         <dataOutputObjs>call</dataOutputObjs>
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="conv1d_out_0_V" lineNumber="141" originalName="conv1d_out_0.V" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="conv1d_out_0_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="83" contextFuncName="gesture_model" bitwidth="15" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="batch_norm_out_0_V" lineNumber="140" originalName="batch_norm_out_0.V" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="batch_norm_out_0_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="83" contextFuncName="gesture_model" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="140" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="max_pool_out_0_V" lineNumber="141" originalName="max_pool_out_0.V" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="max_pool_out_0_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="83" contextFuncName="gesture_model" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="141" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
         <dataOutputObjs>call</dataOutputObjs>
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="batch_norm_out_0_V" lineNumber="142" originalName="batch_norm_out_0.V" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="batch_norm_out_0_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="83" contextFuncName="gesture_model" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="flatten_out_0_V" lineNumber="142" originalName="flatten_out_0.V" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="flatten_out_0_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="83" contextFuncName="gesture_model" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="142" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
         <dataOutputObjs>call</dataOutputObjs>
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="max_pool_out_0_V" lineNumber="143" originalName="max_pool_out_0.V" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="max_pool_out_0_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="83" contextFuncName="gesture_model" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="dense_out_0_V" lineNumber="143" originalName="dense_out_0.V" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="dense_out_0_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="83" contextFuncName="gesture_model" bitwidth="15" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="143" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
         <dataOutputObjs>call</dataOutputObjs>
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="flatten_out_0_V" lineNumber="144" originalName="flatten_out_0.V" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="flatten_out_0_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="83" contextFuncName="gesture_model" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="batch_norm_out_1_V" lineNumber="144" originalName="batch_norm_out_1.V" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="batch_norm_out_1_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="83" contextFuncName="gesture_model" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="144" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
         <dataOutputObjs>call</dataOutputObjs>
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="dense_out_0_V" lineNumber="145" originalName="dense_out_0.V" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="dense_out_0_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="83" contextFuncName="gesture_model" bitwidth="15" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="145" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
-        <dataOutputObjs>call</dataOutputObjs>
-        <dataOutputObjs>call</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="batch_norm_out_1_V" lineNumber="146" originalName="batch_norm_out_1.V" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="batch_norm_out_1_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="83" contextFuncName="gesture_model" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="146" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
-        <dataOutputObjs>call</dataOutputObjs>
-        <dataOutputObjs>call</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="_ln0" rtlName="Loop_VITIS_LOOP_149_1_proc8_U0" coreId="3408039494" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
-        <dataInputObjs>input_stream</dataInputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="_ln0" rtlName="Loop_VITIS_LOOP_147_1_proc9_U0" coreId="0" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <dataInputObjs>input_stream_V_data_V</dataInputObjs>
+        <dataInputObjs>input_stream_V_keep_V</dataInputObjs>
+        <dataInputObjs>input_stream_V_strb_V</dataInputObjs>
+        <dataInputObjs>input_stream_V_user_V</dataInputObjs>
+        <dataInputObjs>input_stream_V_last_V</dataInputObjs>
+        <dataInputObjs>input_stream_V_id_V</dataInputObjs>
+        <dataInputObjs>input_stream_V_dest_V</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
-        <constName>Loop_VITIS_LOOP_149_1_proc8</constName>
+        <constName>Loop_VITIS_LOOP_147_1_proc9</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="_ln157" lineNumber="157" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="conv1d_0_U0" coreId="2934372720" contextFuncName="gesture_model" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="_ln157" lineNumber="157" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="conv1d_0_U0" coreId="2619476576" contextFuncName="gesture_model" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="157" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>conv1d_0</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="_ln158" lineNumber="158" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="batch_normalization_0_U0" coreId="2934807552" contextFuncName="gesture_model" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="_ln158" lineNumber="158" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="batch_normalization_0_U0" coreId="2620437184" contextFuncName="gesture_model" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="158" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>batch_normalization_0</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="_ln159" lineNumber="159" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="max_pooling1d_0_U0" coreId="2934825216" contextFuncName="gesture_model" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="_ln159" lineNumber="159" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="max_pooling1d_0_U0" coreId="2617416848" contextFuncName="gesture_model" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="159" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>max_pooling1d_0</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="_ln0" rtlName="Loop_VITIS_LOOP_79_1_proc_U0" coreId="2934791152" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="_ln0" rtlName="Loop_VITIS_LOOP_77_1_proc_U0" coreId="2619776864" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
-        <constName>Loop_VITIS_LOOP_79_1_proc</constName>
+        <constName>Loop_VITIS_LOOP_77_1_proc</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="_ln161" lineNumber="161" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="dense_0_U0" coreId="2932551984" contextFuncName="gesture_model" opcode="call" nodeLabel="11.0" nodeLatency="1" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="_ln161" lineNumber="161" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="dense_0_U0" coreId="1953394531" contextFuncName="gesture_model" opcode="call" nodeLabel="11.0" nodeLatency="1" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="161" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>dense_0</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="_ln162" lineNumber="162" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="batch_normalization_1_U0" coreId="2935732144" contextFuncName="gesture_model" opcode="call" nodeLabel="13.0" nodeLatency="1" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="_ln162" lineNumber="162" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="batch_normalization_1_U0" coreId="2619968768" contextFuncName="gesture_model" opcode="call" nodeLabel="13.0" nodeLatency="1" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="162" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>batch_normalization_1</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="_ln163" lineNumber="163" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="dense_1_U0" coreId="2935730080" contextFuncName="gesture_model" opcode="call" nodeLabel="15.0" nodeLatency="1" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="_ln163" lineNumber="163" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." rtlName="dense_1_U0" coreId="176" contextFuncName="gesture_model" opcode="call" nodeLabel="15.0" nodeLatency="1" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="163" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>dense_1</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="_ln0" rtlName="Loop_VITIS_LOOP_166_3_proc9_U0" coreId="3407310168" opcode="call" nodeLabel="17.0" nodeLatency="1" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="call_ret" rtlName="Loop_VITIS_LOOP_167_3_proc_U0" coreId="2619776864" bitwidth="48" opcode="call" nodeLabel="17.0" nodeLatency="1" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
         <dataInputObjs>alloca</dataInputObjs>
-        <dataOutputObjs>output_stream</dataOutputObjs>
-        <constName>Loop_VITIS_LOOP_166_3_proc9</constName>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <constName>Loop_VITIS_LOOP_167_3_proc</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="_ln169" lineNumber="169" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." coreId="2935452328" contextFuncName="gesture_model" opcode="ret" nodeLabel="19.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="169" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="max_val_V_3_loc_channel" rtlName="max_val_V_3_loc_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="16" opcode="extractvalue" nodeLabel="18.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="max_idx_2_loc_channel" rtlName="max_idx_2_loc_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="extractvalue" nodeLabel="18.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="_ln0" rtlName="Block_for_end111_proc_U0" coreId="2620230128" opcode="call" nodeLabel="18.0" nodeLatency="1" m_display="0" m_delay="3.08" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataOutputObjs>output_stream_V_data_V</dataOutputObjs>
+        <dataOutputObjs>output_stream_V_keep_V</dataOutputObjs>
+        <dataOutputObjs>output_stream_V_strb_V</dataOutputObjs>
+        <dataOutputObjs>output_stream_V_user_V</dataOutputObjs>
+        <dataOutputObjs>output_stream_V_last_V</dataOutputObjs>
+        <dataOutputObjs>output_stream_V_id_V</dataOutputObjs>
+        <dataOutputObjs>output_stream_V_dest_V</dataOutputObjs>
+        <constName>Block_for_end111_proc</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="87" name="_ln185" lineNumber="185" fileName="vitis_test/nnet/core.cpp" fileDirectory=".." coreId="2619191504" contextFuncName="gesture_model" opcode="ret" nodeLabel="20.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="vitis_test/nnet/core.cpp" linenumber="185" fileDirectory="/home/prince/Documents/capstone/Gesture-AI" functionName="gesture_model"/>
       </node_objs>
       <fileValidLineNumbers fileName="vitis_test/nnet/core.cpp">
-        <validLinenumbers>138</validLinenumbers>
+        <validLinenumbers>136</validLinenumbers>
+        <validLinenumbers>137</validLinenumbers>
         <validLinenumbers>139</validLinenumbers>
+        <validLinenumbers>140</validLinenumbers>
         <validLinenumbers>141</validLinenumbers>
         <validLinenumbers>142</validLinenumbers>
         <validLinenumbers>143</validLinenumbers>
         <validLinenumbers>144</validLinenumbers>
-        <validLinenumbers>145</validLinenumbers>
-        <validLinenumbers>146</validLinenumbers>
         <validLinenumbers>157</validLinenumbers>
         <validLinenumbers>158</validLinenumbers>
         <validLinenumbers>159</validLinenumbers>
         <validLinenumbers>161</validLinenumbers>
         <validLinenumbers>162</validLinenumbers>
         <validLinenumbers>163</validLinenumbers>
-        <validLinenumbers>169</validLinenumbers>
+        <validLinenumbers>185</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
   </regions>
@@ -214,234 +293,330 @@
   <ScheduleInfo time="17"/>
   <ScheduleInfo time="18"/>
   <ScheduleInfo time="19"/>
-  <expressionNodes realName="batch_norm_out_1_V_alloca_fu_140">
-    <nodeIds>48</nodeIds>
+  <ScheduleInfo time="20"/>
+  <regnodes realName="max_val_V_3_loc_channel_reg_334">
+    <nodeIds>84</nodeIds>
+  </regnodes>
+  <regnodes realName="max_idx_2_loc_channel_reg_339">
+    <nodeIds>85</nodeIds>
+  </regnodes>
+  <expressionNodes realName="dense_out_0_V_alloca_fu_168">
+    <nodeIds>71</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="input_V_0_alloca_fu_112">
-    <nodeIds>41</nodeIds>
+  <expressionNodes realName="batch_norm_out_1_V_alloca_fu_172">
+    <nodeIds>72</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="max_pool_out_0_V_alloca_fu_128">
-    <nodeIds>45</nodeIds>
+  <expressionNodes realName="max_pool_out_0_V_alloca_fu_160">
+    <nodeIds>69</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="dense_out_0_V_alloca_fu_136">
-    <nodeIds>47</nodeIds>
+  <expressionNodes realName="conv1d_out_0_V_alloca_fu_152">
+    <nodeIds>67</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="conv1d_out_0_V_alloca_fu_120">
-    <nodeIds>43</nodeIds>
+  <expressionNodes realName="max_idx_2_loc_channel_fu_329">
+    <nodeIds>85</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="flatten_out_0_V_alloca_fu_132">
-    <nodeIds>46</nodeIds>
+  <expressionNodes realName="flatten_out_0_V_alloca_fu_164">
+    <nodeIds>70</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="output_V_alloca_fu_116">
-    <nodeIds>42</nodeIds>
+  <expressionNodes realName="output_V_alloca_fu_148">
+    <nodeIds>66</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="batch_norm_out_0_V_alloca_fu_124">
-    <nodeIds>44</nodeIds>
+  <expressionNodes realName="batch_norm_out_0_V_alloca_fu_156">
+    <nodeIds>68</nodeIds>
   </expressionNodes>
-  <moduleNodes realName="grp_Loop_VITIS_LOOP_166_3_proc9_fu_255">
-    <nodeIds>57</nodeIds>
+  <expressionNodes realName="input_V_0_alloca_fu_144">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="max_val_V_3_loc_channel_fu_324">
+    <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_batch_normalization_1_fu_245">
+    <nodeIds>81</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_batch_normalization_0_fu_165">
-    <nodeIds>51</nodeIds>
+  <moduleNodes realName="grp_dense_0_fu_235">
+    <nodeIds>80</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_batch_normalization_1_fu_201">
-    <nodeIds>55</nodeIds>
+  <moduleNodes realName="grp_max_pooling1d_0_fu_223">
+    <nodeIds>78</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_max_pooling1d_0_fu_179">
-    <nodeIds>52</nodeIds>
+  <moduleNodes realName="grp_Loop_VITIS_LOOP_77_1_proc_fu_229">
+    <nodeIds>79</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_conv1d_0_fu_151">
-    <nodeIds>50</nodeIds>
+  <moduleNodes realName="grp_conv1d_0_fu_195">
+    <nodeIds>76</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_dense_1_fu_215">
-    <nodeIds>56</nodeIds>
+  <moduleNodes realName="grp_Loop_VITIS_LOOP_167_3_proc_fu_299">
+    <nodeIds>83</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_Loop_VITIS_LOOP_149_1_proc8_fu_144">
-    <nodeIds>49</nodeIds>
+  <moduleNodes realName="grp_dense_1_fu_259">
+    <nodeIds>82</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_Loop_VITIS_LOOP_79_1_proc_fu_185">
-    <nodeIds>53</nodeIds>
+  <moduleNodes realName="grp_Block_for_end111_proc_fu_304">
+    <nodeIds>86</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_dense_0_fu_191">
-    <nodeIds>54</nodeIds>
+  <moduleNodes realName="grp_Loop_VITIS_LOOP_147_1_proc9_fu_176">
+    <nodeIds>75</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_batch_normalization_0_fu_209">
+    <nodeIds>77</nodeIds>
   </moduleNodes>
   <memoryPorts dataString="batch_norm_0_beta_V" portID="100">
-    <nodeIds>51</nodeIds>
+    <nodeIds>77</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="batch_norm_0_gamma_V" portID="100">
-    <nodeIds>51</nodeIds>
+    <nodeIds>77</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="batch_norm_0_mean_V" portID="100">
-    <nodeIds>51</nodeIds>
+    <nodeIds>77</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="batch_norm_0_variance_V" portID="100">
-    <nodeIds>51</nodeIds>
+    <nodeIds>77</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="batch_norm_1_beta_V" portID="100">
-    <nodeIds>55</nodeIds>
+    <nodeIds>81</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="batch_norm_1_gamma_V" portID="100">
-    <nodeIds>55</nodeIds>
+    <nodeIds>81</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="batch_norm_1_mean_V" portID="100">
-    <nodeIds>55</nodeIds>
+    <nodeIds>81</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="batch_norm_1_variance_V" portID="100">
-    <nodeIds>55</nodeIds>
+    <nodeIds>81</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="conv1d_0_biases_V" portID="100">
-    <nodeIds>50</nodeIds>
+    <nodeIds>76</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="conv1d_0_weights_V_0_0" portID="100">
-    <nodeIds>50</nodeIds>
+    <nodeIds>76</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="conv1d_0_weights_V_1_0" portID="100">
-    <nodeIds>50</nodeIds>
+    <nodeIds>76</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="conv1d_0_weights_V_2_0" portID="100">
-    <nodeIds>50</nodeIds>
+    <nodeIds>76</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_0_biases_V" portID="100">
-    <nodeIds>54</nodeIds>
+    <nodeIds>80</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_0_weights_V" portID="100">
-    <nodeIds>54</nodeIds>
+    <nodeIds>80</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_1_biases_V" portID="100">
-    <nodeIds>56</nodeIds>
+    <nodeIds>82</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_1_weights_V_0" portID="100">
-    <nodeIds>56</nodeIds>
+    <nodeIds>82</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_1_weights_V_1" portID="100">
-    <nodeIds>56</nodeIds>
+    <nodeIds>82</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_1_weights_V_10" portID="100">
-    <nodeIds>56</nodeIds>
+    <nodeIds>82</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_1_weights_V_11" portID="100">
-    <nodeIds>56</nodeIds>
+    <nodeIds>82</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_1_weights_V_12" portID="100">
-    <nodeIds>56</nodeIds>
+    <nodeIds>82</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_1_weights_V_13" portID="100">
-    <nodeIds>56</nodeIds>
+    <nodeIds>82</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_1_weights_V_14" portID="100">
-    <nodeIds>56</nodeIds>
+    <nodeIds>82</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_1_weights_V_15" portID="100">
-    <nodeIds>56</nodeIds>
+    <nodeIds>82</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_1_weights_V_2" portID="100">
-    <nodeIds>56</nodeIds>
+    <nodeIds>82</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_1_weights_V_3" portID="100">
-    <nodeIds>56</nodeIds>
+    <nodeIds>82</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_1_weights_V_4" portID="100">
-    <nodeIds>56</nodeIds>
+    <nodeIds>82</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_1_weights_V_5" portID="100">
-    <nodeIds>56</nodeIds>
+    <nodeIds>82</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_1_weights_V_6" portID="100">
-    <nodeIds>56</nodeIds>
+    <nodeIds>82</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_1_weights_V_7" portID="100">
-    <nodeIds>56</nodeIds>
+    <nodeIds>82</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_1_weights_V_8" portID="100">
-    <nodeIds>56</nodeIds>
+    <nodeIds>82</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="dense_1_weights_V_9" portID="100">
-    <nodeIds>56</nodeIds>
+    <nodeIds>82</nodeIds>
   </memoryPorts>
-  <ioPorts name="input_stream">
+  <ioPorts name="input_stream_V_data_V">
     <contents name="call">
-      <nodeIds>49</nodeIds>
+      <nodeIds>75</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="output_stream">
+  <ioPorts name="input_stream_V_dest_V">
     <contents name="call">
-      <nodeIds>57</nodeIds>
+      <nodeIds>75</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="input_stream_V_id_V">
+    <contents name="call">
+      <nodeIds>75</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="input_stream_V_keep_V">
+    <contents name="call">
+      <nodeIds>75</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="input_stream_V_last_V">
+    <contents name="call">
+      <nodeIds>75</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="input_stream_V_strb_V">
+    <contents name="call">
+      <nodeIds>75</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="input_stream_V_user_V">
+    <contents name="call">
+      <nodeIds>75</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_stream_V_data_V">
+    <contents name="call">
+      <nodeIds>86</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_stream_V_dest_V">
+    <contents name="call">
+      <nodeIds>86</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_stream_V_id_V">
+    <contents name="call">
+      <nodeIds>86</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_stream_V_keep_V">
+    <contents name="call">
+      <nodeIds>86</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_stream_V_last_V">
+    <contents name="call">
+      <nodeIds>86</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_stream_V_strb_V">
+    <contents name="call">
+      <nodeIds>86</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_stream_V_user_V">
+    <contents name="call">
+      <nodeIds>86</nodeIds>
     </contents>
   </ioPorts>
   <fsm>
     <states id="1">
-      <operations id="41" stage="1" latency="1"/>
-      <operations id="42" stage="1" latency="1"/>
-      <operations id="43" stage="1" latency="1"/>
-      <operations id="44" stage="1" latency="1"/>
-      <operations id="45" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="75" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="75" stage="1" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="76" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="76" stage="1" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="77" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="77" stage="1" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="78" stage="2" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="78" stage="1" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="79" stage="2" latency="2"/>
+    </states>
+    <states id="11">
+      <operations id="79" stage="1" latency="2"/>
+    </states>
+    <states id="12">
+      <operations id="80" stage="2" latency="2"/>
+    </states>
+    <states id="13">
+      <operations id="80" stage="1" latency="2"/>
+    </states>
+    <states id="14">
+      <operations id="81" stage="2" latency="2"/>
+    </states>
+    <states id="15">
+      <operations id="81" stage="1" latency="2"/>
+    </states>
+    <states id="16">
+      <operations id="82" stage="2" latency="2"/>
+    </states>
+    <states id="17">
+      <operations id="82" stage="1" latency="2"/>
+    </states>
+    <states id="18">
+      <operations id="83" stage="2" latency="2"/>
+    </states>
+    <states id="19">
+      <operations id="83" stage="1" latency="2"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="2" latency="2"/>
+    </states>
+    <states id="20">
+      <operations id="86" stage="1" latency="2"/>
+    </states>
+    <states id="21">
       <operations id="46" stage="1" latency="1"/>
       <operations id="47" stage="1" latency="1"/>
       <operations id="48" stage="1" latency="1"/>
-    </states>
-    <states id="2">
-      <operations id="49" stage="2" latency="2"/>
-    </states>
-    <states id="3">
-      <operations id="49" stage="1" latency="2"/>
-    </states>
-    <states id="4">
-      <operations id="50" stage="2" latency="2"/>
-    </states>
-    <states id="5">
-      <operations id="50" stage="1" latency="2"/>
-    </states>
-    <states id="6">
-      <operations id="51" stage="2" latency="2"/>
-    </states>
-    <states id="7">
-      <operations id="51" stage="1" latency="2"/>
-    </states>
-    <states id="8">
-      <operations id="52" stage="2" latency="2"/>
-    </states>
-    <states id="9">
-      <operations id="52" stage="1" latency="2"/>
-    </states>
-    <states id="10">
-      <operations id="53" stage="2" latency="2"/>
-    </states>
-    <states id="11">
-      <operations id="53" stage="1" latency="2"/>
-    </states>
-    <states id="12">
-      <operations id="54" stage="2" latency="2"/>
-    </states>
-    <states id="13">
-      <operations id="54" stage="1" latency="2"/>
-    </states>
-    <states id="14">
-      <operations id="55" stage="2" latency="2"/>
-    </states>
-    <states id="15">
-      <operations id="55" stage="1" latency="2"/>
-    </states>
-    <states id="16">
-      <operations id="56" stage="2" latency="2"/>
-    </states>
-    <states id="17">
-      <operations id="56" stage="1" latency="2"/>
-    </states>
-    <states id="18">
-      <operations id="57" stage="2" latency="2"/>
-    </states>
-    <states id="19">
-      <operations id="57" stage="1" latency="2"/>
-    </states>
-    <states id="20">
-      <operations id="34" stage="1" latency="1"/>
-      <operations id="35" stage="1" latency="1"/>
-      <operations id="36" stage="1" latency="1"/>
-      <operations id="37" stage="1" latency="1"/>
-      <operations id="38" stage="1" latency="1"/>
-      <operations id="39" stage="1" latency="1"/>
-      <operations id="40" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
       <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
     </states>
     <transitions inState="1" outState="2">
       <condition id="-1"/>
@@ -500,108 +675,180 @@
     <transitions inState="19" outState="20">
       <condition id="-1"/>
     </transitions>
+    <transitions inState="20" outState="21">
+      <condition id="-1"/>
+    </transitions>
   </fsm>
   <CFGRegionsRoot>
     <cfgRegions mId="1" mTag="gesture_model" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="23078" mMaxLatency="23078" mIsDfPipe="true">
-      <basicBlocks>59</basicBlocks>
-      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.8/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.0/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.1/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.2/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.3/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.4/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.5/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.6/@sink.0/@inst">
-        <processe_list name="Loop_VITIS_LOOP_149_1_proc8_U0" ssdmobj_id="49">
+      <basicBlocks>88</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.9/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.0/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.1/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.2/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.3/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.4/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.5/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.6/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.7/@sink.0/@inst">
+        <processe_list name="Loop_VITIS_LOOP_147_1_proc9_U0" ssdmobj_id="75">
           <pins>
-            <port name="input_stream" type="SIOType" top_port_object_id="" top_port_object_id_reference="_116" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="Loop_VITIS_LOOP_149_1_proc8_U0" ssdmobj_id="49" object_id="_121"/>
+            <port name="input_stream_V_data_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_149" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_147_1_proc9_U0" ssdmobj_id="75" object_id="_166"/>
+          </pins>
+          <pins>
+            <port name="input_stream_V_keep_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_150" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_147_1_proc9_U0" ssdmobj_id="75" object_id="_166"/>
+          </pins>
+          <pins>
+            <port name="input_stream_V_strb_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_151" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_147_1_proc9_U0" ssdmobj_id="75" object_id="_166"/>
+          </pins>
+          <pins>
+            <port name="input_stream_V_user_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_152" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_147_1_proc9_U0" ssdmobj_id="75" object_id="_166"/>
+          </pins>
+          <pins>
+            <port name="input_stream_V_last_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_153" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_147_1_proc9_U0" ssdmobj_id="75" object_id="_166"/>
+          </pins>
+          <pins>
+            <port name="input_stream_V_id_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_154" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_147_1_proc9_U0" ssdmobj_id="75" object_id="_166"/>
+          </pins>
+          <pins>
+            <port name="input_stream_V_dest_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_155" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_147_1_proc9_U0" ssdmobj_id="75" object_id="_166"/>
           </pins>
         </processe_list>
-        <processe_list name="conv1d_0_U0" ssdmobj_id="50"/>
-        <processe_list name="batch_normalization_0_U0" ssdmobj_id="51"/>
-        <processe_list name="max_pooling1d_0_U0" ssdmobj_id="52"/>
-        <processe_list name="Loop_VITIS_LOOP_79_1_proc_U0" ssdmobj_id="53"/>
-        <processe_list name="dense_0_U0" ssdmobj_id="54"/>
-        <processe_list name="batch_normalization_1_U0" ssdmobj_id="55"/>
-        <processe_list name="dense_1_U0" ssdmobj_id="56"/>
-        <processe_list name="Loop_VITIS_LOOP_166_3_proc9_U0" ssdmobj_id="57">
+        <processe_list name="conv1d_0_U0" ssdmobj_id="76"/>
+        <processe_list name="batch_normalization_0_U0" ssdmobj_id="77"/>
+        <processe_list name="max_pooling1d_0_U0" ssdmobj_id="78"/>
+        <processe_list name="Loop_VITIS_LOOP_77_1_proc_U0" ssdmobj_id="79"/>
+        <processe_list name="dense_0_U0" ssdmobj_id="80"/>
+        <processe_list name="batch_normalization_1_U0" ssdmobj_id="81"/>
+        <processe_list name="dense_1_U0" ssdmobj_id="82"/>
+        <processe_list name="Loop_VITIS_LOOP_167_3_proc_U0" ssdmobj_id="83"/>
+        <processe_list name="Block_for_end111_proc_U0" ssdmobj_id="86">
           <pins>
-            <port name="output_stream" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_117" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="Loop_VITIS_LOOP_166_3_proc9_U0" ssdmobj_id="57" object_id="_132"/>
+            <port name="output_stream_V_data_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_156" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_for_end111_proc_U0" ssdmobj_id="86" object_id="_190"/>
+          </pins>
+          <pins>
+            <port name="output_stream_V_keep_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_157" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_for_end111_proc_U0" ssdmobj_id="86" object_id="_190"/>
+          </pins>
+          <pins>
+            <port name="output_stream_V_strb_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_158" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_for_end111_proc_U0" ssdmobj_id="86" object_id="_190"/>
+          </pins>
+          <pins>
+            <port name="output_stream_V_user_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_159" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_for_end111_proc_U0" ssdmobj_id="86" object_id="_190"/>
+          </pins>
+          <pins>
+            <port name="output_stream_V_last_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_160" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_for_end111_proc_U0" ssdmobj_id="86" object_id="_190"/>
+          </pins>
+          <pins>
+            <port name="output_stream_V_id_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_161" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_for_end111_proc_U0" ssdmobj_id="86" object_id="_190"/>
+          </pins>
+          <pins>
+            <port name="output_stream_V_dest_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_162" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_for_end111_proc_U0" ssdmobj_id="86" object_id="_190"/>
           </pins>
         </processe_list>
-        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="input_V_0" ssdmobj_id="41">
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="input_V_0" ssdmobj_id="65">
           <source>
             <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="Loop_VITIS_LOOP_149_1_proc8_U0" ssdmobj_id="49" object_id="_121"/>
+            <inst name="Loop_VITIS_LOOP_147_1_proc9_U0" ssdmobj_id="75" object_id="_166"/>
           </source>
           <sink>
             <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="conv1d_0_U0" ssdmobj_id="50" object_id="_138"/>
+            <inst name="conv1d_0_U0" ssdmobj_id="76" object_id="_208"/>
           </sink>
         </channel_list>
-        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="conv1d_out_0_V" ssdmobj_id="43">
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="conv1d_out_0_V" ssdmobj_id="67">
           <source>
             <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="conv1d_0_U0" ssdmobj_id="50" object_id="_138"/>
+            <inst name="conv1d_0_U0" ssdmobj_id="76" object_id="_208"/>
           </source>
           <sink>
             <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="batch_normalization_0_U0" ssdmobj_id="51" object_id="_144"/>
+            <inst name="batch_normalization_0_U0" ssdmobj_id="77" object_id="_214"/>
           </sink>
         </channel_list>
-        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="batch_norm_out_0_V" ssdmobj_id="44">
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="batch_norm_out_0_V" ssdmobj_id="68">
           <source>
             <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="batch_normalization_0_U0" ssdmobj_id="51" object_id="_144"/>
+            <inst name="batch_normalization_0_U0" ssdmobj_id="77" object_id="_214"/>
           </source>
           <sink>
             <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="max_pooling1d_0_U0" ssdmobj_id="52" object_id="_150"/>
+            <inst name="max_pooling1d_0_U0" ssdmobj_id="78" object_id="_220"/>
           </sink>
         </channel_list>
-        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="max_pool_out_0_V" ssdmobj_id="45">
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="max_pool_out_0_V" ssdmobj_id="69">
           <source>
             <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="max_pooling1d_0_U0" ssdmobj_id="52" object_id="_150"/>
+            <inst name="max_pooling1d_0_U0" ssdmobj_id="78" object_id="_220"/>
           </source>
           <sink>
             <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="Loop_VITIS_LOOP_79_1_proc_U0" ssdmobj_id="53" object_id="_156"/>
+            <inst name="Loop_VITIS_LOOP_77_1_proc_U0" ssdmobj_id="79" object_id="_226"/>
           </sink>
         </channel_list>
-        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="flatten_out_0_V" ssdmobj_id="46">
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="flatten_out_0_V" ssdmobj_id="70">
           <source>
             <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="Loop_VITIS_LOOP_79_1_proc_U0" ssdmobj_id="53" object_id="_156"/>
+            <inst name="Loop_VITIS_LOOP_77_1_proc_U0" ssdmobj_id="79" object_id="_226"/>
           </source>
           <sink>
             <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="dense_0_U0" ssdmobj_id="54" object_id="_162"/>
+            <inst name="dense_0_U0" ssdmobj_id="80" object_id="_232"/>
           </sink>
         </channel_list>
-        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="dense_out_0_V" ssdmobj_id="47">
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="dense_out_0_V" ssdmobj_id="71">
           <source>
             <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="dense_0_U0" ssdmobj_id="54" object_id="_162"/>
+            <inst name="dense_0_U0" ssdmobj_id="80" object_id="_232"/>
           </source>
           <sink>
             <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="batch_normalization_1_U0" ssdmobj_id="55" object_id="_168"/>
+            <inst name="batch_normalization_1_U0" ssdmobj_id="81" object_id="_238"/>
           </sink>
         </channel_list>
-        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="batch_norm_out_1_V" ssdmobj_id="48">
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="batch_norm_out_1_V" ssdmobj_id="72">
           <source>
             <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="batch_normalization_1_U0" ssdmobj_id="55" object_id="_168"/>
+            <inst name="batch_normalization_1_U0" ssdmobj_id="81" object_id="_238"/>
           </source>
           <sink>
             <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="dense_1_U0" ssdmobj_id="56" object_id="_174"/>
+            <inst name="dense_1_U0" ssdmobj_id="82" object_id="_244"/>
           </sink>
         </channel_list>
-        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="output_V" ssdmobj_id="42">
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="output_V" ssdmobj_id="66">
           <source>
             <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="dense_1_U0" ssdmobj_id="56" object_id="_174"/>
+            <inst name="dense_1_U0" ssdmobj_id="82" object_id="_244"/>
           </source>
           <sink>
             <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="Loop_VITIS_LOOP_166_3_proc9_U0" ssdmobj_id="57" object_id="_132"/>
+            <inst name="Loop_VITIS_LOOP_167_3_proc_U0" ssdmobj_id="83" object_id="_250"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="max_val_V_3_loc_channel" ssdmobj_id="84">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_167_3_proc_U0" ssdmobj_id="83" object_id="_250"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_for_end111_proc_U0" ssdmobj_id="86" object_id="_190"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="1" suggested_depth="2" name="max_idx_2_loc_channel" ssdmobj_id="85">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_167_3_proc_U0" ssdmobj_id="83" object_id="_250"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_for_end111_proc_U0" ssdmobj_id="86" object_id="_190"/>
           </sink>
         </channel_list>
       </mDfPipe>

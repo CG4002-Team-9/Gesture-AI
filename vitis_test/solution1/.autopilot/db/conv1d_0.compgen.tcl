@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 4
+set id 16
 set name gesture_model_mul_mul_16s_8s_24_4_1
 set corename simcore_mul
 set op mul
@@ -55,7 +55,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 5
+set id 17
 set name gesture_model_mac_muladd_16s_8s_24ns_24_4_1
 set corename simcore_mac
 set op mac
@@ -145,7 +145,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 13 \
+    id 25 \
     name input_0 \
     reset_level 1 \
     sync_rst true \
@@ -164,7 +164,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 14 \
+    id 26 \
     name output_r \
     reset_level 1 \
     sync_rst true \

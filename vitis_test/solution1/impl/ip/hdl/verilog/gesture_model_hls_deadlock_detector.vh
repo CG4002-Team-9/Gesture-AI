@@ -191,13 +191,13 @@
     wire token_clear;
     reg [8:0] origin;
 
-    reg ap_done_reg_0;// for module Loop_VITIS_LOOP_149_1_proc8_U0
+    reg ap_done_reg_0;// for module Loop_VITIS_LOOP_147_1_proc9_U0
     always @ (negedge dl_reset or posedge dl_clock) begin
         if (~dl_reset) begin
             ap_done_reg_0 <= 'b0;
         end
         else begin
-            ap_done_reg_0 <= Loop_VITIS_LOOP_149_1_proc8_U0.ap_done & ~Loop_VITIS_LOOP_149_1_proc8_U0.ap_continue;
+            ap_done_reg_0 <= Loop_VITIS_LOOP_147_1_proc9_U0.ap_done & ~Loop_VITIS_LOOP_147_1_proc9_U0.ap_continue;
         end
     end
 
@@ -231,13 +231,13 @@
         end
     end
 
-    reg ap_done_reg_4;// for module Loop_VITIS_LOOP_79_1_proc_U0
+    reg ap_done_reg_4;// for module Loop_VITIS_LOOP_77_1_proc_U0
     always @ (negedge dl_reset or posedge dl_clock) begin
         if (~dl_reset) begin
             ap_done_reg_4 <= 'b0;
         end
         else begin
-            ap_done_reg_4 <= Loop_VITIS_LOOP_79_1_proc_U0.ap_done & ~Loop_VITIS_LOOP_79_1_proc_U0.ap_continue;
+            ap_done_reg_4 <= Loop_VITIS_LOOP_77_1_proc_U0.ap_done & ~Loop_VITIS_LOOP_77_1_proc_U0.ap_continue;
         end
     end
 
@@ -271,17 +271,27 @@
         end
     end
 
-    reg ap_done_reg_8;// for module Loop_VITIS_LOOP_166_3_proc9_U0
+    reg ap_done_reg_8;// for module Loop_VITIS_LOOP_167_3_proc_U0
     always @ (negedge dl_reset or posedge dl_clock) begin
         if (~dl_reset) begin
             ap_done_reg_8 <= 'b0;
         end
         else begin
-            ap_done_reg_8 <= Loop_VITIS_LOOP_166_3_proc9_U0.ap_done & ~Loop_VITIS_LOOP_166_3_proc9_U0.ap_continue;
+            ap_done_reg_8 <= Loop_VITIS_LOOP_167_3_proc_U0.ap_done & ~Loop_VITIS_LOOP_167_3_proc_U0.ap_continue;
         end
     end
 
-    // Process: Loop_VITIS_LOOP_149_1_proc8_U0
+    reg ap_done_reg_9;// for module Block_for_end111_proc_U0
+    always @ (negedge dl_reset or posedge dl_clock) begin
+        if (~dl_reset) begin
+            ap_done_reg_9 <= 'b0;
+        end
+        else begin
+            ap_done_reg_9 <= Block_for_end111_proc_U0.ap_done & ~Block_for_end111_proc_U0.ap_continue;
+        end
+    end
+
+    // Process: Loop_VITIS_LOOP_147_1_proc9_U0
     gesture_model_hls_deadlock_detect_unit #(9, 0, 1, 1) gesture_model_hls_deadlock_detect_unit_0 (
         .reset(dl_reset),
         .clock(dl_clock),
@@ -298,7 +308,7 @@
         .dl_detect_out(dl_in_vec[0]));
 
     assign proc_0_data_FIFO_blk[0] = 1'b0;
-    assign proc_0_data_PIPO_blk[0] = 1'b0 | (~input_V_0_U.i_full_n & Loop_VITIS_LOOP_149_1_proc8_U0.ap_done & ap_done_reg_0 & ~input_V_0_U.t_read);
+    assign proc_0_data_PIPO_blk[0] = 1'b0 | (~input_V_0_U.i_full_n & Loop_VITIS_LOOP_147_1_proc9_U0.ap_done & ap_done_reg_0 & ~input_V_0_U.t_read);
     assign proc_0_start_FIFO_blk[0] = 1'b0;
     assign proc_0_TLF_FIFO_blk[0] = 1'b0;
     assign proc_0_input_sync_blk[0] = 1'b0;
@@ -472,7 +482,7 @@
     assign dep_chan_data_3_4 = out_chan_dep_data_3;
     assign token_3_4 = token_out_vec_3[1];
 
-    // Process: Loop_VITIS_LOOP_79_1_proc_U0
+    // Process: Loop_VITIS_LOOP_77_1_proc_U0
     gesture_model_hls_deadlock_detect_unit #(9, 4, 2, 2) gesture_model_hls_deadlock_detect_unit_4 (
         .reset(dl_reset),
         .clock(dl_clock),
@@ -489,14 +499,14 @@
         .dl_detect_out(dl_in_vec[4]));
 
     assign proc_4_data_FIFO_blk[0] = 1'b0;
-    assign proc_4_data_PIPO_blk[0] = 1'b0 | (~max_pool_out_0_V_U.t_empty_n & Loop_VITIS_LOOP_79_1_proc_U0.ap_idle & ~max_pool_out_0_V_U.i_write);
+    assign proc_4_data_PIPO_blk[0] = 1'b0 | (~max_pool_out_0_V_U.t_empty_n & Loop_VITIS_LOOP_77_1_proc_U0.ap_idle & ~max_pool_out_0_V_U.i_write);
     assign proc_4_start_FIFO_blk[0] = 1'b0;
     assign proc_4_TLF_FIFO_blk[0] = 1'b0;
     assign proc_4_input_sync_blk[0] = 1'b0;
     assign proc_4_output_sync_blk[0] = 1'b0;
     assign proc_dep_vld_vec_4[0] = dl_detect_out ? proc_dep_vld_vec_4_reg[0] : (proc_4_data_FIFO_blk[0] | proc_4_data_PIPO_blk[0] | proc_4_start_FIFO_blk[0] | proc_4_TLF_FIFO_blk[0] | proc_4_input_sync_blk[0] | proc_4_output_sync_blk[0]);
     assign proc_4_data_FIFO_blk[1] = 1'b0;
-    assign proc_4_data_PIPO_blk[1] = 1'b0 | (~flatten_out_0_V_U.i_full_n & Loop_VITIS_LOOP_79_1_proc_U0.ap_done & ap_done_reg_4 & ~flatten_out_0_V_U.t_read);
+    assign proc_4_data_PIPO_blk[1] = 1'b0 | (~flatten_out_0_V_U.i_full_n & Loop_VITIS_LOOP_77_1_proc_U0.ap_done & ap_done_reg_4 & ~flatten_out_0_V_U.t_read);
     assign proc_4_start_FIFO_blk[1] = 1'b0;
     assign proc_4_TLF_FIFO_blk[1] = 1'b0;
     assign proc_4_input_sync_blk[1] = 1'b0;
@@ -676,7 +686,7 @@
     assign dep_chan_data_7_8 = out_chan_dep_data_7;
     assign token_7_8 = token_out_vec_7[1];
 
-    // Process: Loop_VITIS_LOOP_166_3_proc9_U0
+    // Process: Loop_VITIS_LOOP_167_3_proc_U0
     gesture_model_hls_deadlock_detect_unit #(9, 8, 1, 1) gesture_model_hls_deadlock_detect_unit_8 (
         .reset(dl_reset),
         .clock(dl_clock),
@@ -693,7 +703,7 @@
         .dl_detect_out(dl_in_vec[8]));
 
     assign proc_8_data_FIFO_blk[0] = 1'b0;
-    assign proc_8_data_PIPO_blk[0] = 1'b0 | (~output_V_U.t_empty_n & Loop_VITIS_LOOP_166_3_proc9_U0.ap_idle & ~output_V_U.i_write);
+    assign proc_8_data_PIPO_blk[0] = 1'b0 | (~output_V_U.t_empty_n & Loop_VITIS_LOOP_167_3_proc_U0.ap_idle & ~output_V_U.i_write);
     assign proc_8_start_FIFO_blk[0] = 1'b0;
     assign proc_8_TLF_FIFO_blk[0] = 1'b0;
     assign proc_8_input_sync_blk[0] = 1'b0;

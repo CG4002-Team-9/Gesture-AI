@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Aug 30 03:12:30 2024" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Aug 31 19:37:58 2024" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="bd_0" PACKAGE="sbva484" SPEEDGRADE="-2"/>
 
@@ -29,9 +29,39 @@
         <CONNECTION INSTANCE="hls_inst" PORT="input_stream_TREADY"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="15" NAME="input_stream_tdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_input_stream_TDATA">
+    <PORT DIR="I" LEFT="31" NAME="input_stream_tdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_input_stream_TDATA">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="input_stream_TDATA"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="input_stream_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_input_stream_TKEEP">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="input_stream_TKEEP"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="input_stream_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_input_stream_TSTRB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="input_stream_TSTRB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="input_stream_tuser" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_input_stream_TUSER">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="input_stream_TUSER"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="input_stream_tlast" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_input_stream_TLAST">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="input_stream_TLAST"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="input_stream_tid" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_input_stream_TID">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="input_stream_TID"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="input_stream_tdest" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_input_stream_TDEST">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="input_stream_TDEST"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="output_stream_tvalid" SIGIS="undef" SIGNAME="hls_inst_output_stream_TVALID">
@@ -44,9 +74,39 @@
         <CONNECTION INSTANCE="hls_inst" PORT="output_stream_TREADY"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="15" NAME="output_stream_tdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_output_stream_TDATA">
+    <PORT DIR="O" LEFT="31" NAME="output_stream_tdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_output_stream_TDATA">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="output_stream_TDATA"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="output_stream_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_output_stream_TKEEP">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="output_stream_TKEEP"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="output_stream_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_output_stream_TSTRB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="output_stream_TSTRB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="output_stream_tuser" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_output_stream_TUSER">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="output_stream_TUSER"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="output_stream_tlast" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_output_stream_TLAST">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="output_stream_TLAST"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="output_stream_tid" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_output_stream_TID">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="output_stream_TID"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="output_stream_tdest" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_output_stream_TDEST">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="output_stream_TDEST"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="3" NAME="s_axi_control_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_control_AWADDR">
@@ -138,14 +198,14 @@
 
   <EXTERNALINTERFACES>
     <BUSINTERFACE BUSNAME="External_Interface_input_stream" NAME="input_stream" TYPE="TARGET">
-      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
-      <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-      <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
-      <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+      <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+      <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+      <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
       <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-      <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
-      <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-      <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+      <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+      <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+      <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
       <PARAMETER NAME="FREQ_HZ" VALUE="100000000.0"/>
       <PARAMETER NAME="PHASE" VALUE="0.0"/>
       <PARAMETER NAME="CLK_DOMAIN" VALUE="bd_0_ap_clk_0"/>
@@ -155,17 +215,23 @@
         <PORTMAP LOGICAL="TVALID" PHYSICAL="input_stream_tvalid"/>
         <PORTMAP LOGICAL="TREADY" PHYSICAL="input_stream_tready"/>
         <PORTMAP LOGICAL="TDATA" PHYSICAL="input_stream_tdata"/>
+        <PORTMAP LOGICAL="TKEEP" PHYSICAL="input_stream_tkeep"/>
+        <PORTMAP LOGICAL="TSTRB" PHYSICAL="input_stream_tstrb"/>
+        <PORTMAP LOGICAL="TUSER" PHYSICAL="input_stream_tuser"/>
+        <PORTMAP LOGICAL="TLAST" PHYSICAL="input_stream_tlast"/>
+        <PORTMAP LOGICAL="TID" PHYSICAL="input_stream_tid"/>
+        <PORTMAP LOGICAL="TDEST" PHYSICAL="input_stream_tdest"/>
       </PORTMAPS>
     </BUSINTERFACE>
     <BUSINTERFACE BUSNAME="hls_inst_output_stream" NAME="output_stream" TYPE="INITIATOR">
-      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
-      <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-      <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
-      <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+      <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+      <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+      <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
       <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-      <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
-      <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-      <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+      <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+      <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+      <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
       <PARAMETER NAME="FREQ_HZ" VALUE="100000000.0"/>
       <PARAMETER NAME="PHASE" VALUE="0.0"/>
       <PARAMETER NAME="CLK_DOMAIN" VALUE="bd_0_ap_clk_0"/>
@@ -175,6 +241,12 @@
         <PORTMAP LOGICAL="TVALID" PHYSICAL="output_stream_tvalid"/>
         <PORTMAP LOGICAL="TREADY" PHYSICAL="output_stream_tready"/>
         <PORTMAP LOGICAL="TDATA" PHYSICAL="output_stream_tdata"/>
+        <PORTMAP LOGICAL="TKEEP" PHYSICAL="output_stream_tkeep"/>
+        <PORTMAP LOGICAL="TSTRB" PHYSICAL="output_stream_tstrb"/>
+        <PORTMAP LOGICAL="TUSER" PHYSICAL="output_stream_tuser"/>
+        <PORTMAP LOGICAL="TLAST" PHYSICAL="output_stream_tlast"/>
+        <PORTMAP LOGICAL="TID" PHYSICAL="output_stream_tid"/>
+        <PORTMAP LOGICAL="TDEST" PHYSICAL="output_stream_tdest"/>
       </PORTMAPS>
     </BUSINTERFACE>
     <BUSINTERFACE BUSNAME="External_Interface_s_axi_control" DATAWIDTH="32" NAME="s_axi_control" TYPE="SLAVE">
@@ -238,7 +310,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="2113712232" FULLNAME="/hls_inst" HWVERSION="1.0" INSTANCE="hls_inst" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="gesture_model" VLNV="xilinx.com:hls:gesture_model:1.0">
+    <MODULE COREREVISION="2113714657" FULLNAME="/hls_inst" HWVERSION="1.0" INSTANCE="hls_inst" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="gesture_model" VLNV="xilinx.com:hls:gesture_model:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_S_AXI_CONTROL_ADDR_WIDTH" VALUE="4"/>
@@ -364,9 +436,39 @@
             <CONNECTION INSTANCE="bd_0_imp" PORT="input_stream_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="input_stream_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_input_stream_TDATA">
+        <PORT DIR="I" LEFT="31" NAME="input_stream_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_input_stream_TDATA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="input_stream_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="input_stream_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_input_stream_TKEEP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="input_stream_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="input_stream_TSTRB" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_input_stream_TSTRB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="input_stream_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="input_stream_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_input_stream_TUSER">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="input_stream_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="input_stream_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_input_stream_TLAST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="input_stream_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="input_stream_TID" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_input_stream_TID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="input_stream_tid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="input_stream_TDEST" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_input_stream_TDEST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="input_stream_tdest"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="output_stream_TVALID" SIGIS="undef" SIGNAME="hls_inst_output_stream_TVALID">
@@ -379,9 +481,39 @@
             <CONNECTION INSTANCE="bd_0_imp" PORT="output_stream_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="output_stream_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_output_stream_TDATA">
+        <PORT DIR="O" LEFT="31" NAME="output_stream_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_output_stream_TDATA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="output_stream_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="output_stream_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_output_stream_TKEEP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="output_stream_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="output_stream_TSTRB" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_output_stream_TSTRB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="output_stream_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="output_stream_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_output_stream_TUSER">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="output_stream_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="output_stream_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_output_stream_TLAST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="output_stream_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="output_stream_TID" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_output_stream_TID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="output_stream_tid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="output_stream_TDEST" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_output_stream_TDEST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="output_stream_tdest"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -439,15 +571,15 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="External_Interface_input_stream" NAME="input_stream" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
           <PARAMETER NAME="LAYERED_METADATA"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000.0"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="bd_0_ap_clk_0"/>
@@ -456,18 +588,24 @@
             <PORTMAP LOGICAL="TVALID" PHYSICAL="input_stream_TVALID"/>
             <PORTMAP LOGICAL="TREADY" PHYSICAL="input_stream_TREADY"/>
             <PORTMAP LOGICAL="TDATA" PHYSICAL="input_stream_TDATA"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="input_stream_TKEEP"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="input_stream_TSTRB"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="input_stream_TUSER"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="input_stream_TLAST"/>
+            <PORTMAP LOGICAL="TID" PHYSICAL="input_stream_TID"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="input_stream_TDEST"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="hls_inst_output_stream" NAME="output_stream" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
           <PARAMETER NAME="LAYERED_METADATA"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000.0"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="bd_0_ap_clk_0"/>
@@ -476,6 +614,12 @@
             <PORTMAP LOGICAL="TVALID" PHYSICAL="output_stream_TVALID"/>
             <PORTMAP LOGICAL="TREADY" PHYSICAL="output_stream_TREADY"/>
             <PORTMAP LOGICAL="TDATA" PHYSICAL="output_stream_TDATA"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="output_stream_TKEEP"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="output_stream_TSTRB"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="output_stream_TUSER"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="output_stream_TLAST"/>
+            <PORTMAP LOGICAL="TID" PHYSICAL="output_stream_TID"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="output_stream_TDEST"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
