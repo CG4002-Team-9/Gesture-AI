@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'gesture_model'
 ================================================================
-* Date:           Sat Aug 31 19:36:55 2024
+* Date:           Mon Sep  2 11:42:00 2024
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        vitis_test
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  7.272 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  7.268 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
     |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
     +---------+---------+----------+----------+-------+-------+----------+
-    |    23078|    23078|  0.231 ms|  0.231 ms|  15110|  15110|  dataflow|
+    |    23128|    23128|  0.231 ms|  0.231 ms|  15111|  15111|  dataflow|
     +---------+---------+----------+----------+-------+-------+----------+
 
     + Detail: 
@@ -38,16 +38,15 @@
         |                                |                             |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
         |            Instance            |            Module           |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
         +--------------------------------+-----------------------------+---------+---------+-----------+-----------+-------+-------+---------+
-        |Loop_VITIS_LOOP_147_1_proc9_U0  |Loop_VITIS_LOOP_147_1_proc9  |      122|      122|   1.220 us|   1.220 us|    122|    122|       no|
+        |Loop_VITIS_LOOP_148_1_proc8_U0  |Loop_VITIS_LOOP_148_1_proc8  |      123|      123|   1.230 us|   1.230 us|    123|    123|       no|
         |conv1d_0_U0                     |conv1d_0                     |     3782|     3782|  37.820 us|  37.820 us|   3782|   3782|       no|
-        |batch_normalization_0_U0        |batch_normalization_0        |     1942|     1942|  19.420 us|  19.420 us|   1942|   1942|       no|
+        |batch_normalization_0_U0        |batch_normalization_0        |     1961|     1961|  19.610 us|  19.610 us|   1961|   1961|       no|
         |max_pooling1d_0_U0              |max_pooling1d_0              |      946|      946|   9.460 us|   9.460 us|    946|    946|       no|
         |Loop_VITIS_LOOP_77_1_proc_U0    |Loop_VITIS_LOOP_77_1_proc    |      946|      946|   9.460 us|   9.460 us|    946|    946|       no|
-        |dense_0_U0                      |dense_0                      |    15109|    15109|   0.151 ms|   0.151 ms|  15109|  15109|       no|
-        |batch_normalization_1_U0        |batch_normalization_1        |       70|       70|   0.700 us|   0.700 us|     70|     70|       no|
-        |dense_1_U0                      |dense_1                      |      154|      154|   1.540 us|   1.540 us|    154|    154|       no|
-        |Loop_VITIS_LOOP_167_3_proc_U0   |Loop_VITIS_LOOP_167_3_proc   |       25|       25|   0.250 us|   0.250 us|     25|     25|       no|
-        |Block_for_end111_proc_U0        |Block_for_end111_proc        |        2|        2|  20.000 ns|  20.000 ns|      2|      2|       no|
+        |dense_0_U0                      |dense_0                      |    15110|    15110|   0.151 ms|   0.151 ms|  15110|  15110|       no|
+        |batch_normalization_1_U0        |batch_normalization_1        |       89|       89|   0.890 us|   0.890 us|     89|     89|       no|
+        |dense_1_U0                      |dense_1                      |      164|      164|   1.640 us|   1.640 us|    164|    164|       no|
+        |Loop_VITIS_LOOP_171_3_proc9_U0  |Loop_VITIS_LOOP_171_3_proc9  |       24|       24|   0.240 us|   0.240 us|     24|     24|       no|
         +--------------------------------+-----------------------------+---------+---------+-----------+-----------+-------+-------+---------+
 
         * Loop: 
@@ -63,39 +62,38 @@
 |       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
 +-----------------+---------+-----+--------+-------+-----+
 |DSP              |        -|    -|       -|      -|    -|
-|Expression       |        -|    -|       0|     14|    -|
-|FIFO             |        -|    -|     198|    134|    -|
-|Instance         |        8|   48|    8721|  14678|    0|
-|Memory           |       14|    -|     143|     26|    0|
-|Multiplexer      |        -|    -|       -|     18|    -|
-|Register         |        -|    -|       2|      -|    -|
+|Expression       |        -|    -|       0|      2|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |       16|   50|   18026|  29341|    0|
+|Memory           |       22|    -|     215|     40|    0|
+|Multiplexer      |        -|    -|       -|      -|    -|
+|Register         |        -|    -|       -|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |       22|   48|    9064|  14870|    0|
+|Total            |       38|   50|   18241|  29383|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      432|  360|  141120|  70560|    0|
 +-----------------+---------+-----+--------+-------+-----+
-|Utilization (%)  |        5|   13|       6|     21|    0|
+|Utilization (%)  |        8|   13|      12|     41|    0|
 +-----------------+---------+-----+--------+-------+-----+
 
 + Detail: 
     * Instance: 
-    +--------------------------------+-----------------------------+---------+----+------+------+-----+
-    |            Instance            |            Module           | BRAM_18K| DSP|  FF  |  LUT | URAM|
-    +--------------------------------+-----------------------------+---------+----+------+------+-----+
-    |Block_for_end111_proc_U0        |Block_for_end111_proc        |        0|   0|     4|   112|    0|
-    |Loop_VITIS_LOOP_147_1_proc9_U0  |Loop_VITIS_LOOP_147_1_proc9  |        0|   0|     9|    64|    0|
-    |Loop_VITIS_LOOP_167_3_proc_U0   |Loop_VITIS_LOOP_167_3_proc   |        0|   0|    84|   208|    0|
-    |Loop_VITIS_LOOP_77_1_proc_U0    |Loop_VITIS_LOOP_77_1_proc    |        0|   0|    46|   261|    0|
-    |batch_normalization_0_U0        |batch_normalization_0        |        0|   1|  2152|  2936|    0|
-    |batch_normalization_1_U0        |batch_normalization_1        |        0|   1|  1772|  2605|    0|
-    |control_s_axi_U                 |control_s_axi                |        0|   0|    36|    40|    0|
-    |conv1d_0_U0                     |conv1d_0                     |        0|   3|   188|   392|    0|
-    |dense_0_U0                      |dense_0                      |        8|   1|   268|   408|    0|
-    |dense_1_U0                      |dense_1                      |        0|  42|  4128|  7429|    0|
-    |max_pooling1d_0_U0              |max_pooling1d_0              |        0|   0|    34|   223|    0|
-    +--------------------------------+-----------------------------+---------+----+------+------+-----+
-    |Total                           |                             |        8|  48|  8721| 14678|    0|
-    +--------------------------------+-----------------------------+---------+----+------+------+-----+
+    +--------------------------------+-----------------------------+---------+----+------+-------+-----+
+    |            Instance            |            Module           | BRAM_18K| DSP|  FF  |  LUT  | URAM|
+    +--------------------------------+-----------------------------+---------+----+------+-------+-----+
+    |Loop_VITIS_LOOP_148_1_proc8_U0  |Loop_VITIS_LOOP_148_1_proc8  |        0|   0|   128|   1336|    0|
+    |Loop_VITIS_LOOP_171_3_proc9_U0  |Loop_VITIS_LOOP_171_3_proc9  |        0|   0|   126|   1105|    0|
+    |Loop_VITIS_LOOP_77_1_proc_U0    |Loop_VITIS_LOOP_77_1_proc    |        0|   0|    46|    261|    0|
+    |batch_normalization_0_U0        |batch_normalization_0        |        0|   2|  4943|   5855|    0|
+    |batch_normalization_1_U0        |batch_normalization_1        |        0|   2|  4539|   5598|    0|
+    |control_s_axi_U                 |control_s_axi                |        0|   0|    36|     40|    0|
+    |conv1d_0_U0                     |conv1d_0                     |        0|   3|   262|    946|    0|
+    |dense_0_U0                      |dense_0                      |       16|   1|   313|    697|    0|
+    |dense_1_U0                      |dense_1                      |        0|  42|  7599|  13269|    0|
+    |max_pooling1d_0_U0              |max_pooling1d_0              |        0|   0|    34|    234|    0|
+    +--------------------------------+-----------------------------+---------+----+------+-------+-----+
+    |Total                           |                             |       16|  50| 18026|  29341|    0|
+    +--------------------------------+-----------------------------+---------+----+------+-------+-----+
 
     * DSP: 
     N/A
@@ -104,62 +102,35 @@
     +----------------------+----------------------------------+---------+----+----+-----+------+-----+------+-------------+
     |        Memory        |              Module              | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
     +----------------------+----------------------------------+---------+----+----+-----+------+-----+------+-------------+
-    |batch_norm_out_0_V_U  |batch_norm_out_0_V_RAM_AUTO_1R1W  |        4|   0|   0|    0|  1888|   16|     1|        30208|
-    |batch_norm_out_1_V_U  |batch_norm_out_1_V_RAM_AUTO_1R1W  |        0|  64|   8|    0|    16|   16|     1|          256|
-    |conv1d_out_0_V_U      |conv1d_out_0_V_RAM_AUTO_1R1W      |        4|   0|   0|    0|  1888|   15|     1|        28320|
-    |dense_out_0_V_U       |dense_out_0_V_RAM_AUTO_1R1W       |        0|  15|   8|    0|    16|   15|     1|          240|
-    |input_V_0_U           |input_V_0_RAM_AUTO_1R1W           |        2|   0|   0|    0|   120|   16|     1|         1920|
-    |max_pool_out_0_V_U    |max_pool_out_0_V_RAM_AUTO_1R1W    |        2|   0|   0|    0|   944|   16|     1|        15104|
-    |flatten_out_0_V_U     |max_pool_out_0_V_RAM_AUTO_1R1W    |        2|   0|   0|    0|   944|   16|     1|        15104|
-    |output_V_U            |output_V_RAM_AUTO_1R1W            |        0|  64|  10|    0|    20|   16|     1|          320|
+    |batch_norm_out_0_V_U  |batch_norm_out_0_V_RAM_AUTO_1R1W  |        6|   0|   0|    0|  1888|   24|     1|        45312|
+    |batch_norm_out_1_V_U  |batch_norm_out_1_V_RAM_AUTO_1R1W  |        0|  96|  12|    0|    16|   24|     1|          384|
+    |conv1d_out_0_V_U      |conv1d_out_0_V_RAM_AUTO_1R1W      |        6|   0|   0|    0|  1888|   23|     1|        43424|
+    |dense_out_0_V_U       |dense_out_0_V_RAM_AUTO_1R1W       |        0|  23|  12|    0|    16|   23|     1|          368|
+    |input_V_0_U           |input_V_0_RAM_AUTO_1R1W           |        4|   0|   0|    0|   120|   24|     1|         2880|
+    |max_pool_out_0_V_U    |max_pool_out_0_V_RAM_AUTO_1R1W    |        3|   0|   0|    0|   944|   24|     1|        22656|
+    |flatten_out_0_V_U     |max_pool_out_0_V_RAM_AUTO_1R1W    |        3|   0|   0|    0|   944|   24|     1|        22656|
+    |output_V_U            |output_V_RAM_AUTO_1R1W            |        0|  96|  16|    0|    20|   24|     1|          480|
     +----------------------+----------------------------------+---------+----+----+-----+------+-----+------+-------------+
-    |Total                 |                                  |       14| 143|  26|    0|  5836|  126|     8|        91472|
+    |Total                 |                                  |       22| 215|  40|    0|  5836|  190|     8|       138160|
     +----------------------+----------------------------------+---------+----+----+-----+------+-----+------+-------------+
 
     * FIFO: 
-    +---------------------------+---------+----+----+-----+------+-----+---------+
-    |            Name           | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
-    +---------------------------+---------+----+----+-----+------+-----+---------+
-    |max_idx_2_loc_channel_U    |        0|  99|   0|    -|     2|   32|       64|
-    |max_val_V_3_loc_channel_U  |        0|  99|   0|    -|     2|   16|       32|
-    +---------------------------+---------+----+----+-----+------+-----+---------+
-    |Total                      |        0| 198|   0|    0|     4|   48|       96|
-    +---------------------------+---------+----+----+-----+------+-----+---------+
+    N/A
 
     * Expression: 
-    +-----------------------------------------------+----------+----+---+----+------------+------------+
-    |                 Variable Name                 | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +-----------------------------------------------+----------+----+---+----+------------+------------+
-    |Block_for_end111_proc_U0_ap_start              |       and|   0|  0|   2|           1|           1|
-    |Loop_VITIS_LOOP_167_3_proc_U0_ap_continue      |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_max_idx_2_loc_channel          |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_max_val_V_3_loc_channel        |       and|   0|  0|   2|           1|           1|
-    |ap_idle                                        |       and|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_max_idx_2_loc_channel    |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_max_val_V_3_loc_channel  |        or|   0|  0|   2|           1|           1|
-    +-----------------------------------------------+----------+----+---+----+------------+------------+
-    |Total                                          |          |   0|  0|  14|           7|           7|
-    +-----------------------------------------------+----------+----+---+----+------------+------------+
+    +--------------+----------+----+---+----+------------+------------+
+    | Variable Name| Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------+----------+----+---+----+------------+------------+
+    |ap_idle       |       and|   0|  0|   2|           1|           1|
+    +--------------+----------+----+---+----+------------+------------+
+    |Total         |          |   0|  0|   2|           1|           1|
+    +--------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    +---------------------------------------------------+----+-----------+-----+-----------+
-    |                        Name                       | LUT| Input Size| Bits| Total Bits|
-    +---------------------------------------------------+----+-----------+-----+-----------+
-    |ap_sync_reg_channel_write_max_idx_2_loc_channel    |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_max_val_V_3_loc_channel  |   9|          2|    1|          2|
-    +---------------------------------------------------+----+-----------+-----+-----------+
-    |Total                                              |  18|          4|    2|          4|
-    +---------------------------------------------------+----+-----------+-----+-----------+
+    N/A
 
     * Register: 
-    +---------------------------------------------------+---+----+-----+-----------+
-    |                        Name                       | FF| LUT| Bits| Const Bits|
-    +---------------------------------------------------+---+----+-----+-----------+
-    |ap_sync_reg_channel_write_max_idx_2_loc_channel    |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_max_val_V_3_loc_channel  |  1|   0|    1|          0|
-    +---------------------------------------------------+---+----+-----+-----------+
-    |Total                                              |  2|   0|    2|          0|
-    +---------------------------------------------------+---+----+-----+-----------+
+    N/A
 
 
 
@@ -193,20 +164,14 @@
 |input_stream_TDATA     |   in|   32|        axis|   input_stream_V_data_V|       pointer|
 |input_stream_TKEEP     |   in|    4|        axis|   input_stream_V_keep_V|       pointer|
 |input_stream_TSTRB     |   in|    4|        axis|   input_stream_V_strb_V|       pointer|
-|input_stream_TUSER     |   in|    1|        axis|   input_stream_V_user_V|       pointer|
 |input_stream_TLAST     |   in|    1|        axis|   input_stream_V_last_V|       pointer|
-|input_stream_TID       |   in|    1|        axis|     input_stream_V_id_V|       pointer|
-|input_stream_TDEST     |   in|    1|        axis|   input_stream_V_dest_V|       pointer|
-|input_stream_TVALID    |   in|    1|        axis|   input_stream_V_dest_V|       pointer|
-|input_stream_TREADY    |  out|    1|        axis|   input_stream_V_dest_V|       pointer|
+|input_stream_TVALID    |   in|    1|        axis|   input_stream_V_last_V|       pointer|
+|input_stream_TREADY    |  out|    1|        axis|   input_stream_V_last_V|       pointer|
 |output_stream_TDATA    |  out|   32|        axis|  output_stream_V_data_V|       pointer|
 |output_stream_TKEEP    |  out|    4|        axis|  output_stream_V_keep_V|       pointer|
 |output_stream_TSTRB    |  out|    4|        axis|  output_stream_V_strb_V|       pointer|
-|output_stream_TUSER    |  out|    1|        axis|  output_stream_V_user_V|       pointer|
 |output_stream_TLAST    |  out|    1|        axis|  output_stream_V_last_V|       pointer|
-|output_stream_TID      |  out|    1|        axis|    output_stream_V_id_V|       pointer|
-|output_stream_TDEST    |  out|    1|        axis|  output_stream_V_dest_V|       pointer|
-|output_stream_TVALID   |  out|    1|        axis|  output_stream_V_dest_V|       pointer|
-|output_stream_TREADY   |   in|    1|        axis|  output_stream_V_dest_V|       pointer|
+|output_stream_TVALID   |  out|    1|        axis|  output_stream_V_last_V|       pointer|
+|output_stream_TREADY   |   in|    1|        axis|  output_stream_V_last_V|       pointer|
 +-----------------------+-----+-----+------------+------------------------+--------------+
 

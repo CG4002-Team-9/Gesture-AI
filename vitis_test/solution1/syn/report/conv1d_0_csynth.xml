@@ -18,7 +18,7 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>4.131</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.396</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -49,8 +49,8 @@
 <Resources>
 <BRAM_18K>0</BRAM_18K>
 <DSP>3</DSP>
-<FF>188</FF>
-<LUT>392</LUT>
+<FF>262</FF>
+<LUT>946</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -170,7 +170,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>16</Bits>
+<Bits>24</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -203,7 +203,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>16</Bits>
+<Bits>24</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -247,7 +247,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>15</Bits>
+<Bits>23</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 </InterfaceSummary>

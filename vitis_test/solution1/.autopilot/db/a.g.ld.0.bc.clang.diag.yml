@@ -2,10 +2,10 @@
 Pass:            reflow-pragma-conflict-handle
 Name:            FunctionPragmaConflictWarn
 DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 74, Column: 0 }
-Function:        _Z9flatten_0PA16_8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_
+Function:        _Z9flatten_0PA16_8ap_fixedILi24ELi6EL9ap_q_mode5EL9ap_o_mode2ELi0EEPS2_
 Args:            
   - String:          'In function '''
-  - Function:        'flatten_0(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+  - Function:        'flatten_0(ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0> (*) [16], ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0>*)'
     DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 74, Column: 0 }
   - String:          ''', '
   - String:          'Pragma conflict happens on '''
@@ -19,13 +19,13 @@ Args:
 Pass:            inline
 Name:            AlwaysInline
 DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 37, Column: 28 }
-Function:        _Z8conv1d_0PA1_8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA16_S2_
+Function:        _Z8conv1d_0PA1_8ap_fixedILi24ELi6EL9ap_q_mode5EL9ap_o_mode2ELi0EEPA16_S2_
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'relu(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - Callee:          'relu(ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0>)'
     DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 18, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'conv1d_0(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1], ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16])'
+  - Caller:          'conv1d_0(ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0> (*) [1], ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0> (*) [16])'
     DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 24, Column: 0 }
   - String:          ''''
 ...
@@ -33,27 +33,27 @@ Args:
 Pass:            inline
 Name:            AlwaysInline
 DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 95, Column: 21 }
-Function:        _Z7dense_0P8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Function:        _Z7dense_0P8ap_fixedILi24ELi6EL9ap_q_mode5EL9ap_o_mode2ELi0EES3_
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'relu(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - Callee:          'relu(ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0>)'
     DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 18, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'dense_0(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+  - Caller:          'dense_0(ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0>*, ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0>*)'
     DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 87, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 160, Column: 5 }
-Function:        _Z13gesture_modelRN3hls6streamINS_4axisI6ap_intILi32EELm1ELm1ELm1EEELi0EEES6_
+DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 162, Column: 5 }
+Function:        _Z13gesture_modelRN3hls6streamINS_4axisIfLm0ELm0ELm0EEELi0EEES4_
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'flatten_0(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+  - Callee:          'flatten_0(ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0> (*) [16], ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0>*)'
     DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 74, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'gesture_model(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)'
+  - Caller:          'gesture_model(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&)'
     DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 131, Column: 0 }
   - String:          ''''
 ...

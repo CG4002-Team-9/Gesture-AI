@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x8701C1C443B42832",
+      "boundary_crc": "0x330AC3F424A122E4",
       "device": "xczu3eg-sbva484-2-i",
       "gen_directory": "../../../../project.gen/sources_1/bd/bd_0",
       "name": "bd_0",
@@ -53,13 +53,13 @@
             "value": "4"
           },
           "TDEST_WIDTH": {
-            "value": "1"
+            "value": "0"
           },
           "TID_WIDTH": {
-            "value": "1"
+            "value": "0"
           },
           "TUSER_WIDTH": {
-            "value": "1"
+            "value": "0"
           }
         },
         "port_maps": {
@@ -89,26 +89,8 @@
             "left": "3",
             "right": "0"
           },
-          "TUSER": {
-            "physical_name": "input_stream_tuser",
-            "direction": "I",
-            "left": "0",
-            "right": "0"
-          },
           "TLAST": {
             "physical_name": "input_stream_tlast",
-            "direction": "I",
-            "left": "0",
-            "right": "0"
-          },
-          "TID": {
-            "physical_name": "input_stream_tid",
-            "direction": "I",
-            "left": "0",
-            "right": "0"
-          },
-          "TDEST": {
-            "physical_name": "input_stream_tdest",
             "direction": "I",
             "left": "0",
             "right": "0"
@@ -160,15 +142,15 @@
             "value_src": "const_prop"
           },
           "TDEST_WIDTH": {
-            "value": "1",
+            "value": "0",
             "value_src": "const_prop"
           },
           "TID_WIDTH": {
-            "value": "1",
+            "value": "0",
             "value_src": "const_prop"
           },
           "TUSER_WIDTH": {
-            "value": "1",
+            "value": "0",
             "value_src": "const_prop"
           }
         },
@@ -199,26 +181,8 @@
             "left": "3",
             "right": "0"
           },
-          "TUSER": {
-            "physical_name": "output_stream_tuser",
-            "direction": "O",
-            "left": "0",
-            "right": "0"
-          },
           "TLAST": {
             "physical_name": "output_stream_tlast",
-            "direction": "O",
-            "left": "0",
-            "right": "0"
-          },
-          "TID": {
-            "physical_name": "output_stream_tid",
-            "direction": "O",
-            "left": "0",
-            "right": "0"
-          },
-          "TDEST": {
-            "physical_name": "output_stream_tdest",
             "direction": "O",
             "left": "0",
             "right": "0"

@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Sat Aug 31 19:37:58 2024
+//Date        : Mon Sep  2 11:44:32 2024
 //Host        : prince-ThinkPad-E14-Gen-5 running 64-bit Ubuntu 24.04 LTS
 //Command     : generate_target bd_0.bd
 //Design      : bd_0
@@ -14,23 +14,17 @@ module bd_0
    (ap_clk,
     ap_rst_n,
     input_stream_tdata,
-    input_stream_tdest,
-    input_stream_tid,
     input_stream_tkeep,
     input_stream_tlast,
     input_stream_tready,
     input_stream_tstrb,
-    input_stream_tuser,
     input_stream_tvalid,
     interrupt,
     output_stream_tdata,
-    output_stream_tdest,
-    output_stream_tid,
     output_stream_tkeep,
     output_stream_tlast,
     output_stream_tready,
     output_stream_tstrb,
-    output_stream_tuser,
     output_stream_tvalid,
     s_axi_control_araddr,
     s_axi_control_arready,
@@ -51,24 +45,18 @@ module bd_0
     s_axi_control_wvalid);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.AP_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.AP_CLK, ASSOCIATED_BUSIF input_stream:output_stream:s_axi_control, ASSOCIATED_RESET ap_rst_n, CLK_DOMAIN bd_0_ap_clk_0, FREQ_HZ 100000000.0, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input ap_clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.AP_RST_N RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.AP_RST_N, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input ap_rst_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME input_stream, CLK_DOMAIN bd_0_ap_clk_0, FREQ_HZ 100000000.0, HAS_TKEEP 1, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 1, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 4, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1" *) input [31:0]input_stream_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream " *) input [0:0]input_stream_tdest;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream " *) input [0:0]input_stream_tid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME input_stream, CLK_DOMAIN bd_0_ap_clk_0, FREQ_HZ 100000000.0, HAS_TKEEP 1, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 1, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) input [31:0]input_stream_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream " *) input [3:0]input_stream_tkeep;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream " *) input [0:0]input_stream_tlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream " *) output input_stream_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream " *) input [3:0]input_stream_tstrb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream " *) input [0:0]input_stream_tuser;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream " *) input input_stream_tvalid;
   (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 INTR.INTERRUPT INTERRUPT" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME INTR.INTERRUPT, PortWidth 1, SENSITIVITY LEVEL_HIGH" *) output interrupt;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME output_stream, CLK_DOMAIN bd_0_ap_clk_0, FREQ_HZ 100000000.0, HAS_TKEEP 1, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 1, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 4, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1" *) output [31:0]output_stream_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream " *) output [0:0]output_stream_tdest;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream " *) output [0:0]output_stream_tid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME output_stream, CLK_DOMAIN bd_0_ap_clk_0, FREQ_HZ 100000000.0, HAS_TKEEP 1, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 1, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) output [31:0]output_stream_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream " *) output [3:0]output_stream_tkeep;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream " *) output [0:0]output_stream_tlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream " *) input output_stream_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream " *) output [3:0]output_stream_tstrb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream " *) output [0:0]output_stream_tuser;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream " *) output output_stream_tvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_control, ADDR_WIDTH 32, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN bd_0_ap_clk_0, DATA_WIDTH 32, FREQ_HZ 100000000.0, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 0, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 1, NUM_READ_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 1, NUM_WRITE_THREADS 1, PHASE 0.0, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) input [3:0]s_axi_control_araddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) output s_axi_control_arready;
@@ -92,22 +80,16 @@ module bd_0
   wire ap_rst_n_0_1;
   wire hls_inst_interrupt;
   wire [31:0]hls_inst_output_stream_TDATA;
-  wire [0:0]hls_inst_output_stream_TDEST;
-  wire [0:0]hls_inst_output_stream_TID;
   wire [3:0]hls_inst_output_stream_TKEEP;
   wire [0:0]hls_inst_output_stream_TLAST;
   wire hls_inst_output_stream_TREADY;
   wire [3:0]hls_inst_output_stream_TSTRB;
-  wire [0:0]hls_inst_output_stream_TUSER;
   wire hls_inst_output_stream_TVALID;
   wire [31:0]input_stream_0_1_TDATA;
-  wire [0:0]input_stream_0_1_TDEST;
-  wire [0:0]input_stream_0_1_TID;
   wire [3:0]input_stream_0_1_TKEEP;
   wire [0:0]input_stream_0_1_TLAST;
   wire input_stream_0_1_TREADY;
   wire [3:0]input_stream_0_1_TSTRB;
-  wire [0:0]input_stream_0_1_TUSER;
   wire input_stream_0_1_TVALID;
   wire [3:0]s_axi_control_0_1_ARADDR;
   wire s_axi_control_0_1_ARREADY;
@@ -131,22 +113,16 @@ module bd_0
   assign ap_rst_n_0_1 = ap_rst_n;
   assign hls_inst_output_stream_TREADY = output_stream_tready;
   assign input_stream_0_1_TDATA = input_stream_tdata[31:0];
-  assign input_stream_0_1_TDEST = input_stream_tdest[0];
-  assign input_stream_0_1_TID = input_stream_tid[0];
   assign input_stream_0_1_TKEEP = input_stream_tkeep[3:0];
   assign input_stream_0_1_TLAST = input_stream_tlast[0];
   assign input_stream_0_1_TSTRB = input_stream_tstrb[3:0];
-  assign input_stream_0_1_TUSER = input_stream_tuser[0];
   assign input_stream_0_1_TVALID = input_stream_tvalid;
   assign input_stream_tready = input_stream_0_1_TREADY;
   assign interrupt = hls_inst_interrupt;
   assign output_stream_tdata[31:0] = hls_inst_output_stream_TDATA;
-  assign output_stream_tdest[0] = hls_inst_output_stream_TDEST;
-  assign output_stream_tid[0] = hls_inst_output_stream_TID;
   assign output_stream_tkeep[3:0] = hls_inst_output_stream_TKEEP;
   assign output_stream_tlast[0] = hls_inst_output_stream_TLAST;
   assign output_stream_tstrb[3:0] = hls_inst_output_stream_TSTRB;
-  assign output_stream_tuser[0] = hls_inst_output_stream_TUSER;
   assign output_stream_tvalid = hls_inst_output_stream_TVALID;
   assign s_axi_control_0_1_ARADDR = s_axi_control_araddr[3:0];
   assign s_axi_control_0_1_ARVALID = s_axi_control_arvalid;
@@ -169,23 +145,17 @@ module bd_0
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .input_stream_TDATA(input_stream_0_1_TDATA),
-        .input_stream_TDEST(input_stream_0_1_TDEST),
-        .input_stream_TID(input_stream_0_1_TID),
         .input_stream_TKEEP(input_stream_0_1_TKEEP),
         .input_stream_TLAST(input_stream_0_1_TLAST),
         .input_stream_TREADY(input_stream_0_1_TREADY),
         .input_stream_TSTRB(input_stream_0_1_TSTRB),
-        .input_stream_TUSER(input_stream_0_1_TUSER),
         .input_stream_TVALID(input_stream_0_1_TVALID),
         .interrupt(hls_inst_interrupt),
         .output_stream_TDATA(hls_inst_output_stream_TDATA),
-        .output_stream_TDEST(hls_inst_output_stream_TDEST),
-        .output_stream_TID(hls_inst_output_stream_TID),
         .output_stream_TKEEP(hls_inst_output_stream_TKEEP),
         .output_stream_TLAST(hls_inst_output_stream_TLAST),
         .output_stream_TREADY(hls_inst_output_stream_TREADY),
         .output_stream_TSTRB(hls_inst_output_stream_TSTRB),
-        .output_stream_TUSER(hls_inst_output_stream_TUSER),
         .output_stream_TVALID(hls_inst_output_stream_TVALID),
         .s_axi_control_ARADDR(s_axi_control_0_1_ARADDR),
         .s_axi_control_ARREADY(s_axi_control_0_1_ARREADY),

@@ -25,13 +25,13 @@
 </TimingReport>
 <AreaReport>
   <Resources>
-    <BRAM>20</BRAM>
+    <BRAM>36</BRAM>
     <CLB>0</CLB>
-    <DSP>48</DSP>
-    <FF>8384</FF>
+    <DSP>52</DSP>
+    <FF>15609</FF>
     <LATCH>0</LATCH>
-    <LUT>11010</LUT>
-    <SRL>423</SRL>
+    <LUT>20985</LUT>
+    <SRL>763</SRL>
     <URAM>0</URAM>
   </Resources>
   <AvailableResources>
@@ -45,384 +45,420 @@
 </AreaReport>
 <RtlModules>
   <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="gesture_model" TOP_CELL="bd_0_i/hls_inst/inst">
-    <SubModules count="21">Block_for_end111_proc_U0 Loop_VITIS_LOOP_147_1_proc9_U0 Loop_VITIS_LOOP_167_3_proc_U0 Loop_VITIS_LOOP_77_1_proc_U0 batch_norm_out_0_V_U batch_norm_out_1_V_U batch_normalization_0_U0 batch_normalization_1_U0 control_s_axi_U conv1d_0_U0 conv1d_out_0_V_U dense_0_U0 dense_1_U0 dense_out_0_V_U flatten_out_0_V_U input_V_0_U max_idx_2_loc_channel_U max_pool_out_0_V_U max_pooling1d_0_U0 max_val_V_3_loc_channel_U output_V_U</SubModules>
-    <Resources BRAM="20" DSP="48" FF="8384" LUT="11010" LUTRAM="330" LogicLUT="10257" RAMB36="10" SRL="423"/>
-    <LocalResources FF="2"/>
+    <SubModules count="18">Loop_VITIS_LOOP_148_1_proc8_U0 Loop_VITIS_LOOP_171_3_proc9_U0 Loop_VITIS_LOOP_77_1_proc_U0 batch_norm_out_0_V_U batch_norm_out_1_V_U batch_normalization_0_U0 batch_normalization_1_U0 control_s_axi_U conv1d_0_U0 conv1d_out_0_V_U dense_0_U0 dense_1_U0 dense_out_0_V_U flatten_out_0_V_U input_V_0_U max_pool_out_0_V_U max_pooling1d_0_U0 output_V_U</SubModules>
+    <Resources BRAM="36" DSP="52" FF="15609" LUT="20985" LUTRAM="718" LogicLUT="19504" RAMB18="4" RAMB36="16" SRL="763"/>
   </RtlModule>
-  <RtlModule CELL="inst/Block_for_end111_proc_U0" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_Block_for_end111_proc">
-    <SubModules count="2">regslice_both_output_stream_V_data_V_U regslice_both_output_stream_V_last_V_U</SubModules>
-    <Resources FF="29" LUT="21" LogicLUT="21"/>
-    <LocalResources FF="3"/>
+  <RtlModule CELL="inst/Loop_VITIS_LOOP_148_1_proc8_U0" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_Loop_VITIS_LOOP_148_1_proc8">
+    <SubModules count="3">flow_control_loop_pipe_U fpext_32ns_64_2_no_dsp_1_U1 regslice_both_input_stream_V_data_V_U</SubModules>
+    <Resources FF="265" LUT="927" LogicLUT="927"/>
+    <LocalResources FF="96" LUT="129" LogicLUT="129"/>
   </RtlModule>
-  <RtlModule CELL="inst/Block_for_end111_proc_U0/regslice_both_output_stream_V_data_V_U" BINDMODULE="gesture_model_regslice_both" DEPTH="2" FILE_NAME="gesture_model_Block_for_end111_proc.v" ORIG_REF_NAME="gesture_model_regslice_both">
-    <Resources FF="20" LUT="16" LogicLUT="16"/>
+  <RtlModule CELL="inst/Loop_VITIS_LOOP_148_1_proc8_U0/flow_control_loop_pipe_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="2" FILE_NAME="gesture_model_Loop_VITIS_LOOP_148_1_proc8.v" ORIG_REF_NAME="gesture_model_flow_control_loop_pipe">
+    <Resources FF="1" LUT="14" LogicLUT="14"/>
   </RtlModule>
-  <RtlModule CELL="inst/Block_for_end111_proc_U0/regslice_both_output_stream_V_last_V_U" BINDMODULE="gesture_model_regslice_both" DEPTH="2" FILE_NAME="gesture_model_Block_for_end111_proc.v" ORIG_REF_NAME="gesture_model_regslice_both">
-    <Resources FF="6" LUT="5" LogicLUT="5"/>
+  <RtlModule CELL="inst/Loop_VITIS_LOOP_148_1_proc8_U0/fpext_32ns_64_2_no_dsp_1_U1" BINDMODULE="gesture_model_fpext_32ns_64_2_no_dsp_1" DEPTH="2" FILE_NAME="gesture_model_Loop_VITIS_LOOP_148_1_proc8.v" ORIG_REF_NAME="gesture_model_fpext_32ns_64_2_no_dsp_1">
+    <Resources FF="100" LUT="757" LogicLUT="757"/>
+    <LocalResources FF="100"/>
   </RtlModule>
-  <RtlModule CELL="inst/Loop_VITIS_LOOP_147_1_proc9_U0" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_Loop_VITIS_LOOP_147_1_proc9">
-    <SubModules count="2">flow_control_loop_pipe_U regslice_both_input_stream_V_data_V_U</SubModules>
-    <Resources FF="29" LUT="33" LogicLUT="33"/>
-    <LocalResources FF="8"/>
+  <RtlModule CELL="inst/Loop_VITIS_LOOP_148_1_proc8_U0/regslice_both_input_stream_V_data_V_U" BINDMODULE="gesture_model_regslice_both" DEPTH="2" FILE_NAME="gesture_model_Loop_VITIS_LOOP_148_1_proc8.v" ORIG_REF_NAME="gesture_model_regslice_both">
+    <Resources FF="68" LUT="27" LogicLUT="27"/>
   </RtlModule>
-  <RtlModule CELL="inst/Loop_VITIS_LOOP_147_1_proc9_U0/flow_control_loop_pipe_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="2" FILE_NAME="gesture_model_Loop_VITIS_LOOP_147_1_proc9.v" ORIG_REF_NAME="gesture_model_flow_control_loop_pipe">
-    <Resources FF="1" LUT="11" LogicLUT="11"/>
+  <RtlModule CELL="inst/Loop_VITIS_LOOP_171_3_proc9_U0" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_Loop_VITIS_LOOP_171_3_proc9">
+    <SubModules count="3">flow_control_loop_pipe_U regslice_both_output_stream_V_data_V_U regslice_both_output_stream_V_last_V_U</SubModules>
+    <Resources FF="133" LUT="179" LogicLUT="179"/>
+    <LocalResources FF="60" LUT="27" LogicLUT="27"/>
   </RtlModule>
-  <RtlModule CELL="inst/Loop_VITIS_LOOP_147_1_proc9_U0/regslice_both_input_stream_V_data_V_U" BINDMODULE="gesture_model_regslice_both" DEPTH="2" FILE_NAME="gesture_model_Loop_VITIS_LOOP_147_1_proc9.v" ORIG_REF_NAME="gesture_model_regslice_both">
-    <Resources FF="20" LUT="22" LogicLUT="22"/>
+  <RtlModule CELL="inst/Loop_VITIS_LOOP_171_3_proc9_U0/flow_control_loop_pipe_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="2" FILE_NAME="gesture_model_Loop_VITIS_LOOP_171_3_proc9.v" ORIG_REF_NAME="gesture_model_flow_control_loop_pipe">
+    <Resources FF="1" LUT="14" LogicLUT="14"/>
   </RtlModule>
-  <RtlModule CELL="inst/Loop_VITIS_LOOP_167_3_proc_U0" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_Loop_VITIS_LOOP_167_3_proc">
-    <SubModules count="1">grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32</SubModules>
-    <Resources FF="57" LUT="52" LogicLUT="52"/>
-    <LocalResources FF="23" LUT="7" LogicLUT="7"/>
+  <RtlModule CELL="inst/Loop_VITIS_LOOP_171_3_proc9_U0/regslice_both_output_stream_V_data_V_U" BINDMODULE="gesture_model_regslice_both" DEPTH="2" FILE_NAME="gesture_model_Loop_VITIS_LOOP_171_3_proc9.v" ORIG_REF_NAME="gesture_model_regslice_both">
+    <Resources FF="66" LUT="132" LogicLUT="132"/>
   </RtlModule>
-  <RtlModule CELL="inst/Loop_VITIS_LOOP_167_3_proc_U0/grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32" DEPTH="2" FILE_NAME="gesture_model_Loop_VITIS_LOOP_167_3_proc.v" ORIG_REF_NAME="gesture_model_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3">
-    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-    <Resources FF="34" LUT="45" LogicLUT="45"/>
-    <LocalResources FF="32" LUT="9" LogicLUT="9"/>
-  </RtlModule>
-  <RtlModule CELL="inst/Loop_VITIS_LOOP_167_3_proc_U0/grp_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3_fu_32/flow_control_loop_pipe_sequential_init_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="3" FILE_NAME="gesture_model_Loop_VITIS_LOOP_167_3_proc_Pipeline_VITIS_LOOP_167_3.v" ORIG_REF_NAME="gesture_model_flow_control_loop_pipe_sequential_init">
-    <Resources FF="2" LUT="36" LogicLUT="36"/>
+  <RtlModule CELL="inst/Loop_VITIS_LOOP_171_3_proc9_U0/regslice_both_output_stream_V_last_V_U" BINDMODULE="gesture_model_regslice_both" DEPTH="2" FILE_NAME="gesture_model_Loop_VITIS_LOOP_171_3_proc9.v" ORIG_REF_NAME="gesture_model_regslice_both">
+    <Resources FF="6" LUT="6" LogicLUT="6"/>
   </RtlModule>
   <RtlModule CELL="inst/Loop_VITIS_LOOP_77_1_proc_U0" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_Loop_VITIS_LOOP_77_1_proc">
     <SubModules count="1">flow_control_loop_pipe_U</SubModules>
-    <Resources FF="42" LUT="63" LogicLUT="63"/>
+    <Resources FF="42" LUT="65" LogicLUT="65"/>
     <LocalResources FF="41" LUT="33" LogicLUT="33"/>
   </RtlModule>
   <RtlModule CELL="inst/Loop_VITIS_LOOP_77_1_proc_U0/flow_control_loop_pipe_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="2" FILE_NAME="gesture_model_Loop_VITIS_LOOP_77_1_proc.v" ORIG_REF_NAME="gesture_model_flow_control_loop_pipe">
-    <Resources FF="1" LUT="30" LogicLUT="30"/>
+    <Resources FF="1" LUT="32" LogicLUT="32"/>
   </RtlModule>
   <RtlModule CELL="inst/batch_norm_out_0_V_U" BINDMODULE="gesture_model_batch_norm_out_0_V_RAM_AUTO_1R1W" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_batch_norm_out_0_V_RAM_AUTO_1R1W">
-    <Resources BRAM="4" FF="40" LUT="83" LogicLUT="83" RAMB36="2"/>
-    <LocalResources FF="40" LUT="5" LogicLUT="5"/>
+    <Resources BRAM="6" FF="56" LUT="112" LogicLUT="112" RAMB18="2" RAMB36="2"/>
+    <LocalResources FF="56" LUT="6" LogicLUT="6"/>
   </RtlModule>
   <RtlModule CELL="inst/batch_norm_out_1_V_U" BINDMODULE="gesture_model_batch_norm_out_1_V_RAM_AUTO_1R1W" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_batch_norm_out_1_V_RAM_AUTO_1R1W">
-    <Resources FF="104" LUT="148" LUTRAM="64" LogicLUT="84"/>
-    <LocalResources FF="40" LUT="4" LogicLUT="4"/>
+    <Resources FF="152" LUT="217" LUTRAM="96" LogicLUT="121"/>
+    <LocalResources FF="56" LUT="9" LogicLUT="9"/>
   </RtlModule>
   <RtlModule CELL="inst/batch_normalization_0_U0" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_batch_normalization_0">
-    <SubModules count="10">batch_norm_0_beta_V_U batch_norm_0_gamma_V_U batch_norm_0_mean_V_U batch_norm_0_variance_V_U dsqrt_64ns_64ns_64_21_no_dsp_1_U27 flow_control_loop_delay_pipe_U frp_pipeline_valid_U mac_muladd_24s_9ns_15s_24_4_1_U29 pf_output_r_d0_U sdiv_24ns_16s_24_28_1_U28</SubModules>
-    <Resources DSP="1" FF="2369" LUT="2967" LogicLUT="2802" SRL="165"/>
-    <LocalResources FF="135" LUT="95" LogicLUT="39" SRL="56"/>
+    <SubModules count="10">batch_norm_0_beta_V_U batch_norm_0_gamma_V_U batch_norm_0_mean_V_U batch_norm_0_variance_V_U dsqrt_64ns_64ns_64_21_no_dsp_1_U22 flow_control_loop_delay_pipe_U frp_pipeline_valid_U mul_43s_19ns_62_1_1_U24 pf_output_r_d0_U sdiv_43s_24s_43_47_1_U23</SubModules>
+    <Resources DSP="3" FF="4390" LUT="5557" LogicLUT="5179" SRL="378"/>
+    <LocalResources DSP="2" FF="224" LUT="971" LogicLUT="817" SRL="154"/>
   </RtlModule>
   <RtlModule CELL="inst/batch_normalization_0_U0/batch_norm_0_beta_V_U" BINDMODULE="gesture_model_batch_normalization_0_batch_norm_0_beta_V_ROM_AUTO_1R" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_0.v" ORIG_REF_NAME="gesture_model_batch_normalization_0_batch_norm_0_beta_V_ROM_AUTO_1R">
-    <Resources FF="7"/>
+    <Resources FF="17"/>
   </RtlModule>
   <RtlModule CELL="inst/batch_normalization_0_U0/batch_norm_0_gamma_V_U" BINDMODULE="gesture_model_batch_normalization_0_batch_norm_0_gamma_V_ROM_AUTO_1R" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_0.v" ORIG_REF_NAME="gesture_model_batch_normalization_0_batch_norm_0_gamma_V_ROM_AUTO_1R">
-    <Resources FF="9"/>
+    <Resources FF="19"/>
   </RtlModule>
   <RtlModule CELL="inst/batch_normalization_0_U0/batch_norm_0_mean_V_U" BINDMODULE="gesture_model_batch_normalization_0_batch_norm_0_mean_V_ROM_AUTO_1R" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_0.v" ORIG_REF_NAME="gesture_model_batch_normalization_0_batch_norm_0_mean_V_ROM_AUTO_1R">
-    <Resources FF="4"/>
+    <Resources FF="13"/>
   </RtlModule>
   <RtlModule CELL="inst/batch_normalization_0_U0/batch_norm_0_variance_V_U" BINDMODULE="gesture_model_batch_normalization_0_batch_norm_0_variance_V_ROM_AUTO_1R" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_0.v" ORIG_REF_NAME="gesture_model_batch_normalization_0_batch_norm_0_variance_V_ROM_AUTO_1R">
-    <Resources FF="1"/>
+    <Resources FF="11"/>
   </RtlModule>
-  <RtlModule CELL="inst/batch_normalization_0_U0/dsqrt_64ns_64ns_64_21_no_dsp_1_U27" BINDMODULE="gesture_model_dsqrt_64ns_64ns_64_21_no_dsp_1" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_0.v" ORIG_REF_NAME="gesture_model_dsqrt_64ns_64ns_64_21_no_dsp_1">
-    <Resources FF="1173" LUT="1562" LogicLUT="1548" SRL="14"/>
-    <LocalResources FF="1"/>
+  <RtlModule CELL="inst/batch_normalization_0_U0/dsqrt_64ns_64ns_64_21_no_dsp_1_U22" BINDMODULE="gesture_model_dsqrt_64ns_64ns_64_21_no_dsp_1" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_0.v" ORIG_REF_NAME="gesture_model_dsqrt_64ns_64ns_64_21_no_dsp_1">
+    <Resources FF="1195" LUT="1579" LogicLUT="1565" SRL="14"/>
+    <LocalResources FF="15"/>
   </RtlModule>
   <RtlModule CELL="inst/batch_normalization_0_U0/flow_control_loop_delay_pipe_U" BINDMODULE="gesture_model_flow_control_loop_delay_pipe" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_0.v" ORIG_REF_NAME="gesture_model_flow_control_loop_delay_pipe">
-    <Resources FF="2" LUT="42" LogicLUT="42"/>
+    <Resources FF="2" LUT="64" LogicLUT="64"/>
   </RtlModule>
   <RtlModule CELL="inst/batch_normalization_0_U0/frp_pipeline_valid_U" BINDMODULE="gesture_model_frp_pipeline_valid" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_0.v" ORIG_REF_NAME="gesture_model_frp_pipeline_valid">
-    <Resources FF="60" LUT="8" LogicLUT="8"/>
+    <Resources FF="80" LUT="9" LogicLUT="9"/>
   </RtlModule>
-  <RtlModule CELL="inst/batch_normalization_0_U0/mac_muladd_24s_9ns_15s_24_4_1_U29" BINDMODULE="gesture_model_mac_muladd_24s_9ns_15s_24_4_1" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_0.v" ORIG_REF_NAME="gesture_model_mac_muladd_24s_9ns_15s_24_4_1">
-    <Resources DSP="1"/>
+  <RtlModule CELL="inst/batch_normalization_0_U0/mul_43s_19ns_62_1_1_U24" BINDMODULE="gesture_model_mul_43s_19ns_62_1_1" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_0.v" ORIG_REF_NAME="gesture_model_mul_43s_19ns_62_1_1">
+    <Resources DSP="1" LUT="57" LogicLUT="57"/>
   </RtlModule>
   <RtlModule CELL="inst/batch_normalization_0_U0/pf_output_r_d0_U" BINDMODULE="gesture_model_frp_fifoout" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_0.v" ORIG_REF_NAME="gesture_model_frp_fifoout">
-    <Resources FF="11" LUT="105" LogicLUT="47" SRL="58"/>
+    <Resources FF="12" LUT="187" LogicLUT="76" SRL="111"/>
   </RtlModule>
-  <RtlModule CELL="inst/batch_normalization_0_U0/sdiv_24ns_16s_24_28_1_U28" BINDMODULE="gesture_model_sdiv_24ns_16s_24_28_1" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_0.v" ORIG_REF_NAME="gesture_model_sdiv_24ns_16s_24_28_1">
-    <Resources FF="967" LUT="1155" LogicLUT="1118" SRL="37"/>
-    <LocalResources FF="32" LUT="316" LogicLUT="316"/>
+  <RtlModule CELL="inst/batch_normalization_0_U0/sdiv_43s_24s_43_47_1_U23" BINDMODULE="gesture_model_sdiv_43s_24s_43_47_1" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_0.v" ORIG_REF_NAME="gesture_model_sdiv_43s_24s_43_47_1">
+    <Resources FF="2817" LUT="2691" LogicLUT="2592" SRL="99"/>
+    <LocalResources FF="48" LUT="1081" LogicLUT="1081"/>
   </RtlModule>
   <RtlModule CELL="inst/batch_normalization_1_U0" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_batch_normalization_1">
-    <SubModules count="8">batch_norm_1_mean_V_U batch_norm_1_variance_V_U dsqrt_64ns_64ns_64_21_no_dsp_1_U49 flow_control_loop_delay_pipe_U frp_pipeline_valid_U mac_muladd_24s_10ns_16s_24_4_1_U51 pf_output_r_d0_U sdiv_24ns_16s_24_28_1_U50</SubModules>
-    <Resources DSP="1" FF="2495" LUT="3038" LogicLUT="2897" SRL="141"/>
-    <LocalResources FF="156" LUT="31" LogicLUT="21" SRL="10"/>
+    <SubModules count="9">batch_norm_1_beta_V_U batch_norm_1_mean_V_U batch_norm_1_variance_V_U dsqrt_64ns_64ns_64_21_no_dsp_1_U44 flow_control_loop_delay_pipe_U frp_pipeline_valid_U mul_43s_20ns_63_1_1_U46 pf_output_r_d0_U sdiv_43s_24s_43_47_1_U45</SubModules>
+    <Resources DSP="3" FF="4345" LUT="5411" LogicLUT="5192" SRL="219"/>
+    <LocalResources DSP="2" FF="166" LUT="816" LogicLUT="801" SRL="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/batch_normalization_1_U0/batch_norm_1_beta_V_U" BINDMODULE="gesture_model_batch_normalization_1_batch_norm_1_beta_V_ROM_AUTO_1R" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_1.v" ORIG_REF_NAME="gesture_model_batch_normalization_1_batch_norm_1_beta_V_ROM_AUTO_1R">
+    <Resources FF="18" LUT="45" LogicLUT="45"/>
   </RtlModule>
   <RtlModule CELL="inst/batch_normalization_1_U0/batch_norm_1_mean_V_U" BINDMODULE="gesture_model_batch_normalization_1_batch_norm_1_mean_V_ROM_AUTO_1R" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_1.v" ORIG_REF_NAME="gesture_model_batch_normalization_1_batch_norm_1_mean_V_ROM_AUTO_1R">
-    <Resources FF="9" LUT="5" LogicLUT="5"/>
+    <Resources FF="19" LUT="10" LogicLUT="10"/>
   </RtlModule>
   <RtlModule CELL="inst/batch_normalization_1_U0/batch_norm_1_variance_V_U" BINDMODULE="gesture_model_batch_normalization_1_batch_norm_1_variance_V_ROM_AUTO_1R" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_1.v" ORIG_REF_NAME="gesture_model_batch_normalization_1_batch_norm_1_variance_V_ROM_AUTO_1R">
-    <Resources FF="8" LUT="45" LogicLUT="45"/>
+    <Resources FF="18"/>
   </RtlModule>
-  <RtlModule CELL="inst/batch_normalization_1_U0/dsqrt_64ns_64ns_64_21_no_dsp_1_U49" BINDMODULE="gesture_model_dsqrt_64ns_64ns_64_21_no_dsp_1" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_1.v" ORIG_REF_NAME="gesture_model_dsqrt_64ns_64ns_64_21_no_dsp_1">
-    <Resources FF="1282" LUT="1676" LogicLUT="1626" SRL="50"/>
-    <LocalResources FF="56"/>
+  <RtlModule CELL="inst/batch_normalization_1_U0/dsqrt_64ns_64ns_64_21_no_dsp_1_U44" BINDMODULE="gesture_model_dsqrt_64ns_64ns_64_21_no_dsp_1" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_1.v" ORIG_REF_NAME="gesture_model_dsqrt_64ns_64ns_64_21_no_dsp_1">
+    <Resources FF="1213" LUT="1590" LogicLUT="1575" SRL="15"/>
+    <LocalResources FF="22"/>
   </RtlModule>
   <RtlModule CELL="inst/batch_normalization_1_U0/flow_control_loop_delay_pipe_U" BINDMODULE="gesture_model_flow_control_loop_delay_pipe" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_1.v" ORIG_REF_NAME="gesture_model_flow_control_loop_delay_pipe">
-    <Resources FF="2" LUT="20" LogicLUT="20"/>
+    <Resources FF="2" LUT="24" LogicLUT="24"/>
   </RtlModule>
   <RtlModule CELL="inst/batch_normalization_1_U0/frp_pipeline_valid_U" BINDMODULE="gesture_model_frp_pipeline_valid" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_1.v" ORIG_REF_NAME="gesture_model_frp_pipeline_valid">
-    <Resources FF="60" LUT="8" LogicLUT="8"/>
+    <Resources FF="80" LUT="9" LogicLUT="9"/>
   </RtlModule>
-  <RtlModule CELL="inst/batch_normalization_1_U0/mac_muladd_24s_10ns_16s_24_4_1_U51" BINDMODULE="gesture_model_mac_muladd_24s_10ns_16s_24_4_1" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_1.v" ORIG_REF_NAME="gesture_model_mac_muladd_24s_10ns_16s_24_4_1">
-    <Resources DSP="1" LUT="10" LogicLUT="10"/>
+  <RtlModule CELL="inst/batch_normalization_1_U0/mul_43s_20ns_63_1_1_U46" BINDMODULE="gesture_model_mul_43s_20ns_63_1_1" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_1.v" ORIG_REF_NAME="gesture_model_mul_43s_20ns_63_1_1">
+    <Resources DSP="1" LUT="67" LogicLUT="67"/>
   </RtlModule>
   <RtlModule CELL="inst/batch_normalization_1_U0/pf_output_r_d0_U" BINDMODULE="gesture_model_frp_fifoout" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_1.v" ORIG_REF_NAME="gesture_model_frp_fifoout">
-    <Resources FF="11" LUT="88" LogicLUT="44" SRL="44"/>
+    <Resources FF="12" LUT="159" LogicLUT="69" SRL="90"/>
   </RtlModule>
-  <RtlModule CELL="inst/batch_normalization_1_U0/sdiv_24ns_16s_24_28_1_U50" BINDMODULE="gesture_model_sdiv_24ns_16s_24_28_1" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_1.v" ORIG_REF_NAME="gesture_model_sdiv_24ns_16s_24_28_1">
-    <Resources FF="967" LUT="1155" LogicLUT="1118" SRL="37"/>
-    <LocalResources FF="32" LUT="316" LogicLUT="316"/>
+  <RtlModule CELL="inst/batch_normalization_1_U0/sdiv_43s_24s_43_47_1_U45" BINDMODULE="gesture_model_sdiv_43s_24s_43_47_1" DEPTH="2" FILE_NAME="gesture_model_batch_normalization_1.v" ORIG_REF_NAME="gesture_model_sdiv_43s_24s_43_47_1">
+    <Resources FF="2817" LUT="2691" LogicLUT="2592" SRL="99"/>
+    <LocalResources FF="48" LUT="1081" LogicLUT="1081"/>
   </RtlModule>
   <RtlModule CELL="inst/control_s_axi_U" BINDMODULE="gesture_model_control_s_axi" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_control_s_axi">
-    <Resources FF="27" LUT="23" LogicLUT="23"/>
+    <Resources FF="27" LUT="25" LogicLUT="25"/>
   </RtlModule>
   <RtlModule CELL="inst/conv1d_0_U0" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_conv1d_0">
-    <SubModules count="6">conv1d_0_biases_V_U conv1d_0_weights_V_1_0_U flow_control_loop_pipe_U mac_muladd_16s_8s_24ns_24_4_1_U17 mac_muladd_16s_8s_24ns_24_4_1_U18 mul_mul_16s_8s_24_4_1_U16</SubModules>
-    <Resources DSP="3" FF="99" LUT="161" LogicLUT="161"/>
-    <LocalResources FF="83" LUT="29" LogicLUT="29"/>
+    <SubModules count="6">conv1d_0_biases_V_U conv1d_0_weights_V_2_0_U flow_control_loop_pipe_U mul_mul_24s_18s_42_4_1_U12 mul_mul_24s_18s_42_4_1_U13 mul_mul_24s_18s_42_4_1_U14</SubModules>
+    <Resources DSP="3" FF="159" LUT="356" LogicLUT="356"/>
+    <LocalResources FF="123" LUT="71" LogicLUT="71"/>
   </RtlModule>
   <RtlModule CELL="inst/conv1d_0_U0/conv1d_0_biases_V_U" BINDMODULE="gesture_model_conv1d_0_conv1d_0_biases_V_ROM_AUTO_1R" DEPTH="2" FILE_NAME="gesture_model_conv1d_0.v" ORIG_REF_NAME="gesture_model_conv1d_0_conv1d_0_biases_V_ROM_AUTO_1R">
-    <Resources FF="7" LUT="5" LogicLUT="5"/>
+    <Resources FF="17" LUT="77" LogicLUT="77"/>
   </RtlModule>
-  <RtlModule CELL="inst/conv1d_0_U0/conv1d_0_weights_V_1_0_U" BINDMODULE="gesture_model_conv1d_0_conv1d_0_weights_V_1_0_ROM_AUTO_1R" DEPTH="2" FILE_NAME="gesture_model_conv1d_0.v" ORIG_REF_NAME="gesture_model_conv1d_0_conv1d_0_weights_V_1_0_ROM_AUTO_1R">
-    <Resources FF="8" LUT="1" LogicLUT="1"/>
+  <RtlModule CELL="inst/conv1d_0_U0/conv1d_0_weights_V_2_0_U" BINDMODULE="gesture_model_conv1d_0_conv1d_0_weights_V_2_0_ROM_AUTO_1R" DEPTH="2" FILE_NAME="gesture_model_conv1d_0.v" ORIG_REF_NAME="gesture_model_conv1d_0_conv1d_0_weights_V_2_0_ROM_AUTO_1R">
+    <Resources FF="18" LUT="1" LogicLUT="1"/>
   </RtlModule>
   <RtlModule CELL="inst/conv1d_0_U0/flow_control_loop_pipe_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="2" FILE_NAME="gesture_model_conv1d_0.v" ORIG_REF_NAME="gesture_model_flow_control_loop_pipe">
-    <Resources FF="1" LUT="81" LogicLUT="81"/>
+    <Resources FF="1" LUT="95" LogicLUT="95"/>
   </RtlModule>
-  <RtlModule CELL="inst/conv1d_0_U0/mac_muladd_16s_8s_24ns_24_4_1_U17" BINDMODULE="gesture_model_mac_muladd_16s_8s_24ns_24_4_1" DEPTH="2" FILE_NAME="gesture_model_conv1d_0.v" ORIG_REF_NAME="gesture_model_mac_muladd_16s_8s_24ns_24_4_1">
+  <RtlModule CELL="inst/conv1d_0_U0/mul_mul_24s_18s_42_4_1_U12" BINDMODULE="gesture_model_mul_mul_24s_18s_42_4_1" DEPTH="2" FILE_NAME="gesture_model_conv1d_0.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_18s_42_4_1">
+    <Resources DSP="1" LUT="55" LogicLUT="55"/>
+  </RtlModule>
+  <RtlModule CELL="inst/conv1d_0_U0/mul_mul_24s_18s_42_4_1_U13" BINDMODULE="gesture_model_mul_mul_24s_18s_42_4_1" DEPTH="2" FILE_NAME="gesture_model_conv1d_0.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_18s_42_4_1">
     <Resources DSP="1" LUT="1" LogicLUT="1"/>
   </RtlModule>
-  <RtlModule CELL="inst/conv1d_0_U0/mac_muladd_16s_8s_24ns_24_4_1_U18" BINDMODULE="gesture_model_mac_muladd_16s_8s_24ns_24_4_1" DEPTH="2" FILE_NAME="gesture_model_conv1d_0.v" ORIG_REF_NAME="gesture_model_mac_muladd_16s_8s_24ns_24_4_1">
-    <Resources DSP="1" LUT="46" LogicLUT="46"/>
-  </RtlModule>
-  <RtlModule CELL="inst/conv1d_0_U0/mul_mul_16s_8s_24_4_1_U16" BINDMODULE="gesture_model_mul_mul_16s_8s_24_4_1" DEPTH="2" FILE_NAME="gesture_model_conv1d_0.v" ORIG_REF_NAME="gesture_model_mul_mul_16s_8s_24_4_1">
-    <Resources DSP="1"/>
+  <RtlModule CELL="inst/conv1d_0_U0/mul_mul_24s_18s_42_4_1_U14" BINDMODULE="gesture_model_mul_mul_24s_18s_42_4_1" DEPTH="2" FILE_NAME="gesture_model_conv1d_0.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_18s_42_4_1">
+    <Resources DSP="1" LUT="66" LogicLUT="66"/>
   </RtlModule>
   <RtlModule CELL="inst/conv1d_out_0_V_U" BINDMODULE="gesture_model_conv1d_out_0_V_RAM_AUTO_1R1W" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_conv1d_out_0_V_RAM_AUTO_1R1W">
-    <Resources BRAM="4" FF="6" LUT="19" LogicLUT="19" RAMB36="2"/>
-    <LocalResources FF="6" LUT="4" LogicLUT="4"/>
+    <Resources BRAM="6" FF="6" LUT="28" LogicLUT="28" RAMB36="3"/>
+    <LocalResources FF="6" LUT="5" LogicLUT="5"/>
   </RtlModule>
   <RtlModule CELL="inst/dense_0_U0" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_dense_0">
-    <SubModules count="4">dense_0_biases_V_U dense_0_weights_V_U flow_control_loop_pipe_U mac_muladd_16s_8s_24ns_24_4_1_U44</SubModules>
-    <Resources BRAM="8" DSP="1" FF="81" LUT="135" LogicLUT="132" RAMB36="4" SRL="3"/>
-    <LocalResources FF="73" LUT="12" LogicLUT="9" SRL="3"/>
+    <SubModules count="4">dense_0_biases_V_U dense_0_weights_V_U flow_control_loop_pipe_U mul_mul_24s_18s_42_4_1_U39</SubModules>
+    <Resources BRAM="18" DSP="1" FF="119" LUT="260" LogicLUT="252" RAMB36="9" SRL="8"/>
+    <LocalResources FF="101" LUT="36" LogicLUT="28" SRL="8"/>
   </RtlModule>
   <RtlModule CELL="inst/dense_0_U0/dense_0_biases_V_U" BINDMODULE="gesture_model_dense_0_dense_0_biases_V_ROM_AUTO_1R" DEPTH="2" FILE_NAME="gesture_model_dense_0.v" ORIG_REF_NAME="gesture_model_dense_0_dense_0_biases_V_ROM_AUTO_1R">
-    <Resources FF="7" LUT="5" LogicLUT="5"/>
+    <Resources FF="17" LUT="96" LogicLUT="96"/>
   </RtlModule>
   <RtlModule CELL="inst/dense_0_U0/dense_0_weights_V_U" BINDMODULE="gesture_model_dense_0_dense_0_weights_V_ROM_AUTO_1R" DEPTH="2" FILE_NAME="gesture_model_dense_0.v" ORIG_REF_NAME="gesture_model_dense_0_dense_0_weights_V_ROM_AUTO_1R">
-    <Resources BRAM="8" LUT="1" LogicLUT="1" RAMB36="4"/>
+    <Resources BRAM="18" LUT="8" LogicLUT="8" RAMB36="9"/>
   </RtlModule>
   <RtlModule CELL="inst/dense_0_U0/flow_control_loop_pipe_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="2" FILE_NAME="gesture_model_dense_0.v" ORIG_REF_NAME="gesture_model_flow_control_loop_pipe">
-    <Resources FF="1" LUT="55" LogicLUT="55"/>
+    <Resources FF="1" LUT="61" LogicLUT="61"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_0_U0/mac_muladd_16s_8s_24ns_24_4_1_U44" BINDMODULE="gesture_model_mac_muladd_16s_8s_24ns_24_4_1" DEPTH="2" FILE_NAME="gesture_model_dense_0.v" ORIG_REF_NAME="gesture_model_mac_muladd_16s_8s_24ns_24_4_1">
-    <Resources DSP="1" LUT="62" LogicLUT="62"/>
+  <RtlModule CELL="inst/dense_0_U0/mul_mul_24s_18s_42_4_1_U39" BINDMODULE="gesture_model_mul_mul_24s_18s_42_4_1" DEPTH="2" FILE_NAME="gesture_model_dense_0.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_18s_42_4_1">
+    <Resources DSP="1" LUT="60" LogicLUT="60"/>
   </RtlModule>
   <RtlModule CELL="inst/dense_1_U0" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_dense_1">
-    <SubModules count="4">dexp_64ns_64ns_64_13_full_dsp_1_U120 grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233 grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291 grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298</SubModules>
-    <Resources DSP="42" FF="2741" LUT="3613" LogicLUT="3499" SRL="114"/>
-    <LocalResources FF="274" LUT="11" LogicLUT="11"/>
+    <SubModules count="4">dexp_64ns_64ns_64_13_full_dsp_1_U114 grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233 grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291 grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298</SubModules>
+    <Resources DSP="42" FF="5558" LUT="6629" LogicLUT="6471" SRL="158"/>
+    <LocalResources FF="402" LUT="198" LogicLUT="198"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120" BINDMODULE="gesture_model_dexp_64ns_64ns_64_13_full_dsp_1" DEPTH="2" FILE_NAME="gesture_model_dense_1.v" ORIG_REF_NAME="gesture_model_dexp_64ns_64ns_64_13_full_dsp_1">
-    <Resources DSP="26" FF="1028" LUT="1842" LogicLUT="1779" SRL="63"/>
-    <LocalResources FF="60"/>
+  <RtlModule CELL="inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114" BINDMODULE="gesture_model_dexp_64ns_64ns_64_13_full_dsp_1" DEPTH="2" FILE_NAME="gesture_model_dense_1.v" ORIG_REF_NAME="gesture_model_dexp_64ns_64ns_64_13_full_dsp_1">
+    <Resources DSP="26" FF="999" LUT="1825" LogicLUT="1762" SRL="63"/>
+    <LocalResources FF="31"/>
   </RtlModule>
   <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233" DEPTH="2" FILE_NAME="gesture_model_dense_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1">
-    <SubModules count="18">dense_1_biases_V_U flow_control_loop_pipe_sequential_init_U mac_muladd_16s_9s_24ns_24_4_1_U61 mac_muladd_16s_9s_24ns_24_4_1_U62 mac_muladd_16s_9s_24ns_24_4_1_U63 mac_muladd_16s_9s_24ns_24_4_1_U64 mac_muladd_16s_9s_24ns_24_4_1_U65 mac_muladd_16s_9s_24ns_24_4_1_U66 mac_muladd_16s_9s_24ns_24_4_1_U67 mac_muladd_16s_9s_24ns_24_4_1_U68 mac_muladd_16s_9s_24ns_24_4_1_U69 mac_muladd_16s_9s_24ns_24_4_1_U70 mac_muladd_16s_9s_24ns_24_4_1_U71 mac_muladd_16s_9s_24ns_24_4_1_U72 mac_muladd_16s_9s_24ns_24_4_1_U73 mac_muladd_16s_9s_24ns_24_4_1_U74 mac_muladd_16s_9s_24ns_24_4_1_U75 mul_mul_16s_9s_24_4_1_U60</SubModules>
-    <Resources DSP="16" FF="120" LUT="151" LogicLUT="145" SRL="6"/>
-    <LocalResources FF="110" LUT="48" LogicLUT="42" SRL="6"/>
+    <SubModules count="34">dense_1_biases_V_U dense_1_weights_V_0_U dense_1_weights_V_10_U dense_1_weights_V_11_U dense_1_weights_V_12_U dense_1_weights_V_13_U dense_1_weights_V_14_U dense_1_weights_V_15_U dense_1_weights_V_1_U dense_1_weights_V_2_U dense_1_weights_V_3_U dense_1_weights_V_4_U dense_1_weights_V_5_U dense_1_weights_V_6_U dense_1_weights_V_7_U dense_1_weights_V_8_U dense_1_weights_V_9_U flow_control_loop_pipe_sequential_init_U mul_mul_24s_19s_43_4_1_U55 mul_mul_24s_19s_43_4_1_U56 mul_mul_24s_19s_43_4_1_U57 mul_mul_24s_19s_43_4_1_U58 mul_mul_24s_19s_43_4_1_U59 mul_mul_24s_19s_43_4_1_U60 mul_mul_24s_19s_43_4_1_U61 mul_mul_24s_19s_43_4_1_U62 mul_mul_24s_19s_43_4_1_U63 mul_mul_24s_19s_43_4_1_U64 mul_mul_24s_19s_43_4_1_U65 mul_mul_24s_19s_43_4_1_U66 mul_mul_24s_19s_43_4_1_U67 mul_mul_24s_19s_43_4_1_U68 mul_mul_24s_19s_43_4_1_U69 mul_mul_24s_19s_43_4_1_U70</SubModules>
+    <Resources DSP="16" FF="1011" LUT="551" LogicLUT="545" SRL="6"/>
+    <LocalResources FF="544" LUT="96" LogicLUT="90" SRL="6"/>
   </RtlModule>
   <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/dense_1_biases_V_U" BINDMODULE="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_biases_V_ROM_AUTO_1R" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_biases_V_ROM_AUTO_1R">
-    <Resources FF="8" LUT="5" LogicLUT="5"/>
+    <Resources FF="18" LUT="61" LogicLUT="61"/>
+  </RtlModule>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/dense_1_weights_V_0_U" BINDMODULE="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_0_ROM_AUTO_1R" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_0_ROM_AUTO_1R">
+    <Resources FF="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/dense_1_weights_V_10_U" BINDMODULE="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_10_ROM_AUTO_1R" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_10_ROM_AUTO_1R">
+    <Resources FF="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/dense_1_weights_V_11_U" BINDMODULE="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_11_ROM_AUTO_1R" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_11_ROM_AUTO_1R">
+    <Resources FF="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/dense_1_weights_V_12_U" BINDMODULE="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_12_ROM_AUTO_1R" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_12_ROM_AUTO_1R">
+    <Resources FF="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/dense_1_weights_V_13_U" BINDMODULE="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_13_ROM_AUTO_1R" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_13_ROM_AUTO_1R">
+    <Resources FF="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/dense_1_weights_V_14_U" BINDMODULE="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_14_ROM_AUTO_1R" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_14_ROM_AUTO_1R">
+    <Resources FF="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/dense_1_weights_V_15_U" BINDMODULE="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_15_ROM_AUTO_1R" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_15_ROM_AUTO_1R">
+    <Resources FF="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/dense_1_weights_V_1_U" BINDMODULE="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_1_ROM_AUTO_1R" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_1_ROM_AUTO_1R">
+    <Resources FF="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/dense_1_weights_V_2_U" BINDMODULE="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_2_ROM_AUTO_1R" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_2_ROM_AUTO_1R">
+    <Resources FF="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/dense_1_weights_V_3_U" BINDMODULE="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_3_ROM_AUTO_1R" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_3_ROM_AUTO_1R">
+    <Resources FF="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/dense_1_weights_V_4_U" BINDMODULE="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_4_ROM_AUTO_1R" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_4_ROM_AUTO_1R">
+    <Resources FF="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/dense_1_weights_V_5_U" BINDMODULE="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_5_ROM_AUTO_1R" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_5_ROM_AUTO_1R">
+    <Resources FF="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/dense_1_weights_V_6_U" BINDMODULE="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_6_ROM_AUTO_1R" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_6_ROM_AUTO_1R">
+    <Resources FF="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/dense_1_weights_V_7_U" BINDMODULE="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_7_ROM_AUTO_1R" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_7_ROM_AUTO_1R">
+    <Resources FF="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/dense_1_weights_V_8_U" BINDMODULE="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_8_ROM_AUTO_1R" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_8_ROM_AUTO_1R">
+    <Resources FF="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/dense_1_weights_V_9_U" BINDMODULE="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_9_ROM_AUTO_1R" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1_dense_1_weights_V_9_ROM_AUTO_1R">
+    <Resources FF="1"/>
   </RtlModule>
   <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/flow_control_loop_pipe_sequential_init_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_flow_control_loop_pipe_sequential_init">
-    <Resources FF="2" LUT="17" LogicLUT="17"/>
+    <Resources FF="2" LUT="11" LogicLUT="11"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U61" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-    <Resources DSP="1" LUT="5" LogicLUT="5"/>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mul_mul_24s_19s_43_4_1_U55" BINDMODULE="gesture_model_mul_mul_24s_19s_43_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_19s_43_4_1">
+    <Resources DSP="1" FF="26" LUT="30" LogicLUT="30"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U62" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-    <Resources DSP="1" LUT="5" LogicLUT="5"/>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mul_mul_24s_19s_43_4_1_U56" BINDMODULE="gesture_model_mul_mul_24s_19s_43_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_19s_43_4_1">
+    <Resources DSP="1" FF="27"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U63" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-    <Resources DSP="1" LUT="5" LogicLUT="5"/>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mul_mul_24s_19s_43_4_1_U57" BINDMODULE="gesture_model_mul_mul_24s_19s_43_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_19s_43_4_1">
+    <Resources DSP="1" FF="27" LUT="25" LogicLUT="25"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U64" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-    <Resources DSP="1" LUT="5" LogicLUT="5"/>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mul_mul_24s_19s_43_4_1_U58" BINDMODULE="gesture_model_mul_mul_24s_19s_43_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_19s_43_4_1">
+    <Resources DSP="1" FF="27" LUT="28" LogicLUT="28"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U65" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-    <Resources DSP="1" LUT="5" LogicLUT="5"/>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mul_mul_24s_19s_43_4_1_U59" BINDMODULE="gesture_model_mul_mul_24s_19s_43_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_19s_43_4_1">
+    <Resources DSP="1" FF="27" LUT="24" LogicLUT="24"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U66" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-    <Resources DSP="1" LUT="5" LogicLUT="5"/>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mul_mul_24s_19s_43_4_1_U60" BINDMODULE="gesture_model_mul_mul_24s_19s_43_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_19s_43_4_1">
+    <Resources DSP="1" FF="27" LUT="25" LogicLUT="25"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U67" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-    <Resources DSP="1" LUT="5" LogicLUT="5"/>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mul_mul_24s_19s_43_4_1_U61" BINDMODULE="gesture_model_mul_mul_24s_19s_43_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_19s_43_4_1">
+    <Resources DSP="1" FF="27" LUT="25" LogicLUT="25"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U68" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-    <Resources DSP="1" LUT="5" LogicLUT="5"/>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mul_mul_24s_19s_43_4_1_U62" BINDMODULE="gesture_model_mul_mul_24s_19s_43_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_19s_43_4_1">
+    <Resources DSP="1" FF="27" LUT="25" LogicLUT="25"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U69" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-    <Resources DSP="1" LUT="5" LogicLUT="5"/>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mul_mul_24s_19s_43_4_1_U63" BINDMODULE="gesture_model_mul_mul_24s_19s_43_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_19s_43_4_1">
+    <Resources DSP="1" FF="27" LUT="25" LogicLUT="25"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U70" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-    <Resources DSP="1" LUT="5" LogicLUT="5"/>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mul_mul_24s_19s_43_4_1_U64" BINDMODULE="gesture_model_mul_mul_24s_19s_43_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_19s_43_4_1">
+    <Resources DSP="1" FF="27" LUT="25" LogicLUT="25"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U71" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-    <Resources DSP="1" LUT="5" LogicLUT="5"/>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mul_mul_24s_19s_43_4_1_U65" BINDMODULE="gesture_model_mul_mul_24s_19s_43_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_19s_43_4_1">
+    <Resources DSP="1" FF="27" LUT="25" LogicLUT="25"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U72" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-    <Resources DSP="1" LUT="5" LogicLUT="5"/>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mul_mul_24s_19s_43_4_1_U66" BINDMODULE="gesture_model_mul_mul_24s_19s_43_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_19s_43_4_1">
+    <Resources DSP="1" FF="27" LUT="25" LogicLUT="25"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U73" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-    <Resources DSP="1" LUT="5" LogicLUT="5"/>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mul_mul_24s_19s_43_4_1_U67" BINDMODULE="gesture_model_mul_mul_24s_19s_43_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_19s_43_4_1">
+    <Resources DSP="1" FF="27" LUT="25" LogicLUT="25"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U74" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-    <Resources DSP="1" LUT="5" LogicLUT="5"/>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mul_mul_24s_19s_43_4_1_U68" BINDMODULE="gesture_model_mul_mul_24s_19s_43_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_19s_43_4_1">
+    <Resources DSP="1" FF="27" LUT="25" LogicLUT="25"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mac_muladd_16s_9s_24ns_24_4_1_U75" BINDMODULE="gesture_model_mac_muladd_16s_9s_24ns_24_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mac_muladd_16s_9s_24ns_24_4_1">
-    <Resources DSP="1" LUT="12" LogicLUT="12"/>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mul_mul_24s_19s_43_4_1_U69" BINDMODULE="gesture_model_mul_mul_24s_19s_43_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_19s_43_4_1">
+    <Resources DSP="1" FF="27" LUT="25" LogicLUT="25"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mul_mul_16s_9s_24_4_1_U60" BINDMODULE="gesture_model_mul_mul_16s_9s_24_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mul_mul_16s_9s_24_4_1">
-    <Resources DSP="1"/>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_109_1_fu_233/mul_mul_24s_19s_43_4_1_U70" BINDMODULE="gesture_model_mul_mul_24s_19s_43_4_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_109_1.v" ORIG_REF_NAME="gesture_model_mul_mul_24s_19s_43_4_1">
+    <Resources DSP="1" FF="27" LUT="25" LogicLUT="25"/>
   </RtlModule>
   <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291" DEPTH="2" FILE_NAME="gesture_model_dense_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_120_3">
     <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-    <Resources FF="117" LUT="168" LogicLUT="166" SRL="2"/>
-    <LocalResources FF="115" LUT="155" LogicLUT="153" SRL="2"/>
+    <Resources FF="143" LUT="202" LogicLUT="200" SRL="2"/>
+    <LocalResources FF="141" LUT="166" LogicLUT="164" SRL="2"/>
   </RtlModule>
   <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_120_3_fu_291/flow_control_loop_pipe_sequential_init_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_120_3.v" ORIG_REF_NAME="gesture_model_flow_control_loop_pipe_sequential_init">
-    <Resources FF="2" LUT="13" LogicLUT="13"/>
+    <Resources FF="2" LUT="36" LogicLUT="36"/>
   </RtlModule>
   <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298" DEPTH="2" FILE_NAME="gesture_model_dense_1.v" ORIG_REF_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_124_4">
-    <SubModules count="2">flow_control_loop_pipe_sequential_init_U sdiv_24ns_16s_16_28_1_U116</SubModules>
-    <Resources FF="1202" LUT="1441" LogicLUT="1398" SRL="43"/>
-    <LocalResources FF="232" LUT="375" LogicLUT="361" SRL="14"/>
+    <SubModules count="2">flow_control_loop_pipe_sequential_init_U sdiv_42ns_24s_42_46_1_U110</SubModules>
+    <Resources FF="3003" LUT="3853" LogicLUT="3766" SRL="87"/>
+    <LocalResources FF="285" LUT="1235" LogicLUT="1221" SRL="14"/>
   </RtlModule>
   <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298/flow_control_loop_pipe_sequential_init_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_124_4.v" ORIG_REF_NAME="gesture_model_flow_control_loop_pipe_sequential_init">
-    <Resources FF="2" LUT="26" LogicLUT="26"/>
+    <Resources FF="2" LUT="23" LogicLUT="23"/>
   </RtlModule>
-  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298/sdiv_24ns_16s_16_28_1_U116" BINDMODULE="gesture_model_sdiv_24ns_16s_16_28_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_124_4.v" ORIG_REF_NAME="gesture_model_sdiv_24ns_16s_16_28_1">
-    <Resources FF="968" LUT="1040" LogicLUT="1011" SRL="29"/>
-    <LocalResources FF="48" LUT="209" LogicLUT="209"/>
+  <RtlModule CELL="inst/dense_1_U0/grp_dense_1_Pipeline_VITIS_LOOP_124_4_fu_298/sdiv_42ns_24s_42_46_1_U110" BINDMODULE="gesture_model_sdiv_42ns_24s_42_46_1" DEPTH="3" FILE_NAME="gesture_model_dense_1_Pipeline_VITIS_LOOP_124_4.v" ORIG_REF_NAME="gesture_model_sdiv_42ns_24s_42_46_1">
+    <Resources FF="2716" LUT="2595" LogicLUT="2522" SRL="73"/>
+    <LocalResources FF="90" LUT="112" LogicLUT="112"/>
   </RtlModule>
   <RtlModule CELL="inst/dense_out_0_V_U" BINDMODULE="gesture_model_dense_out_0_V_RAM_AUTO_1R1W" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_dense_out_0_V_RAM_AUTO_1R1W">
-    <Resources FF="21" LUT="31" LUTRAM="10" LogicLUT="21"/>
+    <Resources FF="29" LUT="75" LUTRAM="46" LogicLUT="29"/>
     <LocalResources FF="6" LUT="6" LogicLUT="6"/>
   </RtlModule>
   <RtlModule CELL="inst/flatten_out_0_V_U" BINDMODULE="gesture_model_max_pool_out_0_V_RAM_AUTO_1R1W" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_max_pool_out_0_V_RAM_AUTO_1R1W">
-    <Resources BRAM="2" FF="6" LUT="7" LogicLUT="7" RAMB36="1"/>
+    <Resources BRAM="3" FF="6" LUT="7" LogicLUT="7" RAMB18="1" RAMB36="1"/>
     <LocalResources FF="6" LUT="7" LogicLUT="7"/>
   </RtlModule>
   <RtlModule CELL="inst/input_V_0_U" BINDMODULE="gesture_model_input_V_0_RAM_AUTO_1R1W" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_input_V_0_RAM_AUTO_1R1W">
-    <Resources FF="57" LUT="237" LUTRAM="128" LogicLUT="109"/>
-    <LocalResources FF="25" LUT="5" LogicLUT="5"/>
-  </RtlModule>
-  <RtlModule CELL="inst/max_idx_2_loc_channel_U" BINDMODULE="gesture_model_fifo_w32_d2_S" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_fifo_w32_d2_S">
-    <Resources FF="14" LUT="11" LogicLUT="11"/>
-    <LocalResources FF="4" LUT="6" LogicLUT="6"/>
+    <Resources FF="153" LUT="632" LUTRAM="384" LogicLUT="248"/>
+    <LocalResources FF="57" LUT="6" LogicLUT="6"/>
   </RtlModule>
   <RtlModule CELL="inst/max_pool_out_0_V_U" BINDMODULE="gesture_model_max_pool_out_0_V_RAM_AUTO_1R1W" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_max_pool_out_0_V_RAM_AUTO_1R1W">
-    <Resources BRAM="2" FF="6" LUT="7" LogicLUT="7" RAMB36="1"/>
-    <LocalResources FF="6" LUT="6" LogicLUT="6"/>
+    <Resources BRAM="3" FF="6" LUT="5" LogicLUT="5" RAMB18="1" RAMB36="1"/>
+    <LocalResources FF="6" LUT="4" LogicLUT="4"/>
   </RtlModule>
   <RtlModule CELL="inst/max_pooling1d_0_U0" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_max_pooling1d_0">
     <SubModules count="1">flow_control_loop_pipe_U</SubModules>
-    <Resources FF="34" LUT="64" LogicLUT="64"/>
-    <LocalResources FF="33" LUT="21" LogicLUT="21"/>
+    <Resources FF="34" LUT="76" LogicLUT="76"/>
+    <LocalResources FF="33" LUT="19" LogicLUT="19"/>
   </RtlModule>
   <RtlModule CELL="inst/max_pooling1d_0_U0/flow_control_loop_pipe_U" BINDMODULE="gesture_model_flow_control_loop_pipe" DEPTH="2" FILE_NAME="gesture_model_max_pooling1d_0.v" ORIG_REF_NAME="gesture_model_flow_control_loop_pipe">
-    <Resources FF="1" LUT="43" LogicLUT="43"/>
-  </RtlModule>
-  <RtlModule CELL="inst/max_val_V_3_loc_channel_U" BINDMODULE="gesture_model_fifo_w16_d2_S" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_fifo_w16_d2_S">
-    <Resources FF="36" LUT="20" LogicLUT="20"/>
-    <LocalResources FF="4" LUT="4" LogicLUT="4"/>
+    <Resources FF="1" LUT="57" LogicLUT="57"/>
   </RtlModule>
   <RtlModule CELL="inst/output_V_U" BINDMODULE="gesture_model_output_V_RAM_AUTO_1R1W" DEPTH="1" FILE_NAME="gesture_model.v" ORIG_REF_NAME="gesture_model_output_V_RAM_AUTO_1R1W">
-    <Resources FF="89" LUT="285" LUTRAM="128" LogicLUT="157"/>
-    <LocalResources FF="25" LUT="5" LogicLUT="5"/>
+    <Resources FF="129" LUT="424" LUTRAM="192" LogicLUT="232"/>
+    <LocalResources FF="33" LUT="6" LogicLUT="6"/>
   </RtlModule>
 </RtlModules>
 <TimingPaths>
-  <TPATH DATAPATH_DELAY="3.729" DATAPATH_LOGIC_DELAY="3.405" DATAPATH_NET_DELAY="0.324" ENDPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[56]/D" LOGIC_LEVELS="13" MAX_FANOUT="2" SLACK="6.222" STARTPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST/CLK">
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q[24]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[24]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[32]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[40]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[48]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[56]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[56]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+  <TPATH DATAPATH_DELAY="3.729" DATAPATH_LOGIC_DELAY="3.405" DATAPATH_NET_DELAY="0.324" ENDPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[56]/D" LOGIC_LEVELS="13" MAX_FANOUT="2" SLACK="6.222" STARTPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST/CLK">
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q[24]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[24]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[32]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[40]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[48]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[56]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[56]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
   </TPATH>
-  <TPATH DATAPATH_DELAY="3.728" DATAPATH_LOGIC_DELAY="3.405" DATAPATH_NET_DELAY="0.323" ENDPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[54]/D" LOGIC_LEVELS="13" MAX_FANOUT="2" SLACK="6.223" STARTPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST/CLK">
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q[24]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[24]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[32]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[40]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[48]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[56]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[54]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+  <TPATH DATAPATH_DELAY="3.728" DATAPATH_LOGIC_DELAY="3.405" DATAPATH_NET_DELAY="0.323" ENDPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[54]/D" LOGIC_LEVELS="13" MAX_FANOUT="2" SLACK="6.223" STARTPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST/CLK">
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q[24]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[24]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[32]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[40]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[48]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[56]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[54]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
   </TPATH>
-  <TPATH DATAPATH_DELAY="3.716" DATAPATH_LOGIC_DELAY="3.392" DATAPATH_NET_DELAY="0.324" ENDPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[55]/D" LOGIC_LEVELS="13" MAX_FANOUT="2" SLACK="6.235" STARTPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST/CLK">
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q[24]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[24]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[32]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[40]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[48]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[56]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[55]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+  <TPATH DATAPATH_DELAY="3.716" DATAPATH_LOGIC_DELAY="3.392" DATAPATH_NET_DELAY="0.324" ENDPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[55]/D" LOGIC_LEVELS="13" MAX_FANOUT="2" SLACK="6.235" STARTPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST/CLK">
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q[24]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[24]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[32]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[40]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[48]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[56]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[55]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
   </TPATH>
-  <TPATH DATAPATH_DELAY="3.702" DATAPATH_LOGIC_DELAY="3.383" DATAPATH_NET_DELAY="0.319" ENDPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[48]/D" LOGIC_LEVELS="12" MAX_FANOUT="2" SLACK="6.249" STARTPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST/CLK">
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q[24]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[24]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[32]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[40]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[48]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[48]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+  <TPATH DATAPATH_DELAY="3.702" DATAPATH_LOGIC_DELAY="3.383" DATAPATH_NET_DELAY="0.319" ENDPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[48]/D" LOGIC_LEVELS="12" MAX_FANOUT="2" SLACK="6.249" STARTPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST/CLK">
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q[24]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[24]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[32]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[40]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[48]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[48]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
   </TPATH>
-  <TPATH DATAPATH_DELAY="3.701" DATAPATH_LOGIC_DELAY="3.383" DATAPATH_NET_DELAY="0.318" ENDPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[46]/D" LOGIC_LEVELS="12" MAX_FANOUT="2" SLACK="6.250" STARTPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST/CLK">
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q[24]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[24]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[32]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[40]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[48]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
-    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U120/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[46]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+  <TPATH DATAPATH_DELAY="3.701" DATAPATH_LOGIC_DELAY="3.383" DATAPATH_NET_DELAY="0.318" ENDPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[46]/D" LOGIC_LEVELS="12" MAX_FANOUT="2" SLACK="6.250" STARTPOINT_PIN="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST/CLK">
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[0].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[1].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[1].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP48[2].bppDSP48[2].use_dsp.use_dsp48e2.iDSP48E2/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q[24]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[24]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[32]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[40]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/opt_has_pipe.first_q_reg[48]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/dense_1_U0/dexp_64ns_64ns_64_13_full_dsp_1_U114/gesture_model_dexp_64ns_64ns_64_13_full_dsp_1_ip_u/inst/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.adder_delay/i_pipe/opt_has_pipe.first_q_reg[46]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
   </TPATH>
 </TimingPaths>
 <VivadoReportFiles>

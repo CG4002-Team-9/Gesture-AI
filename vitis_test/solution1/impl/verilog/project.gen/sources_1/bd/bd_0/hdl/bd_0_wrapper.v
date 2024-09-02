@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Sat Aug 31 19:37:58 2024
+//Date        : Mon Sep  2 11:44:32 2024
 //Host        : prince-ThinkPad-E14-Gen-5 running 64-bit Ubuntu 24.04 LTS
 //Command     : generate_target bd_0_wrapper.bd
 //Design      : bd_0_wrapper
@@ -13,23 +13,17 @@ module bd_0_wrapper
    (ap_clk,
     ap_rst_n,
     input_stream_tdata,
-    input_stream_tdest,
-    input_stream_tid,
     input_stream_tkeep,
     input_stream_tlast,
     input_stream_tready,
     input_stream_tstrb,
-    input_stream_tuser,
     input_stream_tvalid,
     interrupt,
     output_stream_tdata,
-    output_stream_tdest,
-    output_stream_tid,
     output_stream_tkeep,
     output_stream_tlast,
     output_stream_tready,
     output_stream_tstrb,
-    output_stream_tuser,
     output_stream_tvalid,
     s_axi_control_araddr,
     s_axi_control_arready,
@@ -51,23 +45,17 @@ module bd_0_wrapper
   input ap_clk;
   input ap_rst_n;
   input [31:0]input_stream_tdata;
-  input [0:0]input_stream_tdest;
-  input [0:0]input_stream_tid;
   input [3:0]input_stream_tkeep;
   input [0:0]input_stream_tlast;
   output input_stream_tready;
   input [3:0]input_stream_tstrb;
-  input [0:0]input_stream_tuser;
   input input_stream_tvalid;
   output interrupt;
   output [31:0]output_stream_tdata;
-  output [0:0]output_stream_tdest;
-  output [0:0]output_stream_tid;
   output [3:0]output_stream_tkeep;
   output [0:0]output_stream_tlast;
   input output_stream_tready;
   output [3:0]output_stream_tstrb;
-  output [0:0]output_stream_tuser;
   output output_stream_tvalid;
   input [3:0]s_axi_control_araddr;
   output s_axi_control_arready;
@@ -90,23 +78,17 @@ module bd_0_wrapper
   wire ap_clk;
   wire ap_rst_n;
   wire [31:0]input_stream_tdata;
-  wire [0:0]input_stream_tdest;
-  wire [0:0]input_stream_tid;
   wire [3:0]input_stream_tkeep;
   wire [0:0]input_stream_tlast;
   wire input_stream_tready;
   wire [3:0]input_stream_tstrb;
-  wire [0:0]input_stream_tuser;
   wire input_stream_tvalid;
   wire interrupt;
   wire [31:0]output_stream_tdata;
-  wire [0:0]output_stream_tdest;
-  wire [0:0]output_stream_tid;
   wire [3:0]output_stream_tkeep;
   wire [0:0]output_stream_tlast;
   wire output_stream_tready;
   wire [3:0]output_stream_tstrb;
-  wire [0:0]output_stream_tuser;
   wire output_stream_tvalid;
   wire [3:0]s_axi_control_araddr;
   wire s_axi_control_arready;
@@ -130,23 +112,17 @@ module bd_0_wrapper
        (.ap_clk(ap_clk),
         .ap_rst_n(ap_rst_n),
         .input_stream_tdata(input_stream_tdata),
-        .input_stream_tdest(input_stream_tdest),
-        .input_stream_tid(input_stream_tid),
         .input_stream_tkeep(input_stream_tkeep),
         .input_stream_tlast(input_stream_tlast),
         .input_stream_tready(input_stream_tready),
         .input_stream_tstrb(input_stream_tstrb),
-        .input_stream_tuser(input_stream_tuser),
         .input_stream_tvalid(input_stream_tvalid),
         .interrupt(interrupt),
         .output_stream_tdata(output_stream_tdata),
-        .output_stream_tdest(output_stream_tdest),
-        .output_stream_tid(output_stream_tid),
         .output_stream_tkeep(output_stream_tkeep),
         .output_stream_tlast(output_stream_tlast),
         .output_stream_tready(output_stream_tready),
         .output_stream_tstrb(output_stream_tstrb),
-        .output_stream_tuser(output_stream_tuser),
         .output_stream_tvalid(output_stream_tvalid),
         .s_axi_control_araddr(s_axi_control_araddr),
         .s_axi_control_arready(s_axi_control_arready),

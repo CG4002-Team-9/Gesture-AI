@@ -38909,8 +38909,10 @@ private:
 
 }
 # 3 "vitis_test/nnet/core.h" 2
-typedef ap_fixed<16, 8> fixed_p;
-typedef ap_axis<32, 1, 1, 1> axis_t;
+
+typedef ap_fixed<24, 6, AP_TRN, AP_SAT_SYM, 0> fixed_p;
+typedef hls::axis<float, 0, 0, 0> data_t;
+typedef hls::stream<data_t> mystream;
 
 fixed_p conv1d_0_weights[3][1][16] = {
     {-0.36647952, 0.047327068, 0.16451997, 0.24460237, -0.19611834, 0.0012412638, -0.2679203, -0.02399582, -0.26953205, 0.1457035, -0.27634272, 0.19704609, 0.14706026, 0.419615, -0.28822696, -0.113219716},
@@ -40037,7 +40039,7 @@ void dense_1(fixed_p input[16], fixed_p output[20])
     }
 }
 
-__attribute__((sdx_kernel("gesture_model", 0))) void gesture_model(hls::stream<axis_t> &input_stream, hls::stream<axis_t> &output_stream)
+__attribute__((sdx_kernel("gesture_model", 0))) void gesture_model(mystream &input_stream, mystream &output_stream)
 {
 #line 16 "/home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=gesture_model
@@ -40049,9 +40051,10 @@ __attribute__((sdx_kernel("gesture_model", 0))) void gesture_model(hls::stream<a
 
 #pragma HLS INTERFACE mode = axis port = input_stream
 #pragma HLS INTERFACE mode = axis port = output_stream
-#pragma HLS INTERFACE mode = s_axilite port = return bundle = control
+#pragma HLS INTERFACE mode = s_axilite port = return
 
- fixed_p input[120][1];
+ data_t in, out;
+    fixed_p input[120][1];
     fixed_p output[20];
 
     fixed_p conv1d_out_0[118][16];
@@ -40062,11 +40065,12 @@ __attribute__((sdx_kernel("gesture_model", 0))) void gesture_model(hls::stream<a
     fixed_p batch_norm_out_1[16];
 
 
-    VITIS_LOOP_147_1: for (int i = 0; i < 120; i++)
+    VITIS_LOOP_148_1: for (int i = 0; i < 120; i++)
     {
-        VITIS_LOOP_149_2: for (int j = 0; j < 1; j++)
+        VITIS_LOOP_150_2: for (int j = 0; j < 1; j++)
         {
-            input[i][j] = input_stream.read().data;
+            input_stream.read(in);
+            input[i][j] = in.data;
         }
     }
 
@@ -40080,24 +40084,14 @@ __attribute__((sdx_kernel("gesture_model", 0))) void gesture_model(hls::stream<a
     batch_normalization_1(dense_out_0, batch_norm_out_1);
     dense_1(batch_norm_out_1, output);
 
-    fixed_p max_val = output[0];
-    unsigned int max_idx = 0;
-    VITIS_LOOP_167_3: for (int i = 1; i < 20; i++)
+
+    out.keep = -1;
+    out.last = 0;
+
+    VITIS_LOOP_171_3: for (uint i = 0; i < 20; i++)
     {
-        if (output[i] > max_val)
-        {
-            max_val = output[i];
-            max_idx = i;
-        }
+        out.data = output[i];
+        out.last = (i == 19) ? 1 : 0;
+        output_stream.write(out);
     }
-
-
-    axis_t out_data;
-    out_data.data = max_idx;
-    out_data.last = 0;
-    output_stream.write(out_data);
-
-    out_data.data = max_val;
-    out_data.last = 1;
-    output_stream.write(out_data);
 }

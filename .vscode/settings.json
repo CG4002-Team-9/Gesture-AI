@@ -8,7 +8,14 @@
     "ranges": "cpp",
     "valarray": "cpp",
     "complex": "cpp",
-    "cmath": "cpp"
+    "cmath": "cpp",
+    "ostream": "cpp",
+    "*.tcc": "cpp",
+    "array": "cpp",
+    "span": "cpp",
+    "string": "cpp",
+    "string_view": "cpp",
+    "vector": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",

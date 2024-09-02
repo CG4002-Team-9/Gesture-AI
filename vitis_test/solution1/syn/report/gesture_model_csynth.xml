@@ -18,28 +18,28 @@
 <PipelineType>dataflow</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>7.272</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.268</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>23078</Best-caseLatency>
-<Average-caseLatency>23078</Average-caseLatency>
-<Worst-caseLatency>23078</Worst-caseLatency>
+<Best-caseLatency>23128</Best-caseLatency>
+<Average-caseLatency>23128</Average-caseLatency>
+<Worst-caseLatency>23128</Worst-caseLatency>
 <Best-caseRealTimeLatency>0.231 ms</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>0.231 ms</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>0.231 ms</Worst-caseRealTimeLatency>
-<DataflowPipelineThroughput>15110</DataflowPipelineThroughput>
-<Interval-min>15110</Interval-min>
-<Interval-max>15110</Interval-max>
+<DataflowPipelineThroughput>15111</DataflowPipelineThroughput>
+<Interval-min>15111</Interval-min>
+<Interval-max>15111</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>22</BRAM_18K>
-<DSP>48</DSP>
-<FF>9064</FF>
-<LUT>14870</LUT>
+<BRAM_18K>38</BRAM_18K>
+<DSP>50</DSP>
+<FF>18241</FF>
+<LUT>29383</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -309,18 +309,6 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>input_stream_TUSER</name>
-<Object>input_stream_V_user_V</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>axis</IOProtocol>
-<IOConfig>register, both mode</IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
 <name>input_stream_TLAST</name>
 <Object>input_stream_V_last_V</Object>
 <Type>pointer</Type>
@@ -333,32 +321,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>input_stream_TID</name>
-<Object>input_stream_V_id_V</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>axis</IOProtocol>
-<IOConfig>register, both mode</IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>input_stream_TDEST</name>
-<Object>input_stream_V_dest_V</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>axis</IOProtocol>
-<IOConfig>register, both mode</IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
 <name>input_stream_TVALID</name>
-<Object>input_stream_V_dest_V</Object>
+<Object>input_stream_V_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -370,7 +334,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>input_stream_TREADY</name>
-<Object>input_stream_V_dest_V</Object>
+<Object>input_stream_V_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -417,18 +381,6 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>output_stream_TUSER</name>
-<Object>output_stream_V_user_V</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>axis</IOProtocol>
-<IOConfig>register, both mode</IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
 <name>output_stream_TLAST</name>
 <Object>output_stream_V_last_V</Object>
 <Type>pointer</Type>
@@ -441,32 +393,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>output_stream_TID</name>
-<Object>output_stream_V_id_V</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>axis</IOProtocol>
-<IOConfig>register, both mode</IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>output_stream_TDEST</name>
-<Object>output_stream_V_dest_V</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>axis</IOProtocol>
-<IOConfig>register, both mode</IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
 <name>output_stream_TVALID</name>
-<Object>output_stream_V_dest_V</Object>
+<Object>output_stream_V_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -478,7 +406,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>output_stream_TREADY</name>
-<Object>output_stream_V_dest_V</Object>
+<Object>output_stream_V_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>

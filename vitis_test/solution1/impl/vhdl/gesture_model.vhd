@@ -37,17 +37,11 @@ port (
     input_stream_TDATA : IN STD_LOGIC_VECTOR (31 downto 0);
     input_stream_TKEEP : IN STD_LOGIC_VECTOR (3 downto 0);
     input_stream_TSTRB : IN STD_LOGIC_VECTOR (3 downto 0);
-    input_stream_TUSER : IN STD_LOGIC_VECTOR (0 downto 0);
     input_stream_TLAST : IN STD_LOGIC_VECTOR (0 downto 0);
-    input_stream_TID : IN STD_LOGIC_VECTOR (0 downto 0);
-    input_stream_TDEST : IN STD_LOGIC_VECTOR (0 downto 0);
     output_stream_TDATA : OUT STD_LOGIC_VECTOR (31 downto 0);
     output_stream_TKEEP : OUT STD_LOGIC_VECTOR (3 downto 0);
     output_stream_TSTRB : OUT STD_LOGIC_VECTOR (3 downto 0);
-    output_stream_TUSER : OUT STD_LOGIC_VECTOR (0 downto 0);
     output_stream_TLAST : OUT STD_LOGIC_VECTOR (0 downto 0);
-    output_stream_TID : OUT STD_LOGIC_VECTOR (0 downto 0);
-    output_stream_TDEST : OUT STD_LOGIC_VECTOR (0 downto 0);
     input_stream_TVALID : IN STD_LOGIC;
     input_stream_TREADY : OUT STD_LOGIC;
     output_stream_TVALID : OUT STD_LOGIC;
@@ -58,57 +52,56 @@ end;
 architecture behav of gesture_model is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "gesture_model_gesture_model,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-2-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.271652,HLS_SYN_LAT=23078,HLS_SYN_TPT=15110,HLS_SYN_MEM=22,HLS_SYN_DSP=0,HLS_SYN_FF=9064,HLS_SYN_LUT=14870,HLS_VERSION=2022_2}";
+    "gesture_model_gesture_model,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-2-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.267652,HLS_SYN_LAT=23128,HLS_SYN_TPT=15111,HLS_SYN_MEM=38,HLS_SYN_DSP=0,HLS_SYN_FF=18241,HLS_SYN_LUT=29383,HLS_VERSION=2022_2}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant C_S_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
     constant ap_const_lv4_0 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
+    constant ap_const_lv24_0 : STD_LOGIC_VECTOR (23 downto 0) := "000000000000000000000000";
     constant ap_const_logic_0 : STD_LOGIC := '0';
-    constant ap_const_lv16_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
-    constant ap_const_lv15_0 : STD_LOGIC_VECTOR (14 downto 0) := "000000000000000";
+    constant ap_const_lv23_0 : STD_LOGIC_VECTOR (22 downto 0) := "00000000000000000000000";
     constant ap_const_lv7_0 : STD_LOGIC_VECTOR (6 downto 0) := "0000000";
     constant ap_const_lv5_0 : STD_LOGIC_VECTOR (4 downto 0) := "00000";
     constant ap_const_lv11_0 : STD_LOGIC_VECTOR (10 downto 0) := "00000000000";
-    constant ap_const_boolean_1 : BOOLEAN := true;
 
     signal ap_rst_n_inv : STD_LOGIC;
-    signal input_V_0_i_q0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal input_V_0_i_q1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal input_V_0_t_q0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal input_V_0_t_q1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal output_V_i_q0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal output_V_i_q1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal output_V_t_q0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal output_V_t_q1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal conv1d_out_0_V_i_q0 : STD_LOGIC_VECTOR (14 downto 0);
-    signal conv1d_out_0_V_t_q0 : STD_LOGIC_VECTOR (14 downto 0);
-    signal batch_norm_out_0_V_i_q0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal batch_norm_out_0_V_i_q1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal batch_norm_out_0_V_t_q0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal batch_norm_out_0_V_t_q1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal max_pool_out_0_V_i_q0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal max_pool_out_0_V_t_q0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal flatten_out_0_V_i_q0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal flatten_out_0_V_t_q0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal dense_out_0_V_i_q0 : STD_LOGIC_VECTOR (14 downto 0);
-    signal dense_out_0_V_t_q0 : STD_LOGIC_VECTOR (14 downto 0);
-    signal batch_norm_out_1_V_i_q0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal batch_norm_out_1_V_i_q1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal batch_norm_out_1_V_t_q0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal batch_norm_out_1_V_t_q1 : STD_LOGIC_VECTOR (15 downto 0);
+    signal input_V_0_i_q0 : STD_LOGIC_VECTOR (23 downto 0);
+    signal input_V_0_i_q1 : STD_LOGIC_VECTOR (23 downto 0);
+    signal input_V_0_t_q0 : STD_LOGIC_VECTOR (23 downto 0);
+    signal input_V_0_t_q1 : STD_LOGIC_VECTOR (23 downto 0);
+    signal output_V_i_q0 : STD_LOGIC_VECTOR (23 downto 0);
+    signal output_V_i_q1 : STD_LOGIC_VECTOR (23 downto 0);
+    signal output_V_t_q0 : STD_LOGIC_VECTOR (23 downto 0);
+    signal output_V_t_q1 : STD_LOGIC_VECTOR (23 downto 0);
+    signal conv1d_out_0_V_i_q0 : STD_LOGIC_VECTOR (22 downto 0);
+    signal conv1d_out_0_V_t_q0 : STD_LOGIC_VECTOR (22 downto 0);
+    signal batch_norm_out_0_V_i_q0 : STD_LOGIC_VECTOR (23 downto 0);
+    signal batch_norm_out_0_V_i_q1 : STD_LOGIC_VECTOR (23 downto 0);
+    signal batch_norm_out_0_V_t_q0 : STD_LOGIC_VECTOR (23 downto 0);
+    signal batch_norm_out_0_V_t_q1 : STD_LOGIC_VECTOR (23 downto 0);
+    signal max_pool_out_0_V_i_q0 : STD_LOGIC_VECTOR (23 downto 0);
+    signal max_pool_out_0_V_t_q0 : STD_LOGIC_VECTOR (23 downto 0);
+    signal flatten_out_0_V_i_q0 : STD_LOGIC_VECTOR (23 downto 0);
+    signal flatten_out_0_V_t_q0 : STD_LOGIC_VECTOR (23 downto 0);
+    signal dense_out_0_V_i_q0 : STD_LOGIC_VECTOR (22 downto 0);
+    signal dense_out_0_V_t_q0 : STD_LOGIC_VECTOR (22 downto 0);
+    signal batch_norm_out_1_V_i_q0 : STD_LOGIC_VECTOR (23 downto 0);
+    signal batch_norm_out_1_V_i_q1 : STD_LOGIC_VECTOR (23 downto 0);
+    signal batch_norm_out_1_V_t_q0 : STD_LOGIC_VECTOR (23 downto 0);
+    signal batch_norm_out_1_V_t_q1 : STD_LOGIC_VECTOR (23 downto 0);
     signal ap_start : STD_LOGIC;
     signal ap_ready : STD_LOGIC;
     signal ap_done : STD_LOGIC;
     signal ap_idle : STD_LOGIC;
-    signal Loop_VITIS_LOOP_147_1_proc9_U0_ap_start : STD_LOGIC;
-    signal Loop_VITIS_LOOP_147_1_proc9_U0_ap_done : STD_LOGIC;
-    signal Loop_VITIS_LOOP_147_1_proc9_U0_ap_continue : STD_LOGIC;
-    signal Loop_VITIS_LOOP_147_1_proc9_U0_ap_idle : STD_LOGIC;
-    signal Loop_VITIS_LOOP_147_1_proc9_U0_ap_ready : STD_LOGIC;
-    signal Loop_VITIS_LOOP_147_1_proc9_U0_input_stream_TREADY : STD_LOGIC;
-    signal Loop_VITIS_LOOP_147_1_proc9_U0_input_V_0_address0 : STD_LOGIC_VECTOR (6 downto 0);
-    signal Loop_VITIS_LOOP_147_1_proc9_U0_input_V_0_ce0 : STD_LOGIC;
-    signal Loop_VITIS_LOOP_147_1_proc9_U0_input_V_0_we0 : STD_LOGIC;
-    signal Loop_VITIS_LOOP_147_1_proc9_U0_input_V_0_d0 : STD_LOGIC_VECTOR (15 downto 0);
+    signal Loop_VITIS_LOOP_148_1_proc8_U0_ap_start : STD_LOGIC;
+    signal Loop_VITIS_LOOP_148_1_proc8_U0_ap_done : STD_LOGIC;
+    signal Loop_VITIS_LOOP_148_1_proc8_U0_ap_continue : STD_LOGIC;
+    signal Loop_VITIS_LOOP_148_1_proc8_U0_ap_idle : STD_LOGIC;
+    signal Loop_VITIS_LOOP_148_1_proc8_U0_ap_ready : STD_LOGIC;
+    signal Loop_VITIS_LOOP_148_1_proc8_U0_input_V_0_address0 : STD_LOGIC_VECTOR (6 downto 0);
+    signal Loop_VITIS_LOOP_148_1_proc8_U0_input_V_0_ce0 : STD_LOGIC;
+    signal Loop_VITIS_LOOP_148_1_proc8_U0_input_V_0_we0 : STD_LOGIC;
+    signal Loop_VITIS_LOOP_148_1_proc8_U0_input_V_0_d0 : STD_LOGIC_VECTOR (23 downto 0);
+    signal Loop_VITIS_LOOP_148_1_proc8_U0_input_stream_TREADY : STD_LOGIC;
     signal conv1d_0_U0_ap_start : STD_LOGIC;
     signal conv1d_0_U0_ap_done : STD_LOGIC;
     signal conv1d_0_U0_ap_continue : STD_LOGIC;
@@ -121,7 +114,7 @@ architecture behav of gesture_model is
     signal conv1d_0_U0_output_r_address0 : STD_LOGIC_VECTOR (10 downto 0);
     signal conv1d_0_U0_output_r_ce0 : STD_LOGIC;
     signal conv1d_0_U0_output_r_we0 : STD_LOGIC;
-    signal conv1d_0_U0_output_r_d0 : STD_LOGIC_VECTOR (14 downto 0);
+    signal conv1d_0_U0_output_r_d0 : STD_LOGIC_VECTOR (22 downto 0);
     signal batch_normalization_0_U0_ap_start : STD_LOGIC;
     signal batch_normalization_0_U0_ap_done : STD_LOGIC;
     signal batch_normalization_0_U0_ap_continue : STD_LOGIC;
@@ -132,7 +125,7 @@ architecture behav of gesture_model is
     signal batch_normalization_0_U0_output_r_address0 : STD_LOGIC_VECTOR (10 downto 0);
     signal batch_normalization_0_U0_output_r_ce0 : STD_LOGIC;
     signal batch_normalization_0_U0_output_r_we0 : STD_LOGIC;
-    signal batch_normalization_0_U0_output_r_d0 : STD_LOGIC_VECTOR (15 downto 0);
+    signal batch_normalization_0_U0_output_r_d0 : STD_LOGIC_VECTOR (23 downto 0);
     signal max_pooling1d_0_U0_ap_start : STD_LOGIC;
     signal max_pooling1d_0_U0_ap_done : STD_LOGIC;
     signal max_pooling1d_0_U0_ap_continue : STD_LOGIC;
@@ -145,7 +138,7 @@ architecture behav of gesture_model is
     signal max_pooling1d_0_U0_output_r_address0 : STD_LOGIC_VECTOR (9 downto 0);
     signal max_pooling1d_0_U0_output_r_ce0 : STD_LOGIC;
     signal max_pooling1d_0_U0_output_r_we0 : STD_LOGIC;
-    signal max_pooling1d_0_U0_output_r_d0 : STD_LOGIC_VECTOR (15 downto 0);
+    signal max_pooling1d_0_U0_output_r_d0 : STD_LOGIC_VECTOR (23 downto 0);
     signal Loop_VITIS_LOOP_77_1_proc_U0_ap_start : STD_LOGIC;
     signal Loop_VITIS_LOOP_77_1_proc_U0_ap_done : STD_LOGIC;
     signal Loop_VITIS_LOOP_77_1_proc_U0_ap_continue : STD_LOGIC;
@@ -156,7 +149,7 @@ architecture behav of gesture_model is
     signal Loop_VITIS_LOOP_77_1_proc_U0_flatten_out_0_V_address0 : STD_LOGIC_VECTOR (9 downto 0);
     signal Loop_VITIS_LOOP_77_1_proc_U0_flatten_out_0_V_ce0 : STD_LOGIC;
     signal Loop_VITIS_LOOP_77_1_proc_U0_flatten_out_0_V_we0 : STD_LOGIC;
-    signal Loop_VITIS_LOOP_77_1_proc_U0_flatten_out_0_V_d0 : STD_LOGIC_VECTOR (15 downto 0);
+    signal Loop_VITIS_LOOP_77_1_proc_U0_flatten_out_0_V_d0 : STD_LOGIC_VECTOR (23 downto 0);
     signal dense_0_U0_ap_start : STD_LOGIC;
     signal dense_0_U0_ap_done : STD_LOGIC;
     signal dense_0_U0_ap_continue : STD_LOGIC;
@@ -167,7 +160,7 @@ architecture behav of gesture_model is
     signal dense_0_U0_output_r_address0 : STD_LOGIC_VECTOR (3 downto 0);
     signal dense_0_U0_output_r_ce0 : STD_LOGIC;
     signal dense_0_U0_output_r_we0 : STD_LOGIC;
-    signal dense_0_U0_output_r_d0 : STD_LOGIC_VECTOR (14 downto 0);
+    signal dense_0_U0_output_r_d0 : STD_LOGIC_VECTOR (22 downto 0);
     signal batch_normalization_1_U0_ap_start : STD_LOGIC;
     signal batch_normalization_1_U0_ap_done : STD_LOGIC;
     signal batch_normalization_1_U0_ap_continue : STD_LOGIC;
@@ -178,7 +171,7 @@ architecture behav of gesture_model is
     signal batch_normalization_1_U0_output_r_address0 : STD_LOGIC_VECTOR (3 downto 0);
     signal batch_normalization_1_U0_output_r_ce0 : STD_LOGIC;
     signal batch_normalization_1_U0_output_r_we0 : STD_LOGIC;
-    signal batch_normalization_1_U0_output_r_d0 : STD_LOGIC_VECTOR (15 downto 0);
+    signal batch_normalization_1_U0_output_r_d0 : STD_LOGIC_VECTOR (23 downto 0);
     signal dense_1_U0_ap_start : STD_LOGIC;
     signal dense_1_U0_ap_done : STD_LOGIC;
     signal dense_1_U0_ap_continue : STD_LOGIC;
@@ -191,39 +184,21 @@ architecture behav of gesture_model is
     signal dense_1_U0_output_r_address0 : STD_LOGIC_VECTOR (4 downto 0);
     signal dense_1_U0_output_r_ce0 : STD_LOGIC;
     signal dense_1_U0_output_r_we0 : STD_LOGIC;
-    signal dense_1_U0_output_r_d0 : STD_LOGIC_VECTOR (15 downto 0);
+    signal dense_1_U0_output_r_d0 : STD_LOGIC_VECTOR (23 downto 0);
     signal dense_1_U0_output_r_address1 : STD_LOGIC_VECTOR (4 downto 0);
     signal dense_1_U0_output_r_ce1 : STD_LOGIC;
-    signal Loop_VITIS_LOOP_167_3_proc_U0_ap_start : STD_LOGIC;
-    signal Loop_VITIS_LOOP_167_3_proc_U0_ap_done : STD_LOGIC;
-    signal Loop_VITIS_LOOP_167_3_proc_U0_ap_continue : STD_LOGIC;
-    signal Loop_VITIS_LOOP_167_3_proc_U0_ap_idle : STD_LOGIC;
-    signal Loop_VITIS_LOOP_167_3_proc_U0_ap_ready : STD_LOGIC;
-    signal Loop_VITIS_LOOP_167_3_proc_U0_output_V_address0 : STD_LOGIC_VECTOR (4 downto 0);
-    signal Loop_VITIS_LOOP_167_3_proc_U0_output_V_ce0 : STD_LOGIC;
-    signal Loop_VITIS_LOOP_167_3_proc_U0_ap_return_0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal Loop_VITIS_LOOP_167_3_proc_U0_ap_return_1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal ap_channel_done_max_idx_2_loc_channel : STD_LOGIC;
-    signal max_idx_2_loc_channel_full_n : STD_LOGIC;
-    signal ap_sync_reg_channel_write_max_idx_2_loc_channel : STD_LOGIC := '0';
-    signal ap_sync_channel_write_max_idx_2_loc_channel : STD_LOGIC;
-    signal ap_channel_done_max_val_V_3_loc_channel : STD_LOGIC;
-    signal max_val_V_3_loc_channel_full_n : STD_LOGIC;
-    signal ap_sync_reg_channel_write_max_val_V_3_loc_channel : STD_LOGIC := '0';
-    signal ap_sync_channel_write_max_val_V_3_loc_channel : STD_LOGIC;
-    signal Block_for_end111_proc_U0_ap_start : STD_LOGIC;
-    signal Block_for_end111_proc_U0_ap_done : STD_LOGIC;
-    signal Block_for_end111_proc_U0_ap_continue : STD_LOGIC;
-    signal Block_for_end111_proc_U0_ap_idle : STD_LOGIC;
-    signal Block_for_end111_proc_U0_ap_ready : STD_LOGIC;
-    signal Block_for_end111_proc_U0_output_stream_TDATA : STD_LOGIC_VECTOR (31 downto 0);
-    signal Block_for_end111_proc_U0_output_stream_TVALID : STD_LOGIC;
-    signal Block_for_end111_proc_U0_output_stream_TKEEP : STD_LOGIC_VECTOR (3 downto 0);
-    signal Block_for_end111_proc_U0_output_stream_TSTRB : STD_LOGIC_VECTOR (3 downto 0);
-    signal Block_for_end111_proc_U0_output_stream_TUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal Block_for_end111_proc_U0_output_stream_TLAST : STD_LOGIC_VECTOR (0 downto 0);
-    signal Block_for_end111_proc_U0_output_stream_TID : STD_LOGIC_VECTOR (0 downto 0);
-    signal Block_for_end111_proc_U0_output_stream_TDEST : STD_LOGIC_VECTOR (0 downto 0);
+    signal Loop_VITIS_LOOP_171_3_proc9_U0_ap_start : STD_LOGIC;
+    signal Loop_VITIS_LOOP_171_3_proc9_U0_ap_done : STD_LOGIC;
+    signal Loop_VITIS_LOOP_171_3_proc9_U0_ap_continue : STD_LOGIC;
+    signal Loop_VITIS_LOOP_171_3_proc9_U0_ap_idle : STD_LOGIC;
+    signal Loop_VITIS_LOOP_171_3_proc9_U0_ap_ready : STD_LOGIC;
+    signal Loop_VITIS_LOOP_171_3_proc9_U0_output_stream_TDATA : STD_LOGIC_VECTOR (31 downto 0);
+    signal Loop_VITIS_LOOP_171_3_proc9_U0_output_stream_TVALID : STD_LOGIC;
+    signal Loop_VITIS_LOOP_171_3_proc9_U0_output_stream_TKEEP : STD_LOGIC_VECTOR (3 downto 0);
+    signal Loop_VITIS_LOOP_171_3_proc9_U0_output_stream_TSTRB : STD_LOGIC_VECTOR (3 downto 0);
+    signal Loop_VITIS_LOOP_171_3_proc9_U0_output_stream_TLAST : STD_LOGIC_VECTOR (0 downto 0);
+    signal Loop_VITIS_LOOP_171_3_proc9_U0_output_V_address0 : STD_LOGIC_VECTOR (4 downto 0);
+    signal Loop_VITIS_LOOP_171_3_proc9_U0_output_V_ce0 : STD_LOGIC;
     signal input_V_0_i_full_n : STD_LOGIC;
     signal input_V_0_t_empty_n : STD_LOGIC;
     signal conv1d_out_0_V_i_full_n : STD_LOGIC;
@@ -240,17 +215,8 @@ architecture behav of gesture_model is
     signal batch_norm_out_1_V_t_empty_n : STD_LOGIC;
     signal output_V_i_full_n : STD_LOGIC;
     signal output_V_t_empty_n : STD_LOGIC;
-    signal max_val_V_3_loc_channel_dout : STD_LOGIC_VECTOR (15 downto 0);
-    signal max_val_V_3_loc_channel_num_data_valid : STD_LOGIC_VECTOR (1 downto 0);
-    signal max_val_V_3_loc_channel_fifo_cap : STD_LOGIC_VECTOR (1 downto 0);
-    signal max_val_V_3_loc_channel_empty_n : STD_LOGIC;
-    signal max_idx_2_loc_channel_dout : STD_LOGIC_VECTOR (31 downto 0);
-    signal max_idx_2_loc_channel_num_data_valid : STD_LOGIC_VECTOR (1 downto 0);
-    signal max_idx_2_loc_channel_fifo_cap : STD_LOGIC_VECTOR (1 downto 0);
-    signal max_idx_2_loc_channel_empty_n : STD_LOGIC;
-    signal ap_ce_reg : STD_LOGIC;
 
-    component gesture_model_Loop_VITIS_LOOP_147_1_proc9 IS
+    component gesture_model_Loop_VITIS_LOOP_148_1_proc8 IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -260,18 +226,15 @@ architecture behav of gesture_model is
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
         input_stream_TVALID : IN STD_LOGIC;
+        input_V_0_address0 : OUT STD_LOGIC_VECTOR (6 downto 0);
+        input_V_0_ce0 : OUT STD_LOGIC;
+        input_V_0_we0 : OUT STD_LOGIC;
+        input_V_0_d0 : OUT STD_LOGIC_VECTOR (23 downto 0);
         input_stream_TDATA : IN STD_LOGIC_VECTOR (31 downto 0);
         input_stream_TREADY : OUT STD_LOGIC;
         input_stream_TKEEP : IN STD_LOGIC_VECTOR (3 downto 0);
         input_stream_TSTRB : IN STD_LOGIC_VECTOR (3 downto 0);
-        input_stream_TUSER : IN STD_LOGIC_VECTOR (0 downto 0);
-        input_stream_TLAST : IN STD_LOGIC_VECTOR (0 downto 0);
-        input_stream_TID : IN STD_LOGIC_VECTOR (0 downto 0);
-        input_stream_TDEST : IN STD_LOGIC_VECTOR (0 downto 0);
-        input_V_0_address0 : OUT STD_LOGIC_VECTOR (6 downto 0);
-        input_V_0_ce0 : OUT STD_LOGIC;
-        input_V_0_we0 : OUT STD_LOGIC;
-        input_V_0_d0 : OUT STD_LOGIC_VECTOR (15 downto 0) );
+        input_stream_TLAST : IN STD_LOGIC_VECTOR (0 downto 0) );
     end component;
 
 
@@ -286,14 +249,14 @@ architecture behav of gesture_model is
         ap_ready : OUT STD_LOGIC;
         input_0_address0 : OUT STD_LOGIC_VECTOR (6 downto 0);
         input_0_ce0 : OUT STD_LOGIC;
-        input_0_q0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        input_0_q0 : IN STD_LOGIC_VECTOR (23 downto 0);
         input_0_address1 : OUT STD_LOGIC_VECTOR (6 downto 0);
         input_0_ce1 : OUT STD_LOGIC;
-        input_0_q1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        input_0_q1 : IN STD_LOGIC_VECTOR (23 downto 0);
         output_r_address0 : OUT STD_LOGIC_VECTOR (10 downto 0);
         output_r_ce0 : OUT STD_LOGIC;
         output_r_we0 : OUT STD_LOGIC;
-        output_r_d0 : OUT STD_LOGIC_VECTOR (14 downto 0) );
+        output_r_d0 : OUT STD_LOGIC_VECTOR (22 downto 0) );
     end component;
 
 
@@ -308,11 +271,11 @@ architecture behav of gesture_model is
         ap_ready : OUT STD_LOGIC;
         input_r_address0 : OUT STD_LOGIC_VECTOR (10 downto 0);
         input_r_ce0 : OUT STD_LOGIC;
-        input_r_q0 : IN STD_LOGIC_VECTOR (14 downto 0);
+        input_r_q0 : IN STD_LOGIC_VECTOR (22 downto 0);
         output_r_address0 : OUT STD_LOGIC_VECTOR (10 downto 0);
         output_r_ce0 : OUT STD_LOGIC;
         output_r_we0 : OUT STD_LOGIC;
-        output_r_d0 : OUT STD_LOGIC_VECTOR (15 downto 0) );
+        output_r_d0 : OUT STD_LOGIC_VECTOR (23 downto 0) );
     end component;
 
 
@@ -327,14 +290,14 @@ architecture behav of gesture_model is
         ap_ready : OUT STD_LOGIC;
         input_r_address0 : OUT STD_LOGIC_VECTOR (10 downto 0);
         input_r_ce0 : OUT STD_LOGIC;
-        input_r_q0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        input_r_q0 : IN STD_LOGIC_VECTOR (23 downto 0);
         input_r_address1 : OUT STD_LOGIC_VECTOR (10 downto 0);
         input_r_ce1 : OUT STD_LOGIC;
-        input_r_q1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        input_r_q1 : IN STD_LOGIC_VECTOR (23 downto 0);
         output_r_address0 : OUT STD_LOGIC_VECTOR (9 downto 0);
         output_r_ce0 : OUT STD_LOGIC;
         output_r_we0 : OUT STD_LOGIC;
-        output_r_d0 : OUT STD_LOGIC_VECTOR (15 downto 0) );
+        output_r_d0 : OUT STD_LOGIC_VECTOR (23 downto 0) );
     end component;
 
 
@@ -349,11 +312,11 @@ architecture behav of gesture_model is
         ap_ready : OUT STD_LOGIC;
         max_pool_out_0_V_address0 : OUT STD_LOGIC_VECTOR (9 downto 0);
         max_pool_out_0_V_ce0 : OUT STD_LOGIC;
-        max_pool_out_0_V_q0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        max_pool_out_0_V_q0 : IN STD_LOGIC_VECTOR (23 downto 0);
         flatten_out_0_V_address0 : OUT STD_LOGIC_VECTOR (9 downto 0);
         flatten_out_0_V_ce0 : OUT STD_LOGIC;
         flatten_out_0_V_we0 : OUT STD_LOGIC;
-        flatten_out_0_V_d0 : OUT STD_LOGIC_VECTOR (15 downto 0) );
+        flatten_out_0_V_d0 : OUT STD_LOGIC_VECTOR (23 downto 0) );
     end component;
 
 
@@ -368,11 +331,11 @@ architecture behav of gesture_model is
         ap_ready : OUT STD_LOGIC;
         input_r_address0 : OUT STD_LOGIC_VECTOR (9 downto 0);
         input_r_ce0 : OUT STD_LOGIC;
-        input_r_q0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        input_r_q0 : IN STD_LOGIC_VECTOR (23 downto 0);
         output_r_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
         output_r_ce0 : OUT STD_LOGIC;
         output_r_we0 : OUT STD_LOGIC;
-        output_r_d0 : OUT STD_LOGIC_VECTOR (14 downto 0) );
+        output_r_d0 : OUT STD_LOGIC_VECTOR (22 downto 0) );
     end component;
 
 
@@ -387,11 +350,11 @@ architecture behav of gesture_model is
         ap_ready : OUT STD_LOGIC;
         input_r_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
         input_r_ce0 : OUT STD_LOGIC;
-        input_r_q0 : IN STD_LOGIC_VECTOR (14 downto 0);
+        input_r_q0 : IN STD_LOGIC_VECTOR (22 downto 0);
         output_r_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
         output_r_ce0 : OUT STD_LOGIC;
         output_r_we0 : OUT STD_LOGIC;
-        output_r_d0 : OUT STD_LOGIC_VECTOR (15 downto 0) );
+        output_r_d0 : OUT STD_LOGIC_VECTOR (23 downto 0) );
     end component;
 
 
@@ -406,22 +369,22 @@ architecture behav of gesture_model is
         ap_ready : OUT STD_LOGIC;
         input_r_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
         input_r_ce0 : OUT STD_LOGIC;
-        input_r_q0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        input_r_q0 : IN STD_LOGIC_VECTOR (23 downto 0);
         input_r_address1 : OUT STD_LOGIC_VECTOR (3 downto 0);
         input_r_ce1 : OUT STD_LOGIC;
-        input_r_q1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        input_r_q1 : IN STD_LOGIC_VECTOR (23 downto 0);
         output_r_address0 : OUT STD_LOGIC_VECTOR (4 downto 0);
         output_r_ce0 : OUT STD_LOGIC;
         output_r_we0 : OUT STD_LOGIC;
-        output_r_d0 : OUT STD_LOGIC_VECTOR (15 downto 0);
-        output_r_q0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        output_r_d0 : OUT STD_LOGIC_VECTOR (23 downto 0);
+        output_r_q0 : IN STD_LOGIC_VECTOR (23 downto 0);
         output_r_address1 : OUT STD_LOGIC_VECTOR (4 downto 0);
         output_r_ce1 : OUT STD_LOGIC;
-        output_r_q1 : IN STD_LOGIC_VECTOR (15 downto 0) );
+        output_r_q1 : IN STD_LOGIC_VECTOR (23 downto 0) );
     end component;
 
 
-    component gesture_model_Loop_VITIS_LOOP_167_3_proc IS
+    component gesture_model_Loop_VITIS_LOOP_171_3_proc9 IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -430,34 +393,15 @@ architecture behav of gesture_model is
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        output_V_address0 : OUT STD_LOGIC_VECTOR (4 downto 0);
-        output_V_ce0 : OUT STD_LOGIC;
-        output_V_q0 : IN STD_LOGIC_VECTOR (15 downto 0);
-        ap_return_0 : OUT STD_LOGIC_VECTOR (15 downto 0);
-        ap_return_1 : OUT STD_LOGIC_VECTOR (31 downto 0) );
-    end component;
-
-
-    component gesture_model_Block_for_end111_proc IS
-    port (
-        ap_clk : IN STD_LOGIC;
-        ap_rst : IN STD_LOGIC;
-        ap_start : IN STD_LOGIC;
-        ap_done : OUT STD_LOGIC;
-        ap_continue : IN STD_LOGIC;
-        ap_idle : OUT STD_LOGIC;
-        ap_ready : OUT STD_LOGIC;
-        p_read : IN STD_LOGIC_VECTOR (31 downto 0);
+        output_stream_TREADY : IN STD_LOGIC;
         output_stream_TDATA : OUT STD_LOGIC_VECTOR (31 downto 0);
         output_stream_TVALID : OUT STD_LOGIC;
-        output_stream_TREADY : IN STD_LOGIC;
         output_stream_TKEEP : OUT STD_LOGIC_VECTOR (3 downto 0);
         output_stream_TSTRB : OUT STD_LOGIC_VECTOR (3 downto 0);
-        output_stream_TUSER : OUT STD_LOGIC_VECTOR (0 downto 0);
         output_stream_TLAST : OUT STD_LOGIC_VECTOR (0 downto 0);
-        output_stream_TID : OUT STD_LOGIC_VECTOR (0 downto 0);
-        output_stream_TDEST : OUT STD_LOGIC_VECTOR (0 downto 0);
-        p_read1 : IN STD_LOGIC_VECTOR (15 downto 0) );
+        output_V_address0 : OUT STD_LOGIC_VECTOR (4 downto 0);
+        output_V_ce0 : OUT STD_LOGIC;
+        output_V_q0 : IN STD_LOGIC_VECTOR (23 downto 0) );
     end component;
 
 
@@ -472,19 +416,19 @@ architecture behav of gesture_model is
         i_address0 : IN STD_LOGIC_VECTOR (6 downto 0);
         i_ce0 : IN STD_LOGIC;
         i_we0 : IN STD_LOGIC;
-        i_d0 : IN STD_LOGIC_VECTOR (15 downto 0);
-        i_q0 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        i_d0 : IN STD_LOGIC_VECTOR (23 downto 0);
+        i_q0 : OUT STD_LOGIC_VECTOR (23 downto 0);
         i_address1 : IN STD_LOGIC_VECTOR (6 downto 0);
         i_ce1 : IN STD_LOGIC;
-        i_q1 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        i_q1 : OUT STD_LOGIC_VECTOR (23 downto 0);
         t_address0 : IN STD_LOGIC_VECTOR (6 downto 0);
         t_ce0 : IN STD_LOGIC;
         t_we0 : IN STD_LOGIC;
-        t_d0 : IN STD_LOGIC_VECTOR (15 downto 0);
-        t_q0 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        t_d0 : IN STD_LOGIC_VECTOR (23 downto 0);
+        t_q0 : OUT STD_LOGIC_VECTOR (23 downto 0);
         t_address1 : IN STD_LOGIC_VECTOR (6 downto 0);
         t_ce1 : IN STD_LOGIC;
-        t_q1 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        t_q1 : OUT STD_LOGIC_VECTOR (23 downto 0);
         i_ce : IN STD_LOGIC;
         t_ce : IN STD_LOGIC;
         i_full_n : OUT STD_LOGIC;
@@ -505,19 +449,19 @@ architecture behav of gesture_model is
         i_address0 : IN STD_LOGIC_VECTOR (4 downto 0);
         i_ce0 : IN STD_LOGIC;
         i_we0 : IN STD_LOGIC;
-        i_d0 : IN STD_LOGIC_VECTOR (15 downto 0);
-        i_q0 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        i_d0 : IN STD_LOGIC_VECTOR (23 downto 0);
+        i_q0 : OUT STD_LOGIC_VECTOR (23 downto 0);
         i_address1 : IN STD_LOGIC_VECTOR (4 downto 0);
         i_ce1 : IN STD_LOGIC;
-        i_q1 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        i_q1 : OUT STD_LOGIC_VECTOR (23 downto 0);
         t_address0 : IN STD_LOGIC_VECTOR (4 downto 0);
         t_ce0 : IN STD_LOGIC;
         t_we0 : IN STD_LOGIC;
-        t_d0 : IN STD_LOGIC_VECTOR (15 downto 0);
-        t_q0 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        t_d0 : IN STD_LOGIC_VECTOR (23 downto 0);
+        t_q0 : OUT STD_LOGIC_VECTOR (23 downto 0);
         t_address1 : IN STD_LOGIC_VECTOR (4 downto 0);
         t_ce1 : IN STD_LOGIC;
-        t_q1 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        t_q1 : OUT STD_LOGIC_VECTOR (23 downto 0);
         i_ce : IN STD_LOGIC;
         t_ce : IN STD_LOGIC;
         i_full_n : OUT STD_LOGIC;
@@ -538,13 +482,13 @@ architecture behav of gesture_model is
         i_address0 : IN STD_LOGIC_VECTOR (10 downto 0);
         i_ce0 : IN STD_LOGIC;
         i_we0 : IN STD_LOGIC;
-        i_d0 : IN STD_LOGIC_VECTOR (14 downto 0);
-        i_q0 : OUT STD_LOGIC_VECTOR (14 downto 0);
+        i_d0 : IN STD_LOGIC_VECTOR (22 downto 0);
+        i_q0 : OUT STD_LOGIC_VECTOR (22 downto 0);
         t_address0 : IN STD_LOGIC_VECTOR (10 downto 0);
         t_ce0 : IN STD_LOGIC;
         t_we0 : IN STD_LOGIC;
-        t_d0 : IN STD_LOGIC_VECTOR (14 downto 0);
-        t_q0 : OUT STD_LOGIC_VECTOR (14 downto 0);
+        t_d0 : IN STD_LOGIC_VECTOR (22 downto 0);
+        t_q0 : OUT STD_LOGIC_VECTOR (22 downto 0);
         i_ce : IN STD_LOGIC;
         t_ce : IN STD_LOGIC;
         i_full_n : OUT STD_LOGIC;
@@ -565,19 +509,19 @@ architecture behav of gesture_model is
         i_address0 : IN STD_LOGIC_VECTOR (10 downto 0);
         i_ce0 : IN STD_LOGIC;
         i_we0 : IN STD_LOGIC;
-        i_d0 : IN STD_LOGIC_VECTOR (15 downto 0);
-        i_q0 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        i_d0 : IN STD_LOGIC_VECTOR (23 downto 0);
+        i_q0 : OUT STD_LOGIC_VECTOR (23 downto 0);
         i_address1 : IN STD_LOGIC_VECTOR (10 downto 0);
         i_ce1 : IN STD_LOGIC;
-        i_q1 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        i_q1 : OUT STD_LOGIC_VECTOR (23 downto 0);
         t_address0 : IN STD_LOGIC_VECTOR (10 downto 0);
         t_ce0 : IN STD_LOGIC;
         t_we0 : IN STD_LOGIC;
-        t_d0 : IN STD_LOGIC_VECTOR (15 downto 0);
-        t_q0 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        t_d0 : IN STD_LOGIC_VECTOR (23 downto 0);
+        t_q0 : OUT STD_LOGIC_VECTOR (23 downto 0);
         t_address1 : IN STD_LOGIC_VECTOR (10 downto 0);
         t_ce1 : IN STD_LOGIC;
-        t_q1 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        t_q1 : OUT STD_LOGIC_VECTOR (23 downto 0);
         i_ce : IN STD_LOGIC;
         t_ce : IN STD_LOGIC;
         i_full_n : OUT STD_LOGIC;
@@ -598,13 +542,13 @@ architecture behav of gesture_model is
         i_address0 : IN STD_LOGIC_VECTOR (9 downto 0);
         i_ce0 : IN STD_LOGIC;
         i_we0 : IN STD_LOGIC;
-        i_d0 : IN STD_LOGIC_VECTOR (15 downto 0);
-        i_q0 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        i_d0 : IN STD_LOGIC_VECTOR (23 downto 0);
+        i_q0 : OUT STD_LOGIC_VECTOR (23 downto 0);
         t_address0 : IN STD_LOGIC_VECTOR (9 downto 0);
         t_ce0 : IN STD_LOGIC;
         t_we0 : IN STD_LOGIC;
-        t_d0 : IN STD_LOGIC_VECTOR (15 downto 0);
-        t_q0 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        t_d0 : IN STD_LOGIC_VECTOR (23 downto 0);
+        t_q0 : OUT STD_LOGIC_VECTOR (23 downto 0);
         i_ce : IN STD_LOGIC;
         t_ce : IN STD_LOGIC;
         i_full_n : OUT STD_LOGIC;
@@ -625,13 +569,13 @@ architecture behav of gesture_model is
         i_address0 : IN STD_LOGIC_VECTOR (3 downto 0);
         i_ce0 : IN STD_LOGIC;
         i_we0 : IN STD_LOGIC;
-        i_d0 : IN STD_LOGIC_VECTOR (14 downto 0);
-        i_q0 : OUT STD_LOGIC_VECTOR (14 downto 0);
+        i_d0 : IN STD_LOGIC_VECTOR (22 downto 0);
+        i_q0 : OUT STD_LOGIC_VECTOR (22 downto 0);
         t_address0 : IN STD_LOGIC_VECTOR (3 downto 0);
         t_ce0 : IN STD_LOGIC;
         t_we0 : IN STD_LOGIC;
-        t_d0 : IN STD_LOGIC_VECTOR (14 downto 0);
-        t_q0 : OUT STD_LOGIC_VECTOR (14 downto 0);
+        t_d0 : IN STD_LOGIC_VECTOR (22 downto 0);
+        t_q0 : OUT STD_LOGIC_VECTOR (22 downto 0);
         i_ce : IN STD_LOGIC;
         t_ce : IN STD_LOGIC;
         i_full_n : OUT STD_LOGIC;
@@ -652,59 +596,25 @@ architecture behav of gesture_model is
         i_address0 : IN STD_LOGIC_VECTOR (3 downto 0);
         i_ce0 : IN STD_LOGIC;
         i_we0 : IN STD_LOGIC;
-        i_d0 : IN STD_LOGIC_VECTOR (15 downto 0);
-        i_q0 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        i_d0 : IN STD_LOGIC_VECTOR (23 downto 0);
+        i_q0 : OUT STD_LOGIC_VECTOR (23 downto 0);
         i_address1 : IN STD_LOGIC_VECTOR (3 downto 0);
         i_ce1 : IN STD_LOGIC;
-        i_q1 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        i_q1 : OUT STD_LOGIC_VECTOR (23 downto 0);
         t_address0 : IN STD_LOGIC_VECTOR (3 downto 0);
         t_ce0 : IN STD_LOGIC;
         t_we0 : IN STD_LOGIC;
-        t_d0 : IN STD_LOGIC_VECTOR (15 downto 0);
-        t_q0 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        t_d0 : IN STD_LOGIC_VECTOR (23 downto 0);
+        t_q0 : OUT STD_LOGIC_VECTOR (23 downto 0);
         t_address1 : IN STD_LOGIC_VECTOR (3 downto 0);
         t_ce1 : IN STD_LOGIC;
-        t_q1 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        t_q1 : OUT STD_LOGIC_VECTOR (23 downto 0);
         i_ce : IN STD_LOGIC;
         t_ce : IN STD_LOGIC;
         i_full_n : OUT STD_LOGIC;
         i_write : IN STD_LOGIC;
         t_empty_n : OUT STD_LOGIC;
         t_read : IN STD_LOGIC );
-    end component;
-
-
-    component gesture_model_fifo_w16_d2_S IS
-    port (
-        clk : IN STD_LOGIC;
-        reset : IN STD_LOGIC;
-        if_read_ce : IN STD_LOGIC;
-        if_write_ce : IN STD_LOGIC;
-        if_din : IN STD_LOGIC_VECTOR (15 downto 0);
-        if_full_n : OUT STD_LOGIC;
-        if_write : IN STD_LOGIC;
-        if_dout : OUT STD_LOGIC_VECTOR (15 downto 0);
-        if_num_data_valid : OUT STD_LOGIC_VECTOR (1 downto 0);
-        if_fifo_cap : OUT STD_LOGIC_VECTOR (1 downto 0);
-        if_empty_n : OUT STD_LOGIC;
-        if_read : IN STD_LOGIC );
-    end component;
-
-
-    component gesture_model_fifo_w32_d2_S IS
-    port (
-        clk : IN STD_LOGIC;
-        reset : IN STD_LOGIC;
-        if_read_ce : IN STD_LOGIC;
-        if_write_ce : IN STD_LOGIC;
-        if_din : IN STD_LOGIC_VECTOR (31 downto 0);
-        if_full_n : OUT STD_LOGIC;
-        if_write : IN STD_LOGIC;
-        if_dout : OUT STD_LOGIC_VECTOR (31 downto 0);
-        if_num_data_valid : OUT STD_LOGIC_VECTOR (1 downto 0);
-        if_fifo_cap : OUT STD_LOGIC_VECTOR (1 downto 0);
-        if_empty_n : OUT STD_LOGIC;
-        if_read : IN STD_LOGIC );
     end component;
 
 
@@ -745,16 +655,16 @@ architecture behav of gesture_model is
 begin
     input_V_0_U : component gesture_model_input_V_0_RAM_AUTO_1R1W
     generic map (
-        DataWidth => 16,
+        DataWidth => 24,
         AddressRange => 120,
         AddressWidth => 7)
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
-        i_address0 => Loop_VITIS_LOOP_147_1_proc9_U0_input_V_0_address0,
-        i_ce0 => Loop_VITIS_LOOP_147_1_proc9_U0_input_V_0_ce0,
-        i_we0 => Loop_VITIS_LOOP_147_1_proc9_U0_input_V_0_we0,
-        i_d0 => Loop_VITIS_LOOP_147_1_proc9_U0_input_V_0_d0,
+        i_address0 => Loop_VITIS_LOOP_148_1_proc8_U0_input_V_0_address0,
+        i_ce0 => Loop_VITIS_LOOP_148_1_proc8_U0_input_V_0_ce0,
+        i_we0 => Loop_VITIS_LOOP_148_1_proc8_U0_input_V_0_we0,
+        i_d0 => Loop_VITIS_LOOP_148_1_proc8_U0_input_V_0_d0,
         i_q0 => input_V_0_i_q0,
         i_address1 => ap_const_lv7_0,
         i_ce1 => ap_const_logic_0,
@@ -762,7 +672,7 @@ begin
         t_address0 => conv1d_0_U0_input_0_address0,
         t_ce0 => conv1d_0_U0_input_0_ce0,
         t_we0 => ap_const_logic_0,
-        t_d0 => ap_const_lv16_0,
+        t_d0 => ap_const_lv24_0,
         t_q0 => input_V_0_t_q0,
         t_address1 => conv1d_0_U0_input_0_address1,
         t_ce1 => conv1d_0_U0_input_0_ce1,
@@ -770,13 +680,13 @@ begin
         i_ce => ap_const_logic_1,
         t_ce => ap_const_logic_1,
         i_full_n => input_V_0_i_full_n,
-        i_write => Loop_VITIS_LOOP_147_1_proc9_U0_ap_done,
+        i_write => Loop_VITIS_LOOP_148_1_proc8_U0_ap_done,
         t_empty_n => input_V_0_t_empty_n,
         t_read => conv1d_0_U0_ap_ready);
 
     output_V_U : component gesture_model_output_V_RAM_AUTO_1R1W
     generic map (
-        DataWidth => 16,
+        DataWidth => 24,
         AddressRange => 20,
         AddressWidth => 5)
     port map (
@@ -790,10 +700,10 @@ begin
         i_address1 => dense_1_U0_output_r_address1,
         i_ce1 => dense_1_U0_output_r_ce1,
         i_q1 => output_V_i_q1,
-        t_address0 => Loop_VITIS_LOOP_167_3_proc_U0_output_V_address0,
-        t_ce0 => Loop_VITIS_LOOP_167_3_proc_U0_output_V_ce0,
+        t_address0 => Loop_VITIS_LOOP_171_3_proc9_U0_output_V_address0,
+        t_ce0 => Loop_VITIS_LOOP_171_3_proc9_U0_output_V_ce0,
         t_we0 => ap_const_logic_0,
-        t_d0 => ap_const_lv16_0,
+        t_d0 => ap_const_lv24_0,
         t_q0 => output_V_t_q0,
         t_address1 => ap_const_lv5_0,
         t_ce1 => ap_const_logic_0,
@@ -803,11 +713,11 @@ begin
         i_full_n => output_V_i_full_n,
         i_write => dense_1_U0_ap_done,
         t_empty_n => output_V_t_empty_n,
-        t_read => Loop_VITIS_LOOP_167_3_proc_U0_ap_ready);
+        t_read => Loop_VITIS_LOOP_171_3_proc9_U0_ap_ready);
 
     conv1d_out_0_V_U : component gesture_model_conv1d_out_0_V_RAM_AUTO_1R1W
     generic map (
-        DataWidth => 15,
+        DataWidth => 23,
         AddressRange => 1888,
         AddressWidth => 11)
     port map (
@@ -821,7 +731,7 @@ begin
         t_address0 => batch_normalization_0_U0_input_r_address0,
         t_ce0 => batch_normalization_0_U0_input_r_ce0,
         t_we0 => ap_const_logic_0,
-        t_d0 => ap_const_lv15_0,
+        t_d0 => ap_const_lv23_0,
         t_q0 => conv1d_out_0_V_t_q0,
         i_ce => ap_const_logic_1,
         t_ce => ap_const_logic_1,
@@ -832,7 +742,7 @@ begin
 
     batch_norm_out_0_V_U : component gesture_model_batch_norm_out_0_V_RAM_AUTO_1R1W
     generic map (
-        DataWidth => 16,
+        DataWidth => 24,
         AddressRange => 1888,
         AddressWidth => 11)
     port map (
@@ -849,7 +759,7 @@ begin
         t_address0 => max_pooling1d_0_U0_input_r_address0,
         t_ce0 => max_pooling1d_0_U0_input_r_ce0,
         t_we0 => ap_const_logic_0,
-        t_d0 => ap_const_lv16_0,
+        t_d0 => ap_const_lv24_0,
         t_q0 => batch_norm_out_0_V_t_q0,
         t_address1 => max_pooling1d_0_U0_input_r_address1,
         t_ce1 => max_pooling1d_0_U0_input_r_ce1,
@@ -863,7 +773,7 @@ begin
 
     max_pool_out_0_V_U : component gesture_model_max_pool_out_0_V_RAM_AUTO_1R1W
     generic map (
-        DataWidth => 16,
+        DataWidth => 24,
         AddressRange => 944,
         AddressWidth => 10)
     port map (
@@ -877,7 +787,7 @@ begin
         t_address0 => Loop_VITIS_LOOP_77_1_proc_U0_max_pool_out_0_V_address0,
         t_ce0 => Loop_VITIS_LOOP_77_1_proc_U0_max_pool_out_0_V_ce0,
         t_we0 => ap_const_logic_0,
-        t_d0 => ap_const_lv16_0,
+        t_d0 => ap_const_lv24_0,
         t_q0 => max_pool_out_0_V_t_q0,
         i_ce => ap_const_logic_1,
         t_ce => ap_const_logic_1,
@@ -888,7 +798,7 @@ begin
 
     flatten_out_0_V_U : component gesture_model_max_pool_out_0_V_RAM_AUTO_1R1W
     generic map (
-        DataWidth => 16,
+        DataWidth => 24,
         AddressRange => 944,
         AddressWidth => 10)
     port map (
@@ -902,7 +812,7 @@ begin
         t_address0 => dense_0_U0_input_r_address0,
         t_ce0 => dense_0_U0_input_r_ce0,
         t_we0 => ap_const_logic_0,
-        t_d0 => ap_const_lv16_0,
+        t_d0 => ap_const_lv24_0,
         t_q0 => flatten_out_0_V_t_q0,
         i_ce => ap_const_logic_1,
         t_ce => ap_const_logic_1,
@@ -913,7 +823,7 @@ begin
 
     dense_out_0_V_U : component gesture_model_dense_out_0_V_RAM_AUTO_1R1W
     generic map (
-        DataWidth => 15,
+        DataWidth => 23,
         AddressRange => 16,
         AddressWidth => 4)
     port map (
@@ -927,7 +837,7 @@ begin
         t_address0 => batch_normalization_1_U0_input_r_address0,
         t_ce0 => batch_normalization_1_U0_input_r_ce0,
         t_we0 => ap_const_logic_0,
-        t_d0 => ap_const_lv15_0,
+        t_d0 => ap_const_lv23_0,
         t_q0 => dense_out_0_V_t_q0,
         i_ce => ap_const_logic_1,
         t_ce => ap_const_logic_1,
@@ -938,7 +848,7 @@ begin
 
     batch_norm_out_1_V_U : component gesture_model_batch_norm_out_1_V_RAM_AUTO_1R1W
     generic map (
-        DataWidth => 16,
+        DataWidth => 24,
         AddressRange => 16,
         AddressWidth => 4)
     port map (
@@ -955,7 +865,7 @@ begin
         t_address0 => dense_1_U0_input_r_address0,
         t_ce0 => dense_1_U0_input_r_ce0,
         t_we0 => ap_const_logic_0,
-        t_d0 => ap_const_lv16_0,
+        t_d0 => ap_const_lv24_0,
         t_q0 => batch_norm_out_1_V_t_q0,
         t_address1 => dense_1_U0_input_r_address1,
         t_ce1 => dense_1_U0_input_r_ce1,
@@ -998,28 +908,25 @@ begin
         ap_done => ap_done,
         ap_idle => ap_idle);
 
-    Loop_VITIS_LOOP_147_1_proc9_U0 : component gesture_model_Loop_VITIS_LOOP_147_1_proc9
+    Loop_VITIS_LOOP_148_1_proc8_U0 : component gesture_model_Loop_VITIS_LOOP_148_1_proc8
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => Loop_VITIS_LOOP_147_1_proc9_U0_ap_start,
-        ap_done => Loop_VITIS_LOOP_147_1_proc9_U0_ap_done,
-        ap_continue => Loop_VITIS_LOOP_147_1_proc9_U0_ap_continue,
-        ap_idle => Loop_VITIS_LOOP_147_1_proc9_U0_ap_idle,
-        ap_ready => Loop_VITIS_LOOP_147_1_proc9_U0_ap_ready,
+        ap_start => Loop_VITIS_LOOP_148_1_proc8_U0_ap_start,
+        ap_done => Loop_VITIS_LOOP_148_1_proc8_U0_ap_done,
+        ap_continue => Loop_VITIS_LOOP_148_1_proc8_U0_ap_continue,
+        ap_idle => Loop_VITIS_LOOP_148_1_proc8_U0_ap_idle,
+        ap_ready => Loop_VITIS_LOOP_148_1_proc8_U0_ap_ready,
         input_stream_TVALID => input_stream_TVALID,
+        input_V_0_address0 => Loop_VITIS_LOOP_148_1_proc8_U0_input_V_0_address0,
+        input_V_0_ce0 => Loop_VITIS_LOOP_148_1_proc8_U0_input_V_0_ce0,
+        input_V_0_we0 => Loop_VITIS_LOOP_148_1_proc8_U0_input_V_0_we0,
+        input_V_0_d0 => Loop_VITIS_LOOP_148_1_proc8_U0_input_V_0_d0,
         input_stream_TDATA => input_stream_TDATA,
-        input_stream_TREADY => Loop_VITIS_LOOP_147_1_proc9_U0_input_stream_TREADY,
+        input_stream_TREADY => Loop_VITIS_LOOP_148_1_proc8_U0_input_stream_TREADY,
         input_stream_TKEEP => input_stream_TKEEP,
         input_stream_TSTRB => input_stream_TSTRB,
-        input_stream_TUSER => input_stream_TUSER,
-        input_stream_TLAST => input_stream_TLAST,
-        input_stream_TID => input_stream_TID,
-        input_stream_TDEST => input_stream_TDEST,
-        input_V_0_address0 => Loop_VITIS_LOOP_147_1_proc9_U0_input_V_0_address0,
-        input_V_0_ce0 => Loop_VITIS_LOOP_147_1_proc9_U0_input_V_0_ce0,
-        input_V_0_we0 => Loop_VITIS_LOOP_147_1_proc9_U0_input_V_0_we0,
-        input_V_0_d0 => Loop_VITIS_LOOP_147_1_proc9_U0_input_V_0_d0);
+        input_stream_TLAST => input_stream_TLAST);
 
     conv1d_0_U0 : component gesture_model_conv1d_0
     port map (
@@ -1153,128 +1060,43 @@ begin
         output_r_ce1 => dense_1_U0_output_r_ce1,
         output_r_q1 => output_V_i_q1);
 
-    Loop_VITIS_LOOP_167_3_proc_U0 : component gesture_model_Loop_VITIS_LOOP_167_3_proc
+    Loop_VITIS_LOOP_171_3_proc9_U0 : component gesture_model_Loop_VITIS_LOOP_171_3_proc9
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => Loop_VITIS_LOOP_167_3_proc_U0_ap_start,
-        ap_done => Loop_VITIS_LOOP_167_3_proc_U0_ap_done,
-        ap_continue => Loop_VITIS_LOOP_167_3_proc_U0_ap_continue,
-        ap_idle => Loop_VITIS_LOOP_167_3_proc_U0_ap_idle,
-        ap_ready => Loop_VITIS_LOOP_167_3_proc_U0_ap_ready,
-        output_V_address0 => Loop_VITIS_LOOP_167_3_proc_U0_output_V_address0,
-        output_V_ce0 => Loop_VITIS_LOOP_167_3_proc_U0_output_V_ce0,
-        output_V_q0 => output_V_t_q0,
-        ap_return_0 => Loop_VITIS_LOOP_167_3_proc_U0_ap_return_0,
-        ap_return_1 => Loop_VITIS_LOOP_167_3_proc_U0_ap_return_1);
-
-    Block_for_end111_proc_U0 : component gesture_model_Block_for_end111_proc
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst_n_inv,
-        ap_start => Block_for_end111_proc_U0_ap_start,
-        ap_done => Block_for_end111_proc_U0_ap_done,
-        ap_continue => Block_for_end111_proc_U0_ap_continue,
-        ap_idle => Block_for_end111_proc_U0_ap_idle,
-        ap_ready => Block_for_end111_proc_U0_ap_ready,
-        p_read => max_idx_2_loc_channel_dout,
-        output_stream_TDATA => Block_for_end111_proc_U0_output_stream_TDATA,
-        output_stream_TVALID => Block_for_end111_proc_U0_output_stream_TVALID,
+        ap_start => Loop_VITIS_LOOP_171_3_proc9_U0_ap_start,
+        ap_done => Loop_VITIS_LOOP_171_3_proc9_U0_ap_done,
+        ap_continue => Loop_VITIS_LOOP_171_3_proc9_U0_ap_continue,
+        ap_idle => Loop_VITIS_LOOP_171_3_proc9_U0_ap_idle,
+        ap_ready => Loop_VITIS_LOOP_171_3_proc9_U0_ap_ready,
         output_stream_TREADY => output_stream_TREADY,
-        output_stream_TKEEP => Block_for_end111_proc_U0_output_stream_TKEEP,
-        output_stream_TSTRB => Block_for_end111_proc_U0_output_stream_TSTRB,
-        output_stream_TUSER => Block_for_end111_proc_U0_output_stream_TUSER,
-        output_stream_TLAST => Block_for_end111_proc_U0_output_stream_TLAST,
-        output_stream_TID => Block_for_end111_proc_U0_output_stream_TID,
-        output_stream_TDEST => Block_for_end111_proc_U0_output_stream_TDEST,
-        p_read1 => max_val_V_3_loc_channel_dout);
-
-    max_val_V_3_loc_channel_U : component gesture_model_fifo_w16_d2_S
-    port map (
-        clk => ap_clk,
-        reset => ap_rst_n_inv,
-        if_read_ce => ap_const_logic_1,
-        if_write_ce => ap_const_logic_1,
-        if_din => Loop_VITIS_LOOP_167_3_proc_U0_ap_return_0,
-        if_full_n => max_val_V_3_loc_channel_full_n,
-        if_write => ap_channel_done_max_val_V_3_loc_channel,
-        if_dout => max_val_V_3_loc_channel_dout,
-        if_num_data_valid => max_val_V_3_loc_channel_num_data_valid,
-        if_fifo_cap => max_val_V_3_loc_channel_fifo_cap,
-        if_empty_n => max_val_V_3_loc_channel_empty_n,
-        if_read => Block_for_end111_proc_U0_ap_ready);
-
-    max_idx_2_loc_channel_U : component gesture_model_fifo_w32_d2_S
-    port map (
-        clk => ap_clk,
-        reset => ap_rst_n_inv,
-        if_read_ce => ap_const_logic_1,
-        if_write_ce => ap_const_logic_1,
-        if_din => Loop_VITIS_LOOP_167_3_proc_U0_ap_return_1,
-        if_full_n => max_idx_2_loc_channel_full_n,
-        if_write => ap_channel_done_max_idx_2_loc_channel,
-        if_dout => max_idx_2_loc_channel_dout,
-        if_num_data_valid => max_idx_2_loc_channel_num_data_valid,
-        if_fifo_cap => max_idx_2_loc_channel_fifo_cap,
-        if_empty_n => max_idx_2_loc_channel_empty_n,
-        if_read => Block_for_end111_proc_U0_ap_ready);
+        output_stream_TDATA => Loop_VITIS_LOOP_171_3_proc9_U0_output_stream_TDATA,
+        output_stream_TVALID => Loop_VITIS_LOOP_171_3_proc9_U0_output_stream_TVALID,
+        output_stream_TKEEP => Loop_VITIS_LOOP_171_3_proc9_U0_output_stream_TKEEP,
+        output_stream_TSTRB => Loop_VITIS_LOOP_171_3_proc9_U0_output_stream_TSTRB,
+        output_stream_TLAST => Loop_VITIS_LOOP_171_3_proc9_U0_output_stream_TLAST,
+        output_V_address0 => Loop_VITIS_LOOP_171_3_proc9_U0_output_V_address0,
+        output_V_ce0 => Loop_VITIS_LOOP_171_3_proc9_U0_output_V_ce0,
+        output_V_q0 => output_V_t_q0);
 
 
 
 
-
-    ap_sync_reg_channel_write_max_idx_2_loc_channel_assign_proc : process(ap_clk)
-    begin
-        if (ap_clk'event and ap_clk =  '1') then
-            if (ap_rst_n_inv = '1') then
-                ap_sync_reg_channel_write_max_idx_2_loc_channel <= ap_const_logic_0;
-            else
-                if (((Loop_VITIS_LOOP_167_3_proc_U0_ap_done and Loop_VITIS_LOOP_167_3_proc_U0_ap_continue) = ap_const_logic_1)) then 
-                    ap_sync_reg_channel_write_max_idx_2_loc_channel <= ap_const_logic_0;
-                else 
-                    ap_sync_reg_channel_write_max_idx_2_loc_channel <= ap_sync_channel_write_max_idx_2_loc_channel;
-                end if; 
-            end if;
-        end if;
-    end process;
-
-
-    ap_sync_reg_channel_write_max_val_V_3_loc_channel_assign_proc : process(ap_clk)
-    begin
-        if (ap_clk'event and ap_clk =  '1') then
-            if (ap_rst_n_inv = '1') then
-                ap_sync_reg_channel_write_max_val_V_3_loc_channel <= ap_const_logic_0;
-            else
-                if (((Loop_VITIS_LOOP_167_3_proc_U0_ap_done and Loop_VITIS_LOOP_167_3_proc_U0_ap_continue) = ap_const_logic_1)) then 
-                    ap_sync_reg_channel_write_max_val_V_3_loc_channel <= ap_const_logic_0;
-                else 
-                    ap_sync_reg_channel_write_max_val_V_3_loc_channel <= ap_sync_channel_write_max_val_V_3_loc_channel;
-                end if; 
-            end if;
-        end if;
-    end process;
-
-    Block_for_end111_proc_U0_ap_continue <= ap_const_logic_1;
-    Block_for_end111_proc_U0_ap_start <= (max_val_V_3_loc_channel_empty_n and max_idx_2_loc_channel_empty_n);
-    Loop_VITIS_LOOP_147_1_proc9_U0_ap_continue <= input_V_0_i_full_n;
-    Loop_VITIS_LOOP_147_1_proc9_U0_ap_start <= ap_start;
-    Loop_VITIS_LOOP_167_3_proc_U0_ap_continue <= (ap_sync_channel_write_max_val_V_3_loc_channel and ap_sync_channel_write_max_idx_2_loc_channel);
-    Loop_VITIS_LOOP_167_3_proc_U0_ap_start <= output_V_t_empty_n;
+    Loop_VITIS_LOOP_148_1_proc8_U0_ap_continue <= input_V_0_i_full_n;
+    Loop_VITIS_LOOP_148_1_proc8_U0_ap_start <= ap_start;
+    Loop_VITIS_LOOP_171_3_proc9_U0_ap_continue <= ap_const_logic_1;
+    Loop_VITIS_LOOP_171_3_proc9_U0_ap_start <= output_V_t_empty_n;
     Loop_VITIS_LOOP_77_1_proc_U0_ap_continue <= flatten_out_0_V_i_full_n;
     Loop_VITIS_LOOP_77_1_proc_U0_ap_start <= max_pool_out_0_V_t_empty_n;
-    ap_channel_done_max_idx_2_loc_channel <= ((ap_sync_reg_channel_write_max_idx_2_loc_channel xor ap_const_logic_1) and Loop_VITIS_LOOP_167_3_proc_U0_ap_done);
-    ap_channel_done_max_val_V_3_loc_channel <= ((ap_sync_reg_channel_write_max_val_V_3_loc_channel xor ap_const_logic_1) and Loop_VITIS_LOOP_167_3_proc_U0_ap_done);
-    ap_done <= Block_for_end111_proc_U0_ap_done;
-    ap_idle <= (max_pooling1d_0_U0_ap_idle and (max_idx_2_loc_channel_empty_n xor ap_const_logic_1) and (max_val_V_3_loc_channel_empty_n xor ap_const_logic_1) and (output_V_t_empty_n xor ap_const_logic_1) and (batch_norm_out_1_V_t_empty_n xor ap_const_logic_1) and (dense_out_0_V_t_empty_n xor ap_const_logic_1) and (flatten_out_0_V_t_empty_n xor ap_const_logic_1) and (max_pool_out_0_V_t_empty_n xor ap_const_logic_1) and (batch_norm_out_0_V_t_empty_n xor ap_const_logic_1) and (conv1d_out_0_V_t_empty_n xor ap_const_logic_1) and (input_V_0_t_empty_n xor ap_const_logic_1) and dense_1_U0_ap_idle and dense_0_U0_ap_idle and conv1d_0_U0_ap_idle and batch_normalization_1_U0_ap_idle and batch_normalization_0_U0_ap_idle and Loop_VITIS_LOOP_77_1_proc_U0_ap_idle and Loop_VITIS_LOOP_167_3_proc_U0_ap_idle and Loop_VITIS_LOOP_147_1_proc9_U0_ap_idle and Block_for_end111_proc_U0_ap_idle);
-    ap_ready <= Loop_VITIS_LOOP_147_1_proc9_U0_ap_ready;
+    ap_done <= Loop_VITIS_LOOP_171_3_proc9_U0_ap_done;
+    ap_idle <= (max_pooling1d_0_U0_ap_idle and (output_V_t_empty_n xor ap_const_logic_1) and (batch_norm_out_1_V_t_empty_n xor ap_const_logic_1) and (dense_out_0_V_t_empty_n xor ap_const_logic_1) and (flatten_out_0_V_t_empty_n xor ap_const_logic_1) and (max_pool_out_0_V_t_empty_n xor ap_const_logic_1) and (batch_norm_out_0_V_t_empty_n xor ap_const_logic_1) and (conv1d_out_0_V_t_empty_n xor ap_const_logic_1) and (input_V_0_t_empty_n xor ap_const_logic_1) and dense_1_U0_ap_idle and dense_0_U0_ap_idle and conv1d_0_U0_ap_idle and batch_normalization_1_U0_ap_idle and batch_normalization_0_U0_ap_idle and Loop_VITIS_LOOP_77_1_proc_U0_ap_idle and Loop_VITIS_LOOP_171_3_proc9_U0_ap_idle and Loop_VITIS_LOOP_148_1_proc8_U0_ap_idle);
+    ap_ready <= Loop_VITIS_LOOP_148_1_proc8_U0_ap_ready;
 
     ap_rst_n_inv_assign_proc : process(ap_rst_n)
     begin
                 ap_rst_n_inv <= not(ap_rst_n);
     end process;
 
-    ap_sync_channel_write_max_idx_2_loc_channel <= ((max_idx_2_loc_channel_full_n and ap_channel_done_max_idx_2_loc_channel) or ap_sync_reg_channel_write_max_idx_2_loc_channel);
-    ap_sync_channel_write_max_val_V_3_loc_channel <= ((max_val_V_3_loc_channel_full_n and ap_channel_done_max_val_V_3_loc_channel) or ap_sync_reg_channel_write_max_val_V_3_loc_channel);
     batch_normalization_0_U0_ap_continue <= batch_norm_out_0_V_i_full_n;
     batch_normalization_0_U0_ap_start <= conv1d_out_0_V_t_empty_n;
     batch_normalization_1_U0_ap_continue <= batch_norm_out_1_V_i_full_n;
@@ -1285,15 +1107,12 @@ begin
     dense_0_U0_ap_start <= flatten_out_0_V_t_empty_n;
     dense_1_U0_ap_continue <= output_V_i_full_n;
     dense_1_U0_ap_start <= batch_norm_out_1_V_t_empty_n;
-    input_stream_TREADY <= Loop_VITIS_LOOP_147_1_proc9_U0_input_stream_TREADY;
+    input_stream_TREADY <= Loop_VITIS_LOOP_148_1_proc8_U0_input_stream_TREADY;
     max_pooling1d_0_U0_ap_continue <= max_pool_out_0_V_i_full_n;
     max_pooling1d_0_U0_ap_start <= batch_norm_out_0_V_t_empty_n;
-    output_stream_TDATA <= Block_for_end111_proc_U0_output_stream_TDATA;
-    output_stream_TDEST <= Block_for_end111_proc_U0_output_stream_TDEST;
-    output_stream_TID <= Block_for_end111_proc_U0_output_stream_TID;
-    output_stream_TKEEP <= Block_for_end111_proc_U0_output_stream_TKEEP;
-    output_stream_TLAST <= Block_for_end111_proc_U0_output_stream_TLAST;
-    output_stream_TSTRB <= Block_for_end111_proc_U0_output_stream_TSTRB;
-    output_stream_TUSER <= Block_for_end111_proc_U0_output_stream_TUSER;
-    output_stream_TVALID <= Block_for_end111_proc_U0_output_stream_TVALID;
+    output_stream_TDATA <= Loop_VITIS_LOOP_171_3_proc9_U0_output_stream_TDATA;
+    output_stream_TKEEP <= Loop_VITIS_LOOP_171_3_proc9_U0_output_stream_TKEEP;
+    output_stream_TLAST <= Loop_VITIS_LOOP_171_3_proc9_U0_output_stream_TLAST;
+    output_stream_TSTRB <= Loop_VITIS_LOOP_171_3_proc9_U0_output_stream_TSTRB;
+    output_stream_TVALID <= Loop_VITIS_LOOP_171_3_proc9_U0_output_stream_TVALID;
 end behav;

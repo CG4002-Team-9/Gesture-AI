@@ -127,12 +127,13 @@ void dense_1(fixed_p input[16], fixed_p output[20])
     }
 }
 
-void gesture_model(hls::stream<axis_t> &input_stream, hls::stream<axis_t> &output_stream)
+void gesture_model(mystream &input_stream, mystream &output_stream)
 {
 #pragma HLS INTERFACE mode = axis port = input_stream
 #pragma HLS INTERFACE mode = axis port = output_stream
-#pragma HLS INTERFACE mode = s_axilite port = return bundle = control
+#pragma HLS INTERFACE mode = s_axilite port = return
 
+    data_t in, out;
     fixed_p input[120][1];
     fixed_p output[20];
 
@@ -148,7 +149,8 @@ void gesture_model(hls::stream<axis_t> &input_stream, hls::stream<axis_t> &outpu
     {
         for (int j = 0; j < 1; j++)
         {
-            input[i][j] = input_stream.read().data;
+            input_stream.read(in);
+            input[i][j] = in.data;
         }
     }
 
@@ -162,24 +164,14 @@ void gesture_model(hls::stream<axis_t> &input_stream, hls::stream<axis_t> &outpu
     batch_normalization_1(dense_out_0, batch_norm_out_1);
     dense_1(batch_norm_out_1, output);
 
-    fixed_p max_val = output[0];
-    unsigned int max_idx = 0;
-    for (int i = 1; i < 20; i++)
-    {
-        if (output[i] > max_val)
-        {
-            max_val = output[i];
-            max_idx = i;
-        }
-    }
-
     // Write the output to the output AXI stream
-    axis_t out_data;
-    out_data.data = max_idx;
-    out_data.last = 0;
-    output_stream.write(out_data);
+    out.keep = -1;
+    out.last = 0;
 
-    out_data.data = max_val;
-    out_data.last = 1;
-    output_stream.write(out_data);
+    for (uint i = 0; i < 20; i++)
+    {
+        out.data = output[i];
+        out.last = (i == 19) ? 1 : 0;
+        output_stream.write(out);
+    }
 }

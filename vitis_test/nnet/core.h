@@ -1,7 +1,9 @@
 #include "ap_fixed.h"
 #include "ap_axi_sdata.h"
-typedef ap_fixed<16, 8> fixed_p;
-typedef ap_axis<32, 1, 1, 1> axis_t;
+//typedef float fixed_p;
+typedef ap_fixed<24, 6, AP_TRN, AP_SAT_SYM, 0> fixed_p;
+typedef hls::axis<float, 0, 0, 0> data_t;
+typedef hls::stream<data_t> mystream;
 // Conv1D Layer 0 Weights
 fixed_p conv1d_0_weights[3][1][16] = {
     {-0.36647952, 0.047327068, 0.16451997, 0.24460237, -0.19611834, 0.0012412638, -0.2679203, -0.02399582, -0.26953205, 0.1457035, -0.27634272, 0.19704609, 0.14706026, 0.419615, -0.28822696, -0.113219716},

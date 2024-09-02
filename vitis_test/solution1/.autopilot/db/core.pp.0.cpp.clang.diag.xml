@@ -717,7 +717,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gesture_model_XLX_SEP_ PragmaOptions=mode = s_axilite port = return bundle = control_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gesture_model_XLX_SEP_ PragmaOptions=mode = s_axilite port = return_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -729,7 +729,7 @@
       <key>filename</key>
       <string>vitis_test/nnet/core.cpp</string>
       <key>line</key>
-      <integer>156</integer>
+      <integer>158</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
