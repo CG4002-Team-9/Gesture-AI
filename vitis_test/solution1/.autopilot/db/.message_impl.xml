@@ -3,5 +3,5 @@
 	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1776" tag="" content="Exporting RTL as a Vivado IP." resolution=""/>
 	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1773" tag="" content="Starting RTL evaluation using Vivado ..." resolution=""/>
 	<Message severity="INFO" prefix="[HLS 200-802]" key="HLS 200-802" tag="" content="Generated output file vitis_test/export.zip" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command export_design CPU user time: 286.3 seconds. CPU system time: 42.89 seconds. Elapsed time: 389.64 seconds; current allocated memory: 11.277 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command export_design CPU user time: 367.13 seconds. CPU system time: 30.19 seconds. Elapsed time: 350.44 seconds; current allocated memory: 11.121 MB." resolution=""/>
 </Messages>

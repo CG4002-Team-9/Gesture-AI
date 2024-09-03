@@ -1,7 +1,7 @@
 <xilinx:hls_fe_msgs>
     <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="vitis_test/nnet/core.cpp:168:16" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
     <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="vitis_test/nnet/core.cpp:169:16" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
-    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="vitis_test/nnet/core.cpp:158:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="vitis_test/nnet/core.cpp:135:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:678:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
@@ -137,20 +137,20 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="vitis_test/nnet/core.cpp:134:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="gesture_model" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = s_axilite port = return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="vitis_test/nnet/core.cpp:158:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="vitis_test/nnet/core.cpp:135:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="gesture_model" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-273" msg_severity="WARNING" msg_loc="vitis_test/nnet/core.cpp:74:0" msg_body="In function 'flatten_0(ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt; (*) [16], ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt;*)', Pragma conflict happens on 'INLINE' and DATAFLOW pragmas: Inline into dataflow region may break the canonical form">
-        <args Function="flatten_0(ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt; (*) [16], ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt;*)"/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-273" msg_severity="WARNING" msg_loc="vitis_test/nnet/core.cpp:74:0" msg_body="In function 'flatten_0(float (*) [16], float*)', Pragma conflict happens on 'INLINE' and DATAFLOW pragmas: Inline into dataflow region may break the canonical form">
+        <args Function="flatten_0(float (*) [16], float*)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="vitis_test/nnet/core.cpp:37:28" msg_body="Inlining function 'relu(ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt;)' into 'conv1d_0(ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt; (*) [1], ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt; (*) [16])'">
-        <args Callee="relu(ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt;)" Caller="conv1d_0(ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt; (*) [1], ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt; (*) [16])"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="vitis_test/nnet/core.cpp:37:28" msg_body="Inlining function 'relu(float)' into 'conv1d_0(float (*) [1], float (*) [16])'">
+        <args Callee="relu(float)" Caller="conv1d_0(float (*) [1], float (*) [16])"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="vitis_test/nnet/core.cpp:95:21" msg_body="Inlining function 'relu(ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt;)' into 'dense_0(ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt;*, ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt;*)'">
-        <args Callee="relu(ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt;)" Caller="dense_0(ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt;*, ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt;*)"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="vitis_test/nnet/core.cpp:95:21" msg_body="Inlining function 'relu(float)' into 'dense_0(float*, float*)'">
+        <args Callee="relu(float)" Caller="dense_0(float*, float*)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="vitis_test/nnet/core.cpp:162:5" msg_body="Inlining function 'flatten_0(ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt; (*) [16], ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt;*)' into 'gesture_model(hls::stream&lt;hls::axis&lt;float, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;float, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;)'">
-        <args Callee="flatten_0(ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt; (*) [16], ap_fixed&lt;24, 6, (ap_q_mode)5, (ap_o_mode)2, 0&gt;*)" Caller="gesture_model(hls::stream&lt;hls::axis&lt;float, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;float, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;)"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="vitis_test/nnet/core.cpp:162:5" msg_body="Inlining function 'flatten_0(float (*) [16], float*)' into 'gesture_model(hls::stream&lt;hls::axis&lt;float, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;float, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;)'">
+        <args Callee="flatten_0(float (*) [16], float*)" Caller="gesture_model(hls::stream&lt;hls::axis&lt;float, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;float, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;)"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

@@ -52,7 +52,7 @@ Diagnostics:
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2007607
+        Offset:          2007574
         Length:          0
         ReplacementText: 'VITIS_LOOP_25_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -61,7 +61,7 @@ Diagnostics:
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2007651
+        Offset:          2007618
         Length:          0
         ReplacementText: 'VITIS_LOOP_27_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -70,7 +70,7 @@ Diagnostics:
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2007731
+        Offset:          2007698
         Length:          0
         ReplacementText: 'VITIS_LOOP_30_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -79,7 +79,7 @@ Diagnostics:
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2007789
+        Offset:          2007756
         Length:          0
         ReplacementText: 'VITIS_LOOP_32_4: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -88,7 +88,7 @@ Diagnostics:
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2008099
+        Offset:          2008066
         Length:          0
         ReplacementText: 'VITIS_LOOP_44_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -97,7 +97,7 @@ Diagnostics:
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2008143
+        Offset:          2008110
         Length:          0
         ReplacementText: 'VITIS_LOOP_46_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -106,7 +106,7 @@ Diagnostics:
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2008449
+        Offset:          2008416
         Length:          0
         ReplacementText: 'VITIS_LOOP_55_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -115,7 +115,7 @@ Diagnostics:
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2008492
+        Offset:          2008459
         Length:          0
         ReplacementText: 'VITIS_LOOP_57_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -124,7 +124,7 @@ Diagnostics:
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2008590
+        Offset:          2008557
         Length:          0
         ReplacementText: 'VITIS_LOOP_60_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -133,7 +133,7 @@ Diagnostics:
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2008986
+        Offset:          2008953
         Length:          0
         ReplacementText: 'VITIS_LOOP_77_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -142,7 +142,7 @@ Diagnostics:
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2009029
+        Offset:          2008996
         Length:          0
         ReplacementText: 'VITIS_LOOP_79_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -151,7 +151,7 @@ Diagnostics:
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2009187
+        Offset:          2009154
         Length:          0
         ReplacementText: 'VITIS_LOOP_88_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -160,7 +160,7 @@ Diagnostics:
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2009255
+        Offset:          2009222
         Length:          0
         ReplacementText: 'VITIS_LOOP_91_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -169,7 +169,7 @@ Diagnostics:
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2009490
+        Offset:          2009457
         Length:          0
         ReplacementText: 'VITIS_LOOP_101_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -178,7 +178,7 @@ Diagnostics:
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2009755
+        Offset:          2009722
         Length:          0
         ReplacementText: 'VITIS_LOOP_109_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -187,7 +187,7 @@ Diagnostics:
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2009823
+        Offset:          2009790
         Length:          0
         ReplacementText: 'VITIS_LOOP_112_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -196,7 +196,7 @@ Diagnostics:
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2010010
+        Offset:          2009977
         Length:          0
         ReplacementText: 'VITIS_LOOP_120_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -205,34 +205,34 @@ Diagnostics:
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2010103
+        Offset:          2010070
         Length:          0
         ReplacementText: 'VITIS_LOOP_124_4: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_148_1:  '
-    FileOffset:      148
+    Message:         'Added loop label VITIS_LOOP_149_1:  '
+    FileOffset:      149
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2011098
+        Offset:          2011086
         Length:          0
-        ReplacementText: 'VITIS_LOOP_148_1: '
+        ReplacementText: 'VITIS_LOOP_149_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_150_2:  '
-    FileOffset:      150
+    Message:         'Added loop label VITIS_LOOP_151_2:  '
+    FileOffset:      151
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2011142
+        Offset:          2011130
         Length:          0
-        ReplacementText: 'VITIS_LOOP_150_2: '
+        ReplacementText: 'VITIS_LOOP_151_2: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_171_3:  '
     FileOffset:      171
     FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/nnet/core.cpp
     Replacements:    
       - FilePath:        /home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          2011663
+        Offset:          2011633
         Length:          0
         ReplacementText: 'VITIS_LOOP_171_3: '
 ...

@@ -131,12 +131,12 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="53" bw="24" op_0_bw="64">
+<Node id="53" bw="32" op_0_bw="64">
 <![CDATA[
-entry:13 %input_V_0 = alloca i64 1
+entry:13 %input_0 = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="input_V_0"/></StgValue>
+<StgValue><ssdm name="input_0"/></StgValue>
 </operation>
 
 <operation id="22" st_id="1" stage="1" lat="1">
@@ -146,12 +146,12 @@ entry:13 %input_V_0 = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="54" bw="24" op_0_bw="64">
+<Node id="54" bw="32" op_0_bw="64">
 <![CDATA[
-entry:14 %output_V = alloca i64 1
+entry:14 %output = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="output_V"/></StgValue>
+<StgValue><ssdm name="output"/></StgValue>
 </operation>
 
 <operation id="23" st_id="1" stage="1" lat="1">
@@ -161,12 +161,12 @@ entry:14 %output_V = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="55" bw="23" op_0_bw="64">
+<Node id="55" bw="32" op_0_bw="64">
 <![CDATA[
-entry:15 %conv1d_out_0_V = alloca i64 1
+entry:15 %conv1d_out_0 = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="conv1d_out_0_V"/></StgValue>
+<StgValue><ssdm name="conv1d_out_0"/></StgValue>
 </operation>
 
 <operation id="24" st_id="1" stage="1" lat="1">
@@ -176,12 +176,12 @@ entry:15 %conv1d_out_0_V = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="56" bw="24" op_0_bw="64">
+<Node id="56" bw="32" op_0_bw="64">
 <![CDATA[
-entry:16 %batch_norm_out_0_V = alloca i64 1
+entry:16 %batch_norm_out_0 = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="batch_norm_out_0_V"/></StgValue>
+<StgValue><ssdm name="batch_norm_out_0"/></StgValue>
 </operation>
 
 <operation id="25" st_id="1" stage="1" lat="1">
@@ -191,12 +191,12 @@ entry:16 %batch_norm_out_0_V = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="57" bw="24" op_0_bw="64">
+<Node id="57" bw="32" op_0_bw="64">
 <![CDATA[
-entry:17 %max_pool_out_0_V = alloca i64 1
+entry:17 %max_pool_out_0 = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="max_pool_out_0_V"/></StgValue>
+<StgValue><ssdm name="max_pool_out_0"/></StgValue>
 </operation>
 
 <operation id="26" st_id="1" stage="1" lat="1">
@@ -206,12 +206,12 @@ entry:17 %max_pool_out_0_V = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="58" bw="24" op_0_bw="64">
+<Node id="58" bw="32" op_0_bw="64">
 <![CDATA[
-entry:18 %flatten_out_0_V = alloca i64 1
+entry:18 %flatten_out_0 = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="flatten_out_0_V"/></StgValue>
+<StgValue><ssdm name="flatten_out_0"/></StgValue>
 </operation>
 
 <operation id="27" st_id="1" stage="1" lat="1">
@@ -221,12 +221,12 @@ entry:18 %flatten_out_0_V = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="23" op_0_bw="64">
+<Node id="59" bw="32" op_0_bw="64">
 <![CDATA[
-entry:19 %dense_out_0_V = alloca i64 1
+entry:19 %dense_out_0 = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="dense_out_0_V"/></StgValue>
+<StgValue><ssdm name="dense_out_0"/></StgValue>
 </operation>
 
 <operation id="28" st_id="1" stage="1" lat="1">
@@ -236,12 +236,12 @@ entry:19 %dense_out_0_V = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="60" bw="24" op_0_bw="64">
+<Node id="60" bw="32" op_0_bw="64">
 <![CDATA[
-entry:20 %batch_norm_out_1_V = alloca i64 1
+entry:20 %batch_norm_out_1 = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="batch_norm_out_1_V"/></StgValue>
+<StgValue><ssdm name="batch_norm_out_1"/></StgValue>
 </operation>
 </state>
 
@@ -254,9 +254,9 @@ entry:20 %batch_norm_out_1_V = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="63" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="32" op_3_bw="4" op_4_bw="4" op_5_bw="1">
+<Node id="63" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="1" op_5_bw="32">
 <![CDATA[
-entry:23 %call_ln0 = call void @Loop_VITIS_LOOP_148_1_proc8, i24 %input_V_0, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 %input_stream_V_last_V
+entry:23 %call_ln0 = call void @Loop_VITIS_LOOP_149_1_proc8, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 %input_stream_V_last_V, i32 %input_0
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -272,9 +272,9 @@ entry:23 %call_ln0 = call void @Loop_VITIS_LOOP_148_1_proc8, i24 %input_V_0, i32
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="63" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="32" op_3_bw="4" op_4_bw="4" op_5_bw="1">
+<Node id="63" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="1" op_5_bw="32">
 <![CDATA[
-entry:23 %call_ln0 = call void @Loop_VITIS_LOOP_148_1_proc8, i24 %input_V_0, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 %input_stream_V_last_V
+entry:23 %call_ln0 = call void @Loop_VITIS_LOOP_149_1_proc8, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 %input_stream_V_last_V, i32 %input_0
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -290,9 +290,9 @@ entry:23 %call_ln0 = call void @Loop_VITIS_LOOP_148_1_proc8, i24 %input_V_0, i32
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="64" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="23" op_3_bw="18" op_4_bw="18" op_5_bw="18" op_6_bw="17" op_7_bw="0" op_8_bw="0">
+<Node id="64" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-entry:24 %call_ln159 = call void @conv1d_0, i24 %input_V_0, i23 %conv1d_out_0_V, i18 %conv1d_0_weights_V_0_0, i18 %conv1d_0_weights_V_1_0, i18 %conv1d_0_weights_V_2_0, i17 %conv1d_0_biases_V
+entry:24 %call_ln159 = call void @conv1d_0, i32 %input_0, i32 %conv1d_out_0, i32 %conv1d_0_weights_0_0, i32 %conv1d_0_weights_1_0, i32 %conv1d_0_weights_2_0, i32 %conv1d_0_biases
 
 ]]></Node>
 <StgValue><ssdm name="call_ln159"/></StgValue>
@@ -308,9 +308,9 @@ entry:24 %call_ln159 = call void @conv1d_0, i24 %input_V_0, i23 %conv1d_out_0_V,
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="64" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="23" op_3_bw="18" op_4_bw="18" op_5_bw="18" op_6_bw="17" op_7_bw="0" op_8_bw="0">
+<Node id="64" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-entry:24 %call_ln159 = call void @conv1d_0, i24 %input_V_0, i23 %conv1d_out_0_V, i18 %conv1d_0_weights_V_0_0, i18 %conv1d_0_weights_V_1_0, i18 %conv1d_0_weights_V_2_0, i17 %conv1d_0_biases_V
+entry:24 %call_ln159 = call void @conv1d_0, i32 %input_0, i32 %conv1d_out_0, i32 %conv1d_0_weights_0_0, i32 %conv1d_0_weights_1_0, i32 %conv1d_0_weights_2_0, i32 %conv1d_0_biases
 
 ]]></Node>
 <StgValue><ssdm name="call_ln159"/></StgValue>
@@ -326,9 +326,9 @@ entry:24 %call_ln159 = call void @conv1d_0, i24 %input_V_0, i23 %conv1d_out_0_V,
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="65" bw="0" op_0_bw="0" op_1_bw="23" op_2_bw="24" op_3_bw="15" op_4_bw="11" op_5_bw="19" op_6_bw="17" op_7_bw="0" op_8_bw="0">
+<Node id="65" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-entry:25 %call_ln160 = call void @batch_normalization_0, i23 %conv1d_out_0_V, i24 %batch_norm_out_0_V, i15 %batch_norm_0_mean_V, i11 %batch_norm_0_variance_V, i19 %batch_norm_0_gamma_V, i17 %batch_norm_0_beta_V
+entry:25 %call_ln160 = call void @batch_normalization_0, i32 %conv1d_out_0, i32 %batch_norm_out_0, i32 %batch_norm_0_gamma, i32 %batch_norm_0_mean, i32 %batch_norm_0_variance, i32 %batch_norm_0_beta
 
 ]]></Node>
 <StgValue><ssdm name="call_ln160"/></StgValue>
@@ -344,9 +344,9 @@ entry:25 %call_ln160 = call void @batch_normalization_0, i23 %conv1d_out_0_V, i2
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="65" bw="0" op_0_bw="0" op_1_bw="23" op_2_bw="24" op_3_bw="15" op_4_bw="11" op_5_bw="19" op_6_bw="17" op_7_bw="0" op_8_bw="0">
+<Node id="65" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-entry:25 %call_ln160 = call void @batch_normalization_0, i23 %conv1d_out_0_V, i24 %batch_norm_out_0_V, i15 %batch_norm_0_mean_V, i11 %batch_norm_0_variance_V, i19 %batch_norm_0_gamma_V, i17 %batch_norm_0_beta_V
+entry:25 %call_ln160 = call void @batch_normalization_0, i32 %conv1d_out_0, i32 %batch_norm_out_0, i32 %batch_norm_0_gamma, i32 %batch_norm_0_mean, i32 %batch_norm_0_variance, i32 %batch_norm_0_beta
 
 ]]></Node>
 <StgValue><ssdm name="call_ln160"/></StgValue>
@@ -362,9 +362,9 @@ entry:25 %call_ln160 = call void @batch_normalization_0, i23 %conv1d_out_0_V, i2
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="66" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24" op_3_bw="0" op_4_bw="0">
+<Node id="66" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-entry:26 %call_ln161 = call void @max_pooling1d_0, i24 %batch_norm_out_0_V, i24 %max_pool_out_0_V
+entry:26 %call_ln161 = call void @max_pooling1d_0, i32 %batch_norm_out_0, i32 %max_pool_out_0
 
 ]]></Node>
 <StgValue><ssdm name="call_ln161"/></StgValue>
@@ -380,9 +380,9 @@ entry:26 %call_ln161 = call void @max_pooling1d_0, i24 %batch_norm_out_0_V, i24 
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="66" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24" op_3_bw="0" op_4_bw="0">
+<Node id="66" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-entry:26 %call_ln161 = call void @max_pooling1d_0, i24 %batch_norm_out_0_V, i24 %max_pool_out_0_V
+entry:26 %call_ln161 = call void @max_pooling1d_0, i32 %batch_norm_out_0, i32 %max_pool_out_0
 
 ]]></Node>
 <StgValue><ssdm name="call_ln161"/></StgValue>
@@ -398,9 +398,9 @@ entry:26 %call_ln161 = call void @max_pooling1d_0, i24 %batch_norm_out_0_V, i24 
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="67" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24" op_3_bw="0" op_4_bw="0">
+<Node id="67" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-entry:27 %call_ln0 = call void @Loop_VITIS_LOOP_77_1_proc, i24 %max_pool_out_0_V, i24 %flatten_out_0_V
+entry:27 %call_ln0 = call void @Loop_VITIS_LOOP_77_1_proc, i32 %max_pool_out_0, i32 %flatten_out_0
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -416,9 +416,9 @@ entry:27 %call_ln0 = call void @Loop_VITIS_LOOP_77_1_proc, i24 %max_pool_out_0_V
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="67" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24" op_3_bw="0" op_4_bw="0">
+<Node id="67" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-entry:27 %call_ln0 = call void @Loop_VITIS_LOOP_77_1_proc, i24 %max_pool_out_0_V, i24 %flatten_out_0_V
+entry:27 %call_ln0 = call void @Loop_VITIS_LOOP_77_1_proc, i32 %max_pool_out_0, i32 %flatten_out_0
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -434,9 +434,9 @@ entry:27 %call_ln0 = call void @Loop_VITIS_LOOP_77_1_proc, i24 %max_pool_out_0_V
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="68" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="23" op_3_bw="17" op_4_bw="18" op_5_bw="0" op_6_bw="0">
+<Node id="68" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-entry:28 %call_ln163 = call void @dense_0, i24 %flatten_out_0_V, i23 %dense_out_0_V, i17 %dense_0_biases_V, i18 %dense_0_weights_V
+entry:28 %call_ln163 = call void @dense_0, i32 %flatten_out_0, i32 %dense_out_0, i32 %dense_0_biases, i32 %dense_0_weights
 
 ]]></Node>
 <StgValue><ssdm name="call_ln163"/></StgValue>
@@ -452,9 +452,9 @@ entry:28 %call_ln163 = call void @dense_0, i24 %flatten_out_0_V, i23 %dense_out_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="68" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="23" op_3_bw="17" op_4_bw="18" op_5_bw="0" op_6_bw="0">
+<Node id="68" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-entry:28 %call_ln163 = call void @dense_0, i24 %flatten_out_0_V, i23 %dense_out_0_V, i17 %dense_0_biases_V, i18 %dense_0_weights_V
+entry:28 %call_ln163 = call void @dense_0, i32 %flatten_out_0, i32 %dense_out_0, i32 %dense_0_biases, i32 %dense_0_weights
 
 ]]></Node>
 <StgValue><ssdm name="call_ln163"/></StgValue>
@@ -470,9 +470,9 @@ entry:28 %call_ln163 = call void @dense_0, i24 %flatten_out_0_V, i23 %dense_out_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="69" bw="0" op_0_bw="0" op_1_bw="23" op_2_bw="24" op_3_bw="19" op_4_bw="18" op_5_bw="20" op_6_bw="18" op_7_bw="0" op_8_bw="0">
+<Node id="69" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-entry:29 %call_ln164 = call void @batch_normalization_1, i23 %dense_out_0_V, i24 %batch_norm_out_1_V, i19 %batch_norm_1_mean_V, i18 %batch_norm_1_variance_V, i20 %batch_norm_1_gamma_V, i18 %batch_norm_1_beta_V
+entry:29 %call_ln164 = call void @batch_normalization_1, i32 %dense_out_0, i32 %batch_norm_out_1, i32 %batch_norm_1_gamma, i32 %batch_norm_1_mean, i32 %batch_norm_1_variance, i32 %batch_norm_1_beta
 
 ]]></Node>
 <StgValue><ssdm name="call_ln164"/></StgValue>
@@ -488,9 +488,9 @@ entry:29 %call_ln164 = call void @batch_normalization_1, i23 %dense_out_0_V, i24
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="69" bw="0" op_0_bw="0" op_1_bw="23" op_2_bw="24" op_3_bw="19" op_4_bw="18" op_5_bw="20" op_6_bw="18" op_7_bw="0" op_8_bw="0">
+<Node id="69" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-entry:29 %call_ln164 = call void @batch_normalization_1, i23 %dense_out_0_V, i24 %batch_norm_out_1_V, i19 %batch_norm_1_mean_V, i18 %batch_norm_1_variance_V, i20 %batch_norm_1_gamma_V, i18 %batch_norm_1_beta_V
+entry:29 %call_ln164 = call void @batch_normalization_1, i32 %dense_out_0, i32 %batch_norm_out_1, i32 %batch_norm_1_gamma, i32 %batch_norm_1_mean, i32 %batch_norm_1_variance, i32 %batch_norm_1_beta
 
 ]]></Node>
 <StgValue><ssdm name="call_ln164"/></StgValue>
@@ -506,9 +506,9 @@ entry:29 %call_ln164 = call void @batch_normalization_1, i23 %dense_out_0_V, i24
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="70" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24" op_3_bw="19" op_4_bw="19" op_5_bw="19" op_6_bw="19" op_7_bw="19" op_8_bw="19" op_9_bw="19" op_10_bw="19" op_11_bw="19" op_12_bw="19" op_13_bw="19" op_14_bw="19" op_15_bw="19" op_16_bw="19" op_17_bw="19" op_18_bw="19" op_19_bw="18" op_20_bw="0" op_21_bw="0">
+<Node id="70" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="0" op_21_bw="0">
 <![CDATA[
-entry:30 %call_ln165 = call void @dense_1, i24 %batch_norm_out_1_V, i24 %output_V, i19 %dense_1_weights_V_0, i19 %dense_1_weights_V_1, i19 %dense_1_weights_V_2, i19 %dense_1_weights_V_3, i19 %dense_1_weights_V_4, i19 %dense_1_weights_V_5, i19 %dense_1_weights_V_6, i19 %dense_1_weights_V_7, i19 %dense_1_weights_V_8, i19 %dense_1_weights_V_9, i19 %dense_1_weights_V_10, i19 %dense_1_weights_V_11, i19 %dense_1_weights_V_12, i19 %dense_1_weights_V_13, i19 %dense_1_weights_V_14, i19 %dense_1_weights_V_15, i18 %dense_1_biases_V
+entry:30 %call_ln165 = call void @dense_1, i32 %batch_norm_out_1, i32 %output, i32 %dense_1_weights_0, i32 %dense_1_weights_1, i32 %dense_1_weights_2, i32 %dense_1_weights_3, i32 %dense_1_weights_4, i32 %dense_1_weights_5, i32 %dense_1_weights_6, i32 %dense_1_weights_7, i32 %dense_1_weights_8, i32 %dense_1_weights_9, i32 %dense_1_weights_10, i32 %dense_1_weights_11, i32 %dense_1_weights_12, i32 %dense_1_weights_13, i32 %dense_1_weights_14, i32 %dense_1_weights_15, i32 %dense_1_biases
 
 ]]></Node>
 <StgValue><ssdm name="call_ln165"/></StgValue>
@@ -524,9 +524,9 @@ entry:30 %call_ln165 = call void @dense_1, i24 %batch_norm_out_1_V, i24 %output_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="70" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24" op_3_bw="19" op_4_bw="19" op_5_bw="19" op_6_bw="19" op_7_bw="19" op_8_bw="19" op_9_bw="19" op_10_bw="19" op_11_bw="19" op_12_bw="19" op_13_bw="19" op_14_bw="19" op_15_bw="19" op_16_bw="19" op_17_bw="19" op_18_bw="19" op_19_bw="18" op_20_bw="0" op_21_bw="0">
+<Node id="70" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="0" op_21_bw="0">
 <![CDATA[
-entry:30 %call_ln165 = call void @dense_1, i24 %batch_norm_out_1_V, i24 %output_V, i19 %dense_1_weights_V_0, i19 %dense_1_weights_V_1, i19 %dense_1_weights_V_2, i19 %dense_1_weights_V_3, i19 %dense_1_weights_V_4, i19 %dense_1_weights_V_5, i19 %dense_1_weights_V_6, i19 %dense_1_weights_V_7, i19 %dense_1_weights_V_8, i19 %dense_1_weights_V_9, i19 %dense_1_weights_V_10, i19 %dense_1_weights_V_11, i19 %dense_1_weights_V_12, i19 %dense_1_weights_V_13, i19 %dense_1_weights_V_14, i19 %dense_1_weights_V_15, i18 %dense_1_biases_V
+entry:30 %call_ln165 = call void @dense_1, i32 %batch_norm_out_1, i32 %output, i32 %dense_1_weights_0, i32 %dense_1_weights_1, i32 %dense_1_weights_2, i32 %dense_1_weights_3, i32 %dense_1_weights_4, i32 %dense_1_weights_5, i32 %dense_1_weights_6, i32 %dense_1_weights_7, i32 %dense_1_weights_8, i32 %dense_1_weights_9, i32 %dense_1_weights_10, i32 %dense_1_weights_11, i32 %dense_1_weights_12, i32 %dense_1_weights_13, i32 %dense_1_weights_14, i32 %dense_1_weights_15, i32 %dense_1_biases
 
 ]]></Node>
 <StgValue><ssdm name="call_ln165"/></StgValue>
@@ -542,9 +542,9 @@ entry:30 %call_ln165 = call void @dense_1, i24 %batch_norm_out_1_V, i24 %output_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="71" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="1" op_5_bw="24" op_6_bw="0" op_7_bw="0">
+<Node id="71" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="4" op_4_bw="4" op_5_bw="1" op_6_bw="0" op_7_bw="0">
 <![CDATA[
-entry:31 %call_ln0 = call void @Loop_VITIS_LOOP_171_3_proc9, i32 %output_stream_V_data_V, i4 %output_stream_V_keep_V, i4 %output_stream_V_strb_V, i1 %output_stream_V_last_V, i24 %output_V
+entry:31 %call_ln0 = call void @Loop_VITIS_LOOP_171_3_proc9, i32 %output, i32 %output_stream_V_data_V, i4 %output_stream_V_keep_V, i4 %output_stream_V_strb_V, i1 %output_stream_V_last_V
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -560,9 +560,9 @@ entry:31 %call_ln0 = call void @Loop_VITIS_LOOP_171_3_proc9, i32 %output_stream_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="71" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="1" op_5_bw="24" op_6_bw="0" op_7_bw="0">
+<Node id="71" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="4" op_4_bw="4" op_5_bw="1" op_6_bw="0" op_7_bw="0">
 <![CDATA[
-entry:31 %call_ln0 = call void @Loop_VITIS_LOOP_171_3_proc9, i32 %output_stream_V_data_V, i4 %output_stream_V_keep_V, i4 %output_stream_V_strb_V, i1 %output_stream_V_last_V, i24 %output_V
+entry:31 %call_ln0 = call void @Loop_VITIS_LOOP_171_3_proc9, i32 %output, i32 %output_stream_V_data_V, i4 %output_stream_V_keep_V, i4 %output_stream_V_strb_V, i1 %output_stream_V_last_V
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -580,10 +580,10 @@ entry:31 %call_ln0 = call void @Loop_VITIS_LOOP_171_3_proc9, i32 %output_stream_
 
 <Node id="40" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0">
 <![CDATA[
-entry:0 %specdataflowpipeline_ln158 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_0
+entry:0 %specdataflowpipeline_ln135 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_0
 
 ]]></Node>
-<StgValue><ssdm name="specdataflowpipeline_ln158"/></StgValue>
+<StgValue><ssdm name="specdataflowpipeline_ln135"/></StgValue>
 </operation>
 
 <operation id="48" st_id="20" stage="1" lat="1">
@@ -775,10 +775,10 @@ entry:12 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0,
 
 <Node id="61" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="0">
 <![CDATA[
-entry:21 %specaxissidechannel_ln148 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %output_stream_V_data_V, i4 %output_stream_V_keep_V, i4 %output_stream_V_strb_V, i1 0, i1 %output_stream_V_last_V, i1 0, i1 0, void @empty_3
+entry:21 %specaxissidechannel_ln149 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %output_stream_V_data_V, i4 %output_stream_V_keep_V, i4 %output_stream_V_strb_V, i1 0, i1 %output_stream_V_last_V, i1 0, i1 0, void @empty_3
 
 ]]></Node>
-<StgValue><ssdm name="specaxissidechannel_ln148"/></StgValue>
+<StgValue><ssdm name="specaxissidechannel_ln149"/></StgValue>
 </operation>
 
 <operation id="61" st_id="20" stage="1" lat="1">
@@ -790,10 +790,10 @@ entry:21 %specaxissidechannel_ln148 = specaxissidechannel void @_ssdm_op_SpecAXI
 
 <Node id="62" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="0">
 <![CDATA[
-entry:22 %specaxissidechannel_ln148 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 0, i1 %input_stream_V_last_V, i1 0, i1 0, void @empty_4
+entry:22 %specaxissidechannel_ln149 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 0, i1 %input_stream_V_last_V, i1 0, i1 0, void @empty_4
 
 ]]></Node>
-<StgValue><ssdm name="specaxissidechannel_ln148"/></StgValue>
+<StgValue><ssdm name="specaxissidechannel_ln149"/></StgValue>
 </operation>
 
 <operation id="62" st_id="20" stage="1" lat="1">

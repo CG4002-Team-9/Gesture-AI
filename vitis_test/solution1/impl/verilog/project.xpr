@@ -6,7 +6,7 @@
 <Project Version="7" Minor="61" Path="/home/prince/Documents/capstone/Gesture-AI/vitis_test/solution1/impl/verilog/project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="feb64e69efe444c0b782644ca188bfab"/>
+    <Option Name="Id" Val="fb1cf580c78e4d35a0634841edc159cd"/>
     <Option Name="Part" Val="xczu3eg-sbva484-2-i"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>

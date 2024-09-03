@@ -2,10 +2,10 @@
 Pass:            reflow-pragma-conflict-handle
 Name:            FunctionPragmaConflictWarn
 DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 74, Column: 0 }
-Function:        _Z9flatten_0PA16_8ap_fixedILi24ELi6EL9ap_q_mode5EL9ap_o_mode2ELi0EEPS2_
+Function:        _Z9flatten_0PA16_fPf
 Args:            
   - String:          'In function '''
-  - Function:        'flatten_0(ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0> (*) [16], ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0>*)'
+  - Function:        'flatten_0(float (*) [16], float*)'
     DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 74, Column: 0 }
   - String:          ''', '
   - String:          'Pragma conflict happens on '''
@@ -19,13 +19,13 @@ Args:
 Pass:            inline
 Name:            AlwaysInline
 DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 37, Column: 28 }
-Function:        _Z8conv1d_0PA1_8ap_fixedILi24ELi6EL9ap_q_mode5EL9ap_o_mode2ELi0EEPA16_S2_
+Function:        _Z8conv1d_0PA1_fPA16_f
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'relu(ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0>)'
+  - Callee:          'relu(float)'
     DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 18, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'conv1d_0(ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0> (*) [1], ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0> (*) [16])'
+  - Caller:          'conv1d_0(float (*) [1], float (*) [16])'
     DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 24, Column: 0 }
   - String:          ''''
 ...
@@ -33,13 +33,13 @@ Args:
 Pass:            inline
 Name:            AlwaysInline
 DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 95, Column: 21 }
-Function:        _Z7dense_0P8ap_fixedILi24ELi6EL9ap_q_mode5EL9ap_o_mode2ELi0EES3_
+Function:        _Z7dense_0PfS_
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'relu(ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0>)'
+  - Callee:          'relu(float)'
     DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 18, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'dense_0(ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0>*, ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0>*)'
+  - Caller:          'dense_0(float*, float*)'
     DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 87, Column: 0 }
   - String:          ''''
 ...
@@ -50,7 +50,7 @@ DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 162, Column: 5 }
 Function:        _Z13gesture_modelRN3hls6streamINS_4axisIfLm0ELm0ELm0EEELi0EEES4_
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'flatten_0(ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0> (*) [16], ap_fixed<24, 6, (ap_q_mode)5, (ap_o_mode)2, 0>*)'
+  - Callee:          'flatten_0(float (*) [16], float*)'
     DebugLoc:        { File: vitis_test/nnet/core.cpp, Line: 74, Column: 0 }
   - String:          ''' into '''
   - Caller:          'gesture_model(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&)'

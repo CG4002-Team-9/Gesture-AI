@@ -38909,8 +38909,8 @@ private:
 
 }
 # 3 "vitis_test/nnet/core.h" 2
+typedef float fixed_p;
 
-typedef ap_fixed<24, 6, AP_TRN, AP_SAT_SYM, 0> fixed_p;
 typedef hls::axis<float, 0, 0, 0> data_t;
 typedef hls::stream<data_t> mystream;
 
@@ -40052,6 +40052,7 @@ __attribute__((sdx_kernel("gesture_model", 0))) void gesture_model(mystream &inp
 #pragma HLS INTERFACE mode = axis port = input_stream
 #pragma HLS INTERFACE mode = axis port = output_stream
 #pragma HLS INTERFACE mode = s_axilite port = return
+#pragma HLS DATAFLOW
 
  data_t in, out;
     fixed_p input[120][1];
@@ -40065,9 +40066,9 @@ __attribute__((sdx_kernel("gesture_model", 0))) void gesture_model(mystream &inp
     fixed_p batch_norm_out_1[16];
 
 
-    VITIS_LOOP_148_1: for (int i = 0; i < 120; i++)
+    VITIS_LOOP_149_1: for (int i = 0; i < 120; i++)
     {
-        VITIS_LOOP_150_2: for (int j = 0; j < 1; j++)
+        VITIS_LOOP_151_2: for (int j = 0; j < 1; j++)
         {
             input_stream.read(in);
             input[i][j] = in.data;
@@ -40075,8 +40076,7 @@ __attribute__((sdx_kernel("gesture_model", 0))) void gesture_model(mystream &inp
     }
 
 
-#pragma HLS DATAFLOW
- conv1d_0(input, conv1d_out_0);
+    conv1d_0(input, conv1d_out_0);
     batch_normalization_0(conv1d_out_0, batch_norm_out_0);
     max_pooling1d_0(batch_norm_out_0, max_pool_out_0);
     flatten_0(max_pool_out_0, flatten_out_0);

@@ -191,13 +191,13 @@
     wire token_clear;
     reg [8:0] origin;
 
-    reg ap_done_reg_0;// for module Loop_VITIS_LOOP_148_1_proc8_U0
+    reg ap_done_reg_0;// for module Loop_VITIS_LOOP_149_1_proc8_U0
     always @ (negedge dl_reset or posedge dl_clock) begin
         if (~dl_reset) begin
             ap_done_reg_0 <= 'b0;
         end
         else begin
-            ap_done_reg_0 <= Loop_VITIS_LOOP_148_1_proc8_U0.ap_done & ~Loop_VITIS_LOOP_148_1_proc8_U0.ap_continue;
+            ap_done_reg_0 <= Loop_VITIS_LOOP_149_1_proc8_U0.ap_done & ~Loop_VITIS_LOOP_149_1_proc8_U0.ap_continue;
         end
     end
 
@@ -281,7 +281,7 @@
         end
     end
 
-    // Process: Loop_VITIS_LOOP_148_1_proc8_U0
+    // Process: Loop_VITIS_LOOP_149_1_proc8_U0
     gesture_model_hls_deadlock_detect_unit #(9, 0, 1, 1) gesture_model_hls_deadlock_detect_unit_0 (
         .reset(dl_reset),
         .clock(dl_clock),
@@ -298,7 +298,7 @@
         .dl_detect_out(dl_in_vec[0]));
 
     assign proc_0_data_FIFO_blk[0] = 1'b0;
-    assign proc_0_data_PIPO_blk[0] = 1'b0 | (~input_V_0_U.i_full_n & Loop_VITIS_LOOP_148_1_proc8_U0.ap_done & ap_done_reg_0 & ~input_V_0_U.t_read);
+    assign proc_0_data_PIPO_blk[0] = 1'b0 | (~input_0_U.i_full_n & Loop_VITIS_LOOP_149_1_proc8_U0.ap_done & ap_done_reg_0 & ~input_0_U.t_read);
     assign proc_0_start_FIFO_blk[0] = 1'b0;
     assign proc_0_TLF_FIFO_blk[0] = 1'b0;
     assign proc_0_input_sync_blk[0] = 1'b0;
@@ -336,14 +336,14 @@
         .dl_detect_out(dl_in_vec[1]));
 
     assign proc_1_data_FIFO_blk[0] = 1'b0;
-    assign proc_1_data_PIPO_blk[0] = 1'b0 | (~input_V_0_U.t_empty_n & conv1d_0_U0.ap_idle & ~input_V_0_U.i_write);
+    assign proc_1_data_PIPO_blk[0] = 1'b0 | (~input_0_U.t_empty_n & conv1d_0_U0.ap_idle & ~input_0_U.i_write);
     assign proc_1_start_FIFO_blk[0] = 1'b0;
     assign proc_1_TLF_FIFO_blk[0] = 1'b0;
     assign proc_1_input_sync_blk[0] = 1'b0;
     assign proc_1_output_sync_blk[0] = 1'b0;
     assign proc_dep_vld_vec_1[0] = dl_detect_out ? proc_dep_vld_vec_1_reg[0] : (proc_1_data_FIFO_blk[0] | proc_1_data_PIPO_blk[0] | proc_1_start_FIFO_blk[0] | proc_1_TLF_FIFO_blk[0] | proc_1_input_sync_blk[0] | proc_1_output_sync_blk[0]);
     assign proc_1_data_FIFO_blk[1] = 1'b0;
-    assign proc_1_data_PIPO_blk[1] = 1'b0 | (~conv1d_out_0_V_U.i_full_n & conv1d_0_U0.ap_done & ap_done_reg_1 & ~conv1d_out_0_V_U.t_read);
+    assign proc_1_data_PIPO_blk[1] = 1'b0 | (~conv1d_out_0_U.i_full_n & conv1d_0_U0.ap_done & ap_done_reg_1 & ~conv1d_out_0_U.t_read);
     assign proc_1_start_FIFO_blk[1] = 1'b0;
     assign proc_1_TLF_FIFO_blk[1] = 1'b0;
     assign proc_1_input_sync_blk[1] = 1'b0;
@@ -387,14 +387,14 @@
         .dl_detect_out(dl_in_vec[2]));
 
     assign proc_2_data_FIFO_blk[0] = 1'b0;
-    assign proc_2_data_PIPO_blk[0] = 1'b0 | (~conv1d_out_0_V_U.t_empty_n & batch_normalization_0_U0.ap_idle & ~conv1d_out_0_V_U.i_write);
+    assign proc_2_data_PIPO_blk[0] = 1'b0 | (~conv1d_out_0_U.t_empty_n & batch_normalization_0_U0.ap_idle & ~conv1d_out_0_U.i_write);
     assign proc_2_start_FIFO_blk[0] = 1'b0;
     assign proc_2_TLF_FIFO_blk[0] = 1'b0;
     assign proc_2_input_sync_blk[0] = 1'b0;
     assign proc_2_output_sync_blk[0] = 1'b0;
     assign proc_dep_vld_vec_2[0] = dl_detect_out ? proc_dep_vld_vec_2_reg[0] : (proc_2_data_FIFO_blk[0] | proc_2_data_PIPO_blk[0] | proc_2_start_FIFO_blk[0] | proc_2_TLF_FIFO_blk[0] | proc_2_input_sync_blk[0] | proc_2_output_sync_blk[0]);
     assign proc_2_data_FIFO_blk[1] = 1'b0;
-    assign proc_2_data_PIPO_blk[1] = 1'b0 | (~batch_norm_out_0_V_U.i_full_n & batch_normalization_0_U0.ap_done & ap_done_reg_2 & ~batch_norm_out_0_V_U.t_read);
+    assign proc_2_data_PIPO_blk[1] = 1'b0 | (~batch_norm_out_0_U.i_full_n & batch_normalization_0_U0.ap_done & ap_done_reg_2 & ~batch_norm_out_0_U.t_read);
     assign proc_2_start_FIFO_blk[1] = 1'b0;
     assign proc_2_TLF_FIFO_blk[1] = 1'b0;
     assign proc_2_input_sync_blk[1] = 1'b0;
@@ -438,14 +438,14 @@
         .dl_detect_out(dl_in_vec[3]));
 
     assign proc_3_data_FIFO_blk[0] = 1'b0;
-    assign proc_3_data_PIPO_blk[0] = 1'b0 | (~batch_norm_out_0_V_U.t_empty_n & max_pooling1d_0_U0.ap_idle & ~batch_norm_out_0_V_U.i_write);
+    assign proc_3_data_PIPO_blk[0] = 1'b0 | (~batch_norm_out_0_U.t_empty_n & max_pooling1d_0_U0.ap_idle & ~batch_norm_out_0_U.i_write);
     assign proc_3_start_FIFO_blk[0] = 1'b0;
     assign proc_3_TLF_FIFO_blk[0] = 1'b0;
     assign proc_3_input_sync_blk[0] = 1'b0;
     assign proc_3_output_sync_blk[0] = 1'b0;
     assign proc_dep_vld_vec_3[0] = dl_detect_out ? proc_dep_vld_vec_3_reg[0] : (proc_3_data_FIFO_blk[0] | proc_3_data_PIPO_blk[0] | proc_3_start_FIFO_blk[0] | proc_3_TLF_FIFO_blk[0] | proc_3_input_sync_blk[0] | proc_3_output_sync_blk[0]);
     assign proc_3_data_FIFO_blk[1] = 1'b0;
-    assign proc_3_data_PIPO_blk[1] = 1'b0 | (~max_pool_out_0_V_U.i_full_n & max_pooling1d_0_U0.ap_done & ap_done_reg_3 & ~max_pool_out_0_V_U.t_read);
+    assign proc_3_data_PIPO_blk[1] = 1'b0 | (~max_pool_out_0_U.i_full_n & max_pooling1d_0_U0.ap_done & ap_done_reg_3 & ~max_pool_out_0_U.t_read);
     assign proc_3_start_FIFO_blk[1] = 1'b0;
     assign proc_3_TLF_FIFO_blk[1] = 1'b0;
     assign proc_3_input_sync_blk[1] = 1'b0;
@@ -489,14 +489,14 @@
         .dl_detect_out(dl_in_vec[4]));
 
     assign proc_4_data_FIFO_blk[0] = 1'b0;
-    assign proc_4_data_PIPO_blk[0] = 1'b0 | (~max_pool_out_0_V_U.t_empty_n & Loop_VITIS_LOOP_77_1_proc_U0.ap_idle & ~max_pool_out_0_V_U.i_write);
+    assign proc_4_data_PIPO_blk[0] = 1'b0 | (~max_pool_out_0_U.t_empty_n & Loop_VITIS_LOOP_77_1_proc_U0.ap_idle & ~max_pool_out_0_U.i_write);
     assign proc_4_start_FIFO_blk[0] = 1'b0;
     assign proc_4_TLF_FIFO_blk[0] = 1'b0;
     assign proc_4_input_sync_blk[0] = 1'b0;
     assign proc_4_output_sync_blk[0] = 1'b0;
     assign proc_dep_vld_vec_4[0] = dl_detect_out ? proc_dep_vld_vec_4_reg[0] : (proc_4_data_FIFO_blk[0] | proc_4_data_PIPO_blk[0] | proc_4_start_FIFO_blk[0] | proc_4_TLF_FIFO_blk[0] | proc_4_input_sync_blk[0] | proc_4_output_sync_blk[0]);
     assign proc_4_data_FIFO_blk[1] = 1'b0;
-    assign proc_4_data_PIPO_blk[1] = 1'b0 | (~flatten_out_0_V_U.i_full_n & Loop_VITIS_LOOP_77_1_proc_U0.ap_done & ap_done_reg_4 & ~flatten_out_0_V_U.t_read);
+    assign proc_4_data_PIPO_blk[1] = 1'b0 | (~flatten_out_0_U.i_full_n & Loop_VITIS_LOOP_77_1_proc_U0.ap_done & ap_done_reg_4 & ~flatten_out_0_U.t_read);
     assign proc_4_start_FIFO_blk[1] = 1'b0;
     assign proc_4_TLF_FIFO_blk[1] = 1'b0;
     assign proc_4_input_sync_blk[1] = 1'b0;
@@ -540,14 +540,14 @@
         .dl_detect_out(dl_in_vec[5]));
 
     assign proc_5_data_FIFO_blk[0] = 1'b0;
-    assign proc_5_data_PIPO_blk[0] = 1'b0 | (~flatten_out_0_V_U.t_empty_n & dense_0_U0.ap_idle & ~flatten_out_0_V_U.i_write);
+    assign proc_5_data_PIPO_blk[0] = 1'b0 | (~flatten_out_0_U.t_empty_n & dense_0_U0.ap_idle & ~flatten_out_0_U.i_write);
     assign proc_5_start_FIFO_blk[0] = 1'b0;
     assign proc_5_TLF_FIFO_blk[0] = 1'b0;
     assign proc_5_input_sync_blk[0] = 1'b0;
     assign proc_5_output_sync_blk[0] = 1'b0;
     assign proc_dep_vld_vec_5[0] = dl_detect_out ? proc_dep_vld_vec_5_reg[0] : (proc_5_data_FIFO_blk[0] | proc_5_data_PIPO_blk[0] | proc_5_start_FIFO_blk[0] | proc_5_TLF_FIFO_blk[0] | proc_5_input_sync_blk[0] | proc_5_output_sync_blk[0]);
     assign proc_5_data_FIFO_blk[1] = 1'b0;
-    assign proc_5_data_PIPO_blk[1] = 1'b0 | (~dense_out_0_V_U.i_full_n & dense_0_U0.ap_done & ap_done_reg_5 & ~dense_out_0_V_U.t_read);
+    assign proc_5_data_PIPO_blk[1] = 1'b0 | (~dense_out_0_U.i_full_n & dense_0_U0.ap_done & ap_done_reg_5 & ~dense_out_0_U.t_read);
     assign proc_5_start_FIFO_blk[1] = 1'b0;
     assign proc_5_TLF_FIFO_blk[1] = 1'b0;
     assign proc_5_input_sync_blk[1] = 1'b0;
@@ -591,14 +591,14 @@
         .dl_detect_out(dl_in_vec[6]));
 
     assign proc_6_data_FIFO_blk[0] = 1'b0;
-    assign proc_6_data_PIPO_blk[0] = 1'b0 | (~dense_out_0_V_U.t_empty_n & batch_normalization_1_U0.ap_idle & ~dense_out_0_V_U.i_write);
+    assign proc_6_data_PIPO_blk[0] = 1'b0 | (~dense_out_0_U.t_empty_n & batch_normalization_1_U0.ap_idle & ~dense_out_0_U.i_write);
     assign proc_6_start_FIFO_blk[0] = 1'b0;
     assign proc_6_TLF_FIFO_blk[0] = 1'b0;
     assign proc_6_input_sync_blk[0] = 1'b0;
     assign proc_6_output_sync_blk[0] = 1'b0;
     assign proc_dep_vld_vec_6[0] = dl_detect_out ? proc_dep_vld_vec_6_reg[0] : (proc_6_data_FIFO_blk[0] | proc_6_data_PIPO_blk[0] | proc_6_start_FIFO_blk[0] | proc_6_TLF_FIFO_blk[0] | proc_6_input_sync_blk[0] | proc_6_output_sync_blk[0]);
     assign proc_6_data_FIFO_blk[1] = 1'b0;
-    assign proc_6_data_PIPO_blk[1] = 1'b0 | (~batch_norm_out_1_V_U.i_full_n & batch_normalization_1_U0.ap_done & ap_done_reg_6 & ~batch_norm_out_1_V_U.t_read);
+    assign proc_6_data_PIPO_blk[1] = 1'b0 | (~batch_norm_out_1_U.i_full_n & batch_normalization_1_U0.ap_done & ap_done_reg_6 & ~batch_norm_out_1_U.t_read);
     assign proc_6_start_FIFO_blk[1] = 1'b0;
     assign proc_6_TLF_FIFO_blk[1] = 1'b0;
     assign proc_6_input_sync_blk[1] = 1'b0;
@@ -642,14 +642,14 @@
         .dl_detect_out(dl_in_vec[7]));
 
     assign proc_7_data_FIFO_blk[0] = 1'b0;
-    assign proc_7_data_PIPO_blk[0] = 1'b0 | (~batch_norm_out_1_V_U.t_empty_n & dense_1_U0.ap_idle & ~batch_norm_out_1_V_U.i_write);
+    assign proc_7_data_PIPO_blk[0] = 1'b0 | (~batch_norm_out_1_U.t_empty_n & dense_1_U0.ap_idle & ~batch_norm_out_1_U.i_write);
     assign proc_7_start_FIFO_blk[0] = 1'b0;
     assign proc_7_TLF_FIFO_blk[0] = 1'b0;
     assign proc_7_input_sync_blk[0] = 1'b0;
     assign proc_7_output_sync_blk[0] = 1'b0;
     assign proc_dep_vld_vec_7[0] = dl_detect_out ? proc_dep_vld_vec_7_reg[0] : (proc_7_data_FIFO_blk[0] | proc_7_data_PIPO_blk[0] | proc_7_start_FIFO_blk[0] | proc_7_TLF_FIFO_blk[0] | proc_7_input_sync_blk[0] | proc_7_output_sync_blk[0]);
     assign proc_7_data_FIFO_blk[1] = 1'b0;
-    assign proc_7_data_PIPO_blk[1] = 1'b0 | (~output_V_U.i_full_n & dense_1_U0.ap_done & ap_done_reg_7 & ~output_V_U.t_read);
+    assign proc_7_data_PIPO_blk[1] = 1'b0 | (~output_U.i_full_n & dense_1_U0.ap_done & ap_done_reg_7 & ~output_U.t_read);
     assign proc_7_start_FIFO_blk[1] = 1'b0;
     assign proc_7_TLF_FIFO_blk[1] = 1'b0;
     assign proc_7_input_sync_blk[1] = 1'b0;
@@ -693,7 +693,7 @@
         .dl_detect_out(dl_in_vec[8]));
 
     assign proc_8_data_FIFO_blk[0] = 1'b0;
-    assign proc_8_data_PIPO_blk[0] = 1'b0 | (~output_V_U.t_empty_n & Loop_VITIS_LOOP_171_3_proc9_U0.ap_idle & ~output_V_U.i_write);
+    assign proc_8_data_PIPO_blk[0] = 1'b0 | (~output_U.t_empty_n & Loop_VITIS_LOOP_171_3_proc9_U0.ap_idle & ~output_U.i_write);
     assign proc_8_start_FIFO_blk[0] = 1'b0;
     assign proc_8_TLF_FIFO_blk[0] = 1'b0;
     assign proc_8_input_sync_blk[0] = 1'b0;

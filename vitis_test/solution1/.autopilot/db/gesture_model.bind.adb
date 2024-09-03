@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3143052592</coreId>
+						<coreId>2776180112</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -106,7 +106,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1797290348</coreId>
+						<coreId>1869901417</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -142,7 +142,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3143250288</coreId>
+						<coreId>640570032</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -178,7 +178,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967040</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -214,7 +214,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3144337208</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -250,7 +250,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>292548700</coreId>
+						<coreId>640158176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -286,7 +286,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3144337248</coreId>
+						<coreId>641028848</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -308,10 +308,10 @@
 					<Obj>
 						<type>0</type>
 						<id>53</id>
-						<name>input_V_0</name>
+						<name>input_0</name>
 						<fileName>vitis_test/nnet/core.cpp</fileName>
 						<fileDirectory>/home/prince/Documents/capstone/Gesture-AI</fileDirectory>
-						<lineNumber>137</lineNumber>
+						<lineNumber>138</lineNumber>
 						<contextFuncName>gesture_model</contextFuncName>
 						<contextNormFuncName>gesture_model</contextNormFuncName>
 						<inlineStackInfo>
@@ -327,12 +327,12 @@
 											<first>vitis_test/nnet/core.cpp</first>
 											<second>gesture_model</second>
 										</first>
-										<second>137</second>
+										<second>138</second>
 									</item>
 								</second>
 							</item>
 						</inlineStackInfo>
-						<originalName>input.V[0]</originalName>
+						<originalName>input[0]</originalName>
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram</opType>
@@ -343,7 +343,7 @@
 						<coreId>83</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>24</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -364,10 +364,10 @@
 					<Obj>
 						<type>0</type>
 						<id>54</id>
-						<name>output_V</name>
+						<name>output</name>
 						<fileName>vitis_test/nnet/core.cpp</fileName>
 						<fileDirectory>/home/prince/Documents/capstone/Gesture-AI</fileDirectory>
-						<lineNumber>138</lineNumber>
+						<lineNumber>139</lineNumber>
 						<contextFuncName>gesture_model</contextFuncName>
 						<contextNormFuncName>gesture_model</contextNormFuncName>
 						<inlineStackInfo>
@@ -383,12 +383,12 @@
 											<first>vitis_test/nnet/core.cpp</first>
 											<second>gesture_model</second>
 										</first>
-										<second>138</second>
+										<second>139</second>
 									</item>
 								</second>
 							</item>
 						</inlineStackInfo>
-						<originalName>output.V</originalName>
+						<originalName>output</originalName>
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram</opType>
@@ -399,7 +399,7 @@
 						<coreId>83</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>24</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -420,63 +420,7 @@
 					<Obj>
 						<type>0</type>
 						<id>55</id>
-						<name>conv1d_out_0_V</name>
-						<fileName>vitis_test/nnet/core.cpp</fileName>
-						<fileDirectory>/home/prince/Documents/capstone/Gesture-AI</fileDirectory>
-						<lineNumber>140</lineNumber>
-						<contextFuncName>gesture_model</contextFuncName>
-						<contextNormFuncName>gesture_model</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/prince/Documents/capstone/Gesture-AI</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>vitis_test/nnet/core.cpp</first>
-											<second>gesture_model</second>
-										</first>
-										<second>140</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName>conv1d_out_0.V</originalName>
-						<rtlName></rtlName>
-						<control>auto</control>
-						<opType>ram</opType>
-						<implIndex>auto</implIndex>
-						<coreName>RAM</coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>83</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>23</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>77</item>
-				</oprand_edges>
-				<opcode>alloca</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>3</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_12">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>56</id>
-						<name>batch_norm_out_0_V</name>
+						<name>conv1d_out_0</name>
 						<fileName>vitis_test/nnet/core.cpp</fileName>
 						<fileDirectory>/home/prince/Documents/capstone/Gesture-AI</fileDirectory>
 						<lineNumber>141</lineNumber>
@@ -500,7 +444,7 @@
 								</second>
 							</item>
 						</inlineStackInfo>
-						<originalName>batch_norm_out_0.V</originalName>
+						<originalName>conv1d_out_0</originalName>
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram</opType>
@@ -511,12 +455,12 @@
 						<coreId>83</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>24</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>78</item>
+					<item>77</item>
 				</oprand_edges>
 				<opcode>alloca</opcode>
 				<m_Display>0</m_Display>
@@ -524,15 +468,15 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>4</m_topoIndex>
+				<m_topoIndex>3</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_13">
+			<item class_id_reference="9" object_id="_12">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>57</id>
-						<name>max_pool_out_0_V</name>
+						<id>56</id>
+						<name>batch_norm_out_0</name>
 						<fileName>vitis_test/nnet/core.cpp</fileName>
 						<fileDirectory>/home/prince/Documents/capstone/Gesture-AI</fileDirectory>
 						<lineNumber>142</lineNumber>
@@ -556,7 +500,7 @@
 								</second>
 							</item>
 						</inlineStackInfo>
-						<originalName>max_pool_out_0.V</originalName>
+						<originalName>batch_norm_out_0</originalName>
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram</opType>
@@ -567,12 +511,12 @@
 						<coreId>83</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>24</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>79</item>
+					<item>78</item>
 				</oprand_edges>
 				<opcode>alloca</opcode>
 				<m_Display>0</m_Display>
@@ -580,15 +524,15 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>5</m_topoIndex>
+				<m_topoIndex>4</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_14">
+			<item class_id_reference="9" object_id="_13">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>58</id>
-						<name>flatten_out_0_V</name>
+						<id>57</id>
+						<name>max_pool_out_0</name>
 						<fileName>vitis_test/nnet/core.cpp</fileName>
 						<fileDirectory>/home/prince/Documents/capstone/Gesture-AI</fileDirectory>
 						<lineNumber>143</lineNumber>
@@ -612,7 +556,7 @@
 								</second>
 							</item>
 						</inlineStackInfo>
-						<originalName>flatten_out_0.V</originalName>
+						<originalName>max_pool_out_0</originalName>
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram</opType>
@@ -623,12 +567,12 @@
 						<coreId>83</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>24</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>80</item>
+					<item>79</item>
 				</oprand_edges>
 				<opcode>alloca</opcode>
 				<m_Display>0</m_Display>
@@ -636,15 +580,15 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>6</m_topoIndex>
+				<m_topoIndex>5</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_15">
+			<item class_id_reference="9" object_id="_14">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>59</id>
-						<name>dense_out_0_V</name>
+						<id>58</id>
+						<name>flatten_out_0</name>
 						<fileName>vitis_test/nnet/core.cpp</fileName>
 						<fileDirectory>/home/prince/Documents/capstone/Gesture-AI</fileDirectory>
 						<lineNumber>144</lineNumber>
@@ -668,7 +612,7 @@
 								</second>
 							</item>
 						</inlineStackInfo>
-						<originalName>dense_out_0.V</originalName>
+						<originalName>flatten_out_0</originalName>
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram</opType>
@@ -679,12 +623,12 @@
 						<coreId>83</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>23</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>81</item>
+					<item>80</item>
 				</oprand_edges>
 				<opcode>alloca</opcode>
 				<m_Display>0</m_Display>
@@ -692,15 +636,15 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>7</m_topoIndex>
+				<m_topoIndex>6</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_16">
+			<item class_id_reference="9" object_id="_15">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>60</id>
-						<name>batch_norm_out_1_V</name>
+						<id>59</id>
+						<name>dense_out_0</name>
 						<fileName>vitis_test/nnet/core.cpp</fileName>
 						<fileDirectory>/home/prince/Documents/capstone/Gesture-AI</fileDirectory>
 						<lineNumber>145</lineNumber>
@@ -724,7 +668,7 @@
 								</second>
 							</item>
 						</inlineStackInfo>
-						<originalName>batch_norm_out_1.V</originalName>
+						<originalName>dense_out_0</originalName>
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram</opType>
@@ -735,7 +679,63 @@
 						<coreId>83</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>24</bitwidth>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>81</item>
+				</oprand_edges>
+				<opcode>alloca</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>7</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_16">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>60</id>
+						<name>batch_norm_out_1</name>
+						<fileName>vitis_test/nnet/core.cpp</fileName>
+						<fileDirectory>/home/prince/Documents/capstone/Gesture-AI</fileDirectory>
+						<lineNumber>146</lineNumber>
+						<contextFuncName>gesture_model</contextFuncName>
+						<contextNormFuncName>gesture_model</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/prince/Documents/capstone/Gesture-AI</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>vitis_test/nnet/core.cpp</first>
+											<second>gesture_model</second>
+										</first>
+										<second>146</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>batch_norm_out_1</originalName>
+						<rtlName></rtlName>
+						<control>auto</control>
+						<opType>ram</opType>
+						<implIndex>auto</implIndex>
+						<coreName>RAM</coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>83</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -774,7 +774,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -899,7 +899,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3144059640</coreId>
+						<coreId>1744</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -963,7 +963,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3143623728</coreId>
+						<coreId>641859080</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1009,7 +1009,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2768474800</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1069,7 +1069,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>34</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1131,7 +1131,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>220589876</coreId>
+						<coreId>641361056</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1195,7 +1195,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3143605792</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1258,7 +1258,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3144326360</coreId>
+						<coreId>641428688</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1321,7 +1321,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>622865508</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1366,7 +1366,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>640629200</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1379,7 +1379,7 @@
 					<Obj>
 						<type>2</type>
 						<id>83</id>
-						<name>Loop_VITIS_LOOP_148_1_proc8</name>
+						<name>Loop_VITIS_LOOP_149_1_proc8</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -1397,13 +1397,13 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
 				<const_type>6</const_type>
-				<content>&lt;constant:Loop_VITIS_LOOP_148_1_proc8&gt;</content>
+				<content>&lt;constant:Loop_VITIS_LOOP_149_1_proc8&gt;</content>
 			</item>
 			<item class_id_reference="16" object_id="_29">
 				<Value>
@@ -1428,7 +1428,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3144325056</coreId>
+						<coreId>640628832</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1459,7 +1459,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3144325144</coreId>
+						<coreId>1680154734</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1490,7 +1490,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3144052064</coreId>
+						<coreId>641327840</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1521,7 +1521,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>290975621</coreId>
+						<coreId>641428688</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1552,7 +1552,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>292413254</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1583,7 +1583,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1651470960</coreId>
+						<coreId>640897296</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1614,7 +1614,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3144132192</coreId>
+						<coreId>2775661486</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1645,7 +1645,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3143515856</coreId>
+						<coreId>641330184</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1775,35 +1775,35 @@
 			<item class_id_reference="20" object_id="_47">
 				<id>85</id>
 				<edge_type>1</edge_type>
-				<source_obj>53</source_obj>
+				<source_obj>1</source_obj>
 				<sink_obj>63</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_48">
 				<id>86</id>
 				<edge_type>1</edge_type>
-				<source_obj>1</source_obj>
+				<source_obj>2</source_obj>
 				<sink_obj>63</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_49">
 				<id>87</id>
 				<edge_type>1</edge_type>
-				<source_obj>2</source_obj>
+				<source_obj>3</source_obj>
 				<sink_obj>63</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_50">
 				<id>88</id>
 				<edge_type>1</edge_type>
-				<source_obj>3</source_obj>
+				<source_obj>4</source_obj>
 				<sink_obj>63</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_51">
 				<id>89</id>
 				<edge_type>1</edge_type>
-				<source_obj>4</source_obj>
+				<source_obj>53</source_obj>
 				<sink_obj>63</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
@@ -1964,35 +1964,35 @@
 			<item class_id_reference="20" object_id="_74">
 				<id>120</id>
 				<edge_type>1</edge_type>
-				<source_obj>5</source_obj>
+				<source_obj>54</source_obj>
 				<sink_obj>71</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_75">
 				<id>121</id>
 				<edge_type>1</edge_type>
-				<source_obj>6</source_obj>
+				<source_obj>5</source_obj>
 				<sink_obj>71</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_76">
 				<id>122</id>
 				<edge_type>1</edge_type>
-				<source_obj>7</source_obj>
+				<source_obj>6</source_obj>
 				<sink_obj>71</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_77">
 				<id>123</id>
 				<edge_type>1</edge_type>
-				<source_obj>8</source_obj>
+				<source_obj>7</source_obj>
 				<sink_obj>71</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_78">
 				<id>124</id>
 				<edge_type>1</edge_type>
-				<source_obj>54</source_obj>
+				<source_obj>8</source_obj>
 				<sink_obj>71</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
@@ -2348,8 +2348,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>23128</mMinLatency>
-			<mMaxLatency>23128</mMaxLatency>
+			<mMinLatency>69392</mMinLatency>
+			<mMaxLatency>69392</mMaxLatency>
 			<mIsDfPipe>1</mIsDfPipe>
 			<mDfPipe class_id="23" tracking_level="1" version="0" object_id="_127">
 				<port_list class_id="24" tracking_level="0" version="0">
@@ -2425,7 +2425,7 @@
 					<item_version>0</item_version>
 					<item class_id="28" tracking_level="1" version="0" object_id="_136">
 						<type>0</type>
-						<name>Loop_VITIS_LOOP_148_1_proc8_U0</name>
+						<name>Loop_VITIS_LOOP_149_1_proc8_U0</name>
 						<ssdmobj_id>63</ssdmobj_id>
 						<pins class_id="29" tracking_level="0" version="0">
 							<count>4</count>
@@ -2441,7 +2441,7 @@
 								</port>
 								<inst class_id="31" tracking_level="1" version="0" object_id="_139">
 									<type>0</type>
-									<name>Loop_VITIS_LOOP_148_1_proc8_U0</name>
+									<name>Loop_VITIS_LOOP_149_1_proc8_U0</name>
 									<ssdmobj_id>63</ssdmobj_id>
 								</inst>
 							</item>
@@ -2633,7 +2633,7 @@
 					<item_version>0</item_version>
 					<item class_id="26" tracking_level="1" version="0" object_id="_163">
 						<type>1</type>
-						<name>input_V_0</name>
+						<name>input_0</name>
 						<ssdmobj_id>53</ssdmobj_id>
 						<ctype>1</ctype>
 						<depth>0</depth>
@@ -2677,7 +2677,7 @@
 					</item>
 					<item class_id_reference="26" object_id="_169">
 						<type>1</type>
-						<name>conv1d_out_0_V</name>
+						<name>conv1d_out_0</name>
 						<ssdmobj_id>55</ssdmobj_id>
 						<ctype>1</ctype>
 						<depth>0</depth>
@@ -2721,7 +2721,7 @@
 					</item>
 					<item class_id_reference="26" object_id="_175">
 						<type>1</type>
-						<name>batch_norm_out_0_V</name>
+						<name>batch_norm_out_0</name>
 						<ssdmobj_id>56</ssdmobj_id>
 						<ctype>1</ctype>
 						<depth>0</depth>
@@ -2765,7 +2765,7 @@
 					</item>
 					<item class_id_reference="26" object_id="_181">
 						<type>1</type>
-						<name>max_pool_out_0_V</name>
+						<name>max_pool_out_0</name>
 						<ssdmobj_id>57</ssdmobj_id>
 						<ctype>1</ctype>
 						<depth>0</depth>
@@ -2809,7 +2809,7 @@
 					</item>
 					<item class_id_reference="26" object_id="_187">
 						<type>1</type>
-						<name>flatten_out_0_V</name>
+						<name>flatten_out_0</name>
 						<ssdmobj_id>58</ssdmobj_id>
 						<ctype>1</ctype>
 						<depth>0</depth>
@@ -2853,7 +2853,7 @@
 					</item>
 					<item class_id_reference="26" object_id="_193">
 						<type>1</type>
-						<name>dense_out_0_V</name>
+						<name>dense_out_0</name>
 						<ssdmobj_id>59</ssdmobj_id>
 						<ctype>1</ctype>
 						<depth>0</depth>
@@ -2897,7 +2897,7 @@
 					</item>
 					<item class_id_reference="26" object_id="_199">
 						<type>1</type>
-						<name>batch_norm_out_1_V</name>
+						<name>batch_norm_out_1</name>
 						<ssdmobj_id>60</ssdmobj_id>
 						<ctype>1</ctype>
 						<depth>0</depth>
@@ -2941,7 +2941,7 @@
 					</item>
 					<item class_id_reference="26" object_id="_205">
 						<type>1</type>
-						<name>output_V</name>
+						<name>output</name>
 						<ssdmobj_id>54</ssdmobj_id>
 						<ctype>1</ctype>
 						<depth>0</depth>
@@ -3984,7 +3984,7 @@
 		<count>8</count>
 		<item_version>0</item_version>
 		<item class_id="58" tracking_level="0" version="0">
-			<first>batch_norm_out_0_V_alloca_fu_144</first>
+			<first>batch_norm_out_0_alloca_fu_144</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3992,7 +3992,7 @@
 			</second>
 		</item>
 		<item>
-			<first>batch_norm_out_1_V_alloca_fu_160</first>
+			<first>batch_norm_out_1_alloca_fu_160</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4000,7 +4000,7 @@
 			</second>
 		</item>
 		<item>
-			<first>conv1d_out_0_V_alloca_fu_140</first>
+			<first>conv1d_out_0_alloca_fu_140</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4008,7 +4008,7 @@
 			</second>
 		</item>
 		<item>
-			<first>dense_out_0_V_alloca_fu_156</first>
+			<first>dense_out_0_alloca_fu_156</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4016,7 +4016,7 @@
 			</second>
 		</item>
 		<item>
-			<first>flatten_out_0_V_alloca_fu_152</first>
+			<first>flatten_out_0_alloca_fu_152</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4024,7 +4024,7 @@
 			</second>
 		</item>
 		<item>
-			<first>input_V_0_alloca_fu_132</first>
+			<first>input_0_alloca_fu_132</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4032,7 +4032,7 @@
 			</second>
 		</item>
 		<item>
-			<first>max_pool_out_0_V_alloca_fu_148</first>
+			<first>max_pool_out_0_alloca_fu_148</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4040,7 +4040,7 @@
 			</second>
 		</item>
 		<item>
-			<first>output_V_alloca_fu_136</first>
+			<first>output_alloca_fu_136</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4052,7 +4052,7 @@
 		<count>9</count>
 		<item_version>0</item_version>
 		<item>
-			<first>grp_Loop_VITIS_LOOP_148_1_proc8_fu_164</first>
+			<first>grp_Loop_VITIS_LOOP_149_1_proc8_fu_164</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -4146,7 +4146,7 @@
 		<item_version>0</item_version>
 		<item class_id="60" tracking_level="0" version="0">
 			<first class_id="61" tracking_level="0" version="0">
-				<first>batch_norm_0_beta_V</first>
+				<first>batch_norm_0_beta</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4157,7 +4157,7 @@
 		</item>
 		<item>
 			<first>
-				<first>batch_norm_0_gamma_V</first>
+				<first>batch_norm_0_gamma</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4168,7 +4168,7 @@
 		</item>
 		<item>
 			<first>
-				<first>batch_norm_0_mean_V</first>
+				<first>batch_norm_0_mean</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4179,7 +4179,7 @@
 		</item>
 		<item>
 			<first>
-				<first>batch_norm_0_variance_V</first>
+				<first>batch_norm_0_variance</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4190,7 +4190,7 @@
 		</item>
 		<item>
 			<first>
-				<first>batch_norm_1_beta_V</first>
+				<first>batch_norm_1_beta</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4201,7 +4201,7 @@
 		</item>
 		<item>
 			<first>
-				<first>batch_norm_1_gamma_V</first>
+				<first>batch_norm_1_gamma</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4212,7 +4212,7 @@
 		</item>
 		<item>
 			<first>
-				<first>batch_norm_1_mean_V</first>
+				<first>batch_norm_1_mean</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4223,7 +4223,7 @@
 		</item>
 		<item>
 			<first>
-				<first>batch_norm_1_variance_V</first>
+				<first>batch_norm_1_variance</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4234,7 +4234,7 @@
 		</item>
 		<item>
 			<first>
-				<first>conv1d_0_biases_V</first>
+				<first>conv1d_0_biases</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4245,7 +4245,7 @@
 		</item>
 		<item>
 			<first>
-				<first>conv1d_0_weights_V_0_0</first>
+				<first>conv1d_0_weights_0_0</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4256,7 +4256,7 @@
 		</item>
 		<item>
 			<first>
-				<first>conv1d_0_weights_V_1_0</first>
+				<first>conv1d_0_weights_1_0</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4267,7 +4267,7 @@
 		</item>
 		<item>
 			<first>
-				<first>conv1d_0_weights_V_2_0</first>
+				<first>conv1d_0_weights_2_0</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4278,7 +4278,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_0_biases_V</first>
+				<first>dense_0_biases</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4289,7 +4289,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_0_weights_V</first>
+				<first>dense_0_weights</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4300,7 +4300,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_1_biases_V</first>
+				<first>dense_1_biases</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4311,7 +4311,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_1_weights_V_0</first>
+				<first>dense_1_weights_0</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4322,7 +4322,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_1_weights_V_1</first>
+				<first>dense_1_weights_1</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4333,7 +4333,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_1_weights_V_10</first>
+				<first>dense_1_weights_10</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4344,7 +4344,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_1_weights_V_11</first>
+				<first>dense_1_weights_11</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4355,7 +4355,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_1_weights_V_12</first>
+				<first>dense_1_weights_12</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4366,7 +4366,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_1_weights_V_13</first>
+				<first>dense_1_weights_13</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4377,7 +4377,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_1_weights_V_14</first>
+				<first>dense_1_weights_14</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4388,7 +4388,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_1_weights_V_15</first>
+				<first>dense_1_weights_15</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4399,7 +4399,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_1_weights_V_2</first>
+				<first>dense_1_weights_2</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4410,7 +4410,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_1_weights_V_3</first>
+				<first>dense_1_weights_3</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4421,7 +4421,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_1_weights_V_4</first>
+				<first>dense_1_weights_4</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4432,7 +4432,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_1_weights_V_5</first>
+				<first>dense_1_weights_5</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4443,7 +4443,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_1_weights_V_6</first>
+				<first>dense_1_weights_6</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4454,7 +4454,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_1_weights_V_7</first>
+				<first>dense_1_weights_7</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4465,7 +4465,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_1_weights_V_8</first>
+				<first>dense_1_weights_8</first>
 				<second>100</second>
 			</first>
 			<second>
@@ -4476,7 +4476,7 @@
 		</item>
 		<item>
 			<first>
-				<first>dense_1_weights_V_9</first>
+				<first>dense_1_weights_9</first>
 				<second>100</second>
 			</first>
 			<second>

@@ -131,12 +131,12 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="53" bw="24" op_0_bw="64">
+<Node id="53" bw="32" op_0_bw="64">
 <![CDATA[
-entry:13 %input_V_0 = alloca i64 1
+entry:13 %input_0 = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="input_V_0"/><MemPortTyVec>2 1 </MemPortTyVec>
+<StgValue><ssdm name="input_0"/><MemPortTyVec>2 1 </MemPortTyVec>
 </StgValue>
 </operation>
 
@@ -147,12 +147,12 @@ entry:13 %input_V_0 = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="54" bw="24" op_0_bw="64">
+<Node id="54" bw="32" op_0_bw="64">
 <![CDATA[
-entry:14 %output_V = alloca i64 1
+entry:14 %output = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="output_V"/><MemPortTyVec>2 1 </MemPortTyVec>
+<StgValue><ssdm name="output"/><MemPortTyVec>2 1 </MemPortTyVec>
 </StgValue>
 </operation>
 
@@ -163,12 +163,12 @@ entry:14 %output_V = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="55" bw="23" op_0_bw="64">
+<Node id="55" bw="32" op_0_bw="64">
 <![CDATA[
-entry:15 %conv1d_out_0_V = alloca i64 1
+entry:15 %conv1d_out_0 = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="conv1d_out_0_V"/><MemPortTyVec>2 3 </MemPortTyVec>
+<StgValue><ssdm name="conv1d_out_0"/><MemPortTyVec>2 3 </MemPortTyVec>
 </StgValue>
 </operation>
 
@@ -179,12 +179,12 @@ entry:15 %conv1d_out_0_V = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="56" bw="24" op_0_bw="64">
+<Node id="56" bw="32" op_0_bw="64">
 <![CDATA[
-entry:16 %batch_norm_out_0_V = alloca i64 1
+entry:16 %batch_norm_out_0 = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="batch_norm_out_0_V"/><MemPortTyVec>2 1 </MemPortTyVec>
+<StgValue><ssdm name="batch_norm_out_0"/><MemPortTyVec>2 1 </MemPortTyVec>
 </StgValue>
 </operation>
 
@@ -195,12 +195,12 @@ entry:16 %batch_norm_out_0_V = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="57" bw="24" op_0_bw="64">
+<Node id="57" bw="32" op_0_bw="64">
 <![CDATA[
-entry:17 %max_pool_out_0_V = alloca i64 1
+entry:17 %max_pool_out_0 = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="max_pool_out_0_V"/><MemPortTyVec>2 3 </MemPortTyVec>
+<StgValue><ssdm name="max_pool_out_0"/><MemPortTyVec>2 3 </MemPortTyVec>
 </StgValue>
 </operation>
 
@@ -211,12 +211,12 @@ entry:17 %max_pool_out_0_V = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="58" bw="24" op_0_bw="64">
+<Node id="58" bw="32" op_0_bw="64">
 <![CDATA[
-entry:18 %flatten_out_0_V = alloca i64 1
+entry:18 %flatten_out_0 = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="flatten_out_0_V"/><MemPortTyVec>2 3 </MemPortTyVec>
+<StgValue><ssdm name="flatten_out_0"/><MemPortTyVec>2 3 </MemPortTyVec>
 </StgValue>
 </operation>
 
@@ -227,12 +227,12 @@ entry:18 %flatten_out_0_V = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="23" op_0_bw="64">
+<Node id="59" bw="32" op_0_bw="64">
 <![CDATA[
-entry:19 %dense_out_0_V = alloca i64 1
+entry:19 %dense_out_0 = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="dense_out_0_V"/><MemPortTyVec>2 3 </MemPortTyVec>
+<StgValue><ssdm name="dense_out_0"/><MemPortTyVec>2 3 </MemPortTyVec>
 </StgValue>
 </operation>
 
@@ -243,12 +243,12 @@ entry:19 %dense_out_0_V = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="60" bw="24" op_0_bw="64">
+<Node id="60" bw="32" op_0_bw="64">
 <![CDATA[
-entry:20 %batch_norm_out_1_V = alloca i64 1
+entry:20 %batch_norm_out_1 = alloca i64 1
 
 ]]></Node>
-<StgValue><ssdm name="batch_norm_out_1_V"/><MemPortTyVec>2 1 </MemPortTyVec>
+<StgValue><ssdm name="batch_norm_out_1"/><MemPortTyVec>2 1 </MemPortTyVec>
 </StgValue>
 </operation>
 </state>
@@ -262,9 +262,9 @@ entry:20 %batch_norm_out_1_V = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="63" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="32" op_3_bw="4" op_4_bw="4" op_5_bw="1">
+<Node id="63" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="1" op_5_bw="32">
 <![CDATA[
-entry:23 %call_ln0 = call void @Loop_VITIS_LOOP_148_1_proc8, i24 %input_V_0, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 %input_stream_V_last_V
+entry:23 %call_ln0 = call void @Loop_VITIS_LOOP_149_1_proc8, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 %input_stream_V_last_V, i32 %input_0
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -280,9 +280,9 @@ entry:23 %call_ln0 = call void @Loop_VITIS_LOOP_148_1_proc8, i24 %input_V_0, i32
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="63" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="32" op_3_bw="4" op_4_bw="4" op_5_bw="1">
+<Node id="63" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="1" op_5_bw="32">
 <![CDATA[
-entry:23 %call_ln0 = call void @Loop_VITIS_LOOP_148_1_proc8, i24 %input_V_0, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 %input_stream_V_last_V
+entry:23 %call_ln0 = call void @Loop_VITIS_LOOP_149_1_proc8, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 %input_stream_V_last_V, i32 %input_0
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -298,9 +298,9 @@ entry:23 %call_ln0 = call void @Loop_VITIS_LOOP_148_1_proc8, i24 %input_V_0, i32
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="64" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="23" op_3_bw="18" op_4_bw="18" op_5_bw="18" op_6_bw="17" op_7_bw="0" op_8_bw="0">
+<Node id="64" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-entry:24 %call_ln159 = call void @conv1d_0, i24 %input_V_0, i23 %conv1d_out_0_V, i18 %conv1d_0_weights_V_0_0, i18 %conv1d_0_weights_V_1_0, i18 %conv1d_0_weights_V_2_0, i17 %conv1d_0_biases_V
+entry:24 %call_ln159 = call void @conv1d_0, i32 %input_0, i32 %conv1d_out_0, i32 %conv1d_0_weights_0_0, i32 %conv1d_0_weights_1_0, i32 %conv1d_0_weights_2_0, i32 %conv1d_0_biases
 
 ]]></Node>
 <StgValue><ssdm name="call_ln159"/></StgValue>
@@ -316,9 +316,9 @@ entry:24 %call_ln159 = call void @conv1d_0, i24 %input_V_0, i23 %conv1d_out_0_V,
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="64" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="23" op_3_bw="18" op_4_bw="18" op_5_bw="18" op_6_bw="17" op_7_bw="0" op_8_bw="0">
+<Node id="64" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-entry:24 %call_ln159 = call void @conv1d_0, i24 %input_V_0, i23 %conv1d_out_0_V, i18 %conv1d_0_weights_V_0_0, i18 %conv1d_0_weights_V_1_0, i18 %conv1d_0_weights_V_2_0, i17 %conv1d_0_biases_V
+entry:24 %call_ln159 = call void @conv1d_0, i32 %input_0, i32 %conv1d_out_0, i32 %conv1d_0_weights_0_0, i32 %conv1d_0_weights_1_0, i32 %conv1d_0_weights_2_0, i32 %conv1d_0_biases
 
 ]]></Node>
 <StgValue><ssdm name="call_ln159"/></StgValue>
@@ -334,9 +334,9 @@ entry:24 %call_ln159 = call void @conv1d_0, i24 %input_V_0, i23 %conv1d_out_0_V,
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="65" bw="0" op_0_bw="0" op_1_bw="23" op_2_bw="24" op_3_bw="15" op_4_bw="11" op_5_bw="19" op_6_bw="17" op_7_bw="0" op_8_bw="0">
+<Node id="65" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-entry:25 %call_ln160 = call void @batch_normalization_0, i23 %conv1d_out_0_V, i24 %batch_norm_out_0_V, i15 %batch_norm_0_mean_V, i11 %batch_norm_0_variance_V, i19 %batch_norm_0_gamma_V, i17 %batch_norm_0_beta_V
+entry:25 %call_ln160 = call void @batch_normalization_0, i32 %conv1d_out_0, i32 %batch_norm_out_0, i32 %batch_norm_0_gamma, i32 %batch_norm_0_mean, i32 %batch_norm_0_variance, i32 %batch_norm_0_beta
 
 ]]></Node>
 <StgValue><ssdm name="call_ln160"/></StgValue>
@@ -352,9 +352,9 @@ entry:25 %call_ln160 = call void @batch_normalization_0, i23 %conv1d_out_0_V, i2
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="65" bw="0" op_0_bw="0" op_1_bw="23" op_2_bw="24" op_3_bw="15" op_4_bw="11" op_5_bw="19" op_6_bw="17" op_7_bw="0" op_8_bw="0">
+<Node id="65" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-entry:25 %call_ln160 = call void @batch_normalization_0, i23 %conv1d_out_0_V, i24 %batch_norm_out_0_V, i15 %batch_norm_0_mean_V, i11 %batch_norm_0_variance_V, i19 %batch_norm_0_gamma_V, i17 %batch_norm_0_beta_V
+entry:25 %call_ln160 = call void @batch_normalization_0, i32 %conv1d_out_0, i32 %batch_norm_out_0, i32 %batch_norm_0_gamma, i32 %batch_norm_0_mean, i32 %batch_norm_0_variance, i32 %batch_norm_0_beta
 
 ]]></Node>
 <StgValue><ssdm name="call_ln160"/></StgValue>
@@ -370,9 +370,9 @@ entry:25 %call_ln160 = call void @batch_normalization_0, i23 %conv1d_out_0_V, i2
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="66" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24" op_3_bw="0" op_4_bw="0">
+<Node id="66" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-entry:26 %call_ln161 = call void @max_pooling1d_0, i24 %batch_norm_out_0_V, i24 %max_pool_out_0_V
+entry:26 %call_ln161 = call void @max_pooling1d_0, i32 %batch_norm_out_0, i32 %max_pool_out_0
 
 ]]></Node>
 <StgValue><ssdm name="call_ln161"/></StgValue>
@@ -388,9 +388,9 @@ entry:26 %call_ln161 = call void @max_pooling1d_0, i24 %batch_norm_out_0_V, i24 
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="66" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24" op_3_bw="0" op_4_bw="0">
+<Node id="66" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-entry:26 %call_ln161 = call void @max_pooling1d_0, i24 %batch_norm_out_0_V, i24 %max_pool_out_0_V
+entry:26 %call_ln161 = call void @max_pooling1d_0, i32 %batch_norm_out_0, i32 %max_pool_out_0
 
 ]]></Node>
 <StgValue><ssdm name="call_ln161"/></StgValue>
@@ -406,9 +406,9 @@ entry:26 %call_ln161 = call void @max_pooling1d_0, i24 %batch_norm_out_0_V, i24 
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="67" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24" op_3_bw="0" op_4_bw="0">
+<Node id="67" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-entry:27 %call_ln0 = call void @Loop_VITIS_LOOP_77_1_proc, i24 %max_pool_out_0_V, i24 %flatten_out_0_V
+entry:27 %call_ln0 = call void @Loop_VITIS_LOOP_77_1_proc, i32 %max_pool_out_0, i32 %flatten_out_0
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -424,9 +424,9 @@ entry:27 %call_ln0 = call void @Loop_VITIS_LOOP_77_1_proc, i24 %max_pool_out_0_V
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="67" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24" op_3_bw="0" op_4_bw="0">
+<Node id="67" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-entry:27 %call_ln0 = call void @Loop_VITIS_LOOP_77_1_proc, i24 %max_pool_out_0_V, i24 %flatten_out_0_V
+entry:27 %call_ln0 = call void @Loop_VITIS_LOOP_77_1_proc, i32 %max_pool_out_0, i32 %flatten_out_0
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -442,9 +442,9 @@ entry:27 %call_ln0 = call void @Loop_VITIS_LOOP_77_1_proc, i24 %max_pool_out_0_V
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="68" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="23" op_3_bw="17" op_4_bw="18" op_5_bw="0" op_6_bw="0">
+<Node id="68" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-entry:28 %call_ln163 = call void @dense_0, i24 %flatten_out_0_V, i23 %dense_out_0_V, i17 %dense_0_biases_V, i18 %dense_0_weights_V
+entry:28 %call_ln163 = call void @dense_0, i32 %flatten_out_0, i32 %dense_out_0, i32 %dense_0_biases, i32 %dense_0_weights
 
 ]]></Node>
 <StgValue><ssdm name="call_ln163"/></StgValue>
@@ -460,9 +460,9 @@ entry:28 %call_ln163 = call void @dense_0, i24 %flatten_out_0_V, i23 %dense_out_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="68" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="23" op_3_bw="17" op_4_bw="18" op_5_bw="0" op_6_bw="0">
+<Node id="68" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-entry:28 %call_ln163 = call void @dense_0, i24 %flatten_out_0_V, i23 %dense_out_0_V, i17 %dense_0_biases_V, i18 %dense_0_weights_V
+entry:28 %call_ln163 = call void @dense_0, i32 %flatten_out_0, i32 %dense_out_0, i32 %dense_0_biases, i32 %dense_0_weights
 
 ]]></Node>
 <StgValue><ssdm name="call_ln163"/></StgValue>
@@ -478,9 +478,9 @@ entry:28 %call_ln163 = call void @dense_0, i24 %flatten_out_0_V, i23 %dense_out_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="69" bw="0" op_0_bw="0" op_1_bw="23" op_2_bw="24" op_3_bw="19" op_4_bw="18" op_5_bw="20" op_6_bw="18" op_7_bw="0" op_8_bw="0">
+<Node id="69" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-entry:29 %call_ln164 = call void @batch_normalization_1, i23 %dense_out_0_V, i24 %batch_norm_out_1_V, i19 %batch_norm_1_mean_V, i18 %batch_norm_1_variance_V, i20 %batch_norm_1_gamma_V, i18 %batch_norm_1_beta_V
+entry:29 %call_ln164 = call void @batch_normalization_1, i32 %dense_out_0, i32 %batch_norm_out_1, i32 %batch_norm_1_gamma, i32 %batch_norm_1_mean, i32 %batch_norm_1_variance, i32 %batch_norm_1_beta
 
 ]]></Node>
 <StgValue><ssdm name="call_ln164"/></StgValue>
@@ -496,9 +496,9 @@ entry:29 %call_ln164 = call void @batch_normalization_1, i23 %dense_out_0_V, i24
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="69" bw="0" op_0_bw="0" op_1_bw="23" op_2_bw="24" op_3_bw="19" op_4_bw="18" op_5_bw="20" op_6_bw="18" op_7_bw="0" op_8_bw="0">
+<Node id="69" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-entry:29 %call_ln164 = call void @batch_normalization_1, i23 %dense_out_0_V, i24 %batch_norm_out_1_V, i19 %batch_norm_1_mean_V, i18 %batch_norm_1_variance_V, i20 %batch_norm_1_gamma_V, i18 %batch_norm_1_beta_V
+entry:29 %call_ln164 = call void @batch_normalization_1, i32 %dense_out_0, i32 %batch_norm_out_1, i32 %batch_norm_1_gamma, i32 %batch_norm_1_mean, i32 %batch_norm_1_variance, i32 %batch_norm_1_beta
 
 ]]></Node>
 <StgValue><ssdm name="call_ln164"/></StgValue>
@@ -514,9 +514,9 @@ entry:29 %call_ln164 = call void @batch_normalization_1, i23 %dense_out_0_V, i24
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="70" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24" op_3_bw="19" op_4_bw="19" op_5_bw="19" op_6_bw="19" op_7_bw="19" op_8_bw="19" op_9_bw="19" op_10_bw="19" op_11_bw="19" op_12_bw="19" op_13_bw="19" op_14_bw="19" op_15_bw="19" op_16_bw="19" op_17_bw="19" op_18_bw="19" op_19_bw="18" op_20_bw="0" op_21_bw="0">
+<Node id="70" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="0" op_21_bw="0">
 <![CDATA[
-entry:30 %call_ln165 = call void @dense_1, i24 %batch_norm_out_1_V, i24 %output_V, i19 %dense_1_weights_V_0, i19 %dense_1_weights_V_1, i19 %dense_1_weights_V_2, i19 %dense_1_weights_V_3, i19 %dense_1_weights_V_4, i19 %dense_1_weights_V_5, i19 %dense_1_weights_V_6, i19 %dense_1_weights_V_7, i19 %dense_1_weights_V_8, i19 %dense_1_weights_V_9, i19 %dense_1_weights_V_10, i19 %dense_1_weights_V_11, i19 %dense_1_weights_V_12, i19 %dense_1_weights_V_13, i19 %dense_1_weights_V_14, i19 %dense_1_weights_V_15, i18 %dense_1_biases_V
+entry:30 %call_ln165 = call void @dense_1, i32 %batch_norm_out_1, i32 %output, i32 %dense_1_weights_0, i32 %dense_1_weights_1, i32 %dense_1_weights_2, i32 %dense_1_weights_3, i32 %dense_1_weights_4, i32 %dense_1_weights_5, i32 %dense_1_weights_6, i32 %dense_1_weights_7, i32 %dense_1_weights_8, i32 %dense_1_weights_9, i32 %dense_1_weights_10, i32 %dense_1_weights_11, i32 %dense_1_weights_12, i32 %dense_1_weights_13, i32 %dense_1_weights_14, i32 %dense_1_weights_15, i32 %dense_1_biases
 
 ]]></Node>
 <StgValue><ssdm name="call_ln165"/></StgValue>
@@ -532,9 +532,9 @@ entry:30 %call_ln165 = call void @dense_1, i24 %batch_norm_out_1_V, i24 %output_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="70" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24" op_3_bw="19" op_4_bw="19" op_5_bw="19" op_6_bw="19" op_7_bw="19" op_8_bw="19" op_9_bw="19" op_10_bw="19" op_11_bw="19" op_12_bw="19" op_13_bw="19" op_14_bw="19" op_15_bw="19" op_16_bw="19" op_17_bw="19" op_18_bw="19" op_19_bw="18" op_20_bw="0" op_21_bw="0">
+<Node id="70" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="0" op_21_bw="0">
 <![CDATA[
-entry:30 %call_ln165 = call void @dense_1, i24 %batch_norm_out_1_V, i24 %output_V, i19 %dense_1_weights_V_0, i19 %dense_1_weights_V_1, i19 %dense_1_weights_V_2, i19 %dense_1_weights_V_3, i19 %dense_1_weights_V_4, i19 %dense_1_weights_V_5, i19 %dense_1_weights_V_6, i19 %dense_1_weights_V_7, i19 %dense_1_weights_V_8, i19 %dense_1_weights_V_9, i19 %dense_1_weights_V_10, i19 %dense_1_weights_V_11, i19 %dense_1_weights_V_12, i19 %dense_1_weights_V_13, i19 %dense_1_weights_V_14, i19 %dense_1_weights_V_15, i18 %dense_1_biases_V
+entry:30 %call_ln165 = call void @dense_1, i32 %batch_norm_out_1, i32 %output, i32 %dense_1_weights_0, i32 %dense_1_weights_1, i32 %dense_1_weights_2, i32 %dense_1_weights_3, i32 %dense_1_weights_4, i32 %dense_1_weights_5, i32 %dense_1_weights_6, i32 %dense_1_weights_7, i32 %dense_1_weights_8, i32 %dense_1_weights_9, i32 %dense_1_weights_10, i32 %dense_1_weights_11, i32 %dense_1_weights_12, i32 %dense_1_weights_13, i32 %dense_1_weights_14, i32 %dense_1_weights_15, i32 %dense_1_biases
 
 ]]></Node>
 <StgValue><ssdm name="call_ln165"/></StgValue>
@@ -550,9 +550,9 @@ entry:30 %call_ln165 = call void @dense_1, i24 %batch_norm_out_1_V, i24 %output_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="71" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="1" op_5_bw="24" op_6_bw="0" op_7_bw="0">
+<Node id="71" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="4" op_4_bw="4" op_5_bw="1" op_6_bw="0" op_7_bw="0">
 <![CDATA[
-entry:31 %call_ln0 = call void @Loop_VITIS_LOOP_171_3_proc9, i32 %output_stream_V_data_V, i4 %output_stream_V_keep_V, i4 %output_stream_V_strb_V, i1 %output_stream_V_last_V, i24 %output_V
+entry:31 %call_ln0 = call void @Loop_VITIS_LOOP_171_3_proc9, i32 %output, i32 %output_stream_V_data_V, i4 %output_stream_V_keep_V, i4 %output_stream_V_strb_V, i1 %output_stream_V_last_V
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -568,9 +568,9 @@ entry:31 %call_ln0 = call void @Loop_VITIS_LOOP_171_3_proc9, i32 %output_stream_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="71" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="1" op_5_bw="24" op_6_bw="0" op_7_bw="0">
+<Node id="71" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="4" op_4_bw="4" op_5_bw="1" op_6_bw="0" op_7_bw="0">
 <![CDATA[
-entry:31 %call_ln0 = call void @Loop_VITIS_LOOP_171_3_proc9, i32 %output_stream_V_data_V, i4 %output_stream_V_keep_V, i4 %output_stream_V_strb_V, i1 %output_stream_V_last_V, i24 %output_V
+entry:31 %call_ln0 = call void @Loop_VITIS_LOOP_171_3_proc9, i32 %output, i32 %output_stream_V_data_V, i4 %output_stream_V_keep_V, i4 %output_stream_V_strb_V, i1 %output_stream_V_last_V
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -588,10 +588,10 @@ entry:31 %call_ln0 = call void @Loop_VITIS_LOOP_171_3_proc9, i32 %output_stream_
 
 <Node id="40" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0">
 <![CDATA[
-entry:0 %specdataflowpipeline_ln158 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_0
+entry:0 %specdataflowpipeline_ln135 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_0
 
 ]]></Node>
-<StgValue><ssdm name="specdataflowpipeline_ln158"/></StgValue>
+<StgValue><ssdm name="specdataflowpipeline_ln135"/></StgValue>
 </operation>
 
 <operation id="48" st_id="20" stage="1" lat="1">
@@ -783,10 +783,10 @@ entry:12 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0,
 
 <Node id="61" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="0">
 <![CDATA[
-entry:21 %specaxissidechannel_ln148 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %output_stream_V_data_V, i4 %output_stream_V_keep_V, i4 %output_stream_V_strb_V, i1 0, i1 %output_stream_V_last_V, i1 0, i1 0, void @empty_3
+entry:21 %specaxissidechannel_ln149 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %output_stream_V_data_V, i4 %output_stream_V_keep_V, i4 %output_stream_V_strb_V, i1 0, i1 %output_stream_V_last_V, i1 0, i1 0, void @empty_3
 
 ]]></Node>
-<StgValue><ssdm name="specaxissidechannel_ln148"/></StgValue>
+<StgValue><ssdm name="specaxissidechannel_ln149"/></StgValue>
 </operation>
 
 <operation id="61" st_id="20" stage="1" lat="1">
@@ -798,10 +798,10 @@ entry:21 %specaxissidechannel_ln148 = specaxissidechannel void @_ssdm_op_SpecAXI
 
 <Node id="62" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="0">
 <![CDATA[
-entry:22 %specaxissidechannel_ln148 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 0, i1 %input_stream_V_last_V, i1 0, i1 0, void @empty_4
+entry:22 %specaxissidechannel_ln149 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 0, i1 %input_stream_V_last_V, i1 0, i1 0, void @empty_4
 
 ]]></Node>
-<StgValue><ssdm name="specaxissidechannel_ln148"/></StgValue>
+<StgValue><ssdm name="specaxissidechannel_ln149"/></StgValue>
 </operation>
 
 <operation id="62" st_id="20" stage="1" lat="1">
@@ -847,413 +847,413 @@ entry:32 %ret_ln177 = ret
 <port id="90" name="output_stream_V_last_V" dir="1" iftype="0">
 <core>NULL</core><StgValue><ssdm name="output_stream_V_last_V"/></StgValue>
 </port>
-<port id="91" name="conv1d_0_weights_V_0_0" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="conv1d_0_weights_V_0_0"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="91" name="conv1d_0_weights_0_0" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="conv1d_0_weights_0_0"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="92" name="conv1d_0_weights_V_1_0" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="conv1d_0_weights_V_1_0"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="92" name="conv1d_0_weights_1_0" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="conv1d_0_weights_1_0"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="93" name="conv1d_0_weights_V_2_0" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="conv1d_0_weights_V_2_0"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="93" name="conv1d_0_weights_2_0" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="conv1d_0_weights_2_0"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="94" name="conv1d_0_biases_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="conv1d_0_biases_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="94" name="conv1d_0_biases" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="conv1d_0_biases"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="95" name="batch_norm_0_mean_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="batch_norm_0_mean_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="95" name="batch_norm_0_gamma" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="batch_norm_0_gamma"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="96" name="batch_norm_0_variance_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="batch_norm_0_variance_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="96" name="batch_norm_0_mean" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="batch_norm_0_mean"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="97" name="batch_norm_0_gamma_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="batch_norm_0_gamma_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="97" name="batch_norm_0_variance" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="batch_norm_0_variance"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="98" name="batch_norm_0_beta_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="batch_norm_0_beta_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="98" name="batch_norm_0_beta" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="batch_norm_0_beta"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="99" name="dense_0_biases_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_0_biases_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="99" name="dense_0_biases" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_0_biases"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="100" name="dense_0_weights_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_0_weights_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="100" name="dense_0_weights" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_0_weights"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="101" name="batch_norm_1_mean_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="batch_norm_1_mean_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="101" name="batch_norm_1_gamma" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="batch_norm_1_gamma"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="102" name="batch_norm_1_variance_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="batch_norm_1_variance_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="102" name="batch_norm_1_mean" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="batch_norm_1_mean"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="103" name="batch_norm_1_gamma_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="batch_norm_1_gamma_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="103" name="batch_norm_1_variance" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="batch_norm_1_variance"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="104" name="batch_norm_1_beta_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="batch_norm_1_beta_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="104" name="batch_norm_1_beta" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="batch_norm_1_beta"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="105" name="dense_1_weights_V_0" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_0"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="105" name="dense_1_weights_0" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_0"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="106" name="dense_1_weights_V_1" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_1"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="106" name="dense_1_weights_1" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_1"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="107" name="dense_1_weights_V_2" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_2"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="107" name="dense_1_weights_2" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_2"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="108" name="dense_1_weights_V_3" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_3"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="108" name="dense_1_weights_3" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_3"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="109" name="dense_1_weights_V_4" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_4"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="109" name="dense_1_weights_4" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_4"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="110" name="dense_1_weights_V_5" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_5"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="110" name="dense_1_weights_5" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_5"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="111" name="dense_1_weights_V_6" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_6"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="111" name="dense_1_weights_6" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_6"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="112" name="dense_1_weights_V_7" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_7"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="112" name="dense_1_weights_7" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_7"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="113" name="dense_1_weights_V_8" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_8"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="113" name="dense_1_weights_8" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_8"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="114" name="dense_1_weights_V_9" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_9"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="114" name="dense_1_weights_9" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_9"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="115" name="dense_1_weights_V_10" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_10"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="115" name="dense_1_weights_10" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_10"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="116" name="dense_1_weights_V_11" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_11"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="116" name="dense_1_weights_11" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_11"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="117" name="dense_1_weights_V_12" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_12"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="117" name="dense_1_weights_12" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_12"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="118" name="dense_1_weights_V_13" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_13"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="118" name="dense_1_weights_13" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_13"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="119" name="dense_1_weights_V_14" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_14"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="119" name="dense_1_weights_14" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_14"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="120" name="dense_1_weights_V_15" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_1_weights_V_15"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="120" name="dense_1_weights_15" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_weights_15"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="121" name="dense_1_biases_V" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="dense_1_biases_V"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="121" name="dense_1_biases" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="dense_1_biases"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
 </ports>
 
 
 <dataflows>
-<dataflow id="123" from="StgValue_122" to="input_V_0" fromId="122" toId="21">
+<dataflow id="123" from="StgValue_122" to="input_0" fromId="122" toId="21">
 </dataflow>
-<dataflow id="124" from="StgValue_122" to="output_V" fromId="122" toId="22">
+<dataflow id="124" from="StgValue_122" to="output" fromId="122" toId="22">
 </dataflow>
-<dataflow id="125" from="StgValue_122" to="conv1d_out_0_V" fromId="122" toId="23">
+<dataflow id="125" from="StgValue_122" to="conv1d_out_0" fromId="122" toId="23">
 </dataflow>
-<dataflow id="126" from="StgValue_122" to="batch_norm_out_0_V" fromId="122" toId="24">
+<dataflow id="126" from="StgValue_122" to="batch_norm_out_0" fromId="122" toId="24">
 </dataflow>
-<dataflow id="127" from="StgValue_122" to="max_pool_out_0_V" fromId="122" toId="25">
+<dataflow id="127" from="StgValue_122" to="max_pool_out_0" fromId="122" toId="25">
 </dataflow>
-<dataflow id="128" from="StgValue_122" to="flatten_out_0_V" fromId="122" toId="26">
+<dataflow id="128" from="StgValue_122" to="flatten_out_0" fromId="122" toId="26">
 </dataflow>
-<dataflow id="129" from="StgValue_122" to="dense_out_0_V" fromId="122" toId="27">
+<dataflow id="129" from="StgValue_122" to="dense_out_0" fromId="122" toId="27">
 </dataflow>
-<dataflow id="130" from="StgValue_122" to="batch_norm_out_1_V" fromId="122" toId="28">
+<dataflow id="130" from="StgValue_122" to="batch_norm_out_1" fromId="122" toId="28">
 </dataflow>
-<dataflow id="132" from="Loop_VITIS_LOOP_148_1_proc8" to="call_ln0" fromId="131" toId="29">
+<dataflow id="132" from="Loop_VITIS_LOOP_149_1_proc8" to="call_ln0" fromId="131" toId="29">
 </dataflow>
-<dataflow id="133" from="input_V_0" to="call_ln0" fromId="21" toId="29">
+<dataflow id="133" from="input_stream_V_data_V" to="call_ln0" fromId="83" toId="29">
 </dataflow>
-<dataflow id="134" from="input_stream_V_data_V" to="call_ln0" fromId="83" toId="29">
+<dataflow id="134" from="input_stream_V_keep_V" to="call_ln0" fromId="84" toId="29">
 </dataflow>
-<dataflow id="135" from="input_stream_V_keep_V" to="call_ln0" fromId="84" toId="29">
+<dataflow id="135" from="input_stream_V_strb_V" to="call_ln0" fromId="85" toId="29">
 </dataflow>
-<dataflow id="136" from="input_stream_V_strb_V" to="call_ln0" fromId="85" toId="29">
+<dataflow id="136" from="input_stream_V_last_V" to="call_ln0" fromId="86" toId="29">
 </dataflow>
-<dataflow id="137" from="input_stream_V_last_V" to="call_ln0" fromId="86" toId="29">
+<dataflow id="137" from="input_0" to="call_ln0" fromId="21" toId="29">
 </dataflow>
-<dataflow id="138" from="Loop_VITIS_LOOP_148_1_proc8" to="call_ln0" fromId="131" toId="30">
+<dataflow id="138" from="Loop_VITIS_LOOP_149_1_proc8" to="call_ln0" fromId="131" toId="30">
 </dataflow>
-<dataflow id="139" from="input_V_0" to="call_ln0" fromId="21" toId="30">
+<dataflow id="139" from="input_stream_V_data_V" to="call_ln0" fromId="83" toId="30">
 </dataflow>
-<dataflow id="140" from="input_stream_V_data_V" to="call_ln0" fromId="83" toId="30">
+<dataflow id="140" from="input_stream_V_keep_V" to="call_ln0" fromId="84" toId="30">
 </dataflow>
-<dataflow id="141" from="input_stream_V_keep_V" to="call_ln0" fromId="84" toId="30">
+<dataflow id="141" from="input_stream_V_strb_V" to="call_ln0" fromId="85" toId="30">
 </dataflow>
-<dataflow id="142" from="input_stream_V_strb_V" to="call_ln0" fromId="85" toId="30">
+<dataflow id="142" from="input_stream_V_last_V" to="call_ln0" fromId="86" toId="30">
 </dataflow>
-<dataflow id="143" from="input_stream_V_last_V" to="call_ln0" fromId="86" toId="30">
+<dataflow id="143" from="input_0" to="call_ln0" fromId="21" toId="30">
 </dataflow>
 <dataflow id="145" from="conv1d_0" to="call_ln159" fromId="144" toId="31">
 </dataflow>
-<dataflow id="146" from="input_V_0" to="call_ln159" fromId="21" toId="31">
+<dataflow id="146" from="input_0" to="call_ln159" fromId="21" toId="31">
 </dataflow>
-<dataflow id="147" from="conv1d_out_0_V" to="call_ln159" fromId="23" toId="31">
+<dataflow id="147" from="conv1d_out_0" to="call_ln159" fromId="23" toId="31">
 </dataflow>
-<dataflow id="148" from="conv1d_0_weights_V_0_0" to="call_ln159" fromId="91" toId="31">
+<dataflow id="148" from="conv1d_0_weights_0_0" to="call_ln159" fromId="91" toId="31">
 </dataflow>
-<dataflow id="149" from="conv1d_0_weights_V_1_0" to="call_ln159" fromId="92" toId="31">
+<dataflow id="149" from="conv1d_0_weights_1_0" to="call_ln159" fromId="92" toId="31">
 </dataflow>
-<dataflow id="150" from="conv1d_0_weights_V_2_0" to="call_ln159" fromId="93" toId="31">
+<dataflow id="150" from="conv1d_0_weights_2_0" to="call_ln159" fromId="93" toId="31">
 </dataflow>
-<dataflow id="151" from="conv1d_0_biases_V" to="call_ln159" fromId="94" toId="31">
+<dataflow id="151" from="conv1d_0_biases" to="call_ln159" fromId="94" toId="31">
 </dataflow>
 <dataflow id="152" from="conv1d_0" to="call_ln159" fromId="144" toId="32">
 </dataflow>
-<dataflow id="153" from="input_V_0" to="call_ln159" fromId="21" toId="32">
+<dataflow id="153" from="input_0" to="call_ln159" fromId="21" toId="32">
 </dataflow>
-<dataflow id="154" from="conv1d_out_0_V" to="call_ln159" fromId="23" toId="32">
+<dataflow id="154" from="conv1d_out_0" to="call_ln159" fromId="23" toId="32">
 </dataflow>
-<dataflow id="155" from="conv1d_0_weights_V_0_0" to="call_ln159" fromId="91" toId="32">
+<dataflow id="155" from="conv1d_0_weights_0_0" to="call_ln159" fromId="91" toId="32">
 </dataflow>
-<dataflow id="156" from="conv1d_0_weights_V_1_0" to="call_ln159" fromId="92" toId="32">
+<dataflow id="156" from="conv1d_0_weights_1_0" to="call_ln159" fromId="92" toId="32">
 </dataflow>
-<dataflow id="157" from="conv1d_0_weights_V_2_0" to="call_ln159" fromId="93" toId="32">
+<dataflow id="157" from="conv1d_0_weights_2_0" to="call_ln159" fromId="93" toId="32">
 </dataflow>
-<dataflow id="158" from="conv1d_0_biases_V" to="call_ln159" fromId="94" toId="32">
+<dataflow id="158" from="conv1d_0_biases" to="call_ln159" fromId="94" toId="32">
 </dataflow>
 <dataflow id="160" from="batch_normalization_0" to="call_ln160" fromId="159" toId="33">
 </dataflow>
-<dataflow id="161" from="conv1d_out_0_V" to="call_ln160" fromId="23" toId="33">
+<dataflow id="161" from="conv1d_out_0" to="call_ln160" fromId="23" toId="33">
 </dataflow>
-<dataflow id="162" from="batch_norm_out_0_V" to="call_ln160" fromId="24" toId="33">
+<dataflow id="162" from="batch_norm_out_0" to="call_ln160" fromId="24" toId="33">
 </dataflow>
-<dataflow id="163" from="batch_norm_0_mean_V" to="call_ln160" fromId="95" toId="33">
+<dataflow id="163" from="batch_norm_0_gamma" to="call_ln160" fromId="95" toId="33">
 </dataflow>
-<dataflow id="164" from="batch_norm_0_variance_V" to="call_ln160" fromId="96" toId="33">
+<dataflow id="164" from="batch_norm_0_mean" to="call_ln160" fromId="96" toId="33">
 </dataflow>
-<dataflow id="165" from="batch_norm_0_gamma_V" to="call_ln160" fromId="97" toId="33">
+<dataflow id="165" from="batch_norm_0_variance" to="call_ln160" fromId="97" toId="33">
 </dataflow>
-<dataflow id="166" from="batch_norm_0_beta_V" to="call_ln160" fromId="98" toId="33">
+<dataflow id="166" from="batch_norm_0_beta" to="call_ln160" fromId="98" toId="33">
 </dataflow>
 <dataflow id="167" from="batch_normalization_0" to="call_ln160" fromId="159" toId="34">
 </dataflow>
-<dataflow id="168" from="conv1d_out_0_V" to="call_ln160" fromId="23" toId="34">
+<dataflow id="168" from="conv1d_out_0" to="call_ln160" fromId="23" toId="34">
 </dataflow>
-<dataflow id="169" from="batch_norm_out_0_V" to="call_ln160" fromId="24" toId="34">
+<dataflow id="169" from="batch_norm_out_0" to="call_ln160" fromId="24" toId="34">
 </dataflow>
-<dataflow id="170" from="batch_norm_0_mean_V" to="call_ln160" fromId="95" toId="34">
+<dataflow id="170" from="batch_norm_0_gamma" to="call_ln160" fromId="95" toId="34">
 </dataflow>
-<dataflow id="171" from="batch_norm_0_variance_V" to="call_ln160" fromId="96" toId="34">
+<dataflow id="171" from="batch_norm_0_mean" to="call_ln160" fromId="96" toId="34">
 </dataflow>
-<dataflow id="172" from="batch_norm_0_gamma_V" to="call_ln160" fromId="97" toId="34">
+<dataflow id="172" from="batch_norm_0_variance" to="call_ln160" fromId="97" toId="34">
 </dataflow>
-<dataflow id="173" from="batch_norm_0_beta_V" to="call_ln160" fromId="98" toId="34">
+<dataflow id="173" from="batch_norm_0_beta" to="call_ln160" fromId="98" toId="34">
 </dataflow>
 <dataflow id="175" from="max_pooling1d_0" to="call_ln161" fromId="174" toId="35">
 </dataflow>
-<dataflow id="176" from="batch_norm_out_0_V" to="call_ln161" fromId="24" toId="35">
+<dataflow id="176" from="batch_norm_out_0" to="call_ln161" fromId="24" toId="35">
 </dataflow>
-<dataflow id="177" from="max_pool_out_0_V" to="call_ln161" fromId="25" toId="35">
+<dataflow id="177" from="max_pool_out_0" to="call_ln161" fromId="25" toId="35">
 </dataflow>
 <dataflow id="178" from="max_pooling1d_0" to="call_ln161" fromId="174" toId="36">
 </dataflow>
-<dataflow id="179" from="batch_norm_out_0_V" to="call_ln161" fromId="24" toId="36">
+<dataflow id="179" from="batch_norm_out_0" to="call_ln161" fromId="24" toId="36">
 </dataflow>
-<dataflow id="180" from="max_pool_out_0_V" to="call_ln161" fromId="25" toId="36">
+<dataflow id="180" from="max_pool_out_0" to="call_ln161" fromId="25" toId="36">
 </dataflow>
 <dataflow id="182" from="Loop_VITIS_LOOP_77_1_proc" to="call_ln0" fromId="181" toId="37">
 </dataflow>
-<dataflow id="183" from="max_pool_out_0_V" to="call_ln0" fromId="25" toId="37">
+<dataflow id="183" from="max_pool_out_0" to="call_ln0" fromId="25" toId="37">
 </dataflow>
-<dataflow id="184" from="flatten_out_0_V" to="call_ln0" fromId="26" toId="37">
+<dataflow id="184" from="flatten_out_0" to="call_ln0" fromId="26" toId="37">
 </dataflow>
 <dataflow id="185" from="Loop_VITIS_LOOP_77_1_proc" to="call_ln0" fromId="181" toId="38">
 </dataflow>
-<dataflow id="186" from="max_pool_out_0_V" to="call_ln0" fromId="25" toId="38">
+<dataflow id="186" from="max_pool_out_0" to="call_ln0" fromId="25" toId="38">
 </dataflow>
-<dataflow id="187" from="flatten_out_0_V" to="call_ln0" fromId="26" toId="38">
+<dataflow id="187" from="flatten_out_0" to="call_ln0" fromId="26" toId="38">
 </dataflow>
 <dataflow id="189" from="dense_0" to="call_ln163" fromId="188" toId="39">
 </dataflow>
-<dataflow id="190" from="flatten_out_0_V" to="call_ln163" fromId="26" toId="39">
+<dataflow id="190" from="flatten_out_0" to="call_ln163" fromId="26" toId="39">
 </dataflow>
-<dataflow id="191" from="dense_out_0_V" to="call_ln163" fromId="27" toId="39">
+<dataflow id="191" from="dense_out_0" to="call_ln163" fromId="27" toId="39">
 </dataflow>
-<dataflow id="192" from="dense_0_biases_V" to="call_ln163" fromId="99" toId="39">
+<dataflow id="192" from="dense_0_biases" to="call_ln163" fromId="99" toId="39">
 </dataflow>
-<dataflow id="193" from="dense_0_weights_V" to="call_ln163" fromId="100" toId="39">
+<dataflow id="193" from="dense_0_weights" to="call_ln163" fromId="100" toId="39">
 </dataflow>
 <dataflow id="194" from="dense_0" to="call_ln163" fromId="188" toId="40">
 </dataflow>
-<dataflow id="195" from="flatten_out_0_V" to="call_ln163" fromId="26" toId="40">
+<dataflow id="195" from="flatten_out_0" to="call_ln163" fromId="26" toId="40">
 </dataflow>
-<dataflow id="196" from="dense_out_0_V" to="call_ln163" fromId="27" toId="40">
+<dataflow id="196" from="dense_out_0" to="call_ln163" fromId="27" toId="40">
 </dataflow>
-<dataflow id="197" from="dense_0_biases_V" to="call_ln163" fromId="99" toId="40">
+<dataflow id="197" from="dense_0_biases" to="call_ln163" fromId="99" toId="40">
 </dataflow>
-<dataflow id="198" from="dense_0_weights_V" to="call_ln163" fromId="100" toId="40">
+<dataflow id="198" from="dense_0_weights" to="call_ln163" fromId="100" toId="40">
 </dataflow>
 <dataflow id="200" from="batch_normalization_1" to="call_ln164" fromId="199" toId="41">
 </dataflow>
-<dataflow id="201" from="dense_out_0_V" to="call_ln164" fromId="27" toId="41">
+<dataflow id="201" from="dense_out_0" to="call_ln164" fromId="27" toId="41">
 </dataflow>
-<dataflow id="202" from="batch_norm_out_1_V" to="call_ln164" fromId="28" toId="41">
+<dataflow id="202" from="batch_norm_out_1" to="call_ln164" fromId="28" toId="41">
 </dataflow>
-<dataflow id="203" from="batch_norm_1_mean_V" to="call_ln164" fromId="101" toId="41">
+<dataflow id="203" from="batch_norm_1_gamma" to="call_ln164" fromId="101" toId="41">
 </dataflow>
-<dataflow id="204" from="batch_norm_1_variance_V" to="call_ln164" fromId="102" toId="41">
+<dataflow id="204" from="batch_norm_1_mean" to="call_ln164" fromId="102" toId="41">
 </dataflow>
-<dataflow id="205" from="batch_norm_1_gamma_V" to="call_ln164" fromId="103" toId="41">
+<dataflow id="205" from="batch_norm_1_variance" to="call_ln164" fromId="103" toId="41">
 </dataflow>
-<dataflow id="206" from="batch_norm_1_beta_V" to="call_ln164" fromId="104" toId="41">
+<dataflow id="206" from="batch_norm_1_beta" to="call_ln164" fromId="104" toId="41">
 </dataflow>
 <dataflow id="207" from="batch_normalization_1" to="call_ln164" fromId="199" toId="42">
 </dataflow>
-<dataflow id="208" from="dense_out_0_V" to="call_ln164" fromId="27" toId="42">
+<dataflow id="208" from="dense_out_0" to="call_ln164" fromId="27" toId="42">
 </dataflow>
-<dataflow id="209" from="batch_norm_out_1_V" to="call_ln164" fromId="28" toId="42">
+<dataflow id="209" from="batch_norm_out_1" to="call_ln164" fromId="28" toId="42">
 </dataflow>
-<dataflow id="210" from="batch_norm_1_mean_V" to="call_ln164" fromId="101" toId="42">
+<dataflow id="210" from="batch_norm_1_gamma" to="call_ln164" fromId="101" toId="42">
 </dataflow>
-<dataflow id="211" from="batch_norm_1_variance_V" to="call_ln164" fromId="102" toId="42">
+<dataflow id="211" from="batch_norm_1_mean" to="call_ln164" fromId="102" toId="42">
 </dataflow>
-<dataflow id="212" from="batch_norm_1_gamma_V" to="call_ln164" fromId="103" toId="42">
+<dataflow id="212" from="batch_norm_1_variance" to="call_ln164" fromId="103" toId="42">
 </dataflow>
-<dataflow id="213" from="batch_norm_1_beta_V" to="call_ln164" fromId="104" toId="42">
+<dataflow id="213" from="batch_norm_1_beta" to="call_ln164" fromId="104" toId="42">
 </dataflow>
 <dataflow id="215" from="dense_1" to="call_ln165" fromId="214" toId="43">
 </dataflow>
-<dataflow id="216" from="batch_norm_out_1_V" to="call_ln165" fromId="28" toId="43">
+<dataflow id="216" from="batch_norm_out_1" to="call_ln165" fromId="28" toId="43">
 </dataflow>
-<dataflow id="217" from="output_V" to="call_ln165" fromId="22" toId="43">
+<dataflow id="217" from="output" to="call_ln165" fromId="22" toId="43">
 </dataflow>
-<dataflow id="218" from="dense_1_weights_V_0" to="call_ln165" fromId="105" toId="43">
+<dataflow id="218" from="dense_1_weights_0" to="call_ln165" fromId="105" toId="43">
 </dataflow>
-<dataflow id="219" from="dense_1_weights_V_1" to="call_ln165" fromId="106" toId="43">
+<dataflow id="219" from="dense_1_weights_1" to="call_ln165" fromId="106" toId="43">
 </dataflow>
-<dataflow id="220" from="dense_1_weights_V_2" to="call_ln165" fromId="107" toId="43">
+<dataflow id="220" from="dense_1_weights_2" to="call_ln165" fromId="107" toId="43">
 </dataflow>
-<dataflow id="221" from="dense_1_weights_V_3" to="call_ln165" fromId="108" toId="43">
+<dataflow id="221" from="dense_1_weights_3" to="call_ln165" fromId="108" toId="43">
 </dataflow>
-<dataflow id="222" from="dense_1_weights_V_4" to="call_ln165" fromId="109" toId="43">
+<dataflow id="222" from="dense_1_weights_4" to="call_ln165" fromId="109" toId="43">
 </dataflow>
-<dataflow id="223" from="dense_1_weights_V_5" to="call_ln165" fromId="110" toId="43">
+<dataflow id="223" from="dense_1_weights_5" to="call_ln165" fromId="110" toId="43">
 </dataflow>
-<dataflow id="224" from="dense_1_weights_V_6" to="call_ln165" fromId="111" toId="43">
+<dataflow id="224" from="dense_1_weights_6" to="call_ln165" fromId="111" toId="43">
 </dataflow>
-<dataflow id="225" from="dense_1_weights_V_7" to="call_ln165" fromId="112" toId="43">
+<dataflow id="225" from="dense_1_weights_7" to="call_ln165" fromId="112" toId="43">
 </dataflow>
-<dataflow id="226" from="dense_1_weights_V_8" to="call_ln165" fromId="113" toId="43">
+<dataflow id="226" from="dense_1_weights_8" to="call_ln165" fromId="113" toId="43">
 </dataflow>
-<dataflow id="227" from="dense_1_weights_V_9" to="call_ln165" fromId="114" toId="43">
+<dataflow id="227" from="dense_1_weights_9" to="call_ln165" fromId="114" toId="43">
 </dataflow>
-<dataflow id="228" from="dense_1_weights_V_10" to="call_ln165" fromId="115" toId="43">
+<dataflow id="228" from="dense_1_weights_10" to="call_ln165" fromId="115" toId="43">
 </dataflow>
-<dataflow id="229" from="dense_1_weights_V_11" to="call_ln165" fromId="116" toId="43">
+<dataflow id="229" from="dense_1_weights_11" to="call_ln165" fromId="116" toId="43">
 </dataflow>
-<dataflow id="230" from="dense_1_weights_V_12" to="call_ln165" fromId="117" toId="43">
+<dataflow id="230" from="dense_1_weights_12" to="call_ln165" fromId="117" toId="43">
 </dataflow>
-<dataflow id="231" from="dense_1_weights_V_13" to="call_ln165" fromId="118" toId="43">
+<dataflow id="231" from="dense_1_weights_13" to="call_ln165" fromId="118" toId="43">
 </dataflow>
-<dataflow id="232" from="dense_1_weights_V_14" to="call_ln165" fromId="119" toId="43">
+<dataflow id="232" from="dense_1_weights_14" to="call_ln165" fromId="119" toId="43">
 </dataflow>
-<dataflow id="233" from="dense_1_weights_V_15" to="call_ln165" fromId="120" toId="43">
+<dataflow id="233" from="dense_1_weights_15" to="call_ln165" fromId="120" toId="43">
 </dataflow>
-<dataflow id="234" from="dense_1_biases_V" to="call_ln165" fromId="121" toId="43">
+<dataflow id="234" from="dense_1_biases" to="call_ln165" fromId="121" toId="43">
 </dataflow>
 <dataflow id="235" from="dense_1" to="call_ln165" fromId="214" toId="44">
 </dataflow>
-<dataflow id="236" from="batch_norm_out_1_V" to="call_ln165" fromId="28" toId="44">
+<dataflow id="236" from="batch_norm_out_1" to="call_ln165" fromId="28" toId="44">
 </dataflow>
-<dataflow id="237" from="output_V" to="call_ln165" fromId="22" toId="44">
+<dataflow id="237" from="output" to="call_ln165" fromId="22" toId="44">
 </dataflow>
-<dataflow id="238" from="dense_1_weights_V_0" to="call_ln165" fromId="105" toId="44">
+<dataflow id="238" from="dense_1_weights_0" to="call_ln165" fromId="105" toId="44">
 </dataflow>
-<dataflow id="239" from="dense_1_weights_V_1" to="call_ln165" fromId="106" toId="44">
+<dataflow id="239" from="dense_1_weights_1" to="call_ln165" fromId="106" toId="44">
 </dataflow>
-<dataflow id="240" from="dense_1_weights_V_2" to="call_ln165" fromId="107" toId="44">
+<dataflow id="240" from="dense_1_weights_2" to="call_ln165" fromId="107" toId="44">
 </dataflow>
-<dataflow id="241" from="dense_1_weights_V_3" to="call_ln165" fromId="108" toId="44">
+<dataflow id="241" from="dense_1_weights_3" to="call_ln165" fromId="108" toId="44">
 </dataflow>
-<dataflow id="242" from="dense_1_weights_V_4" to="call_ln165" fromId="109" toId="44">
+<dataflow id="242" from="dense_1_weights_4" to="call_ln165" fromId="109" toId="44">
 </dataflow>
-<dataflow id="243" from="dense_1_weights_V_5" to="call_ln165" fromId="110" toId="44">
+<dataflow id="243" from="dense_1_weights_5" to="call_ln165" fromId="110" toId="44">
 </dataflow>
-<dataflow id="244" from="dense_1_weights_V_6" to="call_ln165" fromId="111" toId="44">
+<dataflow id="244" from="dense_1_weights_6" to="call_ln165" fromId="111" toId="44">
 </dataflow>
-<dataflow id="245" from="dense_1_weights_V_7" to="call_ln165" fromId="112" toId="44">
+<dataflow id="245" from="dense_1_weights_7" to="call_ln165" fromId="112" toId="44">
 </dataflow>
-<dataflow id="246" from="dense_1_weights_V_8" to="call_ln165" fromId="113" toId="44">
+<dataflow id="246" from="dense_1_weights_8" to="call_ln165" fromId="113" toId="44">
 </dataflow>
-<dataflow id="247" from="dense_1_weights_V_9" to="call_ln165" fromId="114" toId="44">
+<dataflow id="247" from="dense_1_weights_9" to="call_ln165" fromId="114" toId="44">
 </dataflow>
-<dataflow id="248" from="dense_1_weights_V_10" to="call_ln165" fromId="115" toId="44">
+<dataflow id="248" from="dense_1_weights_10" to="call_ln165" fromId="115" toId="44">
 </dataflow>
-<dataflow id="249" from="dense_1_weights_V_11" to="call_ln165" fromId="116" toId="44">
+<dataflow id="249" from="dense_1_weights_11" to="call_ln165" fromId="116" toId="44">
 </dataflow>
-<dataflow id="250" from="dense_1_weights_V_12" to="call_ln165" fromId="117" toId="44">
+<dataflow id="250" from="dense_1_weights_12" to="call_ln165" fromId="117" toId="44">
 </dataflow>
-<dataflow id="251" from="dense_1_weights_V_13" to="call_ln165" fromId="118" toId="44">
+<dataflow id="251" from="dense_1_weights_13" to="call_ln165" fromId="118" toId="44">
 </dataflow>
-<dataflow id="252" from="dense_1_weights_V_14" to="call_ln165" fromId="119" toId="44">
+<dataflow id="252" from="dense_1_weights_14" to="call_ln165" fromId="119" toId="44">
 </dataflow>
-<dataflow id="253" from="dense_1_weights_V_15" to="call_ln165" fromId="120" toId="44">
+<dataflow id="253" from="dense_1_weights_15" to="call_ln165" fromId="120" toId="44">
 </dataflow>
-<dataflow id="254" from="dense_1_biases_V" to="call_ln165" fromId="121" toId="44">
+<dataflow id="254" from="dense_1_biases" to="call_ln165" fromId="121" toId="44">
 </dataflow>
 <dataflow id="256" from="Loop_VITIS_LOOP_171_3_proc9" to="call_ln0" fromId="255" toId="45">
 </dataflow>
-<dataflow id="257" from="output_stream_V_data_V" to="call_ln0" fromId="87" toId="45">
+<dataflow id="257" from="output" to="call_ln0" fromId="22" toId="45">
 </dataflow>
-<dataflow id="258" from="output_stream_V_keep_V" to="call_ln0" fromId="88" toId="45">
+<dataflow id="258" from="output_stream_V_data_V" to="call_ln0" fromId="87" toId="45">
 </dataflow>
-<dataflow id="259" from="output_stream_V_strb_V" to="call_ln0" fromId="89" toId="45">
+<dataflow id="259" from="output_stream_V_keep_V" to="call_ln0" fromId="88" toId="45">
 </dataflow>
-<dataflow id="260" from="output_stream_V_last_V" to="call_ln0" fromId="90" toId="45">
+<dataflow id="260" from="output_stream_V_strb_V" to="call_ln0" fromId="89" toId="45">
 </dataflow>
-<dataflow id="261" from="output_V" to="call_ln0" fromId="22" toId="45">
+<dataflow id="261" from="output_stream_V_last_V" to="call_ln0" fromId="90" toId="45">
 </dataflow>
 <dataflow id="262" from="Loop_VITIS_LOOP_171_3_proc9" to="call_ln0" fromId="255" toId="46">
 </dataflow>
-<dataflow id="263" from="output_stream_V_data_V" to="call_ln0" fromId="87" toId="46">
+<dataflow id="263" from="output" to="call_ln0" fromId="22" toId="46">
 </dataflow>
-<dataflow id="264" from="output_stream_V_keep_V" to="call_ln0" fromId="88" toId="46">
+<dataflow id="264" from="output_stream_V_data_V" to="call_ln0" fromId="87" toId="46">
 </dataflow>
-<dataflow id="265" from="output_stream_V_strb_V" to="call_ln0" fromId="89" toId="46">
+<dataflow id="265" from="output_stream_V_keep_V" to="call_ln0" fromId="88" toId="46">
 </dataflow>
-<dataflow id="266" from="output_stream_V_last_V" to="call_ln0" fromId="90" toId="46">
+<dataflow id="266" from="output_stream_V_strb_V" to="call_ln0" fromId="89" toId="46">
 </dataflow>
-<dataflow id="267" from="output_V" to="call_ln0" fromId="22" toId="46">
+<dataflow id="267" from="output_stream_V_last_V" to="call_ln0" fromId="90" toId="46">
 </dataflow>
-<dataflow id="269" from="_ssdm_op_SpecDataflowPipeline" to="specdataflowpipeline_ln158" fromId="268" toId="47">
+<dataflow id="269" from="_ssdm_op_SpecDataflowPipeline" to="specdataflowpipeline_ln135" fromId="268" toId="47">
 </dataflow>
-<dataflow id="271" from="StgValue_270" to="specdataflowpipeline_ln158" fromId="270" toId="47">
+<dataflow id="271" from="StgValue_270" to="specdataflowpipeline_ln135" fromId="270" toId="47">
 </dataflow>
-<dataflow id="273" from="StgValue_272" to="specdataflowpipeline_ln158" fromId="272" toId="47">
+<dataflow id="273" from="StgValue_272" to="specdataflowpipeline_ln135" fromId="272" toId="47">
 </dataflow>
-<dataflow id="275" from="empty_0" to="specdataflowpipeline_ln158" fromId="274" toId="47">
+<dataflow id="275" from="empty_0" to="specdataflowpipeline_ln135" fromId="274" toId="47">
 </dataflow>
 <dataflow id="277" from="_ssdm_op_SpecTopModule" to="spectopmodule_ln130" fromId="276" toId="48">
 </dataflow>
@@ -1417,41 +1417,41 @@ entry:32 %ret_ln177 = ret
 </dataflow>
 <dataflow id="365" from="StgValue_272" to="specinterface_ln0" fromId="272" toId="59">
 </dataflow>
-<dataflow id="367" from="_ssdm_op_SpecAXISSideChannel" to="specaxissidechannel_ln148" fromId="366" toId="60">
+<dataflow id="367" from="_ssdm_op_SpecAXISSideChannel" to="specaxissidechannel_ln149" fromId="366" toId="60">
 </dataflow>
-<dataflow id="368" from="output_stream_V_data_V" to="specaxissidechannel_ln148" fromId="87" toId="60">
+<dataflow id="368" from="output_stream_V_data_V" to="specaxissidechannel_ln149" fromId="87" toId="60">
 </dataflow>
-<dataflow id="369" from="output_stream_V_keep_V" to="specaxissidechannel_ln148" fromId="88" toId="60">
+<dataflow id="369" from="output_stream_V_keep_V" to="specaxissidechannel_ln149" fromId="88" toId="60">
 </dataflow>
-<dataflow id="370" from="output_stream_V_strb_V" to="specaxissidechannel_ln148" fromId="89" toId="60">
+<dataflow id="370" from="output_stream_V_strb_V" to="specaxissidechannel_ln149" fromId="89" toId="60">
 </dataflow>
-<dataflow id="372" from="StgValue_371" to="specaxissidechannel_ln148" fromId="371" toId="60">
+<dataflow id="372" from="StgValue_371" to="specaxissidechannel_ln149" fromId="371" toId="60">
 </dataflow>
-<dataflow id="373" from="output_stream_V_last_V" to="specaxissidechannel_ln148" fromId="90" toId="60">
+<dataflow id="373" from="output_stream_V_last_V" to="specaxissidechannel_ln149" fromId="90" toId="60">
 </dataflow>
-<dataflow id="374" from="StgValue_371" to="specaxissidechannel_ln148" fromId="371" toId="60">
+<dataflow id="374" from="StgValue_371" to="specaxissidechannel_ln149" fromId="371" toId="60">
 </dataflow>
-<dataflow id="375" from="StgValue_371" to="specaxissidechannel_ln148" fromId="371" toId="60">
+<dataflow id="375" from="StgValue_371" to="specaxissidechannel_ln149" fromId="371" toId="60">
 </dataflow>
-<dataflow id="377" from="empty_3" to="specaxissidechannel_ln148" fromId="376" toId="60">
+<dataflow id="377" from="empty_3" to="specaxissidechannel_ln149" fromId="376" toId="60">
 </dataflow>
-<dataflow id="378" from="_ssdm_op_SpecAXISSideChannel" to="specaxissidechannel_ln148" fromId="366" toId="61">
+<dataflow id="378" from="_ssdm_op_SpecAXISSideChannel" to="specaxissidechannel_ln149" fromId="366" toId="61">
 </dataflow>
-<dataflow id="379" from="input_stream_V_data_V" to="specaxissidechannel_ln148" fromId="83" toId="61">
+<dataflow id="379" from="input_stream_V_data_V" to="specaxissidechannel_ln149" fromId="83" toId="61">
 </dataflow>
-<dataflow id="380" from="input_stream_V_keep_V" to="specaxissidechannel_ln148" fromId="84" toId="61">
+<dataflow id="380" from="input_stream_V_keep_V" to="specaxissidechannel_ln149" fromId="84" toId="61">
 </dataflow>
-<dataflow id="381" from="input_stream_V_strb_V" to="specaxissidechannel_ln148" fromId="85" toId="61">
+<dataflow id="381" from="input_stream_V_strb_V" to="specaxissidechannel_ln149" fromId="85" toId="61">
 </dataflow>
-<dataflow id="382" from="StgValue_371" to="specaxissidechannel_ln148" fromId="371" toId="61">
+<dataflow id="382" from="StgValue_371" to="specaxissidechannel_ln149" fromId="371" toId="61">
 </dataflow>
-<dataflow id="383" from="input_stream_V_last_V" to="specaxissidechannel_ln148" fromId="86" toId="61">
+<dataflow id="383" from="input_stream_V_last_V" to="specaxissidechannel_ln149" fromId="86" toId="61">
 </dataflow>
-<dataflow id="384" from="StgValue_371" to="specaxissidechannel_ln148" fromId="371" toId="61">
+<dataflow id="384" from="StgValue_371" to="specaxissidechannel_ln149" fromId="371" toId="61">
 </dataflow>
-<dataflow id="385" from="StgValue_371" to="specaxissidechannel_ln148" fromId="371" toId="61">
+<dataflow id="385" from="StgValue_371" to="specaxissidechannel_ln149" fromId="371" toId="61">
 </dataflow>
-<dataflow id="387" from="empty_4" to="specaxissidechannel_ln148" fromId="386" toId="61">
+<dataflow id="387" from="empty_4" to="specaxissidechannel_ln149" fromId="386" toId="61">
 </dataflow>
 </dataflows>
 

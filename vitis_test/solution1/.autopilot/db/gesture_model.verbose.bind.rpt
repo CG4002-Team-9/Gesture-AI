@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'gesture_model'
 ================================================================
-* Date:           Mon Sep  2 11:41:51 2024
+* Date:           Mon Sep  2 18:51:15 2024
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        vitis_test
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  7.268 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  7.114 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
     |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
     +---------+---------+----------+----------+-------+-------+----------+
-    |    23128|    23128|  0.231 ms|  0.231 ms|  15111|  15111|  dataflow|
+    |    69392|    69392|  0.694 ms|  0.694 ms|  60430|  60430|  dataflow|
     +---------+---------+----------+----------+-------+-------+----------+
 
     + Detail: 
@@ -38,15 +38,15 @@
         |                                        |                             |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
         |                Instance                |            Module           |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
         +----------------------------------------+-----------------------------+---------+---------+-----------+-----------+-------+-------+---------+
-        |grp_Loop_VITIS_LOOP_148_1_proc8_fu_164  |Loop_VITIS_LOOP_148_1_proc8  |      123|      123|   1.230 us|   1.230 us|    123|    123|       no|
-        |grp_conv1d_0_fu_177                     |conv1d_0                     |     3782|     3782|  37.820 us|  37.820 us|   3782|   3782|       no|
-        |grp_batch_normalization_0_fu_191        |batch_normalization_0        |     1961|     1961|  19.610 us|  19.610 us|   1961|   1961|       no|
-        |grp_max_pooling1d_0_fu_205              |max_pooling1d_0              |      946|      946|   9.460 us|   9.460 us|    946|    946|       no|
+        |grp_Loop_VITIS_LOOP_149_1_proc8_fu_164  |Loop_VITIS_LOOP_149_1_proc8  |      122|      122|   1.220 us|   1.220 us|    122|    122|       no|
+        |grp_conv1d_0_fu_177                     |conv1d_0                     |     3799|     3799|  37.990 us|  37.990 us|   3799|   3799|       no|
+        |grp_batch_normalization_0_fu_191        |batch_normalization_0        |     1918|     1918|  19.180 us|  19.180 us|   1918|   1918|       no|
+        |grp_max_pooling1d_0_fu_205              |max_pooling1d_0              |     1892|     1892|  18.920 us|  18.920 us|   1892|   1892|       no|
         |grp_Loop_VITIS_LOOP_77_1_proc_fu_211    |Loop_VITIS_LOOP_77_1_proc    |      946|      946|   9.460 us|   9.460 us|    946|    946|       no|
-        |grp_dense_0_fu_217                      |dense_0                      |    15110|    15110|   0.151 ms|   0.151 ms|  15110|  15110|       no|
-        |grp_batch_normalization_1_fu_227        |batch_normalization_1        |       89|       89|   0.890 us|   0.890 us|     89|     89|       no|
-        |grp_dense_1_fu_241                      |dense_1                      |      164|      164|   1.640 us|   1.640 us|    164|    164|       no|
-        |grp_Loop_VITIS_LOOP_171_3_proc9_fu_281  |Loop_VITIS_LOOP_171_3_proc9  |       24|       24|   0.240 us|   0.240 us|     24|     24|       no|
+        |grp_dense_0_fu_217                      |dense_0                      |    60429|    60429|   0.604 ms|   0.604 ms|  60429|  60429|       no|
+        |grp_batch_normalization_1_fu_227        |batch_normalization_1        |       45|       45|   0.450 us|   0.450 us|     45|     45|       no|
+        |grp_dense_1_fu_241                      |dense_1                      |      234|      234|   2.340 us|   2.340 us|    234|    234|       no|
+        |grp_Loop_VITIS_LOOP_171_3_proc9_fu_281  |Loop_VITIS_LOOP_171_3_proc9  |       23|       23|   0.230 us|   0.230 us|     23|     23|       no|
         +----------------------------------------+-----------------------------+---------+---------+-----------+-----------+-------+-------+---------+
 
         * Loop: 
@@ -108,71 +108,71 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.23>
-ST_1 : Operation 21 [1/1] (1.23ns)   --->   "%input_V_0 = alloca i64 1" [vitis_test/nnet/core.cpp:137]   --->   Operation 21 'alloca' 'input_V_0' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 22 [1/1] (0.67ns)   --->   "%output_V = alloca i64 1" [vitis_test/nnet/core.cpp:138]   --->   Operation 22 'alloca' 'output_V' <Predicate = true> <Delay = 0.67>
-ST_1 : Operation 23 [1/1] (1.23ns)   --->   "%conv1d_out_0_V = alloca i64 1" [vitis_test/nnet/core.cpp:140]   --->   Operation 23 'alloca' 'conv1d_out_0_V' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 24 [1/1] (1.23ns)   --->   "%batch_norm_out_0_V = alloca i64 1" [vitis_test/nnet/core.cpp:141]   --->   Operation 24 'alloca' 'batch_norm_out_0_V' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 25 [1/1] (1.23ns)   --->   "%max_pool_out_0_V = alloca i64 1" [vitis_test/nnet/core.cpp:142]   --->   Operation 25 'alloca' 'max_pool_out_0_V' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 26 [1/1] (1.23ns)   --->   "%flatten_out_0_V = alloca i64 1" [vitis_test/nnet/core.cpp:143]   --->   Operation 26 'alloca' 'flatten_out_0_V' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 27 [1/1] (0.67ns)   --->   "%dense_out_0_V = alloca i64 1" [vitis_test/nnet/core.cpp:144]   --->   Operation 27 'alloca' 'dense_out_0_V' <Predicate = true> <Delay = 0.67>
-ST_1 : Operation 28 [1/1] (0.67ns)   --->   "%batch_norm_out_1_V = alloca i64 1" [vitis_test/nnet/core.cpp:145]   --->   Operation 28 'alloca' 'batch_norm_out_1_V' <Predicate = true> <Delay = 0.67>
+ST_1 : Operation 21 [1/1] (1.23ns)   --->   "%input_0 = alloca i64 1" [vitis_test/nnet/core.cpp:138]   --->   Operation 21 'alloca' 'input_0' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 22 [1/1] (0.67ns)   --->   "%output = alloca i64 1" [vitis_test/nnet/core.cpp:139]   --->   Operation 22 'alloca' 'output' <Predicate = true> <Delay = 0.67>
+ST_1 : Operation 23 [1/1] (1.23ns)   --->   "%conv1d_out_0 = alloca i64 1" [vitis_test/nnet/core.cpp:141]   --->   Operation 23 'alloca' 'conv1d_out_0' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 24 [1/1] (1.23ns)   --->   "%batch_norm_out_0 = alloca i64 1" [vitis_test/nnet/core.cpp:142]   --->   Operation 24 'alloca' 'batch_norm_out_0' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 25 [1/1] (1.23ns)   --->   "%max_pool_out_0 = alloca i64 1" [vitis_test/nnet/core.cpp:143]   --->   Operation 25 'alloca' 'max_pool_out_0' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 26 [1/1] (1.23ns)   --->   "%flatten_out_0 = alloca i64 1" [vitis_test/nnet/core.cpp:144]   --->   Operation 26 'alloca' 'flatten_out_0' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 27 [1/1] (0.67ns)   --->   "%dense_out_0 = alloca i64 1" [vitis_test/nnet/core.cpp:145]   --->   Operation 27 'alloca' 'dense_out_0' <Predicate = true> <Delay = 0.67>
+ST_1 : Operation 28 [1/1] (0.67ns)   --->   "%batch_norm_out_1 = alloca i64 1" [vitis_test/nnet/core.cpp:146]   --->   Operation 28 'alloca' 'batch_norm_out_1' <Predicate = true> <Delay = 0.67>
 
 State 2 <SV = 1> <Delay = 0.00>
-ST_2 : Operation 29 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_148_1_proc8, i24 %input_V_0, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 %input_stream_V_last_V"   --->   Operation 29 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 29 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_149_1_proc8, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 %input_stream_V_last_V, i32 %input_0"   --->   Operation 29 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 30 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_148_1_proc8, i24 %input_V_0, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 %input_stream_V_last_V"   --->   Operation 30 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 30 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_149_1_proc8, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 %input_stream_V_last_V, i32 %input_0"   --->   Operation 30 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 31 [2/2] (0.00ns)   --->   "%call_ln159 = call void @conv1d_0, i24 %input_V_0, i23 %conv1d_out_0_V, i18 %conv1d_0_weights_V_0_0, i18 %conv1d_0_weights_V_1_0, i18 %conv1d_0_weights_V_2_0, i17 %conv1d_0_biases_V" [vitis_test/nnet/core.cpp:159]   --->   Operation 31 'call' 'call_ln159' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 31 [2/2] (0.00ns)   --->   "%call_ln159 = call void @conv1d_0, i32 %input_0, i32 %conv1d_out_0, i32 %conv1d_0_weights_0_0, i32 %conv1d_0_weights_1_0, i32 %conv1d_0_weights_2_0, i32 %conv1d_0_biases" [vitis_test/nnet/core.cpp:159]   --->   Operation 31 'call' 'call_ln159' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 5 <SV = 4> <Delay = 0.00>
-ST_5 : Operation 32 [1/2] (0.00ns)   --->   "%call_ln159 = call void @conv1d_0, i24 %input_V_0, i23 %conv1d_out_0_V, i18 %conv1d_0_weights_V_0_0, i18 %conv1d_0_weights_V_1_0, i18 %conv1d_0_weights_V_2_0, i17 %conv1d_0_biases_V" [vitis_test/nnet/core.cpp:159]   --->   Operation 32 'call' 'call_ln159' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 32 [1/2] (0.00ns)   --->   "%call_ln159 = call void @conv1d_0, i32 %input_0, i32 %conv1d_out_0, i32 %conv1d_0_weights_0_0, i32 %conv1d_0_weights_1_0, i32 %conv1d_0_weights_2_0, i32 %conv1d_0_biases" [vitis_test/nnet/core.cpp:159]   --->   Operation 32 'call' 'call_ln159' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 6 <SV = 5> <Delay = 0.00>
-ST_6 : Operation 33 [2/2] (0.00ns)   --->   "%call_ln160 = call void @batch_normalization_0, i23 %conv1d_out_0_V, i24 %batch_norm_out_0_V, i15 %batch_norm_0_mean_V, i11 %batch_norm_0_variance_V, i19 %batch_norm_0_gamma_V, i17 %batch_norm_0_beta_V" [vitis_test/nnet/core.cpp:160]   --->   Operation 33 'call' 'call_ln160' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 33 [2/2] (0.00ns)   --->   "%call_ln160 = call void @batch_normalization_0, i32 %conv1d_out_0, i32 %batch_norm_out_0, i32 %batch_norm_0_gamma, i32 %batch_norm_0_mean, i32 %batch_norm_0_variance, i32 %batch_norm_0_beta" [vitis_test/nnet/core.cpp:160]   --->   Operation 33 'call' 'call_ln160' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 7 <SV = 6> <Delay = 0.00>
-ST_7 : Operation 34 [1/2] (0.00ns)   --->   "%call_ln160 = call void @batch_normalization_0, i23 %conv1d_out_0_V, i24 %batch_norm_out_0_V, i15 %batch_norm_0_mean_V, i11 %batch_norm_0_variance_V, i19 %batch_norm_0_gamma_V, i17 %batch_norm_0_beta_V" [vitis_test/nnet/core.cpp:160]   --->   Operation 34 'call' 'call_ln160' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 34 [1/2] (0.00ns)   --->   "%call_ln160 = call void @batch_normalization_0, i32 %conv1d_out_0, i32 %batch_norm_out_0, i32 %batch_norm_0_gamma, i32 %batch_norm_0_mean, i32 %batch_norm_0_variance, i32 %batch_norm_0_beta" [vitis_test/nnet/core.cpp:160]   --->   Operation 34 'call' 'call_ln160' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 8 <SV = 7> <Delay = 0.00>
-ST_8 : Operation 35 [2/2] (0.00ns)   --->   "%call_ln161 = call void @max_pooling1d_0, i24 %batch_norm_out_0_V, i24 %max_pool_out_0_V" [vitis_test/nnet/core.cpp:161]   --->   Operation 35 'call' 'call_ln161' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 35 [2/2] (0.00ns)   --->   "%call_ln161 = call void @max_pooling1d_0, i32 %batch_norm_out_0, i32 %max_pool_out_0" [vitis_test/nnet/core.cpp:161]   --->   Operation 35 'call' 'call_ln161' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 9 <SV = 8> <Delay = 0.00>
-ST_9 : Operation 36 [1/2] (0.00ns)   --->   "%call_ln161 = call void @max_pooling1d_0, i24 %batch_norm_out_0_V, i24 %max_pool_out_0_V" [vitis_test/nnet/core.cpp:161]   --->   Operation 36 'call' 'call_ln161' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 36 [1/2] (0.00ns)   --->   "%call_ln161 = call void @max_pooling1d_0, i32 %batch_norm_out_0, i32 %max_pool_out_0" [vitis_test/nnet/core.cpp:161]   --->   Operation 36 'call' 'call_ln161' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 10 <SV = 9> <Delay = 0.00>
-ST_10 : Operation 37 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_77_1_proc, i24 %max_pool_out_0_V, i24 %flatten_out_0_V"   --->   Operation 37 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 37 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_77_1_proc, i32 %max_pool_out_0, i32 %flatten_out_0"   --->   Operation 37 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 11 <SV = 10> <Delay = 0.00>
-ST_11 : Operation 38 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_77_1_proc, i24 %max_pool_out_0_V, i24 %flatten_out_0_V"   --->   Operation 38 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 38 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_77_1_proc, i32 %max_pool_out_0, i32 %flatten_out_0"   --->   Operation 38 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 12 <SV = 11> <Delay = 0.00>
-ST_12 : Operation 39 [2/2] (0.00ns)   --->   "%call_ln163 = call void @dense_0, i24 %flatten_out_0_V, i23 %dense_out_0_V, i17 %dense_0_biases_V, i18 %dense_0_weights_V" [vitis_test/nnet/core.cpp:163]   --->   Operation 39 'call' 'call_ln163' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 39 [2/2] (0.00ns)   --->   "%call_ln163 = call void @dense_0, i32 %flatten_out_0, i32 %dense_out_0, i32 %dense_0_biases, i32 %dense_0_weights" [vitis_test/nnet/core.cpp:163]   --->   Operation 39 'call' 'call_ln163' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 13 <SV = 12> <Delay = 0.00>
-ST_13 : Operation 40 [1/2] (0.00ns)   --->   "%call_ln163 = call void @dense_0, i24 %flatten_out_0_V, i23 %dense_out_0_V, i17 %dense_0_biases_V, i18 %dense_0_weights_V" [vitis_test/nnet/core.cpp:163]   --->   Operation 40 'call' 'call_ln163' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 40 [1/2] (0.00ns)   --->   "%call_ln163 = call void @dense_0, i32 %flatten_out_0, i32 %dense_out_0, i32 %dense_0_biases, i32 %dense_0_weights" [vitis_test/nnet/core.cpp:163]   --->   Operation 40 'call' 'call_ln163' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 14 <SV = 13> <Delay = 0.00>
-ST_14 : Operation 41 [2/2] (0.00ns)   --->   "%call_ln164 = call void @batch_normalization_1, i23 %dense_out_0_V, i24 %batch_norm_out_1_V, i19 %batch_norm_1_mean_V, i18 %batch_norm_1_variance_V, i20 %batch_norm_1_gamma_V, i18 %batch_norm_1_beta_V" [vitis_test/nnet/core.cpp:164]   --->   Operation 41 'call' 'call_ln164' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 41 [2/2] (0.00ns)   --->   "%call_ln164 = call void @batch_normalization_1, i32 %dense_out_0, i32 %batch_norm_out_1, i32 %batch_norm_1_gamma, i32 %batch_norm_1_mean, i32 %batch_norm_1_variance, i32 %batch_norm_1_beta" [vitis_test/nnet/core.cpp:164]   --->   Operation 41 'call' 'call_ln164' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 15 <SV = 14> <Delay = 0.00>
-ST_15 : Operation 42 [1/2] (0.00ns)   --->   "%call_ln164 = call void @batch_normalization_1, i23 %dense_out_0_V, i24 %batch_norm_out_1_V, i19 %batch_norm_1_mean_V, i18 %batch_norm_1_variance_V, i20 %batch_norm_1_gamma_V, i18 %batch_norm_1_beta_V" [vitis_test/nnet/core.cpp:164]   --->   Operation 42 'call' 'call_ln164' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_15 : Operation 42 [1/2] (0.00ns)   --->   "%call_ln164 = call void @batch_normalization_1, i32 %dense_out_0, i32 %batch_norm_out_1, i32 %batch_norm_1_gamma, i32 %batch_norm_1_mean, i32 %batch_norm_1_variance, i32 %batch_norm_1_beta" [vitis_test/nnet/core.cpp:164]   --->   Operation 42 'call' 'call_ln164' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 16 <SV = 15> <Delay = 0.00>
-ST_16 : Operation 43 [2/2] (0.00ns)   --->   "%call_ln165 = call void @dense_1, i24 %batch_norm_out_1_V, i24 %output_V, i19 %dense_1_weights_V_0, i19 %dense_1_weights_V_1, i19 %dense_1_weights_V_2, i19 %dense_1_weights_V_3, i19 %dense_1_weights_V_4, i19 %dense_1_weights_V_5, i19 %dense_1_weights_V_6, i19 %dense_1_weights_V_7, i19 %dense_1_weights_V_8, i19 %dense_1_weights_V_9, i19 %dense_1_weights_V_10, i19 %dense_1_weights_V_11, i19 %dense_1_weights_V_12, i19 %dense_1_weights_V_13, i19 %dense_1_weights_V_14, i19 %dense_1_weights_V_15, i18 %dense_1_biases_V" [vitis_test/nnet/core.cpp:165]   --->   Operation 43 'call' 'call_ln165' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 43 [2/2] (0.00ns)   --->   "%call_ln165 = call void @dense_1, i32 %batch_norm_out_1, i32 %output, i32 %dense_1_weights_0, i32 %dense_1_weights_1, i32 %dense_1_weights_2, i32 %dense_1_weights_3, i32 %dense_1_weights_4, i32 %dense_1_weights_5, i32 %dense_1_weights_6, i32 %dense_1_weights_7, i32 %dense_1_weights_8, i32 %dense_1_weights_9, i32 %dense_1_weights_10, i32 %dense_1_weights_11, i32 %dense_1_weights_12, i32 %dense_1_weights_13, i32 %dense_1_weights_14, i32 %dense_1_weights_15, i32 %dense_1_biases" [vitis_test/nnet/core.cpp:165]   --->   Operation 43 'call' 'call_ln165' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 17 <SV = 16> <Delay = 0.00>
-ST_17 : Operation 44 [1/2] (0.00ns)   --->   "%call_ln165 = call void @dense_1, i24 %batch_norm_out_1_V, i24 %output_V, i19 %dense_1_weights_V_0, i19 %dense_1_weights_V_1, i19 %dense_1_weights_V_2, i19 %dense_1_weights_V_3, i19 %dense_1_weights_V_4, i19 %dense_1_weights_V_5, i19 %dense_1_weights_V_6, i19 %dense_1_weights_V_7, i19 %dense_1_weights_V_8, i19 %dense_1_weights_V_9, i19 %dense_1_weights_V_10, i19 %dense_1_weights_V_11, i19 %dense_1_weights_V_12, i19 %dense_1_weights_V_13, i19 %dense_1_weights_V_14, i19 %dense_1_weights_V_15, i18 %dense_1_biases_V" [vitis_test/nnet/core.cpp:165]   --->   Operation 44 'call' 'call_ln165' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_17 : Operation 44 [1/2] (0.00ns)   --->   "%call_ln165 = call void @dense_1, i32 %batch_norm_out_1, i32 %output, i32 %dense_1_weights_0, i32 %dense_1_weights_1, i32 %dense_1_weights_2, i32 %dense_1_weights_3, i32 %dense_1_weights_4, i32 %dense_1_weights_5, i32 %dense_1_weights_6, i32 %dense_1_weights_7, i32 %dense_1_weights_8, i32 %dense_1_weights_9, i32 %dense_1_weights_10, i32 %dense_1_weights_11, i32 %dense_1_weights_12, i32 %dense_1_weights_13, i32 %dense_1_weights_14, i32 %dense_1_weights_15, i32 %dense_1_biases" [vitis_test/nnet/core.cpp:165]   --->   Operation 44 'call' 'call_ln165' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 18 <SV = 17> <Delay = 0.00>
-ST_18 : Operation 45 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_171_3_proc9, i32 %output_stream_V_data_V, i4 %output_stream_V_keep_V, i4 %output_stream_V_strb_V, i1 %output_stream_V_last_V, i24 %output_V"   --->   Operation 45 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_18 : Operation 45 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_171_3_proc9, i32 %output, i32 %output_stream_V_data_V, i4 %output_stream_V_keep_V, i4 %output_stream_V_strb_V, i1 %output_stream_V_last_V"   --->   Operation 45 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 19 <SV = 18> <Delay = 0.00>
-ST_19 : Operation 46 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_171_3_proc9, i32 %output_stream_V_data_V, i4 %output_stream_V_keep_V, i4 %output_stream_V_strb_V, i1 %output_stream_V_last_V, i24 %output_V"   --->   Operation 46 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_19 : Operation 46 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_171_3_proc9, i32 %output, i32 %output_stream_V_data_V, i4 %output_stream_V_keep_V, i4 %output_stream_V_strb_V, i1 %output_stream_V_last_V"   --->   Operation 46 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 20 <SV = 19> <Delay = 0.00>
-ST_20 : Operation 47 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln158 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_0" [vitis_test/nnet/core.cpp:158]   --->   Operation 47 'specdataflowpipeline' 'specdataflowpipeline_ln158' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 47 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln135 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_0" [vitis_test/nnet/core.cpp:135]   --->   Operation 47 'specdataflowpipeline' 'specdataflowpipeline_ln135' <Predicate = true> <Delay = 0.00>
 ST_20 : Operation 48 [1/1] (0.00ns)   --->   "%spectopmodule_ln130 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_8" [vitis_test/nnet/core.cpp:130]   --->   Operation 48 'spectopmodule' 'spectopmodule_ln130' <Predicate = true> <Delay = 0.00>
 ST_20 : Operation 49 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 %input_stream_V_last_V, void @empty_13, i32 1, i32 1, void @empty, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 49 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_20 : Operation 50 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %input_stream_V_data_V"   --->   Operation 50 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
@@ -185,8 +185,8 @@ ST_20 : Operation 56 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap voi
 ST_20 : Operation 57 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %output_stream_V_strb_V"   --->   Operation 57 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_20 : Operation 58 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %output_stream_V_last_V"   --->   Operation 58 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_20 : Operation 59 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_2, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 59 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_20 : Operation 60 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln148 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %output_stream_V_data_V, i4 %output_stream_V_keep_V, i4 %output_stream_V_strb_V, i1 0, i1 %output_stream_V_last_V, i1 0, i1 0, void @empty_3" [vitis_test/nnet/core.cpp:148]   --->   Operation 60 'specaxissidechannel' 'specaxissidechannel_ln148' <Predicate = true> <Delay = 0.00>
-ST_20 : Operation 61 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln148 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 0, i1 %input_stream_V_last_V, i1 0, i1 0, void @empty_4" [vitis_test/nnet/core.cpp:148]   --->   Operation 61 'specaxissidechannel' 'specaxissidechannel_ln148' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 60 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln149 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %output_stream_V_data_V, i4 %output_stream_V_keep_V, i4 %output_stream_V_strb_V, i1 0, i1 %output_stream_V_last_V, i1 0, i1 0, void @empty_3" [vitis_test/nnet/core.cpp:149]   --->   Operation 60 'specaxissidechannel' 'specaxissidechannel_ln149' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 61 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln149 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %input_stream_V_data_V, i4 %input_stream_V_keep_V, i4 %input_stream_V_strb_V, i1 0, i1 %input_stream_V_last_V, i1 0, i1 0, void @empty_4" [vitis_test/nnet/core.cpp:149]   --->   Operation 61 'specaxissidechannel' 'specaxissidechannel_ln149' <Predicate = true> <Delay = 0.00>
 ST_20 : Operation 62 [1/1] (0.00ns)   --->   "%ret_ln177 = ret" [vitis_test/nnet/core.cpp:177]   --->   Operation 62 'ret' 'ret_ln177' <Predicate = true> <Delay = 0.00>
 
 
@@ -209,51 +209,51 @@ Port [ output_stream_V_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=
 Port [ output_stream_V_keep_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
 Port [ output_stream_V_strb_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
 Port [ output_stream_V_last_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
-Port [ conv1d_0_weights_V_0_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ conv1d_0_weights_V_1_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ conv1d_0_weights_V_2_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ conv1d_0_biases_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ batch_norm_0_mean_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ batch_norm_0_variance_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ batch_norm_0_gamma_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ batch_norm_0_beta_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_0_biases_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_0_weights_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ batch_norm_1_mean_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ batch_norm_1_variance_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ batch_norm_1_gamma_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ batch_norm_1_beta_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_1_weights_V_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_1_weights_V_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_1_weights_V_2]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_1_weights_V_3]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_1_weights_V_4]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_1_weights_V_5]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_1_weights_V_6]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_1_weights_V_7]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_1_weights_V_8]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_1_weights_V_9]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_1_weights_V_10]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_1_weights_V_11]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_1_weights_V_12]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_1_weights_V_13]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_1_weights_V_14]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_1_weights_V_15]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ dense_1_biases_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ conv1d_0_weights_0_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ conv1d_0_weights_1_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ conv1d_0_weights_2_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ conv1d_0_biases]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ batch_norm_0_gamma]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ batch_norm_0_mean]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ batch_norm_0_variance]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ batch_norm_0_beta]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_0_biases]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_0_weights]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ batch_norm_1_gamma]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ batch_norm_1_mean]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ batch_norm_1_variance]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ batch_norm_1_beta]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_1_weights_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_1_weights_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_1_weights_2]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_1_weights_3]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_1_weights_4]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_1_weights_5]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_1_weights_6]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_1_weights_7]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_1_weights_8]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_1_weights_9]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_1_weights_10]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_1_weights_11]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_1_weights_12]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_1_weights_13]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_1_weights_14]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_1_weights_15]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dense_1_biases]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
 
 <LifeTime>
 <method=bitvector/>
-input_V_0                  (alloca              ) [ 001111000000000000000]
-output_V                   (alloca              ) [ 001111111111111111110]
-conv1d_out_0_V             (alloca              ) [ 001111110000000000000]
-batch_norm_out_0_V         (alloca              ) [ 001111111100000000000]
-max_pool_out_0_V           (alloca              ) [ 001111111111000000000]
-flatten_out_0_V            (alloca              ) [ 001111111111110000000]
-dense_out_0_V              (alloca              ) [ 001111111111111100000]
-batch_norm_out_1_V         (alloca              ) [ 001111111111111111000]
+input_0                    (alloca              ) [ 001111000000000000000]
+output                     (alloca              ) [ 001111111111111111110]
+conv1d_out_0               (alloca              ) [ 001111110000000000000]
+batch_norm_out_0           (alloca              ) [ 001111111100000000000]
+max_pool_out_0             (alloca              ) [ 001111111111000000000]
+flatten_out_0              (alloca              ) [ 001111111111110000000]
+dense_out_0                (alloca              ) [ 001111111111111100000]
+batch_norm_out_1           (alloca              ) [ 001111111111111111000]
 call_ln0                   (call                ) [ 000000000000000000000]
 call_ln159                 (call                ) [ 000000000000000000000]
 call_ln160                 (call                ) [ 000000000000000000000]
@@ -263,7 +263,7 @@ call_ln163                 (call                ) [ 000000000000000000000]
 call_ln164                 (call                ) [ 000000000000000000000]
 call_ln165                 (call                ) [ 000000000000000000000]
 call_ln0                   (call                ) [ 000000000000000000000]
-specdataflowpipeline_ln158 (specdataflowpipeline) [ 000000000000000000000]
+specdataflowpipeline_ln135 (specdataflowpipeline) [ 000000000000000000000]
 spectopmodule_ln130        (spectopmodule       ) [ 000000000000000000000]
 specinterface_ln0          (specinterface       ) [ 000000000000000000000]
 specbitsmap_ln0            (specbitsmap         ) [ 000000000000000000000]
@@ -276,8 +276,8 @@ specbitsmap_ln0            (specbitsmap         ) [ 000000000000000000000]
 specbitsmap_ln0            (specbitsmap         ) [ 000000000000000000000]
 specbitsmap_ln0            (specbitsmap         ) [ 000000000000000000000]
 specinterface_ln0          (specinterface       ) [ 000000000000000000000]
-specaxissidechannel_ln148  (specaxissidechannel ) [ 000000000000000000000]
-specaxissidechannel_ln148  (specaxissidechannel ) [ 000000000000000000000]
+specaxissidechannel_ln149  (specaxissidechannel ) [ 000000000000000000000]
+specaxissidechannel_ln149  (specaxissidechannel ) [ 000000000000000000000]
 ret_ln177                  (ret                 ) [ 000000000000000000000]
 </LifeTime>
 
@@ -356,312 +356,312 @@ ret_ln177                  (ret                 ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="16" class="1000" name="conv1d_0_weights_V_0_0">
+<comp id="16" class="1000" name="conv1d_0_weights_0_0">
 <pin_list>
 <pin id="17" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="conv1d_0_weights_V_0_0"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="conv1d_0_weights_0_0"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="18" class="1000" name="conv1d_0_weights_V_1_0">
+<comp id="18" class="1000" name="conv1d_0_weights_1_0">
 <pin_list>
 <pin id="19" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="conv1d_0_weights_V_1_0"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="conv1d_0_weights_1_0"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="20" class="1000" name="conv1d_0_weights_V_2_0">
+<comp id="20" class="1000" name="conv1d_0_weights_2_0">
 <pin_list>
 <pin id="21" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="conv1d_0_weights_V_2_0"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="conv1d_0_weights_2_0"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="22" class="1000" name="conv1d_0_biases_V">
+<comp id="22" class="1000" name="conv1d_0_biases">
 <pin_list>
 <pin id="23" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="conv1d_0_biases_V"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="conv1d_0_biases"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="24" class="1000" name="batch_norm_0_mean_V">
+<comp id="24" class="1000" name="batch_norm_0_gamma">
 <pin_list>
 <pin id="25" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="batch_norm_0_mean_V"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="batch_norm_0_gamma"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="26" class="1000" name="batch_norm_0_variance_V">
+<comp id="26" class="1000" name="batch_norm_0_mean">
 <pin_list>
 <pin id="27" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="batch_norm_0_variance_V"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="batch_norm_0_mean"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="28" class="1000" name="batch_norm_0_gamma_V">
+<comp id="28" class="1000" name="batch_norm_0_variance">
 <pin_list>
 <pin id="29" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="batch_norm_0_gamma_V"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="batch_norm_0_variance"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="30" class="1000" name="batch_norm_0_beta_V">
+<comp id="30" class="1000" name="batch_norm_0_beta">
 <pin_list>
 <pin id="31" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="batch_norm_0_beta_V"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="batch_norm_0_beta"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="32" class="1000" name="dense_0_biases_V">
+<comp id="32" class="1000" name="dense_0_biases">
 <pin_list>
 <pin id="33" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_0_biases_V"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_0_biases"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="34" class="1000" name="dense_0_weights_V">
+<comp id="34" class="1000" name="dense_0_weights">
 <pin_list>
 <pin id="35" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_0_weights_V"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_0_weights"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="36" class="1000" name="batch_norm_1_mean_V">
+<comp id="36" class="1000" name="batch_norm_1_gamma">
 <pin_list>
 <pin id="37" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="batch_norm_1_mean_V"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="batch_norm_1_gamma"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="38" class="1000" name="batch_norm_1_variance_V">
+<comp id="38" class="1000" name="batch_norm_1_mean">
 <pin_list>
 <pin id="39" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="batch_norm_1_variance_V"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="batch_norm_1_mean"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="40" class="1000" name="batch_norm_1_gamma_V">
+<comp id="40" class="1000" name="batch_norm_1_variance">
 <pin_list>
 <pin id="41" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="batch_norm_1_gamma_V"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="batch_norm_1_variance"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="42" class="1000" name="batch_norm_1_beta_V">
+<comp id="42" class="1000" name="batch_norm_1_beta">
 <pin_list>
 <pin id="43" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="batch_norm_1_beta_V"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="batch_norm_1_beta"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="44" class="1000" name="dense_1_weights_V_0">
+<comp id="44" class="1000" name="dense_1_weights_0">
 <pin_list>
 <pin id="45" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_1_weights_V_0"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_1_weights_0"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="46" class="1000" name="dense_1_weights_V_1">
+<comp id="46" class="1000" name="dense_1_weights_1">
 <pin_list>
 <pin id="47" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_1_weights_V_1"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_1_weights_1"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="48" class="1000" name="dense_1_weights_V_2">
+<comp id="48" class="1000" name="dense_1_weights_2">
 <pin_list>
 <pin id="49" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_1_weights_V_2"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_1_weights_2"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="50" class="1000" name="dense_1_weights_V_3">
+<comp id="50" class="1000" name="dense_1_weights_3">
 <pin_list>
 <pin id="51" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_1_weights_V_3"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_1_weights_3"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="52" class="1000" name="dense_1_weights_V_4">
+<comp id="52" class="1000" name="dense_1_weights_4">
 <pin_list>
 <pin id="53" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_1_weights_V_4"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_1_weights_4"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="54" class="1000" name="dense_1_weights_V_5">
+<comp id="54" class="1000" name="dense_1_weights_5">
 <pin_list>
 <pin id="55" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_1_weights_V_5"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_1_weights_5"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="56" class="1000" name="dense_1_weights_V_6">
+<comp id="56" class="1000" name="dense_1_weights_6">
 <pin_list>
 <pin id="57" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_1_weights_V_6"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_1_weights_6"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="58" class="1000" name="dense_1_weights_V_7">
+<comp id="58" class="1000" name="dense_1_weights_7">
 <pin_list>
 <pin id="59" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_1_weights_V_7"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_1_weights_7"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="60" class="1000" name="dense_1_weights_V_8">
+<comp id="60" class="1000" name="dense_1_weights_8">
 <pin_list>
 <pin id="61" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_1_weights_V_8"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_1_weights_8"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="62" class="1000" name="dense_1_weights_V_9">
+<comp id="62" class="1000" name="dense_1_weights_9">
 <pin_list>
 <pin id="63" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_1_weights_V_9"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_1_weights_9"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="64" class="1000" name="dense_1_weights_V_10">
+<comp id="64" class="1000" name="dense_1_weights_10">
 <pin_list>
 <pin id="65" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_1_weights_V_10"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_1_weights_10"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="66" class="1000" name="dense_1_weights_V_11">
+<comp id="66" class="1000" name="dense_1_weights_11">
 <pin_list>
 <pin id="67" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_1_weights_V_11"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_1_weights_11"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="68" class="1000" name="dense_1_weights_V_12">
+<comp id="68" class="1000" name="dense_1_weights_12">
 <pin_list>
 <pin id="69" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_1_weights_V_12"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_1_weights_12"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="70" class="1000" name="dense_1_weights_V_13">
+<comp id="70" class="1000" name="dense_1_weights_13">
 <pin_list>
 <pin id="71" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_1_weights_V_13"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_1_weights_13"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="72" class="1000" name="dense_1_weights_V_14">
+<comp id="72" class="1000" name="dense_1_weights_14">
 <pin_list>
 <pin id="73" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_1_weights_V_14"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_1_weights_14"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="74" class="1000" name="dense_1_weights_V_15">
+<comp id="74" class="1000" name="dense_1_weights_15">
 <pin_list>
 <pin id="75" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_1_weights_V_15"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_1_weights_15"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="76" class="1000" name="dense_1_biases_V">
+<comp id="76" class="1000" name="dense_1_biases">
 <pin_list>
 <pin id="77" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="dense_1_biases_V"/><MemPortTyVec>1 </MemPortTyVec>
+<StgValue><ssdm name="dense_1_biases"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
@@ -680,7 +680,7 @@ ret_ln177                  (ret                 ) [ 000000000000000000000]
 <pin id="81" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="Loop_VITIS_LOOP_148_1_proc8"/></StgValue>
+<StgValue><ssdm name="Loop_VITIS_LOOP_149_1_proc8"/></StgValue>
 </bind>
 </comp>
 
@@ -909,102 +909,102 @@ ret_ln177                  (ret                 ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="132" class="1004" name="input_V_0_alloca_fu_132">
+<comp id="132" class="1004" name="input_0_alloca_fu_132">
 <pin_list>
 <pin id="133" dir="0" index="0" bw="1" slack="0"/>
-<pin id="134" dir="1" index="1" bw="24" slack="2147483647"/>
+<pin id="134" dir="1" index="1" bw="32" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
-<opset="input_V_0/1 "/>
+<opset="input_0/1 "/>
 </bind>
 </comp>
 
-<comp id="136" class="1004" name="output_V_alloca_fu_136">
+<comp id="136" class="1004" name="output_alloca_fu_136">
 <pin_list>
 <pin id="137" dir="0" index="0" bw="1" slack="0"/>
-<pin id="138" dir="1" index="1" bw="24" slack="2147483647"/>
+<pin id="138" dir="1" index="1" bw="32" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
-<opset="output_V/1 "/>
+<opset="output/1 "/>
 </bind>
 </comp>
 
-<comp id="140" class="1004" name="conv1d_out_0_V_alloca_fu_140">
+<comp id="140" class="1004" name="conv1d_out_0_alloca_fu_140">
 <pin_list>
 <pin id="141" dir="0" index="0" bw="1" slack="0"/>
-<pin id="142" dir="1" index="1" bw="23" slack="2147483647"/>
+<pin id="142" dir="1" index="1" bw="32" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
-<opset="conv1d_out_0_V/1 "/>
+<opset="conv1d_out_0/1 "/>
 </bind>
 </comp>
 
-<comp id="144" class="1004" name="batch_norm_out_0_V_alloca_fu_144">
+<comp id="144" class="1004" name="batch_norm_out_0_alloca_fu_144">
 <pin_list>
 <pin id="145" dir="0" index="0" bw="1" slack="0"/>
-<pin id="146" dir="1" index="1" bw="24" slack="2147483647"/>
+<pin id="146" dir="1" index="1" bw="32" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
-<opset="batch_norm_out_0_V/1 "/>
+<opset="batch_norm_out_0/1 "/>
 </bind>
 </comp>
 
-<comp id="148" class="1004" name="max_pool_out_0_V_alloca_fu_148">
+<comp id="148" class="1004" name="max_pool_out_0_alloca_fu_148">
 <pin_list>
 <pin id="149" dir="0" index="0" bw="1" slack="0"/>
-<pin id="150" dir="1" index="1" bw="24" slack="2147483647"/>
+<pin id="150" dir="1" index="1" bw="32" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
-<opset="max_pool_out_0_V/1 "/>
+<opset="max_pool_out_0/1 "/>
 </bind>
 </comp>
 
-<comp id="152" class="1004" name="flatten_out_0_V_alloca_fu_152">
+<comp id="152" class="1004" name="flatten_out_0_alloca_fu_152">
 <pin_list>
 <pin id="153" dir="0" index="0" bw="1" slack="0"/>
-<pin id="154" dir="1" index="1" bw="24" slack="2147483647"/>
+<pin id="154" dir="1" index="1" bw="32" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
-<opset="flatten_out_0_V/1 "/>
+<opset="flatten_out_0/1 "/>
 </bind>
 </comp>
 
-<comp id="156" class="1004" name="dense_out_0_V_alloca_fu_156">
+<comp id="156" class="1004" name="dense_out_0_alloca_fu_156">
 <pin_list>
 <pin id="157" dir="0" index="0" bw="1" slack="0"/>
-<pin id="158" dir="1" index="1" bw="23" slack="2147483647"/>
+<pin id="158" dir="1" index="1" bw="32" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
-<opset="dense_out_0_V/1 "/>
+<opset="dense_out_0/1 "/>
 </bind>
 </comp>
 
-<comp id="160" class="1004" name="batch_norm_out_1_V_alloca_fu_160">
+<comp id="160" class="1004" name="batch_norm_out_1_alloca_fu_160">
 <pin_list>
 <pin id="161" dir="0" index="0" bw="1" slack="0"/>
-<pin id="162" dir="1" index="1" bw="24" slack="2147483647"/>
+<pin id="162" dir="1" index="1" bw="32" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
-<opset="batch_norm_out_1_V/1 "/>
+<opset="batch_norm_out_1/1 "/>
 </bind>
 </comp>
 
-<comp id="164" class="1004" name="grp_Loop_VITIS_LOOP_148_1_proc8_fu_164">
+<comp id="164" class="1004" name="grp_Loop_VITIS_LOOP_149_1_proc8_fu_164">
 <pin_list>
 <pin id="165" dir="0" index="0" bw="0" slack="0"/>
-<pin id="166" dir="0" index="1" bw="24" slack="2147483647"/>
-<pin id="167" dir="0" index="2" bw="32" slack="0"/>
+<pin id="166" dir="0" index="1" bw="32" slack="0"/>
+<pin id="167" dir="0" index="2" bw="4" slack="0"/>
 <pin id="168" dir="0" index="3" bw="4" slack="0"/>
-<pin id="169" dir="0" index="4" bw="4" slack="0"/>
-<pin id="170" dir="0" index="5" bw="1" slack="0"/>
+<pin id="169" dir="0" index="4" bw="1" slack="0"/>
+<pin id="170" dir="0" index="5" bw="32" slack="2147483647"/>
 <pin id="171" dir="1" index="6" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -1016,12 +1016,12 @@ ret_ln177                  (ret                 ) [ 000000000000000000000]
 <comp id="177" class="1004" name="grp_conv1d_0_fu_177">
 <pin_list>
 <pin id="178" dir="0" index="0" bw="0" slack="0"/>
-<pin id="179" dir="0" index="1" bw="24" slack="2147483647"/>
-<pin id="180" dir="0" index="2" bw="23" slack="2147483647"/>
-<pin id="181" dir="0" index="3" bw="18" slack="0"/>
-<pin id="182" dir="0" index="4" bw="18" slack="0"/>
-<pin id="183" dir="0" index="5" bw="18" slack="0"/>
-<pin id="184" dir="0" index="6" bw="17" slack="0"/>
+<pin id="179" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="180" dir="0" index="2" bw="32" slack="2147483647"/>
+<pin id="181" dir="0" index="3" bw="32" slack="0"/>
+<pin id="182" dir="0" index="4" bw="32" slack="0"/>
+<pin id="183" dir="0" index="5" bw="32" slack="0"/>
+<pin id="184" dir="0" index="6" bw="32" slack="0"/>
 <pin id="185" dir="1" index="7" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -1033,12 +1033,12 @@ ret_ln177                  (ret                 ) [ 000000000000000000000]
 <comp id="191" class="1004" name="grp_batch_normalization_0_fu_191">
 <pin_list>
 <pin id="192" dir="0" index="0" bw="0" slack="0"/>
-<pin id="193" dir="0" index="1" bw="23" slack="2147483647"/>
-<pin id="194" dir="0" index="2" bw="24" slack="2147483647"/>
-<pin id="195" dir="0" index="3" bw="15" slack="0"/>
-<pin id="196" dir="0" index="4" bw="11" slack="0"/>
-<pin id="197" dir="0" index="5" bw="19" slack="0"/>
-<pin id="198" dir="0" index="6" bw="17" slack="0"/>
+<pin id="193" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="194" dir="0" index="2" bw="32" slack="2147483647"/>
+<pin id="195" dir="0" index="3" bw="32" slack="0"/>
+<pin id="196" dir="0" index="4" bw="32" slack="0"/>
+<pin id="197" dir="0" index="5" bw="32" slack="0"/>
+<pin id="198" dir="0" index="6" bw="32" slack="0"/>
 <pin id="199" dir="1" index="7" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -1050,8 +1050,8 @@ ret_ln177                  (ret                 ) [ 000000000000000000000]
 <comp id="205" class="1004" name="grp_max_pooling1d_0_fu_205">
 <pin_list>
 <pin id="206" dir="0" index="0" bw="0" slack="0"/>
-<pin id="207" dir="0" index="1" bw="24" slack="2147483647"/>
-<pin id="208" dir="0" index="2" bw="24" slack="2147483647"/>
+<pin id="207" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="208" dir="0" index="2" bw="32" slack="2147483647"/>
 <pin id="209" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -1063,8 +1063,8 @@ ret_ln177                  (ret                 ) [ 000000000000000000000]
 <comp id="211" class="1004" name="grp_Loop_VITIS_LOOP_77_1_proc_fu_211">
 <pin_list>
 <pin id="212" dir="0" index="0" bw="0" slack="0"/>
-<pin id="213" dir="0" index="1" bw="24" slack="2147483647"/>
-<pin id="214" dir="0" index="2" bw="24" slack="2147483647"/>
+<pin id="213" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="214" dir="0" index="2" bw="32" slack="2147483647"/>
 <pin id="215" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -1076,10 +1076,10 @@ ret_ln177                  (ret                 ) [ 000000000000000000000]
 <comp id="217" class="1004" name="grp_dense_0_fu_217">
 <pin_list>
 <pin id="218" dir="0" index="0" bw="0" slack="0"/>
-<pin id="219" dir="0" index="1" bw="24" slack="2147483647"/>
-<pin id="220" dir="0" index="2" bw="23" slack="2147483647"/>
-<pin id="221" dir="0" index="3" bw="17" slack="0"/>
-<pin id="222" dir="0" index="4" bw="18" slack="0"/>
+<pin id="219" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="220" dir="0" index="2" bw="32" slack="2147483647"/>
+<pin id="221" dir="0" index="3" bw="32" slack="0"/>
+<pin id="222" dir="0" index="4" bw="32" slack="0"/>
 <pin id="223" dir="1" index="5" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -1091,12 +1091,12 @@ ret_ln177                  (ret                 ) [ 000000000000000000000]
 <comp id="227" class="1004" name="grp_batch_normalization_1_fu_227">
 <pin_list>
 <pin id="228" dir="0" index="0" bw="0" slack="0"/>
-<pin id="229" dir="0" index="1" bw="23" slack="2147483647"/>
-<pin id="230" dir="0" index="2" bw="24" slack="2147483647"/>
-<pin id="231" dir="0" index="3" bw="19" slack="0"/>
-<pin id="232" dir="0" index="4" bw="18" slack="0"/>
-<pin id="233" dir="0" index="5" bw="20" slack="0"/>
-<pin id="234" dir="0" index="6" bw="18" slack="0"/>
+<pin id="229" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="230" dir="0" index="2" bw="32" slack="2147483647"/>
+<pin id="231" dir="0" index="3" bw="32" slack="0"/>
+<pin id="232" dir="0" index="4" bw="32" slack="0"/>
+<pin id="233" dir="0" index="5" bw="32" slack="0"/>
+<pin id="234" dir="0" index="6" bw="32" slack="0"/>
 <pin id="235" dir="1" index="7" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -1108,25 +1108,25 @@ ret_ln177                  (ret                 ) [ 000000000000000000000]
 <comp id="241" class="1004" name="grp_dense_1_fu_241">
 <pin_list>
 <pin id="242" dir="0" index="0" bw="0" slack="0"/>
-<pin id="243" dir="0" index="1" bw="24" slack="2147483647"/>
-<pin id="244" dir="0" index="2" bw="24" slack="2147483647"/>
-<pin id="245" dir="0" index="3" bw="19" slack="0"/>
-<pin id="246" dir="0" index="4" bw="19" slack="0"/>
-<pin id="247" dir="0" index="5" bw="19" slack="0"/>
-<pin id="248" dir="0" index="6" bw="19" slack="0"/>
-<pin id="249" dir="0" index="7" bw="19" slack="0"/>
-<pin id="250" dir="0" index="8" bw="19" slack="0"/>
-<pin id="251" dir="0" index="9" bw="19" slack="0"/>
-<pin id="252" dir="0" index="10" bw="19" slack="0"/>
-<pin id="253" dir="0" index="11" bw="19" slack="0"/>
-<pin id="254" dir="0" index="12" bw="19" slack="0"/>
-<pin id="255" dir="0" index="13" bw="19" slack="0"/>
-<pin id="256" dir="0" index="14" bw="19" slack="0"/>
-<pin id="257" dir="0" index="15" bw="19" slack="0"/>
-<pin id="258" dir="0" index="16" bw="19" slack="0"/>
-<pin id="259" dir="0" index="17" bw="19" slack="0"/>
-<pin id="260" dir="0" index="18" bw="19" slack="0"/>
-<pin id="261" dir="0" index="19" bw="18" slack="0"/>
+<pin id="243" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="244" dir="0" index="2" bw="32" slack="2147483647"/>
+<pin id="245" dir="0" index="3" bw="32" slack="0"/>
+<pin id="246" dir="0" index="4" bw="32" slack="0"/>
+<pin id="247" dir="0" index="5" bw="32" slack="0"/>
+<pin id="248" dir="0" index="6" bw="32" slack="0"/>
+<pin id="249" dir="0" index="7" bw="32" slack="0"/>
+<pin id="250" dir="0" index="8" bw="32" slack="0"/>
+<pin id="251" dir="0" index="9" bw="32" slack="0"/>
+<pin id="252" dir="0" index="10" bw="32" slack="0"/>
+<pin id="253" dir="0" index="11" bw="32" slack="0"/>
+<pin id="254" dir="0" index="12" bw="32" slack="0"/>
+<pin id="255" dir="0" index="13" bw="32" slack="0"/>
+<pin id="256" dir="0" index="14" bw="32" slack="0"/>
+<pin id="257" dir="0" index="15" bw="32" slack="0"/>
+<pin id="258" dir="0" index="16" bw="32" slack="0"/>
+<pin id="259" dir="0" index="17" bw="32" slack="0"/>
+<pin id="260" dir="0" index="18" bw="32" slack="0"/>
+<pin id="261" dir="0" index="19" bw="32" slack="0"/>
 <pin id="262" dir="1" index="20" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -1138,11 +1138,11 @@ ret_ln177                  (ret                 ) [ 000000000000000000000]
 <comp id="281" class="1004" name="grp_Loop_VITIS_LOOP_171_3_proc9_fu_281">
 <pin_list>
 <pin id="282" dir="0" index="0" bw="0" slack="0"/>
-<pin id="283" dir="0" index="1" bw="32" slack="0"/>
-<pin id="284" dir="0" index="2" bw="4" slack="0"/>
+<pin id="283" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="284" dir="0" index="2" bw="32" slack="0"/>
 <pin id="285" dir="0" index="3" bw="4" slack="0"/>
-<pin id="286" dir="0" index="4" bw="1" slack="0"/>
-<pin id="287" dir="0" index="5" bw="24" slack="2147483647"/>
+<pin id="286" dir="0" index="4" bw="4" slack="0"/>
+<pin id="287" dir="0" index="5" bw="1" slack="0"/>
 <pin id="288" dir="1" index="6" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -1172,13 +1172,13 @@ ret_ln177                  (ret                 ) [ 000000000000000000000]
 
 <net id="172"><net_src comp="80" pin="0"/><net_sink comp="164" pin=0"/></net>
 
-<net id="173"><net_src comp="0" pin="0"/><net_sink comp="164" pin=2"/></net>
+<net id="173"><net_src comp="0" pin="0"/><net_sink comp="164" pin=1"/></net>
 
-<net id="174"><net_src comp="2" pin="0"/><net_sink comp="164" pin=3"/></net>
+<net id="174"><net_src comp="2" pin="0"/><net_sink comp="164" pin=2"/></net>
 
-<net id="175"><net_src comp="4" pin="0"/><net_sink comp="164" pin=4"/></net>
+<net id="175"><net_src comp="4" pin="0"/><net_sink comp="164" pin=3"/></net>
 
-<net id="176"><net_src comp="6" pin="0"/><net_sink comp="164" pin=5"/></net>
+<net id="176"><net_src comp="6" pin="0"/><net_sink comp="164" pin=4"/></net>
 
 <net id="186"><net_src comp="82" pin="0"/><net_sink comp="177" pin=0"/></net>
 
@@ -1258,13 +1258,13 @@ ret_ln177                  (ret                 ) [ 000000000000000000000]
 
 <net id="289"><net_src comp="96" pin="0"/><net_sink comp="281" pin=0"/></net>
 
-<net id="290"><net_src comp="8" pin="0"/><net_sink comp="281" pin=1"/></net>
+<net id="290"><net_src comp="8" pin="0"/><net_sink comp="281" pin=2"/></net>
 
-<net id="291"><net_src comp="10" pin="0"/><net_sink comp="281" pin=2"/></net>
+<net id="291"><net_src comp="10" pin="0"/><net_sink comp="281" pin=3"/></net>
 
-<net id="292"><net_src comp="12" pin="0"/><net_sink comp="281" pin=3"/></net>
+<net id="292"><net_src comp="12" pin="0"/><net_sink comp="281" pin=4"/></net>
 
-<net id="293"><net_src comp="14" pin="0"/><net_sink comp="281" pin=4"/></net>
+<net id="293"><net_src comp="14" pin="0"/><net_sink comp="281" pin=5"/></net>
 
 </net_list>
 
@@ -1282,37 +1282,37 @@ ret_ln177                  (ret                 ) [ 000000000000000000000]
 	Port: gesture_model : input_stream_V_keep_V | {2 3 }
 	Port: gesture_model : input_stream_V_strb_V | {2 3 }
 	Port: gesture_model : input_stream_V_last_V | {2 3 }
-	Port: gesture_model : conv1d_0_weights_V_0_0 | {4 5 }
-	Port: gesture_model : conv1d_0_weights_V_1_0 | {4 5 }
-	Port: gesture_model : conv1d_0_weights_V_2_0 | {4 5 }
-	Port: gesture_model : conv1d_0_biases_V | {4 5 }
-	Port: gesture_model : batch_norm_0_mean_V | {6 7 }
-	Port: gesture_model : batch_norm_0_variance_V | {6 7 }
-	Port: gesture_model : batch_norm_0_gamma_V | {6 7 }
-	Port: gesture_model : batch_norm_0_beta_V | {6 7 }
-	Port: gesture_model : dense_0_biases_V | {12 13 }
-	Port: gesture_model : dense_0_weights_V | {12 13 }
-	Port: gesture_model : batch_norm_1_mean_V | {14 15 }
-	Port: gesture_model : batch_norm_1_variance_V | {14 15 }
-	Port: gesture_model : batch_norm_1_gamma_V | {14 15 }
-	Port: gesture_model : batch_norm_1_beta_V | {14 15 }
-	Port: gesture_model : dense_1_weights_V_0 | {16 17 }
-	Port: gesture_model : dense_1_weights_V_1 | {16 17 }
-	Port: gesture_model : dense_1_weights_V_2 | {16 17 }
-	Port: gesture_model : dense_1_weights_V_3 | {16 17 }
-	Port: gesture_model : dense_1_weights_V_4 | {16 17 }
-	Port: gesture_model : dense_1_weights_V_5 | {16 17 }
-	Port: gesture_model : dense_1_weights_V_6 | {16 17 }
-	Port: gesture_model : dense_1_weights_V_7 | {16 17 }
-	Port: gesture_model : dense_1_weights_V_8 | {16 17 }
-	Port: gesture_model : dense_1_weights_V_9 | {16 17 }
-	Port: gesture_model : dense_1_weights_V_10 | {16 17 }
-	Port: gesture_model : dense_1_weights_V_11 | {16 17 }
-	Port: gesture_model : dense_1_weights_V_12 | {16 17 }
-	Port: gesture_model : dense_1_weights_V_13 | {16 17 }
-	Port: gesture_model : dense_1_weights_V_14 | {16 17 }
-	Port: gesture_model : dense_1_weights_V_15 | {16 17 }
-	Port: gesture_model : dense_1_biases_V | {16 17 }
+	Port: gesture_model : conv1d_0_weights_0_0 | {4 5 }
+	Port: gesture_model : conv1d_0_weights_1_0 | {4 5 }
+	Port: gesture_model : conv1d_0_weights_2_0 | {4 5 }
+	Port: gesture_model : conv1d_0_biases | {4 5 }
+	Port: gesture_model : batch_norm_0_gamma | {6 7 }
+	Port: gesture_model : batch_norm_0_mean | {6 7 }
+	Port: gesture_model : batch_norm_0_variance | {6 7 }
+	Port: gesture_model : batch_norm_0_beta | {6 7 }
+	Port: gesture_model : dense_0_biases | {12 13 }
+	Port: gesture_model : dense_0_weights | {12 13 }
+	Port: gesture_model : batch_norm_1_gamma | {14 15 }
+	Port: gesture_model : batch_norm_1_mean | {14 15 }
+	Port: gesture_model : batch_norm_1_variance | {14 15 }
+	Port: gesture_model : batch_norm_1_beta | {14 15 }
+	Port: gesture_model : dense_1_weights_0 | {16 17 }
+	Port: gesture_model : dense_1_weights_1 | {16 17 }
+	Port: gesture_model : dense_1_weights_2 | {16 17 }
+	Port: gesture_model : dense_1_weights_3 | {16 17 }
+	Port: gesture_model : dense_1_weights_4 | {16 17 }
+	Port: gesture_model : dense_1_weights_5 | {16 17 }
+	Port: gesture_model : dense_1_weights_6 | {16 17 }
+	Port: gesture_model : dense_1_weights_7 | {16 17 }
+	Port: gesture_model : dense_1_weights_8 | {16 17 }
+	Port: gesture_model : dense_1_weights_9 | {16 17 }
+	Port: gesture_model : dense_1_weights_10 | {16 17 }
+	Port: gesture_model : dense_1_weights_11 | {16 17 }
+	Port: gesture_model : dense_1_weights_12 | {16 17 }
+	Port: gesture_model : dense_1_weights_13 | {16 17 }
+	Port: gesture_model : dense_1_weights_14 | {16 17 }
+	Port: gesture_model : dense_1_weights_15 | {16 17 }
+	Port: gesture_model : dense_1_biases | {16 17 }
   - Chain level:
 	State 1
 	State 2
@@ -1344,65 +1344,65 @@ ret_ln177                  (ret                 ) [ 000000000000000000000]
 |----------|----------------------------------------|---------|---------|---------|---------|
 | Operation|             Functional Unit            |   DSP   |  Delay  |    FF   |   LUT   |
 |----------|----------------------------------------|---------|---------|---------|---------|
-|          | grp_Loop_VITIS_LOOP_148_1_proc8_fu_164 |    0    |  0.427  |   149   |   1144  |
-|          |           grp_conv1d_0_fu_177          |    3    |  5.222  |   460   |   867   |
-|          |    grp_batch_normalization_0_fu_191    |    2    |  3.416  |   4607  |   5282  |
-|          |       grp_max_pooling1d_0_fu_205       |    0    |  0.854  |    53   |   166   |
+|          | grp_Loop_VITIS_LOOP_149_1_proc8_fu_164 |    0    |    0    |    7    |    24   |
+|          |           grp_conv1d_0_fu_177          |    10   |  5.222  |   1301  |   1016  |
+|          |    grp_batch_normalization_0_fu_191    |    9    |  2.989  |   1346  |   934   |
+|          |       grp_max_pooling1d_0_fu_205       |    0    |  1.806  |   166   |   227   |
 |   call   |  grp_Loop_VITIS_LOOP_77_1_proc_fu_211  |    0    |  0.427  |    52   |   153   |
-|          |           grp_dense_0_fu_217           |    1    |  2.135  |   261   |   543   |
-|          |    grp_batch_normalization_1_fu_227    |    2    |  3.416  |   4533  |   5220  |
-|          |           grp_dense_1_fu_241           |    68   |  17.204 |   8977  |  15059  |
-|          | grp_Loop_VITIS_LOOP_171_3_proc9_fu_281 |    0    |  0.854  |    93   |   821   |
+|          |           grp_dense_0_fu_217           |    5    |  2.184  |   740   |   614   |
+|          |    grp_batch_normalization_1_fu_227    |    9    |  3.843  |   1219  |   879   |
+|          |           grp_dense_1_fu_241           |   136   |  11.653 |  11751  |  11762  |
+|          | grp_Loop_VITIS_LOOP_171_3_proc9_fu_281 |    0    |  0.854  |    44   |    48   |
 |----------|----------------------------------------|---------|---------|---------|---------|
-|   Total  |                                        |    76   |  33.955 |  19185  |  29255  |
+|   Total  |                                        |   169   |  28.978 |  16626  |  15657  |
 |----------|----------------------------------------|---------|---------|---------|---------|
 
 Memories:
-+-----------------------+--------+--------+--------+--------+
-|                       |  BRAM  |   FF   |   LUT  |  URAM  |
-+-----------------------+--------+--------+--------+--------+
-|  batch_norm_0_beta_V  |    0   |   17   |    5   |    -   |
-|  batch_norm_0_gamma_V |    0   |   19   |    5   |    -   |
-|  batch_norm_0_mean_V  |    0   |   15   |    4   |    -   |
-|batch_norm_0_variance_V|    0   |   11   |    3   |    -   |
-|  batch_norm_1_beta_V  |    0   |   18   |    5   |    -   |
-|  batch_norm_1_gamma_V |    0   |   20   |    5   |    -   |
-|  batch_norm_1_mean_V  |    0   |   19   |    5   |    -   |
-|batch_norm_1_variance_V|    0   |   18   |    5   |    -   |
-|   batch_norm_out_0_V  |    6   |    0   |    0   |    0   |
-|   batch_norm_out_1_V  |    0   |   96   |   12   |    0   |
-|   conv1d_0_biases_V   |    0   |   17   |    5   |    -   |
-| conv1d_0_weights_V_0_0|    0   |   18   |    5   |    -   |
-| conv1d_0_weights_V_1_0|    0   |   18   |    5   |    -   |
-| conv1d_0_weights_V_2_0|    0   |   18   |    5   |    -   |
-|     conv1d_out_0_V    |    6   |    0   |    0   |    0   |
-|    dense_0_biases_V   |    0   |   17   |    5   |    -   |
-|   dense_0_weights_V   |   16   |    0   |    0   |    -   |
-|    dense_1_biases_V   |    0   |   18   |    6   |    -   |
-|  dense_1_weights_V_0  |    0   |   19   |    6   |    -   |
-|  dense_1_weights_V_1  |    0   |   19   |    6   |    -   |
-|  dense_1_weights_V_10 |    0   |   19   |    6   |    -   |
-|  dense_1_weights_V_11 |    0   |   19   |    6   |    -   |
-|  dense_1_weights_V_12 |    0   |   19   |    6   |    -   |
-|  dense_1_weights_V_13 |    0   |   19   |    6   |    -   |
-|  dense_1_weights_V_14 |    0   |   19   |    6   |    -   |
-|  dense_1_weights_V_15 |    0   |   19   |    6   |    -   |
-|  dense_1_weights_V_2  |    0   |   19   |    6   |    -   |
-|  dense_1_weights_V_3  |    0   |   19   |    6   |    -   |
-|  dense_1_weights_V_4  |    0   |   19   |    6   |    -   |
-|  dense_1_weights_V_5  |    0   |   19   |    6   |    -   |
-|  dense_1_weights_V_6  |    0   |   19   |    6   |    -   |
-|  dense_1_weights_V_7  |    0   |   19   |    6   |    -   |
-|  dense_1_weights_V_8  |    0   |   19   |    6   |    -   |
-|  dense_1_weights_V_9  |    0   |   19   |    6   |    -   |
-|     dense_out_0_V     |    0   |   23   |   12   |    0   |
-|    flatten_out_0_V    |    3   |    0   |    0   |    0   |
-|       input_V_0       |    4   |    0   |    0   |    0   |
-|    max_pool_out_0_V   |    3   |    0   |    0   |    0   |
-|        output_V       |    0   |   96   |   16   |    0   |
-+-----------------------+--------+--------+--------+--------+
-|         Total         |   38   |   762  |   204  |    0   |
-+-----------------------+--------+--------+--------+--------+
++---------------------+--------+--------+--------+--------+
+|                     |  BRAM  |   FF   |   LUT  |  URAM  |
++---------------------+--------+--------+--------+--------+
+|  batch_norm_0_beta  |    0   |   32   |    8   |    -   |
+|  batch_norm_0_gamma |    0   |   32   |    8   |    -   |
+|  batch_norm_0_mean  |    0   |   32   |    8   |    -   |
+|batch_norm_0_variance|    0   |   32   |    8   |    -   |
+|  batch_norm_1_beta  |    0   |   32   |    8   |    -   |
+|  batch_norm_1_gamma |    0   |   32   |    8   |    -   |
+|  batch_norm_1_mean  |    0   |   32   |    8   |    -   |
+|batch_norm_1_variance|    0   |   32   |    8   |    -   |
+|   batch_norm_out_0  |    8   |    0   |    0   |    0   |
+|   batch_norm_out_1  |    0   |   128  |   16   |    0   |
+|   conv1d_0_biases   |    0   |   32   |    8   |    -   |
+| conv1d_0_weights_0_0|    0   |   32   |    8   |    -   |
+| conv1d_0_weights_1_0|    0   |   32   |    8   |    -   |
+| conv1d_0_weights_2_0|    0   |   32   |    8   |    -   |
+|     conv1d_out_0    |    8   |    0   |    0   |    0   |
+|    dense_0_biases   |    0   |   32   |    8   |    -   |
+|   dense_0_weights   |   30   |    0   |    0   |    -   |
+|    dense_1_biases   |    0   |   32   |   10   |    -   |
+|  dense_1_weights_0  |    0   |   32   |   10   |    -   |
+|  dense_1_weights_1  |    0   |   32   |   10   |    -   |
+|  dense_1_weights_10 |    0   |   32   |   10   |    -   |
+|  dense_1_weights_11 |    0   |   32   |   10   |    -   |
+|  dense_1_weights_12 |    0   |   32   |   10   |    -   |
+|  dense_1_weights_13 |    0   |   32   |   10   |    -   |
+|  dense_1_weights_14 |    0   |   32   |   10   |    -   |
+|  dense_1_weights_15 |    0   |   32   |   10   |    -   |
+|  dense_1_weights_2  |    0   |   32   |   10   |    -   |
+|  dense_1_weights_3  |    0   |   32   |   10   |    -   |
+|  dense_1_weights_4  |    0   |   32   |   10   |    -   |
+|  dense_1_weights_5  |    0   |   32   |   10   |    -   |
+|  dense_1_weights_6  |    0   |   32   |   10   |    -   |
+|  dense_1_weights_7  |    0   |   32   |   10   |    -   |
+|  dense_1_weights_8  |    0   |   32   |   10   |    -   |
+|  dense_1_weights_9  |    0   |   32   |   10   |    -   |
+|     dense_out_0     |    1   |    0   |    0   |    0   |
+|    flatten_out_0    |    4   |    0   |    0   |    0   |
+|       input_0       |    4   |    0   |    0   |    0   |
+|    max_pool_out_0   |    4   |    0   |    0   |    0   |
+|        output       |    0   |   128  |   20   |    0   |
++---------------------+--------+--------+--------+--------+
+|        Total        |   59   |  1216  |   310  |    0   |
++---------------------+--------+--------+--------+--------+
 
 * Register list:
 N/A
@@ -1420,10 +1420,10 @@ N/A
 +-----------+--------+--------+--------+--------+--------+--------+
 |           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
 +-----------+--------+--------+--------+--------+--------+--------+
-|  Function |    -   |   76   |   33   |  19185 |  29255 |    -   |
-|   Memory  |   38   |    -   |    -   |   762  |   204  |    0   |
+|  Function |    -   |   169  |   28   |  16626 |  15657 |    -   |
+|   Memory  |   59   |    -   |    -   |  1216  |   310  |    0   |
 |Multiplexer|    -   |    -   |    -   |    -   |    -   |    -   |
 |  Register |    -   |    -   |    -   |    -   |    -   |    -   |
 +-----------+--------+--------+--------+--------+--------+--------+
-|   Total   |   38   |   76   |   33   |  19947 |  29459 |    0   |
+|   Total   |   59   |   169  |   28   |  17842 |  15967 |    0   |
 +-----------+--------+--------+--------+--------+--------+--------+

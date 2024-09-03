@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:gesture_model:1.0
-// IP Revision: 2113717063
+// IP Revision: 2113717499
 
 (* X_CORE_INFO = "gesture_model,Vivado 2022.2" *)
 (* CHECK_LICENSE_TYPE = "bd_0_hls_inst_0,gesture_model,{}" *)
-(* CORE_GENERATION_INFO = "bd_0_hls_inst_0,gesture_model,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=gesture_model,x_ipVersion=1.0,x_ipCoreRevision=2113717063,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_ADDR_WIDTH=4,C_S_AXI_CONTROL_DATA_WIDTH=32}" *)
+(* CORE_GENERATION_INFO = "bd_0_hls_inst_0,gesture_model,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=gesture_model,x_ipVersion=1.0,x_ipCoreRevision=2113717499,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_ADDR_WIDTH=4,C_S_AXI_CONTROL_DATA_WIDTH=32}" *)
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module bd_0_hls_inst_0 (

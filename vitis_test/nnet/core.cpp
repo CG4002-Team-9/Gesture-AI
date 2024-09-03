@@ -132,6 +132,7 @@ void gesture_model(mystream &input_stream, mystream &output_stream)
 #pragma HLS INTERFACE mode = axis port = input_stream
 #pragma HLS INTERFACE mode = axis port = output_stream
 #pragma HLS INTERFACE mode = s_axilite port = return
+#pragma HLS DATAFLOW
 
     data_t in, out;
     fixed_p input[120][1];
@@ -155,7 +156,6 @@ void gesture_model(mystream &input_stream, mystream &output_stream)
     }
 
     // Perform the neural network operations
-#pragma HLS DATAFLOW
     conv1d_0(input, conv1d_out_0);
     batch_normalization_0(conv1d_out_0, batch_norm_out_0);
     max_pooling1d_0(batch_norm_out_0, max_pool_out_0);

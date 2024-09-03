@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'gesture_model'" level="0">
-<item name = "Date">Mon Sep  2 11:42:00 2024
+<item name = "Date">Mon Sep  2 18:51:18 2024
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">vitis_test</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.268 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.114 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,22 +24,22 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">23128, 23128, 0.231 ms, 0.231 ms, 15111, 15111, dataflow</column>
+<column name="">69392, 69392, 0.694 ms, 0.694 ms, 60430, 60430, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="Loop_VITIS_LOOP_148_1_proc8_U0">Loop_VITIS_LOOP_148_1_proc8, 123, 123, 1.230 us, 1.230 us, 123, 123, no</column>
-<column name="conv1d_0_U0">conv1d_0, 3782, 3782, 37.820 us, 37.820 us, 3782, 3782, no</column>
-<column name="batch_normalization_0_U0">batch_normalization_0, 1961, 1961, 19.610 us, 19.610 us, 1961, 1961, no</column>
-<column name="max_pooling1d_0_U0">max_pooling1d_0, 946, 946, 9.460 us, 9.460 us, 946, 946, no</column>
+<column name="Loop_VITIS_LOOP_149_1_proc8_U0">Loop_VITIS_LOOP_149_1_proc8, 122, 122, 1.220 us, 1.220 us, 122, 122, no</column>
+<column name="conv1d_0_U0">conv1d_0, 3799, 3799, 37.990 us, 37.990 us, 3799, 3799, no</column>
+<column name="batch_normalization_0_U0">batch_normalization_0, 1918, 1918, 19.180 us, 19.180 us, 1918, 1918, no</column>
+<column name="max_pooling1d_0_U0">max_pooling1d_0, 1892, 1892, 18.920 us, 18.920 us, 1892, 1892, no</column>
 <column name="Loop_VITIS_LOOP_77_1_proc_U0">Loop_VITIS_LOOP_77_1_proc, 946, 946, 9.460 us, 9.460 us, 946, 946, no</column>
-<column name="dense_0_U0">dense_0, 15110, 15110, 0.151 ms, 0.151 ms, 15110, 15110, no</column>
-<column name="batch_normalization_1_U0">batch_normalization_1, 89, 89, 0.890 us, 0.890 us, 89, 89, no</column>
-<column name="dense_1_U0">dense_1, 164, 164, 1.640 us, 1.640 us, 164, 164, no</column>
-<column name="Loop_VITIS_LOOP_171_3_proc9_U0">Loop_VITIS_LOOP_171_3_proc9, 24, 24, 0.240 us, 0.240 us, 24, 24, no</column>
+<column name="dense_0_U0">dense_0, 60429, 60429, 0.604 ms, 0.604 ms, 60429, 60429, no</column>
+<column name="batch_normalization_1_U0">batch_normalization_1, 45, 45, 0.450 us, 0.450 us, 45, 45, no</column>
+<column name="dense_1_U0">dense_1, 234, 234, 2.340 us, 2.340 us, 234, 234, no</column>
+<column name="Loop_VITIS_LOOP_171_3_proc9_U0">Loop_VITIS_LOOP_171_3_proc9, 23, 23, 0.230 us, 0.230 us, 23, 23, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -58,28 +58,28 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 2, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">16, 50, 18026, 29341, 0</column>
-<column name="Memory">22, -, 215, 40, 0</column>
+<column name="Instance">30, 141, 15928, 14246, 0</column>
+<column name="Memory">29, -, 256, 36, 0</column>
 <column name="Multiplexer">-, -, -, -, -</column>
 <column name="Register">-, -, -, -, -</column>
 <specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
-<specialColumn name="Utilization (%)">8, 13, 12, 41, 0</specialColumn>
+<specialColumn name="Utilization (%)">13, 39, 11, 20, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="Loop_VITIS_LOOP_148_1_proc8_U0">Loop_VITIS_LOOP_148_1_proc8, 0, 0, 128, 1336, 0</column>
-<column name="Loop_VITIS_LOOP_171_3_proc9_U0">Loop_VITIS_LOOP_171_3_proc9, 0, 0, 126, 1105, 0</column>
+<column name="Loop_VITIS_LOOP_149_1_proc8_U0">Loop_VITIS_LOOP_149_1_proc8, 0, 0, 9, 64, 0</column>
+<column name="Loop_VITIS_LOOP_171_3_proc9_U0">Loop_VITIS_LOOP_171_3_proc9, 0, 0, 11, 83, 0</column>
 <column name="Loop_VITIS_LOOP_77_1_proc_U0">Loop_VITIS_LOOP_77_1_proc, 0, 0, 46, 261, 0</column>
-<column name="batch_normalization_0_U0">batch_normalization_0, 0, 2, 4943, 5855, 0</column>
-<column name="batch_normalization_1_U0">batch_normalization_1, 0, 2, 4539, 5598, 0</column>
+<column name="batch_normalization_0_U0">batch_normalization_0, 0, 9, 1662, 1142, 0</column>
+<column name="batch_normalization_1_U0">batch_normalization_1, 0, 9, 1267, 905, 0</column>
 <column name="control_s_axi_U">control_s_axi, 0, 0, 36, 40, 0</column>
-<column name="conv1d_0_U0">conv1d_0, 0, 3, 262, 946, 0</column>
-<column name="dense_0_U0">dense_0, 16, 1, 313, 697, 0</column>
-<column name="dense_1_U0">dense_1, 0, 42, 7599, 13269, 0</column>
-<column name="max_pooling1d_0_U0">max_pooling1d_0, 0, 0, 34, 234, 0</column>
+<column name="conv1d_0_U0">conv1d_0, 0, 10, 1614, 1259, 0</column>
+<column name="dense_0_U0">dense_0, 30, 5, 740, 763, 0</column>
+<column name="dense_1_U0">dense_1, 0, 108, 10457, 9408, 0</column>
+<column name="max_pooling1d_0_U0">max_pooling1d_0, 0, 0, 86, 321, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -88,14 +88,14 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="batch_norm_out_0_V_U">batch_norm_out_0_V_RAM_AUTO_1R1W, 6, 0, 0, 0, 1888, 24, 1, 45312</column>
-<column name="batch_norm_out_1_V_U">batch_norm_out_1_V_RAM_AUTO_1R1W, 0, 96, 12, 0, 16, 24, 1, 384</column>
-<column name="conv1d_out_0_V_U">conv1d_out_0_V_RAM_AUTO_1R1W, 6, 0, 0, 0, 1888, 23, 1, 43424</column>
-<column name="dense_out_0_V_U">dense_out_0_V_RAM_AUTO_1R1W, 0, 23, 12, 0, 16, 23, 1, 368</column>
-<column name="input_V_0_U">input_V_0_RAM_AUTO_1R1W, 4, 0, 0, 0, 120, 24, 1, 2880</column>
-<column name="max_pool_out_0_V_U">max_pool_out_0_V_RAM_AUTO_1R1W, 3, 0, 0, 0, 944, 24, 1, 22656</column>
-<column name="flatten_out_0_V_U">max_pool_out_0_V_RAM_AUTO_1R1W, 3, 0, 0, 0, 944, 24, 1, 22656</column>
-<column name="output_V_U">output_V_RAM_AUTO_1R1W, 0, 96, 16, 0, 20, 24, 1, 480</column>
+<column name="batch_norm_out_0_U">batch_norm_out_0_RAM_AUTO_1R1W, 8, 0, 0, 0, 1888, 32, 1, 60416</column>
+<column name="batch_norm_out_1_U">batch_norm_out_1_RAM_AUTO_1R1W, 0, 128, 16, 0, 16, 32, 1, 512</column>
+<column name="conv1d_out_0_U">conv1d_out_0_RAM_AUTO_1R1W, 8, 0, 0, 0, 1888, 32, 1, 60416</column>
+<column name="dense_out_0_U">dense_out_0_RAM_AUTO_1R1W, 1, 0, 0, 0, 16, 32, 1, 512</column>
+<column name="input_0_U">input_0_RAM_AUTO_1R1W, 4, 0, 0, 0, 120, 32, 1, 3840</column>
+<column name="max_pool_out_0_U">max_pool_out_0_RAM_AUTO_1R1W, 4, 0, 0, 0, 944, 32, 1, 30208</column>
+<column name="flatten_out_0_U">max_pool_out_0_RAM_AUTO_1R1W, 4, 0, 0, 0, 944, 32, 1, 30208</column>
+<column name="output_U">output_RAM_AUTO_1R1W, 0, 128, 20, 0, 20, 32, 1, 640</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
