@@ -2,3 +2,7 @@
 *.log
 tensenv
 vitis_test/solution1
+my_dir/
+model_dir/
+.vscode/
+.wsdata/
