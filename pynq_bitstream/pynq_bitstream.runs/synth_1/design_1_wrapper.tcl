@@ -55,21 +55,8 @@ if {$::dispatch::connected} {
   }
 }
 
-proc create_report { reportName command } {
-  set status "."
-  append status $reportName ".fail"
-  if { [file exists $status] } {
-    eval file delete [glob $status]
-  }
-  send_msg_id runtcl-4 info "Executing : $command"
-  set retval [eval catch { $command } msg]
-  if { $retval != 0 } {
-    set fp [open $status w]
-    close $fp
-    send_msg_id runtcl-5 warning "$msg"
-  }
-}
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param bd.open.in_stealth_mode 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xczu3eg-sbva484-2-i
 
@@ -90,11 +77,8 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
 add_files /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.srcs/sources_1/bd/design_1/design_1.bd
-set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_2/design_1_axi_dma_0_2.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_2/design_1_axi_dma_0_2_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_2/design_1_axi_dma_0_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_1/bd_886d_psr_aclk_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_1/bd_886d_psr_aclk_0.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_2/bd_886d_arsw_0_ooc.xdc]
@@ -104,23 +88,34 @@ set_property used_in_implementation false [get_files -all /home/prince/Documents
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_6/bd_886d_bsw_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_10/bd_886d_s00a2s_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_11/bd_886d_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_11/bd_886d_sarn_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_12/bd_886d_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_12/bd_886d_srn_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_16/bd_886d_s01a2s_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_17/bd_886d_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_17/bd_886d_sawn_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_18/bd_886d_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_18/bd_886d_swn_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_19/bd_886d_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_19/bd_886d_sbn_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_20/bd_886d_m00s2a_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_21/bd_886d_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_21/bd_886d_m00arn_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_22/bd_886d_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_22/bd_886d_m00rn_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_23/bd_886d_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_23/bd_886d_m00awn_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_24/bd_886d_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_24/bd_886d_m00wn_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_25/bd_886d_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_25/bd_886d_m00bn_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/smartconnect.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_2/design_1_proc_sys_reset_0_2_board.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_2/design_1_proc_sys_reset_0_2.xdc]
-set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_2/design_1_proc_sys_reset_0_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_xbar_4/design_1_xbar_4_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_gesture_model_0_2/constraints/gesture_model_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/design_1_zynq_ultra_ps_e_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/design_1_zynq_ultra_ps_e_0_1.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 
@@ -154,7 +149,7 @@ set_param constraints.enableBinaryConstraints false
 write_checkpoint -force -noxdef design_1_wrapper.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb"
+generate_parallel_reports -reports { "report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb"  } 
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

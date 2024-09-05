@@ -1,8 +1,9 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+//Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Mon Sep  2 11:52:31 2024
-//Host        : prince-ThinkPad-E14-Gen-5 running 64-bit Ubuntu 24.04 LTS
+//Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+//Date        : Thu Sep  5 16:46:33 2024
+//Host        : prince-ThinkPad-E14-Gen-5 running 64-bit Ubuntu 24.04.1 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
 //Purpose     : IP block netlist

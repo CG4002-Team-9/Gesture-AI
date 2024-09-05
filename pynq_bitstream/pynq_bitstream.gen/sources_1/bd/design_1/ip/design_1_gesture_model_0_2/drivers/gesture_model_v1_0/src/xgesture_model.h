@@ -1,7 +1,9 @@
 // ==============================================================
-// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
-// Tool Version Limit: 2019.12
+// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+// Tool Version Limit: 2024.05
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+// 
 // ==============================================================
 #ifndef XGESTURE_MODEL_H
 #define XGESTURE_MODEL_H
@@ -38,7 +40,11 @@ typedef uint32_t u32;
 typedef uint64_t u64;
 #else
 typedef struct {
+#ifdef SDT
+    char *Name;
+#else
     u16 DeviceId;
+#endif
     u64 Control_BaseAddress;
 } XGesture_model_Config;
 #endif
@@ -73,8 +79,13 @@ typedef u32 word_type;
 
 /************************** Function Prototypes *****************************/
 #ifndef __linux__
+#ifdef SDT
+int XGesture_model_Initialize(XGesture_model *InstancePtr, UINTPTR BaseAddress);
+XGesture_model_Config* XGesture_model_LookupConfig(UINTPTR BaseAddress);
+#else
 int XGesture_model_Initialize(XGesture_model *InstancePtr, u16 DeviceId);
 XGesture_model_Config* XGesture_model_LookupConfig(u16 DeviceId);
+#endif
 int XGesture_model_CfgInitialize(XGesture_model *InstancePtr, XGesture_model_Config *ConfigPtr);
 #else
 int XGesture_model_Initialize(XGesture_model *InstancePtr, const char* InstanceName);

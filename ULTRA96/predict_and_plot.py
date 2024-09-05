@@ -76,7 +76,8 @@ y_hidden = hidden_data['gesture']
 print(y_hidden)
 
 # Reshape input data to match the input shape expected by the 1D CNN
-X_hidden = X_hidden.reshape(X_hidden.shape[0], X_hidden.shape[1], 1)
+X_hidden = X_hidden.reshape(X_hidden.shape[0], X_
+                            hidden.shape[1], 1)
 
 print(X_hidden.shape)
 
