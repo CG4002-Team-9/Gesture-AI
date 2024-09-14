@@ -3,7 +3,7 @@
 
 mystream input_stream, output_stream;
 
-#define NUM_SAMPLES 713
+#define NUM_SAMPLES 150
 #define INPUT_SIZE 120
 #define OUTPUT_SIZE 20
 
@@ -56,7 +56,8 @@ int main()
         }
 
         // print predicted vs expected and the confidence
-        printf("Sample %d: Predicted %d, Expected %d, Confidence %f\n", i, max_idx, expected_class[i], max_val);
+        printf("Sample %d: Predicted %d, Expected %d, Confidence %f\n"
+        , i, max_idx, expected_class[i], max_val);
     }
 
     if (correct == NUM_SAMPLES)

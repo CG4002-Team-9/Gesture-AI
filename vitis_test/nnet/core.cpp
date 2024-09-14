@@ -8,7 +8,11 @@ fixed_p epsilon = 0.001;
 fixed_p relu(fixed_p x)
 {
 #pragma HLS INLINE
-    return x > fixed_p(0) ? x : fixed_p(0);
+    if (x > 0)
+    {
+        return x;
+    }
+    return 0;
 }
 
 void conv1d_0(fixed_p input[120][1], fixed_p output[118][16])
@@ -20,8 +24,10 @@ void conv1d_0(fixed_p input[120][1], fixed_p output[118][16])
             fixed_p sum = 0;
             for (int k = 0; k < 3; k++) // Loop over the kernel size
             {
+#pragma HLS unroll factor = 2
                 for (int c = 0; c < 1; c++) // Loop over input channels
                 {
+#pragma HLS unroll factor = 2
                     sum += input[i + k][c] * conv1d_0_weights[k][c][j];
                 }
             }
@@ -36,6 +42,7 @@ void batch_normalization_0(fixed_p input[118][16], fixed_p output[118][16])
     {
         for (int j = 0; j < 16; j++) // Loop over channels
         {
+#pragma HLS unroll factor = 2
             fixed_p batch_norm_eps = batch_norm_0_variance[j] + epsilon;
             output[i][j] = batch_norm_0_gamma[j] * ((input[i][j] - batch_norm_0_mean[j]) / hls::sqrt(batch_norm_eps)) + batch_norm_0_beta[j];
         }
@@ -51,6 +58,7 @@ void max_pooling1d_0(fixed_p input[118][16], fixed_p output[59][16])
             fixed_p max_val = input[i * 2][j]; // Initialize max value
             for (int k = 1; k < 2; k++)        // Loop over pooling window
             {
+#pragma HLS unroll factor = 2
                 int idx = i * 2 + k;
                 if (idx < 118) // Ensure within bounds
                 {
@@ -82,6 +90,7 @@ void dense_0(fixed_p input[944], fixed_p output[16])
         fixed_p sum = 0;
         for (int j = 0; j < 944; j++)
         {
+#pragma HLS unroll factor = 2
             sum += input[j] * dense_0_weights[j][i];
         }
         output[i] = relu(sum + dense_0_biases[i]); // Apply ReLU
@@ -92,6 +101,7 @@ void batch_normalization_1(fixed_p input[16], fixed_p output[16])
 {
     for (int i = 0; i < 16; i++) // Loop over neurons
     {
+#pragma HLS unroll factor = 2
         fixed_p batch_norm_eps = batch_norm_1_variance[i] + epsilon;
         output[i] = batch_norm_1_gamma[i] * ((input[i] - batch_norm_1_mean[i]) / hls::sqrt(batch_norm_eps)) + batch_norm_1_beta[i];
     }
@@ -104,6 +114,7 @@ void dense_1(fixed_p input[16], fixed_p output[20])
         fixed_p sum = 0;
         for (int j = 0; j < 16; j++)
         {
+#pragma HLS unroll factor = 2
             sum += input[j] * dense_1_weights[j][i];
         }
         output[i] = sum + dense_1_biases[i]; // No ReLU before softmax
@@ -112,11 +123,13 @@ void dense_1(fixed_p input[16], fixed_p output[20])
     fixed_p softmax_sum = 0;
     for (int i = 0; i < 20; i++)
     {
+#pragma HLS unroll factor = 2
         fixed_p softmax_out = output[i];
         softmax_sum += hls::exp(softmax_out);
     }
     for (int i = 0; i < 20; i++)
     {
+#pragma HLS unroll factor = 2
         output[i] = hls::exp(output[i]) / softmax_sum;
     }
 }
@@ -149,7 +162,6 @@ void gesture_model(mystream &input_stream, mystream &output_stream)
     }
 
     // Perform the neural network operations
-#pragma HLS DATAFLOW
     conv1d_0(input, conv1d_out_0);
     batch_normalization_0(conv1d_out_0, batch_norm_out_0);
     max_pooling1d_0(batch_norm_out_0, max_pool_out_0);

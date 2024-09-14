@@ -12493,34 +12493,6 @@ poll 0xFD080030 0x00000FFF 0x00000FFF
  
   #Poll PUB_PGSR0 for Trng complete  
 
-
- # Run Vref training in static read mode  
-mwr -force  0xFD080200 0x100091C7
-mwr -force  0xFD080018 0x00F00D0F
-	psu_mask_write 0xFD08142C 0x00000030 0x00000030
-	psu_mask_write 0xFD08146C 0x00000030 0x00000030
-	psu_mask_write 0xFD0814AC 0x00000030 0x00000030
-	psu_mask_write 0xFD0814EC 0x00000030 0x00000030
-	psu_mask_write 0xFD08152C 0x00000030 0x00000030
-psu_mask_write 0xFD080004 0xFFFFFFFF 0x00060001
-  
- #trigger VreFPHY training 
-poll 0xFD080030 0x00004001 0x00004001
-     
- #//Poll PUB_PGSR0 for Trng complete  
-mwr -force  0xFD080200 0x800091C7
-mwr -force  0xFD080018 0x00F08207
-	psu_mask_write 0xFD08142C 0x00000030 0x00000000
-	psu_mask_write 0xFD08146C 0x00000030 0x00000000
-	psu_mask_write 0xFD0814AC 0x00000030 0x00000000
-	psu_mask_write 0xFD0814EC 0x00000030 0x00000000
-	psu_mask_write 0xFD08152C 0x00000030 0x00000000
-psu_mask_write 0xFD080004 0xFFFFFFFF 0x0000C001
-  
- #trigger VreFPHY training 
-poll 0xFD080030 0x00000C01 0x00000C01
-     
- #//Poll PUB_PGSR0 for Trng complete  
 mwr -force  0xFD070180 0x01000040
 mwr -force  0xFD070060 0x00000000
 	psu_mask_write 0xFD080014 0x00000040 0x00000000

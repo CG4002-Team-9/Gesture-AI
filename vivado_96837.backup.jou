@@ -1,0 +1,59 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Sep  6 17:50:43 2024
+# Process ID: 96837
+# Current directory: /home/prince/Documents/capstone/Gesture-AI
+# Command line: vivado
+# Log file: /home/prince/Documents/capstone/Gesture-AI/vivado.log
+# Journal file: /home/prince/Documents/capstone/Gesture-AI/vivado.jou
+# Running On        :prince-ThinkPad-E14-Gen-5
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04.1 LTS
+# Processor Detail  :13th Gen Intel(R) Core(TM) i7-13700H
+# CPU Frequency     :1032.908 MHz
+# CPU Physical cores:14
+# CPU Logical cores :20
+# Host memory       :16411 MB
+# Swap memory       :12884 MB
+# Total Virtual     :29296 MB
+# Available Virtual :21173 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.srcs/sources_1/bd/design_1/design_1.bd}
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:hls:gesture_model:1.0 [get_ips  design_1_gesture_model_0_2] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_gesture_model_0_2] -no_script -sync -force -quiet
+generate_target all [get_files  /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.ip_user_files/sim_scripts -ip_user_files_dir /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.ip_user_files -ipstatic_source_dir /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.cache/compile_simlib/modelsim} {questa=/home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.cache/compile_simlib/questa} {xcelium=/home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.cache/compile_simlib/xcelium} {vcs=/home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.cache/compile_simlib/vcs} {riviera=/home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+make_wrapper -files [get_files /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_run impl_1
+file copy -force /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.runs/impl_1/design_1_wrapper.bit /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/hw_handoff/design_1.bit
+open_bd_design {/home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.srcs/sources_1/bd/design_1/design_1.bd}
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:gesture_model:1.0 [get_ips  design_1_gesture_model_0_2] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_gesture_model_0_2] -no_script -sync -force -quiet
+generate_target all [get_files  /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.ip_user_files/sim_scripts -ip_user_files_dir /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.ip_user_files -ipstatic_source_dir /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.cache/compile_simlib/modelsim} {questa=/home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.cache/compile_simlib/questa} {xcelium=/home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.cache/compile_simlib/xcelium} {vcs=/home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.cache/compile_simlib/vcs} {riviera=/home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+file copy -force /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.runs/impl_1/design_1_wrapper.bit /home/prince/Documents/capstone/Gesture-AI/pynq_bitstream/pynq_bitstream.gen/sources_1/bd/design_1/hw_handoff/design_1.bit

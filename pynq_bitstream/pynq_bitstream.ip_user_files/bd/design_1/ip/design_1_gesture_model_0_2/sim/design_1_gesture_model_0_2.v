@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:hls:gesture_model:1.0
-// IP Revision: 2113721670
+// IP Revision: 2113732997
 
 `timescale 1ns/1ps
 
@@ -76,16 +76,22 @@ module design_1_gesture_model_0_2 (
   ap_rst_n,
   interrupt,
   input_stream_TDATA,
+  input_stream_TDEST,
+  input_stream_TID,
   input_stream_TKEEP,
   input_stream_TLAST,
   input_stream_TREADY,
   input_stream_TSTRB,
+  input_stream_TUSER,
   input_stream_TVALID,
   output_stream_TDATA,
+  output_stream_TDEST,
+  output_stream_TID,
   output_stream_TKEEP,
   output_stream_TLAST,
   output_stream_TREADY,
   output_stream_TSTRB,
+  output_stream_TUSER,
   output_stream_TVALID
 );
 
@@ -136,6 +142,10 @@ input wire ap_rst_n;
 output wire interrupt;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream TDATA" *)
 input wire [31 : 0] input_stream_TDATA;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream TDEST" *)
+input wire [5 : 0] input_stream_TDEST;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream TID" *)
+input wire [4 : 0] input_stream_TID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream TKEEP" *)
 input wire [3 : 0] input_stream_TKEEP;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream TLAST" *)
@@ -144,11 +154,17 @@ input wire [0 : 0] input_stream_TLAST;
 output wire input_stream_TREADY;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream TSTRB" *)
 input wire [3 : 0] input_stream_TSTRB;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME input_stream, TUSER_WIDTH 0, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 96968727, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_1_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream TUSER" *)
+input wire [1 : 0] input_stream_TUSER;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME input_stream, TUSER_WIDTH 0, TDATA_NUM_BYTES 4, TDEST_WIDTH 6, TID_WIDTH 5, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 96968727, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_1_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_stream TVALID" *)
 input wire input_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream TDATA" *)
 output wire [31 : 0] output_stream_TDATA;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream TDEST" *)
+output wire [5 : 0] output_stream_TDEST;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream TID" *)
+output wire [4 : 0] output_stream_TID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream TKEEP" *)
 output wire [3 : 0] output_stream_TKEEP;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream TLAST" *)
@@ -157,7 +173,9 @@ output wire [0 : 0] output_stream_TLAST;
 input wire output_stream_TREADY;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream TSTRB" *)
 output wire [3 : 0] output_stream_TSTRB;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME output_stream, TUSER_WIDTH 0, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 96968727, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_1_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream TUSER" *)
+output wire [1 : 0] output_stream_TUSER;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME output_stream, TUSER_WIDTH 0, TDATA_NUM_BYTES 4, TDEST_WIDTH 6, TID_WIDTH 5, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 96968727, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_1_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_stream TVALID" *)
 output wire output_stream_TVALID;
 
@@ -189,16 +207,22 @@ output wire output_stream_TVALID;
     .ap_rst_n(ap_rst_n),
     .interrupt(interrupt),
     .input_stream_TDATA(input_stream_TDATA),
+    .input_stream_TDEST(input_stream_TDEST),
+    .input_stream_TID(input_stream_TID),
     .input_stream_TKEEP(input_stream_TKEEP),
     .input_stream_TLAST(input_stream_TLAST),
     .input_stream_TREADY(input_stream_TREADY),
     .input_stream_TSTRB(input_stream_TSTRB),
+    .input_stream_TUSER(input_stream_TUSER),
     .input_stream_TVALID(input_stream_TVALID),
     .output_stream_TDATA(output_stream_TDATA),
+    .output_stream_TDEST(output_stream_TDEST),
+    .output_stream_TID(output_stream_TID),
     .output_stream_TKEEP(output_stream_TKEEP),
     .output_stream_TLAST(output_stream_TLAST),
     .output_stream_TREADY(output_stream_TREADY),
     .output_stream_TSTRB(output_stream_TSTRB),
+    .output_stream_TUSER(output_stream_TUSER),
     .output_stream_TVALID(output_stream_TVALID)
   );
 endmodule
