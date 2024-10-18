@@ -4,7 +4,7 @@
     "xci_name": "design_1_gesture_model_0_2",
     "cell_name": "gesture_model_0",
     "component_reference": "xilinx.com:hls:gesture_model:1.0",
-    "ip_revision": "2113732997",
+    "ip_revision": "2113780544",
     "gen_directory": "../../../../../../pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_gesture_model_0_2",
     "parameters": {
       "component_parameters": {
@@ -12,8 +12,8 @@
         "clk_period": [ { "value": "10", "enabled": false, "usage": "all" } ],
         "machine": [ { "value": "64", "enabled": false, "usage": "all" } ],
         "combinational": [ { "value": "0", "enabled": false, "usage": "all" } ],
-        "latency": [ { "value": "66362", "enabled": false, "usage": "all" } ],
-        "II": [ { "value": "66363", "enabled": false, "usage": "all" } ]
+        "latency": [ { "value": "446203", "enabled": false, "usage": "all" } ],
+        "II": [ { "value": "446204", "enabled": false, "usage": "all" } ]
       },
       "model_parameters": {
         "C_S_AXI_CONTROL_ADDR_WIDTH": [ { "value": "4", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -35,7 +35,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "2113732997" } ],
+        "IPREVISION": [ { "value": "2113780544" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../pynq_bitstream.gen/sources_1/bd/design_1/ip/design_1_gesture_model_0_2" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

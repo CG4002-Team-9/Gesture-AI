@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:hls:gesture_model:1.0
-// IP Revision: 2113732997
+// IP Revision: 2113780544
 
 `timescale 1ns/1ps
 

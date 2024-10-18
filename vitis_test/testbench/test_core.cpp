@@ -4,8 +4,8 @@
 mystream input_stream, output_stream;
 
 #define NUM_SAMPLES 150
-#define INPUT_SIZE 120
-#define OUTPUT_SIZE 20
+#define INPUT_SIZE 240
+#define OUTPUT_SIZE 4
 
 // Define the main function for the testbench
 int main()
@@ -18,6 +18,9 @@ int main()
 
     for (int i = 0; i < NUM_SAMPLES; i++)
     {
+        in.data = 0.0;
+        in.last = 0;
+        input_stream.write(in);
         for (int j = 0; j < INPUT_SIZE; j++)
         {
             in.data = test_input[i][j][0];
